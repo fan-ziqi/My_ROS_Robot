@@ -1,0 +1,27 @@
+The system is: Darwin - 19.6.0 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /Library/Developer/CommandLineTools/usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is AppleClang, found in "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/robot/CMakeFiles/3.21.2/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /Library/Developer/CommandLineTools/usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is AppleClang, found in "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/robot/CMakeFiles/3.21.2/CompilerIdCXX/a.out"
+

@@ -1,0 +1,8 @@
+# Request server to delete the given annotations
+
+Annotation[] annotations
+
+---
+# What went wrong, if anything
+bool result
+string message

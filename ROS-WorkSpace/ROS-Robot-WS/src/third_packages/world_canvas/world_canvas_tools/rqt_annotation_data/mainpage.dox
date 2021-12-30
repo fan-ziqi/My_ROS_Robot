@@ -1,0 +1,8 @@
+/**
+\mainpage
+\htmlinclude manifest.html
+
+\b World Canvas Framework Annotations Data Editor.
+   Auxiliary tool for the World Canvas Editor: allows creating a ROS message with the associated
+   data for one or more annotations. Code has been adapted from rqt_publisher plugin.
+*/

@@ -1,0 +1,47 @@
+-  
+  name: table1
+  frame_id: map
+  radius: 0.483
+  height: 0.25
+  pose:
+      position:
+          x: 3.067
+          y: 1.107
+          z: 0
+      orientation:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+
+-
+  name: table2
+  frame_id: map
+  radius: 0.547
+  height: 1.5
+  pose:
+    position:
+      x: 1.292
+      y: 2.328
+      z: 0
+    orientation:
+      x: 0
+      y: 0
+      z: 0
+      w: 1
+
+-
+  name: tower
+  frame_id: map
+  radius: 0.2
+  height: 2.5
+  pose:
+    position:
+      x: 4.837
+      y: 0.563
+      z: 0
+    orientation:
+      x: 0
+      y: 0
+      z: 1
+      w: 0

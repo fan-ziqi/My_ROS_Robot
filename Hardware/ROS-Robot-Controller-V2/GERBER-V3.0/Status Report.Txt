@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [ROS-Robot-Controller.PrjPcb]
+   Generated File[ROS-Robot-Controller-RoundHoles.TXT]
+   Generated File[ROS-Robot-Controller-SlotHoles.TXT]
+   Generated File[ROS-Robot-Controller.LDP]
+   Generated File[ROS-Robot-Controller.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 15:19:22 On 2021/11/1

@@ -1,0 +1,43 @@
+<launch>
+	<arg name="resolution" default="480p"/>
+	<!-- 启动底盘及激光雷达驱动包 -->
+	<include file="$(find driver)/launch/bringup.launch" />
+
+        <!-- 启动USB摄像头驱动包 -->
+        <include file="$(find driver)/launch/camera.launch">
+		<arg name="resolution" value="$(arg resolution)"/>
+	</include>
+
+	<!-- 启动Map server功能包，发布地图 -->
+	<arg name="map_file" default="$(find nav)/maps/test.yaml"/>
+	<node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+	
+	<arg name="initial_pose_x" default="0.0"/>
+	<arg name="initial_pose_y" default="0.0"/>
+	<arg name="initial_pose_a" default="0.0"/>
+	
+	<!-- 启动AMCL 自适应蒙特卡洛定位算法包 -->
+	<include file="$(find nav)/launch/include/amcl_omni.launch">
+		<arg name="initial_pose_x" value="$(arg initial_pose_x)"/>
+		<arg name="initial_pose_y" value="$(arg initial_pose_y)"/>
+		<arg name="initial_pose_a" value="$(arg initial_pose_a)"/>
+	</include>
+
+	<!-- 启动路径规划算法包 -->
+	<include file="$(find nav)/launch/include/teb_move_base_omni.launch"/>
+
+	<include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+	<node name="robot_pose_publisher" pkg="robot_pose_publisher" type="robot_pose_publisher"/>
+	<arg name="debug" default="false"/>
+	<node pkg="world_canvas_server" type="world_canvas_server" name="world_canvas_server" args="$(arg debug)">
+		<param name="start_map_manager" value="true"/>
+		<param name="auto_save_map" value="false"/>
+	</node>
+	<node pkg="world_canvas_server" type="map_manager.py" name="map_manager"/>
+        <node name="showMark" pkg="nav" type="show_mark.py" output="screen"/>
+        <node name="multiGoal" pkg="nav" type="multiGoalListen.py" output="screen"/>
+        <node name="cancelGoal" pkg="nav" type="cancelGoalListen.py" output="screen"/>
+
+	
+
+</launch>

@@ -1,0 +1,9 @@
+- git: {local-name: kobuki, uri: 'https://github.com/yujinrobot/kobuki.git', version: indigo}
+- git: {local-name: kobuki_desktop, uri: 'https://github.com/yujinrobot/kobuki_desktop.git', version: indigo}
+- git: {local-name: stdr_simulator, uri: 'https://github.com/stdr-simulator-ros-pkg/stdr_simulator', version: hydro-devel}
+- git: {local-name: turtlebot, uri: 'https://github.com/turtlebot/turtlebot.git', version: indigo}
+- git: {local-name: turtlebot_create, uri: 'http://github.com/turtlebot/turtlebot_create.git', version: indigo}
+- git: {local-name: turtlebot_apps, uri: 'http://github.com/turtlebot/turtlebot_apps.git', version: indigo}
+- git: {local-name: turtlebot_msgs, uri: 'http://github.com/turtlebot/turtlebot_msgs.git', version: indigo}
+- git: {local-name: turtlebot_simulator, uri: 'http://github.com/turtlebot/turtlebot_simulator.git', version: indigo}
+- git: {local-name: turtlebot_create_desktop, uri: 'https://github.com/turtlebot/turtlebot_create_desktop.git', version: indigo}

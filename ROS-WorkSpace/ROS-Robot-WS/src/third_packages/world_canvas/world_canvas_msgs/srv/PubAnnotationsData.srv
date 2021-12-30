@@ -1,0 +1,16 @@
+# Request server to publish annotations' data for a list of annotation identifiers
+# If pub_as_list is true, annotations will be packed in a list before publishing,
+# so topic_type must be an array of the requested annotations. However, if is false,
+# topic_type is just ignored and the published topic type is obtained from one of
+# the annotations in the list
+# NOTE: in both cases, all annotations must be of the same type
+
+uuid_msgs/UniqueID[] annotation_ids
+string topic_name
+string topic_type
+bool pub_as_list
+
+---
+# What went wrong, if anything
+bool result
+string message

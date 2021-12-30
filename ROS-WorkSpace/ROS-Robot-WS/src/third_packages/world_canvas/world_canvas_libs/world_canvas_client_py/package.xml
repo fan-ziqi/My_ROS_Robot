@@ -1,0 +1,28 @@
+<package>
+  <name>world_canvas_client_py</name>
+  <version>0.1.0</version>
+  <description>
+    Python client library to access semantic maps within the world canvas framework.
+  </description>
+
+  <author email="jsantossimon@gmail.com">Jorge Santos</author>
+  <maintainer email="jsantossimon@gmail.com">Jorge Santos</maintainer>
+  <license>BSD</license>
+  <url type="website">http://ros.org/wiki/world_canvas_client_py</url>
+  <url type="repository">https://github.com/corot/world_canvas_libs</url>
+  <url type="bugtracker">https://github.com/corot/world_canvas_libs/issues</url>
+    
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <build_depend>rospy</build_depend>
+  <build_depend>roslib</build_depend>
+  <build_depend>python-pymongo</build_depend>
+  <build_depend>visualization_msgs</build_depend>
+  <build_depend>world_canvas_msgs</build_depend>
+
+  <run_depend>rospy</run_depend>
+  <run_depend>roslib</run_depend>
+  <run_depend>python-pymongo</run_depend>
+  <run_depend>visualization_msgs</run_depend>
+  <run_depend>world_canvas_msgs</run_depend>
+</package>

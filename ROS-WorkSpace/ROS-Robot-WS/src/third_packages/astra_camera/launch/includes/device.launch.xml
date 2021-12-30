@@ -1,0 +1,55 @@
+<!-- Launch the OpenNI2 device driver -->
+<launch>
+
+  <!-- Name of nodelet manager, must be fully resolved -->
+  <arg name="manager" />
+
+  <!-- Driver parameters -->
+  <arg name="device_id" />
+  <arg name="bootorder" />
+  <arg name="devnums" />
+  <arg name="rgb_frame_id" />
+  <arg name="depth_frame_id" />
+  <arg name="rgb_camera_info_url" />
+  <arg name="depth_camera_info_url" />
+
+  <arg name="depth_registration" default="true" />
+  <arg name="color_depth_synchronization" default="false" />
+  <arg name="auto_exposure" default="true" />
+  <arg name="auto_white_balance" default="true" />
+
+  <arg name="respawn" default="false" />
+
+  <!-- Remapping arguments -->
+  <arg name="rgb"              default="rgb" />
+  <arg name="ir"               default="ir" />
+  <arg name="depth"            default="depth" />
+  <arg name="depth_registered" default="depth_registered" />
+
+  <!-- Driver nodelet -->
+  <node pkg="nodelet" type="nodelet" name="driver"
+        args="load astra_camera/AstraDriverNodelet $(arg manager)"
+	    respawn="$(arg respawn)">
+    <param name="device_id" type="str" value="$(arg device_id)" />
+    <param name="bootorder" type="int" value="$(arg bootorder)" />
+    <param name="devnums" type="int" value="$(arg devnums)" />
+    <param name="rgb_camera_info_url"   value="$(arg rgb_camera_info_url)" />
+    <param name="depth_camera_info_url" value="$(arg depth_camera_info_url)" />
+    <param name="rgb_frame_id"   value="$(arg rgb_frame_id)" />
+    <param name="depth_frame_id" value="$(arg depth_frame_id)" />
+
+    <param name="depth_registration" value="$(arg depth_registration)" />
+    <param name="color_depth_synchronization" value="$(arg color_depth_synchronization)" />
+    <param name="auto_exposure" value="$(arg auto_exposure)" />
+    <param name="auto_white_balance" value="$(arg auto_white_balance)" />
+
+    <remap from="ir" to="$(arg ir)" />
+    <remap from="rgb" to="$(arg rgb)" />
+    <remap from="depth" to="$(arg depth)" />
+    <remap from="depth_registered" to="$(arg depth_registered)" />
+
+    <remap from="$(arg rgb)/image" to="$(arg rgb)/image_raw" />
+    <remap from="$(arg depth)/image" to="$(arg depth_registered)/image_raw" />
+  </node>
+
+</launch>

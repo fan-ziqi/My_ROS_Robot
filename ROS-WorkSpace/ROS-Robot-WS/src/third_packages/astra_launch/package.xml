@@ -1,0 +1,19 @@
+<package>
+  <name>astra_launch</name>
+  <version>0.2.2</version>
+  <description>Drivers for Orbbec Astra Devices. </description>
+  <author email="liuhua@orbbec.com">Tim Liu</author>
+  <license>BSD</license>
+
+  <maintainer email="cjwu@orbbec3d.com">Sayter99</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>rgbd_launch</run_depend>
+  <run_depend>depth_image_proc</run_depend>
+  <run_depend>image_proc</run_depend>
+  <run_depend>nodelet</run_depend>
+  <run_depend>astra_camera</run_depend>
+  <run_depend>tf</run_depend>
+
+</package>

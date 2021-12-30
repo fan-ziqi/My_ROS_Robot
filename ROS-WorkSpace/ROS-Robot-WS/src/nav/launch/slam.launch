@@ -1,0 +1,11 @@
+<launch>
+	<!-- 设置SLAM算法 -->
+	<arg name="slam_methods" default="gmapping" doc="slam type [gmapping,karto,hector,frontier,cartographer]"/>
+	<arg name="resolution" default="480p" doc="Camera Resolution 480p 720p 1080p"/>
+
+	<!-- 启动选中的SLAM算法 -->	
+	<include file="$(find nav)/launch/mapping_$(arg slam_methods).launch">
+		<arg name="resolution" value="$(arg resolution)"/>
+	</include>
+
+</launch>

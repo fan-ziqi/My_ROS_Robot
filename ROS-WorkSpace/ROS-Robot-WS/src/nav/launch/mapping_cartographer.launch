@@ -1,0 +1,21 @@
+<launch>
+  <param name="/use_sim_time" value="false" />
+  <arg name="resolution" default="480p"/>
+	
+  <include file="$(find driver)/launch/bringup.launch"/>
+  <include file="$(find driver)/launch/camera.launch">
+	<arg name="resolution" value="$(arg resolution)"/>
+  </include>
+
+  <node name="cartographer_node" pkg="cartographer_ros"
+      type="cartographer_node" args="
+          -configuration_directory $(find cartographer_ros)/configuration_files
+          -configuration_basename robot.lua"
+      output="screen">
+    <remap from="scan" to="/scan" />
+  </node>
+
+  <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
+      type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
+
+</launch>

@@ -1,0 +1,21 @@
+# Request an auxiliary editor to add/modify/delete the data for the given annotation. The annotation
+# itself is passed just for information, to show extra information to the user or assist data edition,
+# but will not be changed.
+#  - On request, action involves whether the editor must show the given data or create it from scratch
+#  - On response, action provides the user choice concerning what to do with old and new annotation data
+
+uint8 NEW=0
+uint8 EDIT=1
+
+uint8 action
+
+Annotation annotation
+AnnotationData data
+---
+uint8 UPDATE=10
+uint8 DELETE=12
+uint8 CANCEL=13
+
+uint8 action
+
+AnnotationData data 

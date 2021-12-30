@@ -1,0 +1,11 @@
+<launch>
+	<!-- 设置SLAM算法 -->
+	<arg name="slam_methods" default="gmapping" doc="slam type [gmapping,karto,hector,frontier]"/>
+	<arg name="base_type" default="omni" doc="base type [omni,diff,ackman]"/>
+
+	<!-- 启动选中的SLAM算法 -->	
+	<include file="$(find nav_depthcamera)/launch/mapping_$(arg slam_methods).launch">
+		<arg name="base_type" value="$(arg base_type)"/>
+	</include>
+
+</launch>

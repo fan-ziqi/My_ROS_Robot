@@ -1,0 +1,16 @@
+# Various combinations of these filter criteria trigger various results
+# The only one mandatory is world_name; empty arrays are ignored
+string world
+uuid_msgs/UniqueID[] ids  # Retrieved annotation uuid is within this list
+string[] names            # Retrieved annotation name is within this list
+string[] types            # Retrieved annotation type is within this list
+string[] keywords         # Retrieved annotation has at least one of these keywords
+uuid_msgs/UniqueID[] relationships # Retrieve annotations related to those on this list
+
+----
+
+# What went wrong, if anything
+bool result
+string message
+
+Annotation[] annotations

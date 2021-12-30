@@ -1,0 +1,60 @@
+-  
+  name: landmark0  # Yaw pi
+  frame_id: map
+  id: 0
+  confidence: 100
+  pose:
+    position:
+      x: 2.2
+      y: 1.0
+      z: 0.3
+    orientation:
+      x: 0.5
+      y: -0.5
+      z: -0.5
+      w: 0.5
+-
+  name: landmark1  # Yaw pi/2
+  frame_id: map
+  id: 1
+  confidence: 100
+  pose:
+    position:
+      x: 0.58
+      y: -0.12
+      z: 0.3
+    orientation:
+      x: 0.0
+      y: 0.71
+      z: 0.71
+      w: 0.0
+-
+  name: landmark2  # Yaw -pi/2
+  frame_id: map
+  id: 2
+  confidence: 100
+  pose:
+    position:
+      x: 1.58
+      y: 3.12
+      z: 0.3
+    orientation:
+      x: 0.71
+      y: 0.0
+      z: 0.0
+      w: 0.71
+-
+  name: landmark3  # Yaw 0
+  frame_id: map
+  id: 3
+  confidence: 100
+  pose:
+    position:
+      x: 6.58
+      y: 3.12
+      z: 0.3
+    orientation:
+      x: 0.5
+      y: 0.5
+      z: 0.5
+      w: 0.5

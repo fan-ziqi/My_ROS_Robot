@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot
+  name="mecx1">
+  <link
+    name="base_footprint">
+    <visual>
+      <origin
+        xyz="0.0 -0.024 -0.2"
+        rpy="0 0 -1.57" />
+      <geometry>
+        <mesh
+		filename="package://urdf/meshes/MECX1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+</robot>

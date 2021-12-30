@@ -1,0 +1,67 @@
+-  
+  name: wall0
+  frame_id: map
+  length: 3.0
+  width:  0.000001
+  height: 0.5
+  pose:
+      position:
+          x: 3.067
+          y: 2.107
+          z: 0
+      orientation:
+          x: 0
+          y: 0
+          z: -0.382683432365090
+          w: 0.923879532511287
+  
+-  
+  name: wall1
+  frame_id: map
+  length: 3.0
+  width:  0.000001
+  height: 1.0
+  pose:
+      position:
+          x: 3.067
+          y: 2.107
+          z: 0
+      orientation:
+          x: 0
+          y: 1
+          z: 0
+          w: 0
+
+-
+  name: wall2
+  frame_id: map
+  length: 5.0
+  width:  0.000001
+  height: 2.0
+  pose:
+      position:
+          x: 6.067
+          y: 3.107
+          z: 0
+      orientation:
+          x: 0
+          y: 0
+          z: 0.382683432365090
+          w: 0.923879532511287
+   
+-
+  name: wall3
+  frame_id: map
+  length: 2.0
+  width:  0.000001
+  height: 1.0
+  pose:
+      position:
+          x: 8.067
+          y: 4.107
+          z: 0
+      orientation:
+          x: 0
+          y: 0
+          z: 0.707106781186548
+          w: 0.707106781186548

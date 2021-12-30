@@ -1,0 +1,18 @@
+<launch>
+
+  <!-- have all the old parameters to prevent roslaunch errors -->
+  <arg name="manager" default="" />
+  <arg name="debug" default="" />
+
+  <!-- deprecation notice -->
+  <node name="manager_deprecated"
+        pkg="rgbd_launch"
+        type="hydro-upgrade-notice"
+        required="true">
+    <param name="name" value="manager.launch" />
+    <param name="from_pkg" value="openni2_launch" />
+    <param name="to_pkg" value="rgbd_launch" />
+    <param name="from_pkg_path" value="launch/includes/manager.launch" />
+    <param name="to_pkg_path" value="launch/includes/manager.launch.xml" />
+  </node>
+</launch>

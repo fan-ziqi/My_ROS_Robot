@@ -1,0 +1,4 @@
+# Service used to delete a given map
+
+string map_id
+---

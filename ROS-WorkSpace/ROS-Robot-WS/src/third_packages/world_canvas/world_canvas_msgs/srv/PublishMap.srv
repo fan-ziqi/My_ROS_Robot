@@ -1,0 +1,4 @@
+# Service used to publish a given map from the database to the /map topic.
+
+string map_id
+---

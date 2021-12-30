@@ -1,0 +1,8 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/Users/fanziqi/ros2_fish_learning/install/topic_interfaces/lib/python3.8/site-packages",
+        "/Users/fanziqi/ros2_fish_learning/install/service_interfaces/lib/python3.8/site-packages",
+        "/Users/fanziqi/ros2_learning_ws/install/py_pubsub/lib/python3.8/site-packages",
+        "/Users/fanziqi/ros2_foxy/ros2-osx/lib/python3.8/site-packages"
+    ]
+}

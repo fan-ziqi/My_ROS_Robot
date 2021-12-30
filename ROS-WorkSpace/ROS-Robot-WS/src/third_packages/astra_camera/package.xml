@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package>
+  <name>astra_camera</name>
+  <version>0.3.0</version>
+  <description>Drivers for Orbbec Astra Devices. </description>
+  <author email="liuhua@orbbec.com">Tim Liu</author>
+  <license>Apache License 2.0</license>
+
+  <maintainer email="cjwu@orbbec3d.com">Sayter99</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>camera_info_manager</build_depend>
+  <build_depend>git</build_depend>
+  <build_depend>libudev-dev</build_depend>
+  <build_depend>libusb-1.0-dev</build_depend>
+  <build_depend>nodelet</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>dynamic_reconfigure</build_depend>
+  <build_depend>image_transport</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>libuvc</build_depend>
+
+  <run_depend>camera_info_manager</run_depend>
+  <run_depend>nodelet</run_depend>
+  <run_depend>dynamic_reconfigure</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>image_transport</run_depend>
+  <run_depend>message_runtime</run_depend>
+  <run_depend>rgbd_launch</run_depend>
+
+  <export>
+    <nodelet plugin="${prefix}/astra_nodelets.xml"/>
+  </export>
+</package>

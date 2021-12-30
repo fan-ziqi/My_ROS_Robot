@@ -1,0 +1,14 @@
+<launch>
+    <param name="use_sim_time" value="false"/>
+
+    <!-- 启动driver驱动包 -->
+    <node name="driver" pkg="driver" type="driver" output="screen" respawn="true">
+        <rosparam file="$(find driver)/config/params.yaml" command="load"/>
+	<param name="publish_odom_transform" value="true"/>
+	<param name="odom_frame"             value="/odom"/>
+    </node>
+
+    <!-- 启动角速度校准节点 -->
+    <node name="calibrate_angular" pkg="driver" type="calibrate_angular.py" output="screen"/>
+    <node pkg="tf" type="static_transform_publisher" name="base_footprint_to_imu" args="-0.05 0 0.05 -1.57 0 0 base_footprint base_imu_link 100"/>
+</launch>

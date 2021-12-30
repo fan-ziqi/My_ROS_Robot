@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+  <name>world_canvas_msgs</name>
+  <version>0.1.0</version>
+  <description>World canvas framework messages package</description>
+
+  <author email="jsantossimon@gmail.com">Jorge Santos</author>
+  <maintainer email="jsantossimon@gmail.com">Jorge Santos</maintainer>
+  <license>BSD</license>
+  <url type="website">http://ros.org/wiki/world_canvas_msgs</url>
+  <url type="repository">https://github.com/corot/world_canvas_msgs</url>
+  <url type="bugtracker">https://github.com/corot/world_canvas_msgs/issues</url>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>std_msgs</build_depend>
+  <build_depend>uuid_msgs</build_depend>
+  <build_depend>std_srvs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>message_generation</build_depend>
+
+  <run_depend>std_msgs</run_depend>
+  <run_depend>uuid_msgs</run_depend>
+  <run_depend>std_srvs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>message_runtime</run_depend>
+</package>

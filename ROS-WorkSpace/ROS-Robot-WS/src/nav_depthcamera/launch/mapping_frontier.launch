@@ -1,0 +1,25 @@
+<launch>
+
+	<arg name="base_type" default="omni"/>
+        <include file="$(find nav_depthcamera)/launch/Driver/bringup_depthcamera.launch" />
+
+	<include file="$(find nav_depthcamera)/launch/include/$(arg base_type)/gmapping_base.launch" />
+	
+	<include file="$(find nav_depthcamera)/launch/include/$(arg base_type)/teb_move_base.launch"/>
+		
+	<include file="$(find exploration_server)/launch/exploration.launch"/>
+
+        <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+
+        <node name="robot_pose_publisher" pkg="robot_pose_publisher" type="robot_pose_publisher"/>
+
+
+        <arg name="debug" default="false"/>
+        <node pkg="world_canvas_server" type="world_canvas_server" name="world_canvas_server" args="$(arg debug)">
+                <param name="start_map_manager" value="true"/>
+                <param name="auto_save_map" value="false"/>
+        </node>
+        <node pkg="world_canvas_server" type="map_manager.py" name="map_manager" />
+
+</launch>
+

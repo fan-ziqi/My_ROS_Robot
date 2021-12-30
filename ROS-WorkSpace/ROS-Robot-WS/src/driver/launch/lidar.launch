@@ -1,0 +1,32 @@
+<launch>
+	<arg name="lidar_type" value="$(env LIDAR_TYPE)"/>
+
+	<!-- 启动激光雷达驱动包  -->
+	<group if="$(eval arg('lidar_type') == 'A2M8')">
+		<include file="$(find rplidar_ros)/launch/rplidar.launch" />
+		<node pkg="tf" type="static_transform_publisher" name="base_foot_print_to_laser" args="0.1 0 0.1 3.1415926 0 0 base_footprint laser 20"/>
+	</group>
+
+	<!-- <group if="$(eval arg('lidar_type') == 'XAS')">
+		<include file="$(find rplidar_ros)/launch/rplidar_filtered.launch"/>
+		<node pkg="tf" type="static_transform_publisher" name="base_foot_print_to_laser" args="0.1 0 0.1 3.1415926 0 0 base_footprint laser 20"/>
+	</group>
+
+	<group if="$(eval arg('lidar_type') == 'XT1')">
+		<include file="$(find sc_mini)/launch/start.launch"/>
+		<node pkg="tf" type="static_transform_publisher" name="base_foot_print_to_laser" args="0.1 0 0.1 -1.57 0 0 base_footprint laser 20"/>
+	</group>
+
+	<group if="$(eval arg('lidar_type') == 'YT1')">
+		<include file="$(find sc_mini)/launch/start.launch"/>
+		<node pkg="tf" type="static_transform_publisher" name="base_foot_print_to_laser" args="0.0 0 0.1 3.1415926 0 0 base_footprint laser 20"/>
+	</group> -->
+
+	<node pkg="laser_filters" type="scan_to_scan_filter_chain" output="log" name="laser_filter">
+		<rosparam command="load" file="$(find driver)/config/laserfilter.yaml"/>
+        <remap from="/scan" to="/scan_raw"/>
+        <remap from="/scan_filtered" to="/scan"/>
+	</node>
+
+ 
+</launch>

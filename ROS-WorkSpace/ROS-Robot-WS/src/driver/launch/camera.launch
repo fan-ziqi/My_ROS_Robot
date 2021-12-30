@@ -1,0 +1,31 @@
+<launch>
+    <arg name="device" default="/dev/video0" />
+    <arg name="resolution" default="480p"/>
+    
+
+    <group if="$(eval arg('resolution') == '480p')">
+	<!-- <include file="$(find uvc_camera)/launch/camera_driver.launch"> -->
+	<include file="$(find driver)/launch/camera_driver.launch">
+    		<arg name="pixel_width" value="640"/>
+    		<arg name="pixel_height" value="480"/>
+	</include>	
+    </group>
+    <group if="$(eval arg('resolution') == '720p')">
+	<!-- <include file="$(find uvc_camera)/launch/camera_driver.launch"> -->
+	<include file="$(find driver)/launch/camera_driver.launch">
+    		<arg name="pixel_width" value="1280"/>
+    		<arg name="pixel_height" value="720"/>
+	</include>	
+    </group>
+    <group if="$(eval arg('resolution') == '1080p')">
+	<!-- <include file="$(find uvc_camera)/launch/camera_driver.launch"> -->
+	<include file="$(find driver)/launch/camera_driver.launch">
+    		<arg name="pixel_width" value="1920"/>
+    		<arg name="pixel_height" value="1080"/>
+	</include>	
+    </group>
+
+    <node name="republish" type="republish" pkg="image_transport" output="screen" args="compressed in:=/image_raw out:=/usb_cam/image_raw"/>
+    <node name="web_video_server" pkg="web_video_server" type="web_video_server" output="screen"/>
+</launch>
+

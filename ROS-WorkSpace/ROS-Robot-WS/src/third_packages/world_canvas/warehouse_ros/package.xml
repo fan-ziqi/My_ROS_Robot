@@ -1,0 +1,33 @@
+<package>
+  <name>warehouse_ros</name>
+  <version>0.9.2</version>
+  <description>
+    Persistent storage of ROS messages
+  </description>
+  <author email="bhaskara@willowgarage.com">Bhaskara Marthi</author>
+  <author email="cbrew@fetchrobotics.com">Connor Brew</author>
+  <maintainer email="isucan@google.com">Ioan Sucan</maintainer>
+
+  <license>BSD</license>
+  <url>http://ros.org/wiki/warehouse_ros</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>rostime</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend version_gte="1.11.2">pluginlib</build_depend>
+  <build_depend>tf</build_depend>
+
+  <run_depend>boost</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>rostime</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend version_gte="1.11.2">pluginlib</run_depend>
+  <run_depend>tf</run_depend>
+  
+  <test_depend>gtest</test_depend>
+  <test_depend>rostest</test_depend>
+</package>

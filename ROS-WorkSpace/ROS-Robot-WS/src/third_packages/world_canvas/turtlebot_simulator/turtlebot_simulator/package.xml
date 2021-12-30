@@ -1,0 +1,20 @@
+<package>
+  <name>turtlebot_simulator</name>
+  <version>2.2.3</version>
+  <description>Catkin metapackage for the turtlebot_simulator stack</description>
+  <maintainer email="turtlebot@osrfoundation.com">OSRF</maintainer>
+  <license>BSD</license>
+  <url type="website">http://ros.org/wiki/turtlebot_simulator</url>
+  <url type="repository">https://github.com/turtlebot/turtlebot_simulator</url>
+  <url type="bugtracker">https://github.com/turtlebot/turtlebot_simulator/issues</url>
+  <author email="turtlebot@willowgarage.com">Willow</author>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>turtlebot_gazebo</run_depend>
+  <run_depend>turtlebot_stage</run_depend>
+  <run_depend>turtlebot_stdr</run_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+</package>

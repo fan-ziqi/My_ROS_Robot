@@ -1,0 +1,8 @@
+<launch>
+  <!-- 启动USB摄像头驱动包 -->
+  <include file="$(find driver)/launch/bringup.launch"/>
+  <include file="$(find driver)/launch/camera.launch"/>
+
+  <node name="self_check" pkg="driver" type="self_check.py" output="screen" required="true"/>
+
+</launch>

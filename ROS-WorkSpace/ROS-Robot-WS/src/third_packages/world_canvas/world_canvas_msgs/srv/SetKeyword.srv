@@ -1,0 +1,11 @@
+# Add/remove a specific keyword to the specified annotation
+uint8 ADD = 1
+uint8 DEL = 2
+
+uuid_msgs/UniqueID id
+string keyword
+uint8 action
+---
+# What went wrong, if anything
+bool result
+string message

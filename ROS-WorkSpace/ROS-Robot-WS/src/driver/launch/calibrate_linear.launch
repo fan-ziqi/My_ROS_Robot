@@ -1,0 +1,10 @@
+<launch>
+    <param name="use_sim_time" value="false"/>
+    <node name="driver" pkg="driver" type="driver" output="screen" respawn="true">
+        <rosparam file="$(find driver)/config/params.yaml" command="load"/>
+	    <param name="publish_odom_transform" value="true"/>
+	    <param name="odom_frame"             value="/odom"/>
+    </node>
+    <node name="calibrate_linear" pkg="driver" type="calibrate_linear.py" output="screen"/>
+    <node pkg="tf" type="static_transform_publisher" name="base_footprint_to_imu" args="-0.05 0 0.05 -1.57 0 0 base_footprint base_imu_link 100"/>
+</launch>

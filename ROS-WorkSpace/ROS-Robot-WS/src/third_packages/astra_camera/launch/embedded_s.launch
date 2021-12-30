@@ -1,0 +1,131 @@
+<launch>
+  <arg name="camera" default="camera" />
+  <arg name="rgb_frame_id"   default="$(arg camera)_rgb_optical_frame" />
+  <arg name="depth_frame_id" default="$(arg camera)_depth_optical_frame" />
+
+  <!-- device_id can have the following formats:
+         "#n"            : the nth device found, starts from 1
+         "2@n"           : the nth device on USB bus 2, n starts from 1
+         "2bc5/0401@1/6" : uri in format <vendor ID>/<product ID>@<bus number>/<device number>
+         "15120410023"   : serial number -->
+  <arg name="device_id" default="#1" />
+  <arg name="bootorder" default="0" />
+  <arg name="devnums" default="1" />
+
+  <!-- By default, calibrations are stored to file://${ROS_HOME}/camera_info/${NAME}.yaml,
+       where ${NAME} is of the form "[rgb|depth]_[serial#]", e.g. "depth_B00367707227042B".
+       See camera_info_manager docs for calibration URL details. -->
+  <arg name="rgb_camera_info_url"   default="" />
+  <arg name="depth_camera_info_url" default="" />
+
+  <!-- Hardware depth registration -->
+  <arg name="depth_registration" default="true" />
+
+  <!-- Driver parameters -->
+  <arg name="color_depth_synchronization"     default="false" />
+  <arg name="auto_exposure"                   default="true" />
+  <arg name="auto_white_balance"              default="true" />
+
+  <!-- Arguments for remapping all device namespaces -->
+  <arg name="rgb"              default="rgb" />
+  <arg name="ir"               default="ir" />
+  <arg name="depth"            default="depth" />
+
+  <!-- Optionally suppress loading the driver nodelet and/or publishing the default tf
+       tree. Useful if you are playing back recorded raw data from a bag, or are
+       supplying a more accurate tf tree from calibration. -->
+  <arg name="load_driver" default="true" />
+  <arg name="publish_tf" default="true" />
+  <!-- Processing Modules -->
+  <arg name="rgb_processing"                  default="true"  />
+  <arg name="debayer_processing"              default="false" />
+  <arg name="ir_processing"                   default="false" />
+  <arg name="depth_processing"                default="true" />
+  <arg name="depth_registered_processing"     default="true" />
+  <arg name="disparity_processing"            default="false" />
+  <arg name="disparity_registered_processing" default="false" />
+  <arg name="hw_registered_processing"        default="true" if="$(arg depth_registration)" />
+  <arg name="sw_registered_processing"        default="false" if="$(arg depth_registration)" />
+  <arg name="hw_registered_processing"        default="false" unless="$(arg depth_registration)" />
+  <arg name="sw_registered_processing"        default="true" unless="$(arg depth_registration)" />
+
+  <!-- Disable bond topics by default -->
+  <arg name="respawn" default="false" />
+
+  <arg name="index" default="0" />
+
+  <!-- Worker threads for the nodelet manager -->
+  <arg name="num_worker_threads" default="4" />
+  <group ns="$(arg camera)">
+    <node pkg="astra_camera" type="camera_node" name="stereo_s">
+      <!-- Parameters used to find the camera -->
+      <param name="vendor" value="0x2bc5"/>
+      <param name="product" value="0x050b"/>
+      <param name="serial" value="0"/>
+      <!-- If the above parameters aren't unique, choose the first match: -->
+      <param name="index" value="$(arg index)"/>
+
+      <!-- Image size and type -->
+      <param name="width" value="640"/>
+      <param name="height" value="480"/>
+      <!-- choose whichever uncompressed format the camera supports: -->
+      <param name="video_mode" value="mjpeg"/> <!-- or yuyv/nv12/jpeg -->
+      <param name="frame_rate" value="30"/>
+
+      <param name="timestamp_method" value="start"/> <!-- start of frame -->
+      <param name="camera_info_url" value=""/>
+
+      <!-- <param name="auto_exposure" value="3"/> --> <!-- use aperture_priority auto exposure -->
+      <!-- <param name="auto_white_balance" value="false"/> -->
+      <remap from="/$(arg camera)/image_raw" to="/$(arg camera)/rgb/image_raw" />
+    </node>
+    <arg name="manager" value="$(arg camera)_nodelet_manager" />
+	  <arg name="debug" default="false" /> <!-- Run manager in GDB? -->
+	  <include file="$(find rgbd_launch)/launch/includes/manager.launch.xml">
+	    <arg name="name" value="$(arg manager)" />
+	    <arg name="debug" value="$(arg debug)" />
+	    <arg name="num_worker_threads"  value="$(arg num_worker_threads)" />
+	  </include>
+    <include if="$(arg load_driver)"
+	     file="$(find astra_camera)/launch/includes/device.launch.xml">
+      <arg name="manager"                         value="$(arg manager)" />
+      <arg name="device_id"                       value="$(arg device_id)" />
+      <arg name="bootorder"                       value="$(arg bootorder)" />
+      <arg name="devnums"                         value="$(arg devnums)" />
+      <arg name="rgb_frame_id"                    value="$(arg rgb_frame_id)" />
+      <arg name="depth_frame_id"                  value="$(arg depth_frame_id)" />
+      <arg name="rgb_camera_info_url"             value="$(arg rgb_camera_info_url)" />
+      <arg name="depth_camera_info_url"           value="$(arg depth_camera_info_url)" />
+      <arg name="rgb"                             value="$(arg rgb)" />
+      <arg name="ir"                              value="$(arg ir)" />
+      <arg name="depth"                           value="$(arg depth)" />
+      <arg name="respawn"                         value="$(arg respawn)" />
+      <arg name="depth_registration"              value="$(arg depth_registration)" />
+      <arg name="color_depth_synchronization"     value="$(arg color_depth_synchronization)" />
+      <arg name="auto_exposure"                   value="$(arg auto_exposure)" />
+      <arg name="auto_white_balance"              value="$(arg auto_white_balance)" />
+    </include>
+
+    <!-- Load standard constellation of processing nodelets -->
+    <include file="$(find rgbd_launch)/launch/includes/processing.launch.xml">
+      <arg name="manager"                         value="$(arg manager)" />
+      <arg name="rgb"                             value="$(arg rgb)" />
+      <arg name="ir"                              value="$(arg ir)" />
+      <arg name="depth"                           value="$(arg depth)" />
+      <arg name="respawn"                         value="$(arg respawn)" />
+      <arg name="rgb_processing"                  value="$(arg rgb_processing)" />
+      <arg name="debayer_processing"              value="$(arg debayer_processing)" />
+      <arg name="ir_processing"                   value="$(arg ir_processing)" />
+      <arg name="depth_processing"                value="$(arg depth_processing)" />
+      <arg name="depth_registered_processing"     value="$(arg depth_registered_processing)" />
+      <arg name="disparity_processing"            value="$(arg disparity_processing)" />
+      <arg name="disparity_registered_processing" value="$(arg disparity_registered_processing)" />
+      <arg name="hw_registered_processing"        value="$(arg hw_registered_processing)" />
+      <arg name="sw_registered_processing"        value="$(arg sw_registered_processing)" />
+    </include>
+  </group>
+  <include if="$(arg publish_tf)"
+	   file="$(find astra_camera)/launch/includes/astra_frames.launch">
+    <arg name="camera" value="$(arg camera)" />
+  </include>
+</launch>

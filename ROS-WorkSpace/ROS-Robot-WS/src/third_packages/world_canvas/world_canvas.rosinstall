@@ -1,0 +1,15 @@
+# WKF (World Canvas Framework)
+- git: {local-name: world_canvas, uri: 'https://github.com/corot/world_canvas.git',
+    version: master}
+- git: {local-name: world_canvas_libs, uri: 'https://github.com/corot/world_canvas_libs.git',
+    version: master}
+- git: {local-name: world_canvas_msgs, uri: 'https://github.com/corot/world_canvas_msgs.git',
+    version: master}
+- git: {local-name: world_canvas_tools, uri: 'https://github.com/corot/world_canvas_tools.git',
+    version: master}
+
+# Testing playground 
+- git: {local-name: turtlebot_simulator, uri: 'https://github.com/turtlebot/turtlebot_simulator.git ',
+    version: experimental}
+- git: {local-name: yocs_msgs, uri: 'https://github.com/yujinrobot/yocs_msgs.git',
+    version: indigo-devel}

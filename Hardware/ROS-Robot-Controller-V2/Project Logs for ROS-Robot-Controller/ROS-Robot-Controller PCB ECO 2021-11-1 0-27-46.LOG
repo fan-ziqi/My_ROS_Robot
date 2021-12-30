@@ -1,0 +1,114 @@
+Removed Pin From Net: NetName=GND Pin=D1-1
+Removed Pin From Net: NetName=VCC5V Pin=E1-1
+Removed Pin From Net: NetName=GND Pin=E1-2
+Removed Pin From Net: NetName=VCC12V Pin=E2-1
+Removed Pin From Net: NetName=GND Pin=E2-2
+Removed Pin From Net: NetName=VCC5V Pin=L1-2
+Removed Pin From Net: NetName=VCC12V Pin=LM1-1
+Removed Pin From Net: NetName=GND Pin=LM1-3
+Removed Pin From Net: NetName=VCC5V Pin=LM1-4
+Removed Pin From Net: NetName=GND Pin=LM1-5
+Removed Pin From Net: NetName=GND Pin=LM1-6
+Removed Member From Class: ClassName=ROS-Robot-Controller Member=D1
+Removed Member From Class: ClassName=ROS-Robot-Controller Member=E1
+Removed Member From Class: ClassName=ROS-Robot-Controller Member=E2
+Removed Member From Class: ClassName=ROS-Robot-Controller Member=LM1
+Change Component Footprint: Designator=C1 Old Footprint=C0402_L New Footprint=C0603_L
+Change Component Footprint: Designator=C2 Old Footprint=C0402_L New Footprint=C0603_L
+Change Component Footprint: Designator=C3 Old Footprint=C0402_L New Footprint=C0603_L
+Change Component Footprint: Designator=C4 Old Footprint=C0402_L New Footprint=C0603_L
+Change Component Footprint: Designator=L1 Old Footprint=CDRH74 New Footprint=L-SMD-0630
+Change Component Comment : Designator=L1 Old Comment=33uH New Comment=4.7uH
+Change component parameters: Designator = "L1" ("L1"); Footprint = "CDRH74"; UniqueID = "\YEKGEHDI" ("\YEKGEHDI")
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "一体成型电感"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "封装库来自淘宝卖家ID：黄晶宝石"; Value = "其他店铺购入均为盗版假冒封装库，请立即申请退款"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "联系卖家，免费查找封装"; Value = "唯一出售店铺网址https://shop463601444.taobao.com"; VariantName = "[No Variations]"
+Added Component: Designator=C27(C0805_L)
+Add component (AddParameter): Name = "BOM名称"; Value = "无极性贴片电容"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "封装库来自淘宝卖家ID：黄晶宝石"; Value = "其他店铺购入均为盗版假冒封装库，请立即申请退款"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "联系卖家，免费查找封装"; Value = "唯一出售店铺网址https://shop463601444.taobao.com"; VariantName = "[No Variations]"
+Added Component: Designator=C28(C1206_L)
+Add component (AddParameter): Name = "BOM名称"; Value = "无极性贴片电容"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "封装库来自淘宝卖家ID：黄晶宝石"; Value = "其他店铺购入均为盗版假冒封装库，请立即申请退款"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "联系卖家，免费查找封装"; Value = "唯一出售店铺网址https://shop463601444.taobao.com"; VariantName = "[No Variations]"
+Added Component: Designator=C29(C1206_L)
+Add component (AddParameter): Name = "BOM名称"; Value = "无极性贴片电容"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "封装库来自淘宝卖家ID：黄晶宝石"; Value = "其他店铺购入均为盗版假冒封装库，请立即申请退款"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "联系卖家，免费查找封装"; Value = "唯一出售店铺网址https://shop463601444.taobao.com"; VariantName = "[No Variations]"
+Added Component: Designator=C30(C0805_L)
+Add component (AddParameter): Name = "BOM名称"; Value = "无极性贴片电容"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "封装库来自淘宝卖家ID：黄晶宝石"; Value = "其他店铺购入均为盗版假冒封装库，请立即申请退款"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "联系卖家，免费查找封装"; Value = "唯一出售店铺网址https://shop463601444.taobao.com"; VariantName = "[No Variations]"
+Added Component: Designator=C31(C0805_L)
+Add component (AddParameter): Name = "BOM名称"; Value = "无极性贴片电容"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "封装库来自淘宝卖家ID：黄晶宝石"; Value = "其他店铺购入均为盗版假冒封装库，请立即申请退款"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "联系卖家，免费查找封装"; Value = "唯一出售店铺网址https://shop463601444.taobao.com"; VariantName = "[No Variations]"
+Added Component: Designator=C32(C0805_L)
+Add component (AddParameter): Name = "BOM名称"; Value = "无极性贴片电容"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "封装库来自淘宝卖家ID：黄晶宝石"; Value = "其他店铺购入均为盗版假冒封装库，请立即申请退款"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "联系卖家，免费查找封装"; Value = "唯一出售店铺网址https://shop463601444.taobao.com"; VariantName = "[No Variations]"
+Added Component: Designator=C33(C0805_L)
+Add component (AddParameter): Name = "BOM名称"; Value = "无极性贴片电容"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "封装库来自淘宝卖家ID：黄晶宝石"; Value = "其他店铺购入均为盗版假冒封装库，请立即申请退款"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "联系卖家，免费查找封装"; Value = "唯一出售店铺网址https://shop463601444.taobao.com"; VariantName = "[No Variations]"
+Added Component: Designator=MP1(SOT23-8N)
+Add component (AddParameter): Name = "封装库来自淘宝卖家 ID：黄晶宝石"; Value = "其他店铺购入均为盗版，请立即申请退款，本店现金奖励5~20元"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "联系卖家 免费查找封装"; Value = "唯一出售店铺网址https://shop463601444.taobao.com"; VariantName = "[No Variations]"
+Added Component: Designator=R20(R0603_L)
+Add component (AddParameter): Name = "BOM名称"; Value = "贴片电阻"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "封装库来自淘宝卖家ID：黄晶宝石"; Value = "其他店铺购入均为盗版假冒封装库，请立即申请退款"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "联系卖家，免费查找封装"; Value = "唯一出售店铺网址https://shop463601444.taobao.com"; VariantName = "[No Variations]"
+Added Component: Designator=R21(R0603_L)
+Add component (AddParameter): Name = "BOM名称"; Value = "贴片电阻"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "封装库来自淘宝卖家ID：黄晶宝石"; Value = "其他店铺购入均为盗版假冒封装库，请立即申请退款"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "联系卖家，免费查找封装"; Value = "唯一出售店铺网址https://shop463601444.taobao.com"; VariantName = "[No Variations]"
+Added Component: Designator=R22(R0603_L)
+Add component (AddParameter): Name = "BOM名称"; Value = "贴片电阻"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "封装库来自淘宝卖家ID：黄晶宝石"; Value = "其他店铺购入均为盗版假冒封装库，请立即申请退款"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "联系卖家，免费查找封装"; Value = "唯一出售店铺网址https://shop463601444.taobao.com"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C28-1
+Added Pin To Net: NetName=VCC12V Pin=C28-2
+Added Pin To Net: NetName=GND Pin=C29-1
+Added Pin To Net: NetName=VCC12V Pin=C29-2
+Added Pin To Net: NetName=GND Pin=C30-1
+Added Pin To Net: NetName=GND Pin=C31-1
+Added Pin To Net: NetName=VCC5V Pin=C31-2
+Added Pin To Net: NetName=GND Pin=C32-1
+Added Pin To Net: NetName=VCC5V Pin=C32-2
+Added Pin To Net: NetName=VCC5V Pin=L1-1
+Added Pin To Net: NetName=GND Pin=MP1-1
+Added Pin To Net: NetName=VCC12V Pin=MP1-2
+Added Pin To Net: NetName=GND Pin=MP1-4
+Added Pin To Net: NetName=GND Pin=R21-2
+Added Pin To Net: NetName=VCC12V Pin=R22-2
+Added Pin To Net: NetName=NetC27_1 Pin=C27-1
+Added Pin To Net: NetName=NetC27_1 Pin=MP1-8
+Added Pin To Net: NetName=NetC27_1 Pin=R20-2
+Added Pin To Net: NetName=NetC27_1 Pin=R21-1
+Added Net: Name=NetC27_1
+Added Pin To Net: NetName=NetC27_2 Pin=C27-2
+Added Pin To Net: NetName=NetC27_2 Pin=C33-1
+Added Pin To Net: NetName=NetC27_2 Pin=L1-2
+Added Pin To Net: NetName=NetC27_2 Pin=MP1-3
+Added Pin To Net: NetName=NetC27_2 Pin=R20-1
+Added Net: Name=NetC27_2
+Added Pin To Net: NetName=NetC30_2 Pin=C30-2
+Added Pin To Net: NetName=NetC30_2 Pin=MP1-7
+Added Net: Name=NetC30_2
+Added Pin To Net: NetName=NetC33_2 Pin=C33-2
+Added Pin To Net: NetName=NetC33_2 Pin=MP1-5
+Added Net: Name=NetC33_2
+Added Pin To Net: NetName=NetMP1_6 Pin=MP1-6
+Added Pin To Net: NetName=NetMP1_6 Pin=R22-1
+Added Net: Name=NetMP1_6
+Added Member To Class: ClassName=ROS-Robot-Controller Member=Component C27 33pf
+Added Member To Class: ClassName=ROS-Robot-Controller Member=Component C28 22uf
+Added Member To Class: ClassName=ROS-Robot-Controller Member=Component C29 0.1uf
+Added Member To Class: ClassName=ROS-Robot-Controller Member=Component C30 0.1uf
+Added Member To Class: ClassName=ROS-Robot-Controller Member=Component C31 22uf
+Added Member To Class: ClassName=ROS-Robot-Controller Member=Component C32 22uf
+Added Member To Class: ClassName=ROS-Robot-Controller Member=Component C33 0.1uf
+Added Member To Class: ClassName=ROS-Robot-Controller Member=Component MP1 MP2315GJ
+Added Member To Class: ClassName=ROS-Robot-Controller Member=Component R20 40.2K
+Added Member To Class: ClassName=ROS-Robot-Controller Member=Component R21 5.49K
+Added Member To Class: ClassName=ROS-Robot-Controller Member=Component R22 100K

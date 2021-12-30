@@ -1,0 +1,9 @@
+# Utility service kept to make debug and testing easier:
+#   saves together annotations and its data assuming a 1-1 relationship.
+
+Annotation[] annotations
+AnnotationData[] data 
+---
+# What went wrong, if anything
+bool result
+string message

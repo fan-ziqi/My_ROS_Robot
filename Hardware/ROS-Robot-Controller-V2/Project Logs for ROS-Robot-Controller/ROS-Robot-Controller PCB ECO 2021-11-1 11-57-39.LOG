@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=NetC27_2 Pin=C27-2
+Removed Pin From Net: NetName=NetC27_2 Pin=R20-1
+Added Pin To Net: NetName=VCC5V Pin=C27-2
+Added Pin To Net: NetName=VCC5V Pin=R20-1
+Change Net Name : Old Net Name=NetC27_2 New Net Name=NetC33_1

@@ -1,0 +1,16 @@
+/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/serial_test/serial_test
+/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/ament_index/resource_index/package_run_dependencies/serial_test
+/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/ament_index/resource_index/parent_prefix_path/serial_test
+/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/serial_test/environment/ament_prefix_path.sh
+/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/serial_test/environment/ament_prefix_path.dsv
+/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/serial_test/environment/path.sh
+/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/serial_test/environment/path.dsv
+/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/serial_test/local_setup.bash
+/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/serial_test/local_setup.sh
+/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/serial_test/local_setup.zsh
+/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/serial_test/local_setup.dsv
+/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/serial_test/package.dsv
+/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/ament_index/resource_index/packages/serial_test
+/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/serial_test/cmake/serial_testConfig.cmake
+/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/serial_test/cmake/serial_testConfig-version.cmake
+/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/serial_test/package.xml

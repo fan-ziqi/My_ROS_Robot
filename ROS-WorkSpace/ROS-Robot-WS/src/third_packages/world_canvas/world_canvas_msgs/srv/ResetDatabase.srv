@@ -1,0 +1,4 @@
+---
+# What went wrong, if anything
+bool result
+string message

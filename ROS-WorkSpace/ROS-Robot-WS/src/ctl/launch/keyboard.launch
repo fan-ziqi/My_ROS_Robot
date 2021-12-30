@@ -1,0 +1,7 @@
+<launch>
+    <param name="use_sim_time" value="false"/>
+
+    <!-- 启动键盘遥控节点 -->
+    <node name="twist_keyboard" pkg="ctl" type="twist_keyboard.py" output="screen" respawn="false"/>
+
+</launch>

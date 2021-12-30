@@ -1,0 +1,4 @@
+<launch> 
+  <test test-name="test_mongo_roscpp" pkg="warehouse_ros" type="test_mongo_roscpp" name="test_mongo_roscpp" />
+  <test test-name="test_mongo_rospy" pkg="warehouse_ros" type="test_mongo_rospy.py" name="test_mongo_rospy" />
+</launch>

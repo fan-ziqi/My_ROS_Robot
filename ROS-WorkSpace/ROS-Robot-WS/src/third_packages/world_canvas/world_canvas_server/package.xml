@@ -1,0 +1,25 @@
+<package>
+  <name>world_canvas_server</name>
+  <version>0.1.0</version>
+  <description>
+    Storage manager and server for WCF semantic maps.
+  </description>
+
+  <author email="jsantossimon@gmail.com">Jorge Santos Simón</author>
+  <maintainer email="jsantossimon@gmail.com">Jorge Santos Simón</maintainer>
+  <license>BSD</license>
+  <url type="website">http://ros.org/wiki/world_canvas_server</url>
+  <url type="repository">https://github.com/corot/world_canvas</url>
+  <url type="bugtracker">https://github.com/corot/world_canvas/issues</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>rospy</run_depend>
+  <run_depend>rostest</run_depend>
+  <run_depend>nav_msgs</run_depend>
+  <run_depend>python-pymongo</run_depend>
+  <run_depend>warehouse_ros</run_depend>
+  <run_depend>world_canvas_utils</run_depend>
+  <run_depend>world_canvas_msgs</run_depend>
+  <run_depend>visualization_msgs</run_depend>
+</package>

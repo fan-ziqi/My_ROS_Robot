@@ -1,0 +1,72 @@
+Protel Design System Design Rule Check
+PCB File : E:\我的文件\科研\A项目库\ROS\My_ROS_Robot\Hardware\ROS-Robot-Controller-V3\ROS-Robot-Controller.PcbDoc
+Date     : 2021/12/7
+Time     : 20:25:20
+
+Processing Rule : Clearance Constraint (Gap=5mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=10mil) (Max=50mil) (Preferred=50mil) (InNetClass('VCC12V'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=7mil) (Max=10mil) (Preferred=7mil) (InNetClass('BuXian'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=10mil) (Max=60mil) (Preferred=60mil) (InNet('GND'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=40mil) (Max=40mil) (Preferred=40mil) (InNetClass('MOTOR'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=30mil) (Max=60mil) (Preferred=30mil) (InNetClass('VCC5V'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=30mil) (Max=60mil) (Preferred=30mil) (InNetClass('VCC3V3'))
+Rule Violations :0
+
+Processing Rule : SMD Neck-Down Constraint (Percent=10000%) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=8mil) (Max=235mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=2mil) (Disabled)(All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0mil) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=1000mil) (InDifferentialPair ('USB'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=1000mil) (InDifferentialPair ('CP2102'))
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+
+Violations Detected : 0
+Waived Violations : 0
+Time Elapsed        : 00:00:02

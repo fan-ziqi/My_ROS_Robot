@@ -1,0 +1,11 @@
+# Add/remove a specific relationship to the specified annotation
+uint8 ADD = 1
+uint8 DEL = 2
+
+uuid_msgs/UniqueID id
+uuid_msgs/UniqueID relationship
+uint8 action
+---
+# What went wrong, if anything
+bool result
+string message

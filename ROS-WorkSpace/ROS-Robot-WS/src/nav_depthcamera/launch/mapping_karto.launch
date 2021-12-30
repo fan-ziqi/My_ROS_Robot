@@ -1,0 +1,27 @@
+<launch>
+	<arg name="base_type" default="omni"/>
+        <include file="$(find nav_depthcamera)/launch/Driver/bringup_depthcamera.launch" />
+
+
+	<node pkg="slam_karto" type="slam_karto" name="slam_karto" output="screen">
+		<param name="odom_frame" value="odom"/>
+		<param name="map_update_interval" value="25"/>
+		<param name="resolution" value="0.025"/>
+		<param name="base_frame" value="base_footprint"/>
+	</node>	
+
+
+    <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+
+        <node name="robot_pose_publisher" pkg="robot_pose_publisher" type="robot_pose_publisher"/>
+
+
+        <arg name="debug" default="false"/>
+        <node pkg="world_canvas_server" type="world_canvas_server" name="world_canvas_server" args="$(arg debug)">
+                <param name="start_map_manager" value="true"/>
+                <param name="auto_save_map" value="false"/>
+        </node>
+        <node pkg="world_canvas_server" type="map_manager.py" name="map_manager" />
+ 
+
+</launch>

@@ -1,0 +1,36 @@
+-  
+  name: wall1
+  frame_id: map
+  p1:
+    x: 3.0
+    y: 3.0
+    z: 0.0
+  p2:
+    x: 5.0
+    y: 5.0
+    z: 1.0
+  
+-
+  name: wall2
+  frame_id: map
+  p1:
+    x: 1.0
+    y: 2.0
+    z: 0.0
+  p2:
+    x: 2.0
+    y: 2.0
+    z: 1.0
+
+-
+  name: wall3
+  frame_id: map
+  p1:
+    x: 5.0
+    y: 3.0
+    z: 0.0
+  p2:
+    x: 4.0
+    y: 8.0
+    z: 1.0
+

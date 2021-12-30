@@ -1,0 +1,27 @@
+<launch>
+	<arg name="resolution" default="480p"/>
+	<!-- 启动底盘及激光雷达等驱动包 -->
+        <include file="$(find driver)/launch/driver.launch" />
+        <include file="$(find driver)/launch/lidar.launch" />
+
+        <!-- 启动USB摄像头驱动包 -->
+        <include file="$(find driver)/launch/camera.launch">
+		<arg name="resolution" value="$(arg resolution)"/>
+	</include>
+        
+
+	<!-- 启动hector建图算法包 -->
+        <include file="$(find hector_mapping)/launch/mapping.launch"/>
+
+	<!-- 启动APP相关接口服务 -->
+        <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+        <node name="robot_pose_publisher" pkg="robot_pose_publisher" type="robot_pose_publisher"/>
+        <arg name="debug" default="false"/>
+        <node pkg="world_canvas_server" type="world_canvas_server" name="world_canvas_server" args="$(arg debug)">
+                <param name="start_map_manager" value="true"/>
+                <param name="auto_save_map" value="false"/>
+        </node>
+        <node pkg="world_canvas_server" type="map_manager.py" name="map_manager" />
+ 
+
+</launch>

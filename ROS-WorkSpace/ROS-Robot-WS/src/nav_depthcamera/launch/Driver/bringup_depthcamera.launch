@@ -1,0 +1,37 @@
+<launch>
+    <param name="use_sim_time" value="false"/>
+    <node name="driver" pkg="driver" type="driver" output="screen" respawn="true">
+        <rosparam file="$(find driver)/config/params.yaml" command="load"/>
+    	<remap from="/odom" to="/odom_raw"/>
+	<param name="odom_frame" value="odom_raw"/>
+	<param name="publish_odom_transform" value="False"/>
+	<param name="lidar_offset_yaw" value="0.0"/>
+    </node>
+   <node pkg="robot_pose_ekf" type="robot_pose_ekf" name="robot_pose_ekf" output="screen">
+	<param name="output_frame" value="odom"/>
+	<param name="base_footprint_frame" value="base_footprint"/>
+	<param name="freq" value="30.0"/>
+	<param name="sensor_timeout" value="1.0"/>
+	<param name="odom_used" value="true"/>
+	<param name="imu_used"  value="true"/>
+	<param name="vo_used"   value="false"/>
+	
+	<remap from="odom" to="/odom_raw"/>
+	<remap from="/imu_data" to="/imu"/>
+	<remap from="/robot_pose_ekf/odom_combined" to="/odom_combined"/>
+   </node>
+   <node pkg="driver" type="odom_ekf.py" name="odom_ekf_node" output="screen">
+	<remap from="input" to="/odom_combined"/>
+	<remap from="output" to="/odom"/>
+   </node>
+
+   <!-- Bring up Astra  -->
+   <include file="$(find nav_depthcamera)/launch/Driver/depthcamera.launch" />
+   <include file="$(find depthimage_to_laserscan)/launch/depthimage_to_laserscan.launch"/>
+
+
+   <node pkg="tf" type="static_transform_publisher" name="base_foot_print_to_laser" args="0.02 0 0.195 3.1415926 0 0 base_footprint laser 40"/>
+   <node pkg="tf" type="static_transform_publisher" name="base_footprint_to_imu" args="-0.035 0 0.95 1.57 0 0  base_footprint base_imu_link 100"/>
+   <node pkg="tf" type="static_transform_publisher" name="base_footprint_to_camera" args="0.095 0 0.165 0 0 0 base_footprint camera_link 100"/>
+
+</launch>

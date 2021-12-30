@@ -1,0 +1,23 @@
+<!-- Load processing nodelets for the depth camera -->
+<launch>
+
+  <!-- have all the old parameters to prevent roslaunch errors -->
+  <arg name="manager" default="" />
+  <arg name="points_xyz" default="" />
+  <arg name="rectify" default="" />
+  <arg name="respawn" default="" />
+  <arg name="depth" default="" />
+
+  <!-- deprecation notice -->
+  <node name="depth_deprecated"
+        pkg="rgbd_launch"
+        type="hydro-upgrade-notice"
+        required="true">
+    <param name="name" value="depth.launch" />
+    <param name="from_pkg" value="openni2_launch" />
+    <param name="to_pkg" value="rgbd_launch" />
+    <param name="from_pkg_path" value="launch/includes/depth.launch" />
+    <param name="to_pkg_path" value="launch/includes/depth.launch.xml" />
+  </node>
+
+</launch>

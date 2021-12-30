@@ -1,0 +1,17 @@
+<launch>
+  <node name="mongo" type="mongo_wrapper_ros.py" pkg="warehouse_ros" output="log">
+    <param name="database_location" value="warehouse_data"/>
+    <param name="overwrite" value="false"/>
+  </node>
+
+  <node pkg="annotations_store" type="annotations_saver" name="annotations_saver" output="screen"/>
+  <node pkg="annotations_store" type="annotations_manager" name="annotations_manager" output="screen">
+     <!-- so that the test system can distinguish effectively -->
+     <remap from="dynamic_map" to="test_dynamic_map"/>
+     <remap from="map" to="test_map"/>
+  </node> 
+
+  <test test-name="test_annotations_store" pkg="annotations_store" type="test_annotations_store.py" />
+
+</launch>
+

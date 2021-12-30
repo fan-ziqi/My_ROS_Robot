@@ -1,0 +1,26 @@
+<launch>
+  <arg name="map_file" />
+  <arg name="map_name" />
+<!--
+  <param name="warehouse_host" value="localhost"/>
+  <param name="warehouse_port" value="27018"/>  27017 is default, use a private one to avoid error 48 conflicts -->
+<!--   <node  pkg="warehouse_ros" type="mongo_wrapper_ros.py" name="mongo">
+    <param name="database_path" value="warehouse_data"/>
+    <param name="overwrite" value="false"/>
+  </node>
+ -->
+  <!-- <node pkg="annotations_store" type="annotations_saver" name="annotations_saver" /> -->
+  <node pkg="annotations_store" type="annotations_manager" name="annotations_manager" output="screen">
+     <!-- unused topics -->
+     <!-- <remap from="dynamic_map" to="annotations_store_dynamic_map"/>
+     <remap from="map" to="annotations_store_map"/> -->
+  </node> 
+
+<!--   <node name="map_server" pkg="map_server" type="map_server" args="'$(arg map_file)'">
+     Remaps to load the map file
+     <remap from="/static_map" to="/dynamic_map" />
+     <remap from="/map" to="/map_unused" />
+  </node>
+ -->
+  <!-- <node pkg="annotations_store" type="add_map.py" name="add_map" args="'$(arg map_name)'" required="true" /> -->
+</launch>

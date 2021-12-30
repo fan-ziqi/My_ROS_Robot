@@ -1,0 +1,17 @@
+<library path="lib/libastra_camera_nodelet">
+
+  <class name="astra_camera/AstraDriverNodelet" type="astra_camera::AstraDriverNodelet" base_class_type="nodelet::Nodelet">
+    <description>
+      Astra camera driver nodelet.
+    </description>
+  </class>
+
+  <class name="astra_camera/driver"
+         type="astra_camera::CameraNodelet"
+         base_class_type="nodelet::Nodelet">
+    <description> 
+      UVC camera driver nodelet.
+    </description>
+  </class>
+
+</library>

@@ -1,0 +1,10 @@
+# Request annotations' data for a list of annotation identifiers
+
+uuid_msgs/UniqueID[] annotation_ids
+
+---
+# What went wrong, if anything
+bool result
+string message
+
+AnnotationData[] data 

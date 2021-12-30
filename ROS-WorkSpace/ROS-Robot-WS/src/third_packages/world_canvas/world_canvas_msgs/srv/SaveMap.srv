@@ -1,0 +1,4 @@
+# Service used to name the most recent saved map.
+
+string map_name
+---

@@ -1,0 +1,19 @@
+<launch>
+	<arg name="base_type" default="omni"/>
+	<include file="$(find nav_depthcamera)/launch/Driver/bringup_depthcamera.launch" />
+
+
+	<arg name="map_file" default="$(find nav_depthcamera)/maps/test.yaml"/>
+	<node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+	
+	<arg name="initial_pose_x" default="0.0"/>
+	<arg name="initial_pose_y" default="0.0"/>
+	<arg name="initial_pose_a" default="0.0"/>
+	<include file="$(find nav_depthcamera)/launch/include/$(arg base_type)/amcl_base.launch">
+		<arg name="initial_pose_x" value="$(arg initial_pose_x)"/>
+		<arg name="initial_pose_y" value="$(arg initial_pose_y)"/>
+		<arg name="initial_pose_a" value="$(arg initial_pose_a)"/>
+	</include>
+	<include file="$(find nav_depthcamera)/launch/include/$(arg base_type)/teb_move_base.launch"/>
+	
+</launch>

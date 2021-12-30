@@ -1,0 +1,13 @@
+<launch>
+  <node pkg="move_base" type="move_base" respawn="true" name="move_base" output="screen" clear_params="true">
+    <rosparam file="$(find nav_depthcamera)/config/omni/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find nav_depthcamera)/config/omni/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find nav_depthcamera)/config/omni/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find nav_depthcamera)/config/omni/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find nav_depthcamera)/config/omni/base_global_planner_param.yaml" command="load" />
+
+    <rosparam file="$(find nav_depthcamera)/config/omni/teb_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find nav_depthcamera)/config/omni/move_base_params.yaml" command="load" />
+  </node>
+  
+</launch>

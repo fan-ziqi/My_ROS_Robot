@@ -1,0 +1,5 @@
+# Get a list of all the worlds in database.
+# TODO: following this issue (https://github.com/corot/world_canvas/issues/20) we may
+# enhance this service returning a list of WorldCanvas objects or something similar
+---
+string[] names

@@ -1,0 +1,14 @@
+<library path="src">
+  <class name="MsgEditor" type="rqt_annotation_data.msg_editor.MsgEditor" base_class_type="rqt_gui_py::Plugin">
+    <description>
+     World Canvas Framework Annotations Data Editor.
+     Auxiliary tool for the World Canvas Editor: allows creating a ROS message with the associated
+     data for one or more annotations. Code has been adapted from rqt_publisher plugin.
+    </description>
+    <qtgui>
+      <label>Edit Annotation Data</label>
+      <icon type="theme">applications-system</icon>
+      <statustip>A Python GUI plugin for creating annotation's data.</statustip>
+    </qtgui>
+  </class>
+</library>
