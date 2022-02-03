@@ -1,0 +1,17 @@
+[0.010s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test -- -j4 -l4
+[0.052s] [35m[1mScanning dependencies of target serial_test[0m
+[0.077s] [ 66%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_test.cpp.o[0m
+[0.078s] [ 66%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_linux.cpp.o[0m
+[1.670s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:[m[K In function ‘[01m[Kvoid write_to_serial()[m[K’:
+[1.670s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:17:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kserial_port_[m[K’ was not declared in this scope
+[1.670s]      boost::asio::write(*[01;31m[Kserial_port_[m[K.get(), boost::asio::buffer("Hello world", 12));
+[1.670s]                          [01;31m[K^~~~~~~~~~~~[m[K
+[1.673s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:17:25:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kin_port_t[m[K’
+[1.674s]      boost::asio::write(*[01;36m[Kserial_port_[m[K.get(), boost::asio::buffer("Hello world", 12));
+[1.674s]                          [01;36m[K^~~~~~~~~~~~[m[K
+[1.674s]                          [32m[Kin_port_t[m[K
+[2.142s] make[2]: *** [CMakeFiles/serial_test.dir/build.make:76: CMakeFiles/serial_test.dir/src/serial_linux.cpp.o] Error 1
+[2.142s] make[2]: *** Waiting for unfinished jobs....
+[2.717s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2
+[2.718s] make: *** [Makefile:141: all] Error 2
+[2.722s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test -- -j4 -l4

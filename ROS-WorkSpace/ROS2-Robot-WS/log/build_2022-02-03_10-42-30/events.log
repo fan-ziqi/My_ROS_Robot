@@ -1,0 +1,8 @@
+[0.000000] (-) TimerEvent: {}
+[0.000368] (-) JobUnselected: {'identifier': 'robot'}
+[0.000461] (-) JobUnselected: {'identifier': 'robot_sim'}
+[0.000506] (-) JobUnselected: {'identifier': 'robot_sim_2'}
+[0.000542] (-) JobUnselected: {'identifier': 'rplidar_ros2'}
+[0.000579] (-) JobUnselected: {'identifier': 'serial_test'}
+[0.000615] (-) JobUnselected: {'identifier': 'teleop_twist_keyboard'}
+[0.000650] (-) EventReactorShutdown: {}

@@ -1,0 +1,22 @@
+[1.615s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/teleop_twist_keyboard': PYTHONPATH=/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install --editable --build-directory /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/teleop_twist_keyboard/build --no-deps install_data --install-dir /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install
+[1.903s] running develop
+[2.082s] running egg_info
+[2.082s] creating teleop_twist_keyboard.egg-info
+[2.082s] writing teleop_twist_keyboard.egg-info/PKG-INFO
+[2.083s] writing dependency_links to teleop_twist_keyboard.egg-info/dependency_links.txt
+[2.083s] writing entry points to teleop_twist_keyboard.egg-info/entry_points.txt
+[2.083s] writing requirements to teleop_twist_keyboard.egg-info/requires.txt
+[2.083s] writing top-level names to teleop_twist_keyboard.egg-info/top_level.txt
+[2.088s] writing manifest file 'teleop_twist_keyboard.egg-info/SOURCES.txt'
+[2.125s] reading manifest file 'teleop_twist_keyboard.egg-info/SOURCES.txt'
+[2.126s] writing manifest file 'teleop_twist_keyboard.egg-info/SOURCES.txt'
+[2.167s] running build_ext
+[2.168s] Creating /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/python3.8/site-packages/site.py
+[2.171s] Creating /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/python3.8/site-packages/teleop-twist-keyboard.egg-link (link to .)
+[2.172s] Installing teleop_twist_keyboard script to /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/teleop_twist_keyboard
+[2.172s] 
+[2.172s] Installed /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/teleop_twist_keyboard
+[2.173s] running install_data
+[2.173s] copying resource/teleop_twist_keyboard -> /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/ament_index/resource_index/packages
+[2.173s] copying package.xml -> /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/teleop_twist_keyboard
+[2.211s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/teleop_twist_keyboard' returned '0': PYTHONPATH=/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install --editable --build-directory /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/teleop_twist_keyboard/build --no-deps install_data --install-dir /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install

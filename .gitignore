@@ -26,3 +26,5 @@ Examples/
 !*.axf
 !*.bin
 !*.hex
+*.vc.db
+.vscode/

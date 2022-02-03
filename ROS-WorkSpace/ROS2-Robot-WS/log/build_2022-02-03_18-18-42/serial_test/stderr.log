@@ -1,0 +1,5 @@
+/usr/bin/ld: CMakeFiles/serial_test.dir/src/serial_linux.cpp.o:(.bss+0x0): multiple definition of `serial_port_'; CMakeFiles/serial_test.dir/src/serial_test.cpp.o:(.bss+0x0): first defined here
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/serial_test.dir/build.make:149: serial_test] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,31 @@
+[35m[1mScanning dependencies of target serial_test[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_test.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_linux.cpp.o[0m
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:5:8:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[KSerial::Serial()[m[K’
+ Serial [01;31m[Kserial[m[K;
+        [01;31m[K^~~~~~[m[K
+In file included from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:2[m[K:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:14:7:[m[K [01;36m[Knote: [m[K‘[01m[KSerial::Serial()[m[K’ is implicitly deleted because the default definition would be ill-formed:
+ class [01;36m[KSerial[m[K : public rclcpp::Node
+       [01;36m[K^~~~~~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:14:7:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Node::Node()[m[K’
+In file included from [01m[K/opt/ros/galactic/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:1[m[K:
+[01m[K/opt/ros/galactic/include/rclcpp/node.hpp:1302:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Node::Node(const rclcpp::Node&, const string&)[m[K’
+   [01;36m[KNode[m[K(
+   [01;36m[K^~~~[m[K
+[01m[K/opt/ros/galactic/include/rclcpp/node.hpp:1302:3:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[01m[K/opt/ros/galactic/include/rclcpp/node.hpp:101:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Node::Node(const string&, const string&, const rclcpp::NodeOptions&)[m[K’
+   explicit [01;36m[KNode[m[K(
+            [01;36m[K^~~~[m[K
+[01m[K/opt/ros/galactic/include/rclcpp/node.hpp:101:12:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 0 provided
+[01m[K/opt/ros/galactic/include/rclcpp/node.hpp:89:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Node::Node(const string&, const rclcpp::NodeOptions&)[m[K’
+   explicit [01;36m[KNode[m[K(
+            [01;36m[K^~~~[m[K
+[01m[K/opt/ros/galactic/include/rclcpp/node.hpp:89:12:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+make[2]: *** [CMakeFiles/serial_test.dir/build.make:63: CMakeFiles/serial_test.dir/src/serial_test.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

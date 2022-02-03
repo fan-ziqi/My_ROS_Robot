@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: teleop-twist-keyboard
+Version: 2.3.2
+Summary: A robot-agnostic teleoperation node to convert keyboardcommands to Twist messages.
+Home-page: UNKNOWN
+Author: Graylin Trevor Jay, Austin Hendrix
+Maintainer: Chris Lalancette
+Maintainer-email: clalancette@openrobotics.org
+License: BSD
+Description: UNKNOWN
+Keywords: ROS
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: BSD
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development

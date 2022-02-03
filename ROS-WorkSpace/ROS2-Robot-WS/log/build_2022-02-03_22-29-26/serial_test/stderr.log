@@ -1,0 +1,32 @@
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:[m[K In member function ‘[01m[Kvoid SerialNode::timer_callback()[m[K’:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:44:56:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KSerial::SerialWrite(short int [4], int, unsigned char&)[m[K’
+         my_serial.SerialWrite(SendTest, 4, SendCodeTest[01;31m[K)[m[K;
+                                                        [01;31m[K^[m[K
+In file included from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:2[m[K:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:23:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid Serial::SerialWrite(double*, unsigned char, unsigned char)[m[K’
+     void [01;36m[KSerialWrite[m[K(double * WriteData, unsigned char MessageLenth, unsigned char MessageCode);
+          [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:23:10:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kshort int [4][m[K’ to ‘[01m[Kdouble*[m[K’
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:49:59:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KSerial::SerialRead(short int [4], unsigned char*)[m[K’
+         my_serial.SerialRead(ReceiveTest, &ReceiveCodeTest[01;31m[K)[m[K;
+                                                           [01;31m[K^[m[K
+In file included from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:2[m[K:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:24:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool Serial::SerialRead(double*, unsigned char*)[m[K’
+     bool [01;36m[KSerialRead[m[K(double * ReceiveData, unsigned char * ReceiveCode);
+          [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:24:10:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kshort int [4][m[K’ to ‘[01m[Kdouble*[m[K’
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:165:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kbool Serial::SerialRead(short int*, unsigned char*)[m[K’
+ bool [01;31m[KSerial[m[K::SerialRead(short * ReceiveData, unsigned char * ReceiveCode)
+      [01;31m[K^~~~~~[m[K
+In file included from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:24:10:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kbool Serial::SerialRead(double*, unsigned char*)[m[K’
+     bool [01;36m[KSerialRead[m[K(double * ReceiveData, unsigned char * ReceiveCode);
+          [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:16:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass Serial[m[K’ defined here
+ class [01;36m[KSerial[m[K
+       [01;36m[K^~~~~~[m[K
+make[2]: *** [CMakeFiles/serial_test.dir/build.make:63: CMakeFiles/serial_test.dir/src/serial_test.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/serial_test.dir/build.make:76: CMakeFiles/serial_test.dir/src/serial_linux.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

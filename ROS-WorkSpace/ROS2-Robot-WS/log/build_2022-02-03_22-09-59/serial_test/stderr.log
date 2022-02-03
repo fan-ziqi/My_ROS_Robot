@@ -1,0 +1,12 @@
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:66:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kspin_once[m[K’ is not a member of ‘[01m[Krclcpp[m[K’
+     rclcpp::[01;31m[Kspin_once[m[K(node);
+             [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:66:13:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kspin_some[m[K’
+     rclcpp::[01;36m[Kspin_once[m[K(node);
+             [01;36m[K^~~~~~~~~[m[K
+             [32m[Kspin_some[m[K
+make[2]: *** [CMakeFiles/serial_test.dir/build.make:63: CMakeFiles/serial_test.dir/src/serial_test.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,4 @@
+source;share/astra_camera/local_setup.bash
+source;share/astra_camera/local_setup.dsv
+source;share/astra_camera/local_setup.sh
+source;share/astra_camera/local_setup.zsh

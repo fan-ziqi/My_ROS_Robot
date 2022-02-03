@@ -10,42 +10,96 @@ union SerialMessageUnion
 	unsigned char data_transmit[2];
 }SendUnion, ReceiveUnion;
 
+Serial::Serial(const std::string &port_name_):serial_port_(NULL)
+{
+    Serial_EC = 0;
+    serial_port_ = new boost::asio::serial_port(io_service_);
+    std::cout << "New Serial_port" << std::endl;
+    if(serial_port_)
+    {
+        SerialInit(port_name_);
+    }
+}
+
+Serial::~Serial()
+{
+    if(serial_port_)
+    {
+        std::cout << "Delete Serial_port" << std::endl;
+        delete serial_port_;
+    }
+}
+
+
+//Define wirte_to_serial to write data to serial
+void Serial::write_to_serial(std::string data)
+{
+    boost::asio::write(*serial_port_, boost::asio::buffer(data), error_code_);//return lenth
+
+    // DEBUG
+    std::cout << "Write: " << data;
+}
+
+void Serial::read_from_serial()
+{
+    boost::asio::streambuf response;
+    boost::asio::read_until(*serial_port_, response, "\r\n", error_code_);
+    unsigned char ReceiveBuf[255] = {0};
+    std::copy(std::istream_iterator<unsigned char>(std::istream(&response) >> std::noskipws), std::istream_iterator<unsigned char>(), ReceiveBuf);
+
+    // DEBUG
+    std::cout << "Read: " << ReceiveBuf;
+}
+
+
+
 // 消息格式: 
 // 消息头1 消息头2 消息长度 消息码 [消息内容] 校验码 消息尾1 消息尾2
 
 // 串口初始化
-void Serial::SerialInit(std::string & port_name_)
+bool Serial::SerialInit(const std::string & port_name_)
 {
-    auto serial_port_ = std::make_shared<boost::asio::serial_port>(io_service_, port_name_);
+    // auto serial_port_ = std::make_shared<boost::asio::serial_port>(io_service_, port_name_);
+
+    // serial_port_ = new boost::asio::serial_port(io_service_);
+
+    // new failed
+	if (!serial_port_)
+    {
+        Serial_EC = 1;
+		return false;
+	}
+
+    serial_port_->open(port_name_, error_code_);
+
+    if(error_code_)
+    {
+        Serial_EC = 2;
+        std::cout << "[Error] serial_port_->open() failed. port_name=" << port_name_ << ", reason: " << error_code_.message().c_str() << std::endl;
+        return false;
+    }
 
     serial_port_->set_option(boost::asio::serial_port::baud_rate(115200));
     serial_port_->set_option(boost::asio::serial_port::flow_control(boost::asio::serial_port::flow_control::none));
     serial_port_->set_option(boost::asio::serial_port::parity(boost::asio::serial_port::parity::none));
     serial_port_->set_option(boost::asio::serial_port::stop_bits(boost::asio::serial_port::stop_bits::one));
     serial_port_->set_option(boost::asio::serial_port::character_size(8));    
-    
+
+    // for(int i=0;i<1000;i++)
+    // {
+    //     write_to_serial("Hello World");
+    //     // boost::asio::write(*serial_port_, boost::asio::buffer("Hello world", 12));
+    // }
+
     SendUnion.data = 0;
     ReceiveUnion.data = 0;
 
-    // serial_port_->open(port_name_,error_code_);
-    // if(error_code_)
-    // {
-    //     std::cout << "error : serial_port_->open() failed...port_name=" << port_name_ << ", e=" << error_code_.message().c_str() << std::endl;
-    // }
-
-
-    test_data[0] = 0x01;
-    test_data[1] = 0x02;
-    test_data[2] = 0x03;
-
-    // boost::asio::write(*serial_port_.get(), boost::asio::buffer(test_data, SendLength), error_code_);
-
-    // double send_init[10] = {0,1,2,3,4,5,6,7,8,9};
-    // SerialWrite(send_init, 2, 0);
+    Serial_EC = 0;
+    return true;
 }
 
 // 串口发送函数
-void Serial::SerialWrite(double * WriteData, unsigned char MessageLenth, unsigned char MessageCode)
+bool Serial::SerialWrite(short * WriteData, unsigned char MessageLenth, unsigned int MessageCode)
 {
     // 计算发送消息长度
     unsigned char SendLength = (unsigned int)(2 * MessageLenth) + 7;
@@ -63,17 +117,12 @@ void Serial::SerialWrite(double * WriteData, unsigned char MessageLenth, unsigne
     SendBuf[2] =  SendLength;
 
     // 消息码 SendBuf[3]
-    SendBuf[3] = MessageCode;
+    SendBuf[3] = (unsigned char)MessageCode;
 
     // 消息内容 SendBuf[4] ~ SendBuf[4 + 2*MessageLenth - 1]
     for(unsigned int i = 0; i < (unsigned int)MessageLenth; i++)
     {
         SendUnion.data = WriteData[i]; //更新消息Union内容
-        // DEBUG BEGIN
-        std::cout << (double)SendUnion.data << "->" 
-                  << std::setfill('0') << std::setw(2) << std::hex << (unsigned int)SendUnion.data_transmit[0] << " " 
-                  << std::setfill('0') << std::setw(2) << std::hex << (unsigned int)SendUnion.data_transmit[1] << std::endl;
-        // DEBUG END
         for(int j = 0; j < 2; j++)
         {
             //送入缓冲区
@@ -88,29 +137,36 @@ void Serial::SerialWrite(double * WriteData, unsigned char MessageLenth, unsigne
     SendBuf[2*MessageLenth + 5] = END[0];
     SendBuf[2*MessageLenth + 6] = END[1];
 
-    SendUnion.data = 0; //消息Union清零
-
     // DEBUG BEGIN
+    std::cout << "Write:(DEC -> HEX) " << std::endl;
+    for(unsigned int i = 0; i < (unsigned int)MessageLenth; i++)
+    {
+        SendUnion.data = WriteData[i]; //更新消息Union内容
+        std::cout << std::dec << SendUnion.data << " -> " 
+                  << std::setfill('0') << std::setw(2) << std::hex << (unsigned int)SendUnion.data_transmit[0] << " " 
+                  << std::setfill('0') << std::setw(2) << std::hex << (unsigned int)SendUnion.data_transmit[1] << "\t";
+    }
+    std::cout << std::endl;
+    std::cout << "Write:(ALL HEX) " << std::endl;
     for(int i = 0; i < SendLength; i++)
     {
         std::cout << std::setfill('0') << std::setw(2) << std::hex << (unsigned int)SendBuf[i] << " ";
     }
     std::cout << std::endl;
-    std::cout << std::dec << (unsigned int)SendLength << std::endl;
+    std::cout << "Write: SendLength: " << std::dec << (unsigned int)SendLength << std::endl;
     // DEBUG END
 
-    //BUG FIND!!!
-    boost::asio::write(*serial_port_.get(), boost::asio::buffer(test_data, 3), error_code_);
-
     // 串口发送消息
-    boost::asio::write(*serial_port_.get(), boost::asio::buffer(SendBuf, (unsigned int)SendLength), error_code_);
+    boost::asio::write(*serial_port_, boost::asio::buffer(SendBuf, (unsigned int)SendLength), error_code_);
 
-    
-    
+    //消息Union清零
+    SendUnion.data = 0; 
+
+    return true;
 }
 
 // 串口接收函数, 成功返回true
-bool Serial::SerialRead(double * ReceiveData, unsigned char * ReceiveCode)
+bool Serial::SerialRead(short * ReceiveData, unsigned int * ReceiveCode)
 {
     // 接收数据缓冲区
     unsigned char ReceiveBuf[255] = {0};
@@ -124,15 +180,20 @@ bool Serial::SerialRead(double * ReceiveData, unsigned char * ReceiveCode)
     try
     {
         boost::asio::streambuf response;
-        boost::asio::read_until(*serial_port_.get(), response, "\r\n", error_code_);
-        std::copy(
-            std::istream_iterator<unsigned char>(std::istream(&response) >> std::noskipws), 
-            std::istream_iterator<unsigned char>(), 
-            ReceiveBuf);
+        boost::asio::read_until(*serial_port_, response, "\r\n", error_code_);
+        std::copy(std::istream_iterator<unsigned char>(std::istream(&response) >> std::noskipws), std::istream_iterator<unsigned char>(), ReceiveBuf);
+        // DEBUG
+        std::cout << "Read:(ALL HEX) " << std::endl;
+        for(int i = 0; i < ReceiveBuf[2]; i++)
+        {
+            std::cout << std::setfill('0') << std::setw(2) << std::hex << (unsigned int)ReceiveBuf[i] << " ";
+        }
+        std::cout << std::endl;
     }
     catch(boost::system::system_error &error_code_)
     {
-        // RCLCPP_INFO(get_logger(), "RECEIVE ERROR: read_until error");
+        std::cout << "RECEIVE ERROR: read_until error" << std::endl;
+        return false;
     }
 
     // 检查消息头
@@ -140,16 +201,20 @@ bool Serial::SerialRead(double * ReceiveData, unsigned char * ReceiveCode)
     {
         if (ReceiveBuf[i] != HEAD[i])
         {
-            // RCLCPP_INFO(this->get_logger(), "RECEIVE ERROR: HEAD%d is : %d , but it should be %d .", i, (int)ReceiveBuf[i], (int)HEAD[i]);
+            std::cout << "RECEIVE ERROR: HEAD" << i <<" is: " << (int)ReceiveBuf[i] << ", but it should be: " << (int)HEAD[i] << std::endl;
             return false;
         }
     }
 
     // 消息长度
     ReceiveLength = ReceiveBuf[2];
+    // debug ReceiveLength
+    // std::cout << "ReceiveLength: " << std::dec << (unsigned int)ReceiveLength << std::endl;
 
     // 消息码传递
-    *ReceiveCode = ReceiveBuf[3];
+    *ReceiveCode = (unsigned int)ReceiveBuf[3];
+    // debug ReceiveCode
+    // std::cout << "ReceiveCode: " << std::setw(2) << std::hex << *ReceiveCode << std::endl;
 
     // 消息内容
     for(int i = 0; i < ReceiveLength; i++)
@@ -163,12 +228,14 @@ bool Serial::SerialRead(double * ReceiveData, unsigned char * ReceiveCode)
     }
 
     // 校验码
-    CrcNum = CalCrc(ReceiveBuf, ReceiveLength + 4); //求得校验码
-    if (CrcNum != ReceiveBuf[ReceiveLength + 4]) //与收到的校验码对比
+    CrcNum = CalCrc(ReceiveBuf, ReceiveLength - 3); //求得校验码
+    if (CrcNum != (unsigned int)ReceiveBuf[ReceiveLength - 3]) //与收到的校验码对比
     {
-        // RCLCPP_INFO(this->get_logger(), "RECEIVE ERROR: CrcNum is : %d , but it should be %d ." , (int)ReceiveBuf[ReceiveLength + 4], (int)CrcNum);
+        std::cout << "RECEIVE ERROR: CrcNum is: " << (unsigned int)ReceiveBuf[ReceiveLength - 3] << " , but it should be: " << (unsigned int)CrcNum << std::endl;
         return false;
     }
+    // debug CrcNum
+    // std::cout << "CrcNum: " << std::setw(2) << std::hex << (unsigned int)ReceiveBuf[ReceiveLength - 3] << std::endl;
 
     //消息Union清零
     ReceiveUnion.data_transmit[0] = 0;

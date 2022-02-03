@@ -1,0 +1,43 @@
+Cloning into 'astra_openni2'...
+Switched to a new branch 'orbbec_ros'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+ThirdParty/PSCommon/BuildSystem/CommonDefs.mak:40: HOST_PLATFORM is x64
+../../BuildSystem/CommonDefs.mak:40: HOST_PLATFORM is x64
+../../ThirdParty/PSCommon/BuildSystem/CommonDefs.mak:40: HOST_PLATFORM is x64
+../../ThirdParty/PSCommon/BuildSystem/CommonDefs.mak:40: HOST_PLATFORM is x64
+../../../ThirdParty/PSCommon/BuildSystem/CommonDefs.mak:40: HOST_PLATFORM is x64
+In file included from [01m[K../../../ThirdParty/PSCommon/XnLib/Include/XnHash.h:26[m[K,
+                 from [01m[K../../../ThirdParty/PSCommon/XnLib/Include/XnStringsHash.h:27[m[K,
+                 from [01m[KSensor/XnDeviceSensorIO.h:34[m[K,
+                 from [01m[KSensor/XnDeviceSensor.h:30[m[K,
+                 from [01m[KSensor/XnFirmwareCommands.h:27[m[K,
+                 from [01m[KSensor/XnSensorFirmware.h:28[m[K,
+                 from [01m[KSensor/XnSensorStreamHelper.h:28[m[K,
+                 from [01m[KSensor/XnSensorStreamHelper.cpp:24[m[K:
+[01m[K../../../ThirdParty/PSCommon/XnLib/Include/XnPair.h:[m[K In member function ‘[01m[KXnStatus XnSensorStreamHelper::MapFirmwareProperty(XnActualIntProperty&, XnActualIntProperty&, XnBool, XnSensorStreamHelper::ConvertCallback)[m[K’:
+[01m[K../../../ThirdParty/PSCommon/XnLib/Include/XnPair.h:32:67:[m[K [01;31m[Kerror: [m[K‘[01m[K*((void*)& cookie +36)[m[K’ may be used uninitialized in this function [[01;31m[K-Werror=maybe-uninitialized[m[K]
+  Pair(const Pair& other) : first(other.first), second(other.second[01;31m[K)[m[K {}
+                                                                   [01;31m[K^[m[K
+[01m[KSensor/XnSensorStreamHelper.cpp:179:29:[m[K [01;36m[Knote: [m[K‘[01m[K*((void*)& cookie +36)[m[K’ was declared here
+  XnSensorStreamHelperCookie [01;36m[Kcookie[m[K(&Property, &FirmwareProperty, bAllowChangeWhileOpen, pStreamToFirmwareFunc);
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K../../../ThirdParty/PSCommon/XnLib/Include/XnHash.h:26[m[K,
+                 from [01m[K../../../ThirdParty/PSCommon/XnLib/Include/XnStringsHash.h:27[m[K,
+                 from [01m[KSensor/XnDeviceSensorIO.h:34[m[K,
+                 from [01m[KSensor/XnDeviceSensor.h:30[m[K,
+                 from [01m[KSensor/XnFirmwareCommands.h:27[m[K,
+                 from [01m[KSensor/XnSensorFirmware.h:28[m[K,
+                 from [01m[KSensor/XnSensorStreamHelper.h:28[m[K,
+                 from [01m[KSensor/XnSensorStreamHelper.cpp:24[m[K:
+[01m[K../../../ThirdParty/PSCommon/XnLib/Include/XnPair.h:32:67:[m[K [01;31m[Kerror: [m[K‘[01m[K*((void*)& cookie +40)[m[K’ may be used uninitialized in this function [[01;31m[K-Werror=maybe-uninitialized[m[K]
+  Pair(const Pair& other) : first(other.first), second(other.second[01;31m[K)[m[K {}
+                                                                   [01;31m[K^[m[K
+[01m[KSensor/XnSensorStreamHelper.cpp:179:29:[m[K [01;36m[Knote: [m[K‘[01m[K*((void*)& cookie +40)[m[K’ was declared here
+  XnSensorStreamHelperCookie [01;36m[Kcookie[m[K(&Property, &FirmwareProperty, bAllowChangeWhileOpen, pStreamToFirmwareFunc);
+                             [01;36m[K^~~~~~[m[K
+cc1plus: all warnings being treated as errors
+make[4]: *** [../../../ThirdParty/PSCommon/BuildSystem/CommonCppMakefile:141: ../../../Bin/Intermediate/x64-Release/liborbbec.so/XnSensorStreamHelper.o] Error 1
+make[3]: *** [Makefile:131: Source/Drivers/orbbec] Error 2
+make[2]: *** [CMakeFiles/astra_openni2.dir/build.make:112: astra_openni2/src/astra_openni2-stamp/astra_openni2-build] Error 2
+make[1]: *** [CMakeFiles/Makefile2:168: CMakeFiles/astra_openni2.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,254 @@
+[0.000000] (-) TimerEvent: {}
+[0.000224] (-) JobUnselected: {'identifier': 'robot'}
+[0.000283] (-) JobUnselected: {'identifier': 'robot_sim'}
+[0.000335] (-) JobUnselected: {'identifier': 'robot_sim_2'}
+[0.000382] (-) JobUnselected: {'identifier': 'rplidar_ros2'}
+[0.000404] (-) JobUnselected: {'identifier': 'serial_test'}
+[0.000443] (-) JobUnselected: {'identifier': 'teleop_twist_keyboard'}
+[0.000474] (astra_camera) JobQueued: {'identifier': 'astra_camera', 'dependencies': OrderedDict()}
+[0.000667] (astra_camera) JobStarted: {'identifier': 'astra_camera'}
+[0.016287] (astra_camera) JobProgress: {'identifier': 'astra_camera', 'progress': 'cmake'}
+[0.021007] (astra_camera) Command: {'cmd': ['/usr/bin/cmake', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install'], 'cwd': '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fzq614'), ('SSH_AGENT_PID', '1679'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/fzq614'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1503'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=37144bb9a3604b73d1f9e88d61fb3bc1'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'fzq614'), ('JOURNAL_STREAM', '8:58466'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'fzq614'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/1714,unix/ubuntu:/tmp/.ICE-unix/1714'), ('INVOCATION_ID', '2e2d40c665994a9e91908fa242d8e65c'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/870e467a_0d53_4ded_967c_b0ddcf91cb6e'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.104'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=37144bb9a3604b73d1f9e88d61fb3bc1'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/teleop_twist_keyboard:/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install:/opt/ros/galactic')]), 'shell': False}
+[0.039664] (astra_camera) StdoutLine: {'line': b'-- Found ament_cmake: 1.1.4 (/opt/ros/galactic/share/ament_cmake/cmake)\n'}
+[0.075585] (astra_camera) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.098367] (-) TimerEvent: {}
+[0.144150] (astra_camera) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.152297] (astra_camera) StdoutLine: {'line': b'-- Found rclcpp: 9.2.0 (/opt/ros/galactic/share/rclcpp/cmake)\n'}
+[0.188673] (astra_camera) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.191690] (astra_camera) StdoutLine: {'line': b'-- Found rosidl_adapter: 2.2.1 (/opt/ros/galactic/share/rosidl_adapter/cmake)\n'}
+[0.198561] (-) TimerEvent: {}
+[0.299305] (-) TimerEvent: {}
+[0.330678] (astra_camera) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.387456] (astra_camera) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)\n'}
+[0.388995] (astra_camera) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 0.22.4 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)\n'}
+[0.399663] (-) TimerEvent: {}
+[0.406263] (astra_camera) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[0.500253] (-) TimerEvent: {}
+[0.542945] (astra_camera) StdoutLine: {'line': b'-- Found sensor_msgs: 2.2.3 (/opt/ros/galactic/share/sensor_msgs/cmake)\n'}
+[0.600560] (-) TimerEvent: {}
+[0.656302] (astra_camera) StdoutLine: {'line': b'-- Found image_transport: 2.3.0 (/opt/ros/galactic/share/image_transport/cmake)\n'}
+[0.701193] (-) TimerEvent: {}
+[0.705741] (astra_camera) StdoutLine: {'line': b'-- Found camera_info_manager: 2.3.0 (/opt/ros/galactic/share/camera_info_manager/cmake)\n'}
+[0.785163] (astra_camera) StdoutLine: {'line': b'-- ORRBEC Machine : x86_64\n'}
+[0.785424] (astra_camera) StdoutLine: {'line': b'\n'}
+[0.785516] (astra_camera) StdoutLine: {'line': b'-- ORRBEC Machine Bits : 64\n'}
+[0.785589] (astra_camera) StdoutLine: {'line': b'\n'}
+[0.801537] (-) TimerEvent: {}
+[0.902126] (-) TimerEvent: {}
+[1.002776] (-) TimerEvent: {}
+[1.022351] (astra_camera) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.093331] (astra_camera) StdoutLine: {'line': b'-- Generating done\n'}
+[1.095139] (astra_camera) StdoutLine: {'line': b'-- Build files have been written to: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera\n'}
+[1.105112] (astra_camera) CommandEnded: {'returncode': 0}
+[1.106037] (-) TimerEvent: {}
+[1.106326] (astra_camera) JobProgress: {'identifier': 'astra_camera', 'progress': 'build'}
+[1.106396] (astra_camera) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera', '--', '-j4', '-l4'], 'cwd': '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fzq614'), ('SSH_AGENT_PID', '1679'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/fzq614'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1503'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=37144bb9a3604b73d1f9e88d61fb3bc1'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'fzq614'), ('JOURNAL_STREAM', '8:58466'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'fzq614'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/1714,unix/ubuntu:/tmp/.ICE-unix/1714'), ('INVOCATION_ID', '2e2d40c665994a9e91908fa242d8e65c'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/870e467a_0d53_4ded_967c_b0ddcf91cb6e'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.104'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=37144bb9a3604b73d1f9e88d61fb3bc1'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/teleop_twist_keyboard:/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install:/opt/ros/galactic')]), 'shell': False}
+[1.159237] (astra_camera) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target astra_driver_lib\x1b[0m\n'}
+[1.160849] (astra_camera) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target astra_wrapper\x1b[0m\n'}
+[1.206403] (-) TimerEvent: {}
+[1.307092] (-) TimerEvent: {}
+[1.363306] (astra_camera) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_convert.cpp.o\x1b[0m\n'}
+[1.372302] (astra_camera) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/astra_driver_lib.dir/src/astra_driver.cpp.o\x1b[0m\n'}
+[1.372722] (astra_camera) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/astra_driver_lib.dir/src/astra_device_type.cpp.o\x1b[0m\n'}
+[1.374068] (astra_camera) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_device.cpp.o\x1b[0m\n'}
+[1.407467] (-) TimerEvent: {}
+[1.411800] (astra_camera) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_device_info.cpp.o\x1b[0m\n'}
+[1.507668] (-) TimerEvent: {}
+[1.608552] (-) TimerEvent: {}
+[1.709096] (-) TimerEvent: {}
+[1.712999] (astra_camera) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_timer_filter.cpp.o\x1b[0m\n'}
+[1.809507] (-) TimerEvent: {}
+[1.910045] (-) TimerEvent: {}
+[2.010559] (-) TimerEvent: {}
+[2.029315] (astra_camera) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_frame_listener.cpp.o\x1b[0m\n'}
+[2.111046] (-) TimerEvent: {}
+[2.211515] (-) TimerEvent: {}
+[2.308700] (astra_camera) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_device_manager.cpp.o\x1b[0m\n'}
+[2.312003] (-) TimerEvent: {}
+[2.416545] (-) TimerEvent: {}
+[2.516994] (-) TimerEvent: {}
+[2.617499] (-) TimerEvent: {}
+[2.727180] (-) TimerEvent: {}
+[2.829246] (-) TimerEvent: {}
+[2.936856] (-) TimerEvent: {}
+[3.037439] (-) TimerEvent: {}
+[3.138518] (-) TimerEvent: {}
+[3.239504] (-) TimerEvent: {}
+[3.340180] (-) TimerEvent: {}
+[3.440837] (-) TimerEvent: {}
+[3.541795] (-) TimerEvent: {}
+[3.642625] (-) TimerEvent: {}
+[3.698634] (astra_camera) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_exception.cpp.o\x1b[0m\n'}
+[3.742971] (-) TimerEvent: {}
+[3.843983] (-) TimerEvent: {}
+[3.944980] (-) TimerEvent: {}
+[4.045948] (-) TimerEvent: {}
+[4.047123] (astra_camera) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/8/map:60\x1b[m\x1b[K,\n'}
+[4.047444] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/system/detail/std_interoperability.hpp:11\x1b[m\x1b[K,\n'}
+[4.047544] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/system/error_code.hpp:959\x1b[m\x1b[K,\n'}
+[4.047628] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/system/system_error.hpp:11\x1b[m\x1b[K,\n'}
+[4.047706] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/thread/exceptions.hpp:22\x1b[m\x1b[K,\n'}
+[4.047831] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/thread/pthread/mutex.hpp:14\x1b[m\x1b[K,\n'}
+[4.047925] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/thread/mutex.hpp:16\x1b[m\x1b[K,\n'}
+[4.048005] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/include/astra_camera/astra_device_manager.h:38\x1b[m\x1b[K,\n'}
+[4.048089] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_device_manager.cpp:33\x1b[m\x1b[K:\n'}
+[4.048166] (astra_camera) StderrLine: {'line': b'/usr/include/c++/8/bits/stl_tree.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kstatic const _Key& std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_S_key(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Const_Link_type) [with _Key = astra_wrapper::AstraDeviceInfo; _Val = astra_wrapper::AstraDeviceInfo; _KeyOfValue = std::_Identity<astra_wrapper::AstraDeviceInfo>; _Compare = astra_wrapper::AstraDeviceInfoComparator; _Alloc = std::allocator<astra_wrapper::AstraDeviceInfo>; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Const_Link_type = const std::_Rb_tree_node<astra_wrapper::AstraDeviceInfo>*]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.048275] (astra_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/8/bits/stl_tree.h:1963:37:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstd::pair<std::_Rb_tree_iterator<_Val>, std::_Rb_tree_iterator<_Val> > std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::equal_range(const _Key&) [with _Key = astra_wrapper::AstraDeviceInfo; _Val = astra_wrapper::AstraDeviceInfo; _KeyOfValue = std::_Identity<astra_wrapper::AstraDeviceInfo>; _Compare = astra_wrapper::AstraDeviceInfoComparator; _Alloc = std::allocator<astra_wrapper::AstraDeviceInfo>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.048377] (astra_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/8/bits/stl_tree.h:2523:32:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstd::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::size_type std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::erase(const _Key&) [with _Key = astra_wrapper::AstraDeviceInfo; _Val = astra_wrapper::AstraDeviceInfo; _KeyOfValue = std::_Identity<astra_wrapper::AstraDeviceInfo>; _Compare = astra_wrapper::AstraDeviceInfoComparator; _Alloc = std::allocator<astra_wrapper::AstraDeviceInfo>; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::size_type = long unsigned int]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.048458] (astra_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/8/bits/stl_set.h:685:30:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstd::set<_Key, _Compare, _Alloc>::size_type std::set<_Key, _Compare, _Alloc>::erase(const key_type&) [with _Key = astra_wrapper::AstraDeviceInfo; _Compare = astra_wrapper::AstraDeviceInfoComparator; _Alloc = std::allocator<astra_wrapper::AstraDeviceInfo>; std::set<_Key, _Compare, _Alloc>::size_type = long unsigned int; std::set<_Key, _Compare, _Alloc>::key_type = astra_wrapper::AstraDeviceInfo]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.048539] (astra_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_device_manager.cpp:120:42:\x1b[m\x1b[K   required from here\n'}
+[4.048622] (astra_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/8/bits/stl_tree.h:777:8:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kstatic assertion failed: comparison object must be invocable as const\n'}
+[4.048697] (astra_camera) StderrLine: {'line': b'        \x1b[01;31m\x1b[Kis_invocable_v<const _Compare&, const _Key&, const _Key&>\x1b[m\x1b[K,\n'}
+[4.048931] (astra_camera) StderrLine: {'line': b'        \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.071987] (astra_camera) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_video_mode.cpp.o\x1b[0m\n'}
+[4.146444] (-) TimerEvent: {}
+[4.227199] (astra_camera) StderrLine: {'line': b'make[2]: *** [CMakeFiles/astra_wrapper.dir/build.make:128: CMakeFiles/astra_wrapper.dir/src/astra_device_manager.cpp.o] Error 1\n'}
+[4.227520] (astra_camera) StderrLine: {'line': b'make[2]: *** Waiting for unfinished jobs....\n'}
+[4.246972] (-) TimerEvent: {}
+[4.347962] (-) TimerEvent: {}
+[4.448960] (-) TimerEvent: {}
+[4.550103] (-) TimerEvent: {}
+[4.651017] (-) TimerEvent: {}
+[4.751981] (-) TimerEvent: {}
+[4.852974] (-) TimerEvent: {}
+[4.954027] (-) TimerEvent: {}
+[5.054956] (-) TimerEvent: {}
+[5.155929] (-) TimerEvent: {}
+[5.256418] (-) TimerEvent: {}
+[5.356934] (-) TimerEvent: {}
+[5.459049] (-) TimerEvent: {}
+[5.559849] (-) TimerEvent: {}
+[5.660523] (-) TimerEvent: {}
+[5.736742] (astra_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[Kastra_wrapper::AstraDriver::AstraDriver(const string&, const rclcpp::NodeOptions&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.737005] (astra_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:67:44:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krclcpp::Duration::Duration(rcl_duration_value_t)\x1b[m\x1b[K\xe2\x80\x99 is deprecated: Use Duration::from_nanoseconds instead or std::chrono_literals. For example:rclcpp::Duration::from_nanoseconds(int64_variable);rclcpp::Duration(0ns); [\x1b[01;35m\x1b[K-Wdeprecated-declarations\x1b[m\x1b[K]\n'}
+[5.737126] (astra_camera) StderrLine: {'line': b'   , depth_time_offset_(rclcpp::Duration(0.0\x1b[01;35m\x1b[K)\x1b[m\x1b[K)\n'}
+[5.737236] (astra_camera) StderrLine: {'line': b'                                            \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[5.737506] (astra_camera) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/qos.hpp:20\x1b[m\x1b[K,\n'}
+[5.737582] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31\x1b[m\x1b[K,\n'}
+[5.737647] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/client.hpp:34\x1b[m\x1b[K,\n'}
+[5.737728] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[5.737798] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/node.hpp:40\x1b[m\x1b[K,\n'}
+[5.737859] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/camera_info_manager/camera_info_manager.hpp:45\x1b[m\x1b[K,\n'}
+[5.737921] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/include/astra_camera/astra_driver.h:45\x1b[m\x1b[K,\n'}
+[5.737984] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:33\x1b[m\x1b[K:\n'}
+[5.738050] (astra_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/duration.hpp:46:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared here\n'}
+[5.738111] (astra_camera) StderrLine: {'line': b'   explicit \x1b[01;36m\x1b[KDuration\x1b[m\x1b[K(rcl_duration_value_t nanoseconds);\n'}
+[5.738171] (astra_camera) StderrLine: {'line': b'            \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.738257] (astra_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:68:41:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krclcpp::Duration::Duration(rcl_duration_value_t)\x1b[m\x1b[K\xe2\x80\x99 is deprecated: Use Duration::from_nanoseconds instead or std::chrono_literals. For example:rclcpp::Duration::from_nanoseconds(int64_variable);rclcpp::Duration(0ns); [\x1b[01;35m\x1b[K-Wdeprecated-declarations\x1b[m\x1b[K]\n'}
+[5.738333] (astra_camera) StderrLine: {'line': b'   , ir_time_offset_(rclcpp::Duration(0.0\x1b[01;35m\x1b[K)\x1b[m\x1b[K)\n'}
+[5.738402] (astra_camera) StderrLine: {'line': b'                                         \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[5.738468] (astra_camera) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/qos.hpp:20\x1b[m\x1b[K,\n'}
+[5.738534] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31\x1b[m\x1b[K,\n'}
+[5.738601] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/client.hpp:34\x1b[m\x1b[K,\n'}
+[5.738670] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[5.738765] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/node.hpp:40\x1b[m\x1b[K,\n'}
+[5.738835] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/camera_info_manager/camera_info_manager.hpp:45\x1b[m\x1b[K,\n'}
+[5.738903] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/include/astra_camera/astra_driver.h:45\x1b[m\x1b[K,\n'}
+[5.738971] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:33\x1b[m\x1b[K:\n'}
+[5.739039] (astra_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/duration.hpp:46:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared here\n'}
+[5.739105] (astra_camera) StderrLine: {'line': b'   explicit \x1b[01;36m\x1b[KDuration\x1b[m\x1b[K(rcl_duration_value_t nanoseconds);\n'}
+[5.739172] (astra_camera) StderrLine: {'line': b'            \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.739266] (astra_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:69:44:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krclcpp::Duration::Duration(rcl_duration_value_t)\x1b[m\x1b[K\xe2\x80\x99 is deprecated: Use Duration::from_nanoseconds instead or std::chrono_literals. For example:rclcpp::Duration::from_nanoseconds(int64_variable);rclcpp::Duration(0ns); [\x1b[01;35m\x1b[K-Wdeprecated-declarations\x1b[m\x1b[K]\n'}
+[5.739339] (astra_camera) StderrLine: {'line': b'   , color_time_offset_(rclcpp::Duration(0.0\x1b[01;35m\x1b[K)\x1b[m\x1b[K)\n'}
+[5.739407] (astra_camera) StderrLine: {'line': b'                                            \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[5.739470] (astra_camera) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/qos.hpp:20\x1b[m\x1b[K,\n'}
+[5.739530] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31\x1b[m\x1b[K,\n'}
+[5.739590] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/client.hpp:34\x1b[m\x1b[K,\n'}
+[5.739652] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[5.739745] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/node.hpp:40\x1b[m\x1b[K,\n'}
+[5.739811] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/camera_info_manager/camera_info_manager.hpp:45\x1b[m\x1b[K,\n'}
+[5.739874] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/include/astra_camera/astra_driver.h:45\x1b[m\x1b[K,\n'}
+[5.739981] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:33\x1b[m\x1b[K:\n'}
+[5.740054] (astra_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/duration.hpp:46:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared here\n'}
+[5.740117] (astra_camera) StderrLine: {'line': b'   explicit \x1b[01;36m\x1b[KDuration\x1b[m\x1b[K(rcl_duration_value_t nanoseconds);\n'}
+[5.740178] (astra_camera) StderrLine: {'line': b'            \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.761189] (-) TimerEvent: {}
+[5.784080] (astra_camera) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[5.784454] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[5.784531] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/node.hpp:40\x1b[m\x1b[K,\n'}
+[5.784600] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/camera_info_manager/camera_info_manager.hpp:45\x1b[m\x1b[K,\n'}
+[5.784668] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/include/astra_camera/astra_driver.h:45\x1b[m\x1b[K,\n'}
+[5.784884] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:33\x1b[m\x1b[K:\n'}
+[5.784975] (astra_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kstd::__cxx11::string astra_wrapper::AstraDriver::resolveDeviceURI(const string&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.785046] (astra_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:776:14:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%d\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99, but argument 5 has type \xe2\x80\x98\x1b[01m\x1b[Ksize_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wformat=\x1b[m\x1b[K]\n'}
+[5.785129] (astra_camera) StderrLine: {'line': b'     ROS_WARN(\x1b[01;35m\x1b[K"------------id %d, available_device_uri is %s-----------"\x1b[m\x1b[K, \x1b[32m\x1b[Ki\x1b[m\x1b[K, s.c_str());\n'}
+[5.785212] (astra_camera) StderrLine: {'line': b'              \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K  \x1b[32m\x1b[K~\x1b[m\x1b[K\n'}
+[5.785290] (astra_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:776:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin expansion of macro \xe2\x80\x98\x1b[01m\x1b[KROS_WARN\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.785359] (astra_camera) StderrLine: {'line': b'     \x1b[01;36m\x1b[KROS_WARN\x1b[m\x1b[K("------------id %d, available_device_uri is %s-----------", i, s.c_str());\n'}
+[5.785426] (astra_camera) StderrLine: {'line': b'     \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.831851] (astra_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Krcl_interfaces::msg::SetParametersResult astra_wrapper::AstraDriver::configCb(const std::vector<rclcpp::Parameter>&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.832096] (astra_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:1269:68:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krclcpp::Duration::Duration(rcl_duration_value_t)\x1b[m\x1b[K\xe2\x80\x99 is deprecated: Use Duration::from_nanoseconds instead or std::chrono_literals. For example:rclcpp::Duration::from_nanoseconds(int64_variable);rclcpp::Duration(0ns); [\x1b[01;35m\x1b[K-Wdeprecated-declarations\x1b[m\x1b[K]\n'}
+[5.832189] (astra_camera) StderrLine: {'line': b'       ir_time_offset_ = rclcpp::Duration(config.get_value<double>()\x1b[01;35m\x1b[K)\x1b[m\x1b[K;\n'}
+[5.832393] (astra_camera) StderrLine: {'line': b'                                                                    \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[5.832468] (astra_camera) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/qos.hpp:20\x1b[m\x1b[K,\n'}
+[5.832540] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31\x1b[m\x1b[K,\n'}
+[5.832606] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/client.hpp:34\x1b[m\x1b[K,\n'}
+[5.832673] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[5.832880] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/node.hpp:40\x1b[m\x1b[K,\n'}
+[5.832974] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/camera_info_manager/camera_info_manager.hpp:45\x1b[m\x1b[K,\n'}
+[5.833044] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/include/astra_camera/astra_driver.h:45\x1b[m\x1b[K,\n'}
+[5.833116] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:33\x1b[m\x1b[K:\n'}
+[5.833282] (astra_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/duration.hpp:46:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared here\n'}
+[5.833381] (astra_camera) StderrLine: {'line': b'   explicit \x1b[01;36m\x1b[KDuration\x1b[m\x1b[K(rcl_duration_value_t nanoseconds);\n'}
+[5.833457] (astra_camera) StderrLine: {'line': b'            \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.833522] (astra_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:1273:71:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krclcpp::Duration::Duration(rcl_duration_value_t)\x1b[m\x1b[K\xe2\x80\x99 is deprecated: Use Duration::from_nanoseconds instead or std::chrono_literals. For example:rclcpp::Duration::from_nanoseconds(int64_variable);rclcpp::Duration(0ns); [\x1b[01;35m\x1b[K-Wdeprecated-declarations\x1b[m\x1b[K]\n'}
+[5.833589] (astra_camera) StderrLine: {'line': b'       color_time_offset_ = rclcpp::Duration(config.get_value<double>()\x1b[01;35m\x1b[K)\x1b[m\x1b[K;\n'}
+[5.833652] (astra_camera) StderrLine: {'line': b'                                                                       \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[5.833741] (astra_camera) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/qos.hpp:20\x1b[m\x1b[K,\n'}
+[5.833810] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31\x1b[m\x1b[K,\n'}
+[5.833875] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/client.hpp:34\x1b[m\x1b[K,\n'}
+[5.833939] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[5.834005] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/node.hpp:40\x1b[m\x1b[K,\n'}
+[5.834078] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/camera_info_manager/camera_info_manager.hpp:45\x1b[m\x1b[K,\n'}
+[5.834142] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/include/astra_camera/astra_driver.h:45\x1b[m\x1b[K,\n'}
+[5.834233] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:33\x1b[m\x1b[K:\n'}
+[5.834303] (astra_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/duration.hpp:46:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared here\n'}
+[5.834366] (astra_camera) StderrLine: {'line': b'   explicit \x1b[01;36m\x1b[KDuration\x1b[m\x1b[K(rcl_duration_value_t nanoseconds);\n'}
+[5.834427] (astra_camera) StderrLine: {'line': b'            \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.834487] (astra_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:1277:71:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krclcpp::Duration::Duration(rcl_duration_value_t)\x1b[m\x1b[K\xe2\x80\x99 is deprecated: Use Duration::from_nanoseconds instead or std::chrono_literals. For example:rclcpp::Duration::from_nanoseconds(int64_variable);rclcpp::Duration(0ns); [\x1b[01;35m\x1b[K-Wdeprecated-declarations\x1b[m\x1b[K]\n'}
+[5.834551] (astra_camera) StderrLine: {'line': b'       depth_time_offset_ = rclcpp::Duration(config.get_value<double>()\x1b[01;35m\x1b[K)\x1b[m\x1b[K;\n'}
+[5.834611] (astra_camera) StderrLine: {'line': b'                                                                       \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[5.834674] (astra_camera) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/qos.hpp:20\x1b[m\x1b[K,\n'}
+[5.834756] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31\x1b[m\x1b[K,\n'}
+[5.834820] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/client.hpp:34\x1b[m\x1b[K,\n'}
+[5.834881] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[5.834941] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/node.hpp:40\x1b[m\x1b[K,\n'}
+[5.835000] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/camera_info_manager/camera_info_manager.hpp:45\x1b[m\x1b[K,\n'}
+[5.835060] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/include/astra_camera/astra_driver.h:45\x1b[m\x1b[K,\n'}
+[5.835119] (astra_camera) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:33\x1b[m\x1b[K:\n'}
+[5.835184] (astra_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/duration.hpp:46:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared here\n'}
+[5.835268] (astra_camera) StderrLine: {'line': b'   explicit \x1b[01;36m\x1b[KDuration\x1b[m\x1b[K(rcl_duration_value_t nanoseconds);\n'}
+[5.835330] (astra_camera) StderrLine: {'line': b'            \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.861418] (-) TimerEvent: {}
+[5.962460] (-) TimerEvent: {}
+[6.063448] (-) TimerEvent: {}
+[6.164552] (-) TimerEvent: {}
+[6.265695] (-) TimerEvent: {}
+[6.366399] (-) TimerEvent: {}
+[6.391547] (astra_camera) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:168: CMakeFiles/astra_wrapper.dir/all] Error 2\n'}
+[6.391843] (astra_camera) StderrLine: {'line': b'make[1]: *** Waiting for unfinished jobs....\n'}
+[6.466916] (-) TimerEvent: {}
+[6.567477] (-) TimerEvent: {}
+[6.668368] (-) TimerEvent: {}
+[6.768908] (-) TimerEvent: {}
+[6.869870] (-) TimerEvent: {}
+[6.971031] (-) TimerEvent: {}
+[7.071867] (-) TimerEvent: {}
+[7.172598] (-) TimerEvent: {}
+[7.273400] (-) TimerEvent: {}
+[7.374522] (-) TimerEvent: {}
+[7.475380] (-) TimerEvent: {}
+[7.575880] (-) TimerEvent: {}
+[7.676819] (-) TimerEvent: {}
+[7.777312] (-) TimerEvent: {}
+[7.877814] (-) TimerEvent: {}
+[7.978337] (-) TimerEvent: {}
+[8.074301] (astra_camera) StdoutLine: {'line': b'[ 57%] \x1b[32m\x1b[1mLinking CXX static library libastra_driver_lib.a\x1b[0m\n'}
+[8.078815] (-) TimerEvent: {}
+[8.146369] (astra_camera) StdoutLine: {'line': b'[ 57%] Built target astra_driver_lib\n'}
+[8.148140] (astra_camera) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[8.154613] (astra_camera) CommandEnded: {'returncode': 2}
+[8.179313] (-) TimerEvent: {}
+[8.280077] (-) TimerEvent: {}
+[8.317585] (astra_camera) JobEnded: {'identifier': 'astra_camera', 'rc': 2}
+[8.329246] (-) EventReactorShutdown: {}

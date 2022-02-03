@@ -1,0 +1,31 @@
+[0.016s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test -- -j4 -l4
+[0.096s] [35m[1mScanning dependencies of target serial_test[0m
+[0.123s] [ 66%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_linux.cpp.o[0m
+[0.123s] [ 66%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_test.cpp.o[0m
+[1.717s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:7:22:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KSerial::Serial(std::__cxx11::string&)[m[K’
+[1.717s]  Serial my_serial(port[01;31m[K)[m[K;
+[1.717s]                       [01;31m[K^[m[K
+[1.717s] In file included from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:2[m[K:
+[1.717s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:16:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KSerial::Serial()[m[K’
+[1.717s]  class [01;36m[KSerial[m[K
+[1.717s]        [01;36m[K^~~~~~[m[K
+[1.717s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:16:7:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[1.718s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:13:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[KSerial::Serial(const string&)[m[K’
+[1.718s]  [01;31m[KSerial[m[K::Serial(const std::string &port_name_):serial_port_( NULL )
+[1.718s]  [01;31m[K^~~~~~[m[K
+[1.718s] In file included from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[1.718s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:16:7:[m[K [01;36m[Knote: [m[Kcandidates are: ‘[01m[KSerial::Serial(Serial&&)[m[K’
+[1.719s]  class [01;36m[KSerial[m[K
+[1.719s]        [01;36m[K^~~~~~[m[K
+[1.719s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:16:7:[m[K [01;36m[Knote: [m[K                ‘[01m[KSerial::Serial(const Serial&)[m[K’
+[1.719s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:16:7:[m[K [01;36m[Knote: [m[K                ‘[01m[KSerial::Serial()[m[K’
+[1.719s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:16:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass Serial[m[K’ defined here
+[1.719s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:23:17:[m[K [01;31m[Kerror: [m[Kdefinition of implicitly-declared ‘[01m[KSerial::~Serial()[m[K’
+[1.719s]  Serial::~Serial([01;31m[K)[m[K
+[1.719s]                  [01;31m[K^[m[K
+[2.161s] make[2]: *** [CMakeFiles/serial_test.dir/build.make:76: CMakeFiles/serial_test.dir/src/serial_linux.cpp.o] Error 1
+[2.162s] make[2]: *** Waiting for unfinished jobs....
+[2.187s] make[2]: *** [CMakeFiles/serial_test.dir/build.make:63: CMakeFiles/serial_test.dir/src/serial_test.cpp.o] Error 1
+[2.187s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2
+[2.187s] make: *** [Makefile:141: all] Error 2
+[2.191s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test -- -j4 -l4

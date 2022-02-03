@@ -1,0 +1,35 @@
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:[m[K In constructor ‘[01m[KSerialNode::SerialNode()[m[K’:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:25:30:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KSerial::Serial(std::__cxx11::string&)[m[K’
+         Serial my_serial(port[01;31m[K)[m[K;
+                              [01;31m[K^[m[K
+In file included from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:2[m[K:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:16:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KSerial::Serial()[m[K’
+ class [01;36m[KSerial[m[K
+       [01;36m[K^~~~~~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:16:7:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:13:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[KSerial::Serial(const string&)[m[K’
+ [01;31m[KSerial[m[K::Serial(const std::string &port_name_):serial_port_( NULL )
+ [01;31m[K^~~~~~[m[K
+In file included from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:16:7:[m[K [01;36m[Knote: [m[Kcandidates are: ‘[01m[KSerial::Serial(Serial&&)[m[K’
+ class [01;36m[KSerial[m[K
+       [01;36m[K^~~~~~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:16:7:[m[K [01;36m[Knote: [m[K                ‘[01m[KSerial::Serial(const Serial&)[m[K’
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:16:7:[m[K [01;36m[Knote: [m[K                ‘[01m[KSerial::Serial()[m[K’
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:16:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass Serial[m[K’ defined here
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:22:17:[m[K [01;31m[Kerror: [m[Kdefinition of implicitly-declared ‘[01m[KSerial::~Serial()[m[K’
+ Serial::~Serial([01;31m[K)[m[K
+                 [01;31m[K^[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:[m[K In member function ‘[01m[Kvoid SerialNode::timer_callback()[m[K’:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:38:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_serial[m[K’ was not declared in this scope
+         boost::asio::write(*[01;31m[Kmy_serial[m[K.serial_port_, boost::asio::buffer("Hello world", 12));
+                             [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:38:29:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KSerial[m[K’
+         boost::asio::write(*[01;36m[Kmy_serial[m[K.serial_port_, boost::asio::buffer("Hello world", 12));
+                             [01;36m[K^~~~~~~~~[m[K
+                             [32m[KSerial[m[K
+make[2]: *** [CMakeFiles/serial_test.dir/build.make:63: CMakeFiles/serial_test.dir/src/serial_test.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/serial_test.dir/build.make:76: CMakeFiles/serial_test.dir/src/serial_linux.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

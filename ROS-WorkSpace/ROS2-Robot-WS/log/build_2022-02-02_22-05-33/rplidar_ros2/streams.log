@@ -1,0 +1,92 @@
+[0.056s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/rplidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/rplidar_ros2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install
+[0.196s] -- The C compiler identification is GNU 8.4.0
+[0.278s] -- The CXX compiler identification is GNU 8.4.0
+[0.291s] -- Check for working C compiler: /usr/bin/cc
+[0.393s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.394s] -- Detecting C compiler ABI info
+[0.493s] -- Detecting C compiler ABI info - done
+[0.508s] -- Detecting C compile features
+[0.508s] -- Detecting C compile features - done
+[0.514s] -- Check for working CXX compiler: /usr/bin/c++
+[0.627s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.628s] -- Detecting CXX compiler ABI info
+[0.746s] -- Detecting CXX compiler ABI info - done
+[0.760s] -- Detecting CXX compile features
+[0.761s] -- Detecting CXX compile features - done
+[0.766s] -- Found ament_cmake: 1.1.4 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.808s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.808s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.892s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.944s] -- Found rclcpp: 9.2.0 (/opt/ros/galactic/share/rclcpp/cmake)
+[1.025s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.036s] -- Found rosidl_adapter: 2.2.1 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[1.174s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.202s] -- Found FastRTPS: /opt/ros/galactic/include  
+[1.314s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.410s] -- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+[1.416s] -- Found rmw_cyclonedds_cpp: 0.22.4 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+[1.447s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[1.448s] -- Looking for pthread.h
+[1.563s] -- Looking for pthread.h - found
+[1.564s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.682s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.682s] -- Looking for pthread_create in pthreads
+[1.767s] -- Looking for pthread_create in pthreads - not found
+[1.767s] -- Looking for pthread_create in pthread
+[1.874s] -- Looking for pthread_create in pthread - found
+[1.875s] -- Found Threads: TRUE  
+[2.070s] -- Found sensor_msgs: 2.2.3 (/opt/ros/galactic/share/sensor_msgs/cmake)
+[2.234s] -- Found std_srvs: 2.2.3 (/opt/ros/galactic/share/std_srvs/cmake)
+[2.255s] -- Found ament_lint_auto: 0.10.6 (/opt/ros/galactic/share/ament_lint_auto/cmake)
+[2.358s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.362s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.362s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/rplidar_ros2/include>;$<BUILD_INTERFACE:/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/rplidar_ros2/sdk/include>;$<BUILD_INTERFACE:/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/rplidar_ros2/sdk/src>
+[2.363s] -- Configured cppcheck exclude dirs and/or files: 
+[2.366s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.366s] -- Configured cpplint exclude dirs and/or files: 
+[2.368s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.369s] -- Added test 'lint_cmake' to check CMake code style
+[2.370s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[2.374s] -- Added test 'uncrustify' to check C / C++ code style
+[2.374s] -- Configured uncrustify additional arguments: 
+[2.375s] -- Added test 'xmllint' to check XML markup files
+[2.379s] -- Configuring done
+[2.396s] -- Generating done
+[2.399s] -- Build files have been written to: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/rplidar_ros2
+[2.410s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/rplidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/rplidar_ros2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install
+[2.416s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/rplidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/rplidar_ros2 -- -j4 -l4
+[2.481s] [35m[1mScanning dependencies of target rplidarNode[0m
+[2.557s] [ 14%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/src/node.cpp.o[0m
+[2.590s] [ 28%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o[0m
+[2.597s] [ 42%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_socket.cpp.o[0m
+[2.620s] [ 57%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.o[0m
+[3.342s] [ 71%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/hal/thread.cpp.o[0m
+[3.358s] [ 85%] [32mBuilding CXX object CMakeFiles/rplidarNode.dir/sdk/src/rplidar_driver.cpp.o[0m
+[8.547s] [100%] [32m[1mLinking CXX executable rplidarNode[0m
+[9.244s] [100%] Built target rplidarNode
+[9.295s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/rplidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/rplidar_ros2 -- -j4 -l4
+[9.580s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/rplidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/rplidar_ros2
+[9.593s] -- Install configuration: ""
+[9.595s] -- Execute custom install script
+[9.596s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/rplidar_ros2/rplidarNode
+[9.611s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/rplidar_ros2//launch/rplidar.launch
+[9.624s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/rplidar_ros2//launch/rplidar.launch.py
+[9.638s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/rplidar_ros2//launch/view_rplidar.launch
+[9.651s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/rplidar_ros2//launch/view_rplidar.launch.py
+[9.665s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/rplidar_ros2//rviz/rplidar.rviz
+[9.678s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/ament_index/resource_index/package_run_dependencies/rplidar_ros2
+[9.692s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/ament_index/resource_index/parent_prefix_path/rplidar_ros2
+[9.707s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/rplidar_ros2/environment/ament_prefix_path.sh
+[9.721s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/rplidar_ros2/environment/ament_prefix_path.dsv
+[9.735s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/rplidar_ros2/environment/path.sh
+[9.748s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/rplidar_ros2/environment/path.dsv
+[9.762s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/rplidar_ros2/local_setup.bash
+[9.775s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/rplidar_ros2/local_setup.sh
+[9.789s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/rplidar_ros2/local_setup.zsh
+[9.803s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/rplidar_ros2/local_setup.dsv
+[9.818s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/rplidar_ros2/package.dsv
+[9.831s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/ament_index/resource_index/packages/rplidar_ros2
+[9.845s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/rplidar_ros2/cmake/rplidar_ros2Config.cmake
+[9.858s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/rplidar_ros2/cmake/rplidar_ros2Config-version.cmake
+[9.871s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/rplidar_ros2/package.xml
+[9.888s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/rplidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/rplidar_ros2

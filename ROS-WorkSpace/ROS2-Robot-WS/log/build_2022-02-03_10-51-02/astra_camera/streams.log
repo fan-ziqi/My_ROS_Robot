@@ -1,0 +1,36 @@
+[0.025s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install
+[0.040s] -- Found ament_cmake: 1.1.4 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.077s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.143s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.151s] -- Found rclcpp: 9.2.0 (/opt/ros/galactic/share/rclcpp/cmake)
+[0.187s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.191s] -- Found rosidl_adapter: 2.2.1 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[0.325s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.378s] -- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+[0.379s] -- Found rmw_cyclonedds_cpp: 0.22.4 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+[0.399s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.533s] -- Found sensor_msgs: 2.2.3 (/opt/ros/galactic/share/sensor_msgs/cmake)
+[0.639s] -- Found image_transport: 2.3.0 (/opt/ros/galactic/share/image_transport/cmake)
+[0.689s] -- Found camera_info_manager: 2.3.0 (/opt/ros/galactic/share/camera_info_manager/cmake)
+[0.795s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0") found components: system thread 
+[0.807s] CMake Error at CMakeLists.txt:23 (find_package):
+[0.807s]   By not providing "Findlibuvc.cmake" in CMAKE_MODULE_PATH this project has
+[0.807s]   asked CMake to find a package configuration file provided by "libuvc", but
+[0.807s]   CMake did not find one.
+[0.807s] 
+[0.807s]   Could not find a package configuration file provided by "libuvc" with any
+[0.807s]   of the following names:
+[0.807s] 
+[0.808s]     libuvcConfig.cmake
+[0.808s]     libuvc-config.cmake
+[0.808s] 
+[0.808s]   Add the installation prefix of "libuvc" to CMAKE_PREFIX_PATH or set
+[0.808s]   "libuvc_DIR" to a directory containing one of the above files.  If "libuvc"
+[0.808s]   provides a separate development package or SDK, be sure it has been
+[0.808s]   installed.
+[0.808s] 
+[0.808s] 
+[0.808s] -- Configuring incomplete, errors occurred!
+[0.808s] See also "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera/CMakeFiles/CMakeOutput.log".
+[0.808s] See also "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera/CMakeFiles/CMakeError.log".
+[0.818s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install

@@ -1,0 +1,4 @@
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:[m[K In member function ‘[01m[Kvoid Serial::write_to_serial(std::__cxx11::string)[m[K’:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:15:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdata[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ void Serial::write_to_serial( [01;35m[Kconst std::string data[m[K )
+                               [01;35m[K~~~~~~~~~~~~~~~~~~^~~~[m[K

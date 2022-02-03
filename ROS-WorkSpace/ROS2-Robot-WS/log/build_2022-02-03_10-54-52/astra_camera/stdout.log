@@ -1,0 +1,34 @@
+-- Found ament_cmake: 1.1.4 (/opt/ros/galactic/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 9.2.0 (/opt/ros/galactic/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 2.2.1 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 0.22.4 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Found sensor_msgs: 2.2.3 (/opt/ros/galactic/share/sensor_msgs/cmake)
+-- Found image_transport: 2.3.0 (/opt/ros/galactic/share/image_transport/cmake)
+-- Found camera_info_manager: 2.3.0 (/opt/ros/galactic/share/camera_info_manager/cmake)
+-- ORRBEC Machine : x86_64
+
+-- ORRBEC Machine Bits : 64
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera
+[35m[1mScanning dependencies of target astra_driver_lib[0m
+[35m[1mScanning dependencies of target astra_wrapper[0m
+[  5%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_convert.cpp.o[0m
+[ 15%] [32mBuilding CXX object CMakeFiles/astra_driver_lib.dir/src/astra_driver.cpp.o[0m
+[ 15%] [32mBuilding CXX object CMakeFiles/astra_driver_lib.dir/src/astra_device_type.cpp.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_device.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_device_info.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_timer_filter.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_frame_listener.cpp.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_device_manager.cpp.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_exception.cpp.o[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_video_mode.cpp.o[0m
+[ 57%] [32m[1mLinking CXX static library libastra_driver_lib.a[0m
+[ 57%] Built target astra_driver_lib

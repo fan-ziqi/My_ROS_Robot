@@ -1,5 +1,56 @@
 # generated from colcon_powershell/shell/template/package.ps1.em
 
+# function to append a value to a variable
+# which uses colons as separators
+# duplicates as well as leading separators are avoided
+# first argument: the name of the result variable
+# second argument: the value to be prepended
+function colcon_append_unique_value {
+  param (
+    $_listname,
+    $_value
+  )
+
+  # get values from variable
+  if (Test-Path Env:$_listname) {
+    $_values=(Get-Item env:$_listname).Value
+  } else {
+    $_values=""
+  }
+  $_duplicate=""
+  # start with no values
+  $_all_values=""
+  # iterate over existing values in the variable
+  if ($_values) {
+    $_values.Split(";") | ForEach {
+      # not an empty string
+      if ($_) {
+        # not a duplicate of _value
+        if ($_ -eq $_value) {
+          $_duplicate="1"
+        }
+        if ($_all_values) {
+          $_all_values="${_all_values};$_"
+        } else {
+          $_all_values="$_"
+        }
+      }
+    }
+  }
+  # append only non-duplicates
+  if (!$_duplicate) {
+    # avoid leading separator
+    if ($_all_values) {
+      $_all_values="${_all_values};${_value}"
+    } else {
+      $_all_values="${_value}"
+    }
+  }
+
+  # export the updated variable
+  Set-Item env:\$_listname -Value "$_all_values"
+}
+
 # function to prepend a value to a variable
 # which uses colons as separators
 # duplicates as well as trailing separators are avoided
@@ -60,6 +111,7 @@ function colcon_package_source_powershell_script {
 $env:COLCON_CURRENT_PREFIX=(Get-Item $PSCommandPath).Directory.Parent.Parent.FullName
 
 colcon_package_source_powershell_script "$env:COLCON_CURRENT_PREFIX\share/serial_test/hook/cmake_prefix_path.ps1"
+colcon_package_source_powershell_script "$env:COLCON_CURRENT_PREFIX\share/serial_test/hook/pythonpath.ps1"
 colcon_package_source_powershell_script "$env:COLCON_CURRENT_PREFIX\share/serial_test/local_setup.ps1"
 
 Remove-Item Env:\COLCON_CURRENT_PREFIX

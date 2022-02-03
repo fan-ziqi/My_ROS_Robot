@@ -80,7 +80,7 @@ void Robot::robot_loop()
 // 从配置文件中获取机器人参数
 void Robot::get_parameter_from_file()
 {
-    this->declare_parameter<std::string>("port_name", "/dev/ttys005"); // For Ubuntu
+    this->declare_parameter<std::string>("port_name", "/dev/pts/3"); // For Ubuntu
     this->get_parameter("port_name", port_name_);
     this->declare_parameter<std::string>("odom_frame", "odom");
     this->get_parameter("odom_frame", odom_frame_);

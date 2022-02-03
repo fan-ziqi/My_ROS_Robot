@@ -1,0 +1,30 @@
+[0.015s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/build/robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/build/robot -- -j4 -l4
+[0.061s] [35m[1mScanning dependencies of target robot[0m
+[0.092s] [ 50%] [32mBuilding CXX object CMakeFiles/robot.dir/src/robot.cpp.o[0m
+[7.179s] [100%] [32m[1mLinking CXX executable robot[0m
+[7.527s] [100%] Built target robot
+[7.536s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/build/robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/build/robot -- -j4 -l4
+[7.574s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/build/robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/build/robot
+[7.580s] -- Install configuration: ""
+[7.581s] -- Execute custom install script
+[7.581s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/lib/robot/robot
+[7.581s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/ament_index/resource_index/package_run_dependencies/robot
+[7.581s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/ament_index/resource_index/parent_prefix_path/robot
+[7.582s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/environment/ament_prefix_path.sh
+[7.582s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/environment/ament_prefix_path.dsv
+[7.582s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/environment/path.sh
+[7.582s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/environment/path.dsv
+[7.582s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/local_setup.bash
+[7.583s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/local_setup.sh
+[7.583s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/local_setup.zsh
+[7.583s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/local_setup.dsv
+[7.583s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/package.dsv
+[7.591s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/ament_index/resource_index/packages/robot
+[7.591s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/cmake/robotConfig.cmake
+[7.591s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/cmake/robotConfig-version.cmake
+[7.592s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/package.xml
+[7.592s] -- Up-to-date: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/launch
+[7.592s] -- Up-to-date: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/launch/robot.launch.py
+[7.592s] -- Up-to-date: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/config
+[7.592s] -- Up-to-date: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/config/params.yaml
+[7.594s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/build/robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/build/robot

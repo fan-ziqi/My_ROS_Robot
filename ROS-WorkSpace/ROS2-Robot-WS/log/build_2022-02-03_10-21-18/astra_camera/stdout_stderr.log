@@ -1,0 +1,4 @@
+[  4%] [34m[1mPerforming update step for 'astra_openni2'[0m
+make[2]: *** [CMakeFiles/astra_openni2.dir/build.make:96: astra_openni2/src/astra_openni2-stamp/astra_openni2-update] Interrupt
+make[1]: *** [CMakeFiles/Makefile2:168: CMakeFiles/astra_openni2.dir/all] Interrupt
+make: *** [Makefile:141: all] Interrupt

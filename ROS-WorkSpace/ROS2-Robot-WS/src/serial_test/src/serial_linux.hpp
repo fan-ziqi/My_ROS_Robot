@@ -11,18 +11,35 @@
 const unsigned char HEAD[2] = {0x55, 0xaa};
 const unsigned char END[2] = {0x0d, 0x0a};
 
+
+
 class Serial
 {
 public:
-    void SerialInit(std::string &port_name_);
-    void SerialWrite(double * WriteData, unsigned char MessageLenth, unsigned char MessageCode);
-    bool SerialRead(double * ReceiveData, unsigned char * ReceiveCode);
+    char Serial_EC;
+    Serial(const std::string &port_name_);
+    ~Serial();
+    bool SerialInit(const std::string &port_name_);
+    bool SerialWrite(short * WriteData, unsigned char MessageLenth, unsigned int MessageCode);
+    bool SerialRead(short * ReceiveData, unsigned int * ReceiveCode);
     unsigned char CalCrc(unsigned char * VectorData, unsigned short len);
 
-private:
+
+    void write_to_serial(std::string data);
+    void read_from_serial();
+
+
+
     boost::system::error_code error_code_;
     boost::asio::io_service io_service_;
-    std::shared_ptr<boost::asio::serial_port> serial_port_;
-};
+    boost::asio::serial_port *serial_port_;
+    // std::shared_ptr<boost::asio::serial_port> serial_port_;
 
+    
+
+private:
+    
+    
+    
+};
 #endif

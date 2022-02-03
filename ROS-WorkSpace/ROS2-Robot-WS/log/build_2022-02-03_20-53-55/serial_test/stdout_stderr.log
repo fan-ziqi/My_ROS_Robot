@@ -1,0 +1,15 @@
+[35m[1mScanning dependencies of target serial_test[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_test.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_linux.cpp.o[0m
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:[m[K In constructor ‘[01m[KSerial::Serial(const string&)[m[K’:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:19:20:[m[K [01;31m[Kerror: [m[Kbinding reference of type ‘[01m[Kstd::__cxx11::string&[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>&[m[K’} to ‘[01m[Kconst string[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>[m[K’} discards qualifiers
+         SerialInit([01;31m[Kport_name_[m[K);
+                    [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:22:10:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid Serial::SerialInit(std::__cxx11::string&)[m[K’
+     void [01;36m[KSerialInit[m[K(std::string &port_name_);
+          [01;36m[K^~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/serial_test.dir/build.make:76: CMakeFiles/serial_test.dir/src/serial_linux.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

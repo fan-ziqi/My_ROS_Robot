@@ -1,7 +1,7 @@
 # generated from
 # ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_uninstall_script.cmake.in
 
-set(install_manifest "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/symlink_install_manifest.txt")
+set(install_manifest "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/symlink_install_manifest.txt")
 if(NOT EXISTS "${install_manifest}")
   message(FATAL_ERROR "Cannot find symlink install manifest: ${install_manifest}")
 endif()

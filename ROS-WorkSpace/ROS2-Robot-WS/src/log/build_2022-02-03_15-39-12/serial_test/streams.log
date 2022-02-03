@@ -1,0 +1,30 @@
+[0.013s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/build/serial_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/build/serial_test -- -j4 -l4
+[0.053s] [35m[1mScanning dependencies of target serial_test[0m
+[0.080s] [ 33%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_linux.cpp.o[0m
+[1.593s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:[m[K In member function ‘[01m[Kvoid Serial::SerialInit(std::__cxx11::string&)[m[K’:
+[1.593s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:17:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kport_name_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.593s]  void Serial::SerialInit([01;35m[Kstd::string & port_name_[m[K)
+[1.593s]                          [01;35m[K~~~~~~~~~~~~~~^~~~~~~~~~[m[K
+[2.222s] [ 66%] [32m[1mLinking CXX executable serial_test[0m
+[2.335s] [100%] Built target serial_test
+[2.347s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/build/serial_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/build/serial_test -- -j4 -l4
+[2.390s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/build/serial_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/build/serial_test
+[2.395s] -- Install configuration: ""
+[2.396s] -- Execute custom install script
+[2.396s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/lib/serial_test/serial_test
+[2.396s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/ament_index/resource_index/package_run_dependencies/serial_test
+[2.397s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/ament_index/resource_index/parent_prefix_path/serial_test
+[2.397s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/serial_test/environment/ament_prefix_path.sh
+[2.397s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/serial_test/environment/ament_prefix_path.dsv
+[2.397s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/serial_test/environment/path.sh
+[2.397s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/serial_test/environment/path.dsv
+[2.398s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/serial_test/local_setup.bash
+[2.398s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/serial_test/local_setup.sh
+[2.398s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/serial_test/local_setup.zsh
+[2.398s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/serial_test/local_setup.dsv
+[2.398s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/serial_test/package.dsv
+[2.406s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/ament_index/resource_index/packages/serial_test
+[2.406s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/serial_test/cmake/serial_testConfig.cmake
+[2.406s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/serial_test/cmake/serial_testConfig-version.cmake
+[2.406s] -- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/serial_test/package.xml
+[2.409s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/build/serial_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/build/serial_test

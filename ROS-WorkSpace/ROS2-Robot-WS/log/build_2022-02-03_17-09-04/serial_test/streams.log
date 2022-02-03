@@ -1,0 +1,25 @@
+[0.014s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test -- -j4 -l4
+[0.053s] [35m[1mScanning dependencies of target serial_test[0m
+[0.078s] [ 33%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_test.cpp.o[0m
+[0.078s] [ 66%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_linux.cpp.o[0m
+[1.633s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:[m[K In member function ‘[01m[Kvoid Serial::SerialWrite(double*, unsigned char, unsigned char)[m[K’:
+[1.633s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:114:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kserial_port_[m[K’ was not declared in this scope
+[1.633s]      boost::asio::write(*[01;31m[Kserial_port_[m[K.get(), boost::asio::buffer(SendBuf, (unsigned int)SendLength), error_code_);
+[1.633s]                          [01;31m[K^~~~~~~~~~~~[m[K
+[1.637s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:114:25:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KSerialInit[m[K’
+[1.637s]      boost::asio::write(*[01;36m[Kserial_port_[m[K.get(), boost::asio::buffer(SendBuf, (unsigned int)SendLength), error_code_);
+[1.637s]                          [01;36m[K^~~~~~~~~~~~[m[K
+[1.637s]                          [32m[KSerialInit[m[K
+[1.638s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:[m[K In member function ‘[01m[Kbool Serial::SerialRead(double*, unsigned char*)[m[K’:
+[1.638s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:135:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kserial_port_[m[K’ was not declared in this scope
+[1.638s]          boost::asio::read_until(*[01;31m[Kserial_port_[m[K.get(), response, "\r\n", error_code_);
+[1.638s]                                   [01;31m[K^~~~~~~~~~~~[m[K
+[1.641s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:135:34:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KSerialInit[m[K’
+[1.641s]          boost::asio::read_until(*[01;36m[Kserial_port_[m[K.get(), response, "\r\n", error_code_);
+[1.641s]                                   [01;36m[K^~~~~~~~~~~~[m[K
+[1.641s]                                   [32m[KSerialInit[m[K
+[2.071s] make[2]: *** [CMakeFiles/serial_test.dir/build.make:76: CMakeFiles/serial_test.dir/src/serial_linux.cpp.o] Error 1
+[2.071s] make[2]: *** Waiting for unfinished jobs....
+[2.442s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2
+[2.443s] make: *** [Makefile:141: all] Error 2
+[2.446s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test -- -j4 -l4

@@ -1,0 +1,97 @@
+[0.011s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test -- -j4 -l4
+[0.052s] [35m[1mScanning dependencies of target serial_test[0m
+[0.076s] [ 33%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_test.cpp.o[0m
+[0.076s] [ 66%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_linux.cpp.o[0m
+[1.620s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:5:8:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[KSerial::Serial()[m[K’
+[1.620s]  Serial [01;31m[Kserial[m[K;
+[1.621s]         [01;31m[K^~~~~~[m[K
+[1.621s] In file included from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:2[m[K:
+[1.621s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:14:7:[m[K [01;36m[Knote: [m[K‘[01m[KSerial::Serial()[m[K’ is implicitly deleted because the default definition would be ill-formed:
+[1.621s]  class [01;36m[KSerial[m[K
+[1.621s]        [01;36m[K^~~~~~[m[K
+[1.621s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:14:7:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kboost::asio::basic_serial_port<>::basic_serial_port()[m[K’
+[1.621s] In file included from [01m[K/usr/include/boost/asio.hpp:29[m[K,
+[1.621s]                  from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5[m[K,
+[1.621s]                  from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:2[m[K:
+[1.621s] [01m[K/usr/include/boost/asio/basic_serial_port.hpp:262:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kboost::asio::basic_serial_port<Executor>::basic_serial_port(boost::asio::basic_serial_port<Executor>&&) [with Executor = boost::asio::executor][m[K’
+[1.621s]    [01;36m[Kbasic_serial_port[m[K(basic_serial_port&& other)
+[1.621s]    [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.621s] [01m[K/usr/include/boost/asio/basic_serial_port.hpp:262:3:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[1.621s] [01m[K/usr/include/boost/asio/basic_serial_port.hpp:237:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ExecutionContext> boost::asio::basic_serial_port<Executor>::basic_serial_port(ExecutionContext&, const native_handle_type&, typename std::enable_if<std::is_convertible<ExecutionContext&, boost::asio::execution_context&>::value>::type*)[m[K’
+[1.621s]    [01;36m[Kbasic_serial_port[m[K(ExecutionContext& context,
+[1.621s]    [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.621s] [01m[K/usr/include/boost/asio/basic_serial_port.hpp:237:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.621s] In file included from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:2[m[K:
+[1.621s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:14:7:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 0 provided
+[1.621s]  class [01;36m[KSerial[m[K
+[1.621s]        [01;36m[K^~~~~~[m[K
+[1.621s] In file included from [01m[K/usr/include/boost/asio.hpp:29[m[K,
+[1.621s]                  from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5[m[K,
+[1.622s]                  from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:2[m[K:
+[1.622s] [01m[K/usr/include/boost/asio/basic_serial_port.hpp:213:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kboost::asio::basic_serial_port<Executor>::basic_serial_port(const executor_type&, const native_handle_type&) [with Executor = boost::asio::executor; boost::asio::basic_serial_port<Executor>::executor_type = boost::asio::executor; boost::asio::basic_serial_port<Executor>::native_handle_type = int][m[K’
+[1.622s]    [01;36m[Kbasic_serial_port[m[K(const executor_type& ex,
+[1.622s]    [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.622s] [01m[K/usr/include/boost/asio/basic_serial_port.hpp:213:3:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[1.622s] [01m[K/usr/include/boost/asio/basic_serial_port.hpp:189:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ExecutionContext> boost::asio::basic_serial_port<Executor>::basic_serial_port(ExecutionContext&, const string&, typename std::enable_if<std::is_convertible<ExecutionContext&, boost::asio::execution_context&>::value>::type*)[m[K’
+[1.622s]    [01;36m[Kbasic_serial_port[m[K(ExecutionContext& context, const std::string& device,
+[1.622s]    [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.622s] [01m[K/usr/include/boost/asio/basic_serial_port.hpp:189:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.622s] In file included from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:2[m[K:
+[1.622s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:14:7:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 0 provided
+[1.622s]  class [01;36m[KSerial[m[K
+[1.622s]        [01;36m[K^~~~~~[m[K
+[1.622s] In file included from [01m[K/usr/include/boost/asio.hpp:29[m[K,
+[1.622s]                  from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5[m[K,
+[1.622s]                  from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:2[m[K:
+[1.622s] [01m[K/usr/include/boost/asio/basic_serial_port.hpp:168:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kboost::asio::basic_serial_port<Executor>::basic_serial_port(const executor_type&, const string&) [with Executor = boost::asio::executor; boost::asio::basic_serial_port<Executor>::executor_type = boost::asio::executor; std::__cxx11::string = std::__cxx11::basic_string<char>][m[K’
+[1.622s]    [01;36m[Kbasic_serial_port[m[K(const executor_type& ex, const std::string& device)
+[1.622s]    [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.622s] [01m[K/usr/include/boost/asio/basic_serial_port.hpp:168:3:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[1.622s] [01m[K/usr/include/boost/asio/basic_serial_port.hpp:145:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ExecutionContext> boost::asio::basic_serial_port<Executor>::basic_serial_port(ExecutionContext&, const char*, typename std::enable_if<std::is_convertible<ExecutionContext&, boost::asio::execution_context&>::value>::type*)[m[K’
+[1.622s]    [01;36m[Kbasic_serial_port[m[K(ExecutionContext& context, const char* device,
+[1.622s]    [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.622s] [01m[K/usr/include/boost/asio/basic_serial_port.hpp:145:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.623s] In file included from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:2[m[K:
+[1.623s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:14:7:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 0 provided
+[1.623s]  class [01;36m[KSerial[m[K
+[1.623s]        [01;36m[K^~~~~~[m[K
+[1.623s] In file included from [01m[K/usr/include/boost/asio.hpp:29[m[K,
+[1.623s]                  from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5[m[K,
+[1.623s]                  from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:2[m[K:
+[1.623s] [01m[K/usr/include/boost/asio/basic_serial_port.hpp:124:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kboost::asio::basic_serial_port<Executor>::basic_serial_port(const executor_type&, const char*) [with Executor = boost::asio::executor; boost::asio::basic_serial_port<Executor>::executor_type = boost::asio::executor][m[K’
+[1.623s]    [01;36m[Kbasic_serial_port[m[K(const executor_type& ex, const char* device)
+[1.623s]    [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.623s] [01m[K/usr/include/boost/asio/basic_serial_port.hpp:124:3:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[1.623s] [01m[K/usr/include/boost/asio/basic_serial_port.hpp:103:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ExecutionContext> boost::asio::basic_serial_port<Executor>::basic_serial_port(ExecutionContext&, typename std::enable_if<std::is_convertible<ExecutionContext&, boost::asio::execution_context&>::value, boost::asio::basic_serial_port<Executor> >::type*)[m[K’
+[1.623s]    explicit [01;36m[Kbasic_serial_port[m[K(ExecutionContext& context,
+[1.623s]             [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.623s] [01m[K/usr/include/boost/asio/basic_serial_port.hpp:103:12:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.623s] In file included from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:2[m[K:
+[1.623s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:14:7:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[1.623s]  class [01;36m[KSerial[m[K
+[1.623s]        [01;36m[K^~~~~~[m[K
+[1.623s] In file included from [01m[K/usr/include/boost/asio.hpp:29[m[K,
+[1.623s]                  from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5[m[K,
+[1.623s]                  from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:2[m[K:
+[1.624s] [01m[K/usr/include/boost/asio/basic_serial_port.hpp:89:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kboost::asio::basic_serial_port<Executor>::basic_serial_port(const executor_type&) [with Executor = boost::asio::executor; boost::asio::basic_serial_port<Executor>::executor_type = boost::asio::executor][m[K’
+[1.624s]    explicit [01;36m[Kbasic_serial_port[m[K(const executor_type& ex)
+[1.624s]             [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.624s] [01m[K/usr/include/boost/asio/basic_serial_port.hpp:89:12:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[1.628s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:[m[K In member function ‘[01m[Kvoid Serial::SerialInit(std::__cxx11::string&)[m[K’:
+[1.628s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:19:41:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(boost::asio::serial_port {aka boost::asio::basic_serial_port<>}) (boost::asio::io_service&, std::__cxx11::string&)[m[K’
+[1.628s]      serial_port_(io_service_, port_name_[01;31m[K)[m[K;
+[1.628s]                                          [01;31m[K^[m[K
+[1.632s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:[m[K In member function ‘[01m[Kvoid Serial::SerialWrite(double*, unsigned char, unsigned char)[m[K’:
+[1.632s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:115:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kboost::asio::serial_port[m[K’ {aka ‘[01m[Kclass boost::asio::basic_serial_port<>[m[K’} has no member named ‘[01m[Kget[m[K’
+[1.632s]      boost::asio::write(*serial_port_.[01;31m[Kget[m[K(), boost::asio::buffer(SendBuf, (unsigned int)SendLength), error_code_);
+[1.632s]                                       [01;31m[K^~~[m[K
+[1.632s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:[m[K In member function ‘[01m[Kbool Serial::SerialRead(double*, unsigned char*)[m[K’:
+[1.632s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:136:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kboost::asio::serial_port[m[K’ {aka ‘[01m[Kclass boost::asio::basic_serial_port<>[m[K’} has no member named ‘[01m[Kget[m[K’
+[1.632s]          boost::asio::read_until(*serial_port_.[01;31m[Kget[m[K(), response, "\r\n", error_code_);
+[1.632s]                                                [01;31m[K^~~[m[K
+[2.048s] make[2]: *** [CMakeFiles/serial_test.dir/build.make:76: CMakeFiles/serial_test.dir/src/serial_linux.cpp.o] Error 1
+[2.048s] make[2]: *** Waiting for unfinished jobs....
+[2.057s] make[2]: *** [CMakeFiles/serial_test.dir/build.make:63: CMakeFiles/serial_test.dir/src/serial_test.cpp.o] Error 1
+[2.058s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2
+[2.058s] make: *** [Makefile:141: all] Error 2
+[2.060s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test -- -j4 -l4

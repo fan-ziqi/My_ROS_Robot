@@ -1,0 +1,12 @@
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+ThirdParty/PSCommon/BuildSystem/CommonDefs.mak:40: HOST_PLATFORM is x64
+../../BuildSystem/CommonDefs.mak:40: HOST_PLATFORM is x64
+[01m[KLinux/XnLinuxUSB.cpp:29:10:[m[K [01;31m[Kfatal error: [m[Klibusb-1.0/libusb.h: No such file or directory
+ #include [01;31m[K<libusb-1.0/libusb.h>[m[K
+          [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[4]: *** [../../BuildSystem/CommonCppMakefile:141: ../Bin/Intermediate/x64-Release/libXnLib.a/XnLinuxUSB.o] Error 1
+make[3]: *** [Makefile:131: ThirdParty/PSCommon/XnLib/Source] Error 2
+make[2]: *** [CMakeFiles/astra_openni2.dir/build.make:112: astra_openni2/src/astra_openni2-stamp/astra_openni2-build] Error 2
+make[1]: *** [CMakeFiles/Makefile2:168: CMakeFiles/astra_openni2.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

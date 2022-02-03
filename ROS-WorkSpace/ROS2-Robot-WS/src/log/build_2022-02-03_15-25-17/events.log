@@ -1,0 +1,116 @@
+[0.000000] (-) TimerEvent: {}
+[0.000252] (-) JobUnselected: {'identifier': 'astra_camera'}
+[0.000307] (-) JobUnselected: {'identifier': 'robot_sim'}
+[0.000352] (-) JobUnselected: {'identifier': 'robot_sim_2'}
+[0.000382] (-) JobUnselected: {'identifier': 'rplidar_ros2'}
+[0.000410] (-) JobUnselected: {'identifier': 'serial_test'}
+[0.000441] (-) JobUnselected: {'identifier': 'teleop_twist_keyboard'}
+[0.000457] (robot) JobQueued: {'identifier': 'robot', 'dependencies': OrderedDict()}
+[0.000487] (robot) JobStarted: {'identifier': 'robot'}
+[0.010795] (robot) JobProgress: {'identifier': 'robot', 'progress': 'cmake'}
+[0.011392] (robot) JobProgress: {'identifier': 'robot', 'progress': 'build'}
+[0.012154] (robot) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/build/robot', '--', '-j4', '-l4'], 'cwd': '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/build/robot', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fzq614'), ('SSH_AGENT_PID', '1672'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/fzq614'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1500'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=12bfc3cf328609254536200761fb7e28'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'fzq614'), ('JOURNAL_STREAM', '8:56804'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'fzq614'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/1707,unix/ubuntu:/tmp/.ICE-unix/1707'), ('INVOCATION_ID', 'f60bf18122ac428caed8e7c215faa7b4'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/db1b493b_d89c_4cc9_b225_98f2dc7d1c1c'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.106'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/build/robot'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=12bfc3cf328609254536200761fb7e28'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/teleop_twist_keyboard:/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install:/opt/ros/galactic')]), 'shell': False}
+[0.054987] (robot) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target robot\x1b[0m\n'}
+[0.085126] (robot) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/robot.dir/src/robot.cpp.o\x1b[0m\n'}
+[0.098644] (-) TimerEvent: {}
+[0.199467] (-) TimerEvent: {}
+[0.300183] (-) TimerEvent: {}
+[0.400963] (-) TimerEvent: {}
+[0.501779] (-) TimerEvent: {}
+[0.602543] (-) TimerEvent: {}
+[0.703293] (-) TimerEvent: {}
+[0.804042] (-) TimerEvent: {}
+[0.904817] (-) TimerEvent: {}
+[1.005595] (-) TimerEvent: {}
+[1.106345] (-) TimerEvent: {}
+[1.207281] (-) TimerEvent: {}
+[1.307923] (-) TimerEvent: {}
+[1.408671] (-) TimerEvent: {}
+[1.509450] (-) TimerEvent: {}
+[1.610256] (-) TimerEvent: {}
+[1.711042] (-) TimerEvent: {}
+[1.811496] (-) TimerEvent: {}
+[1.912146] (-) TimerEvent: {}
+[2.012931] (-) TimerEvent: {}
+[2.113743] (-) TimerEvent: {}
+[2.214513] (-) TimerEvent: {}
+[2.315375] (-) TimerEvent: {}
+[2.416130] (-) TimerEvent: {}
+[2.516981] (-) TimerEvent: {}
+[2.617388] (-) TimerEvent: {}
+[2.718116] (-) TimerEvent: {}
+[2.818949] (-) TimerEvent: {}
+[2.919746] (-) TimerEvent: {}
+[3.020529] (-) TimerEvent: {}
+[3.120926] (-) TimerEvent: {}
+[3.221662] (-) TimerEvent: {}
+[3.322489] (-) TimerEvent: {}
+[3.422855] (-) TimerEvent: {}
+[3.523705] (-) TimerEvent: {}
+[3.624486] (-) TimerEvent: {}
+[3.725343] (-) TimerEvent: {}
+[3.826182] (-) TimerEvent: {}
+[3.926991] (-) TimerEvent: {}
+[4.027385] (-) TimerEvent: {}
+[4.128175] (-) TimerEvent: {}
+[4.229117] (-) TimerEvent: {}
+[4.329874] (-) TimerEvent: {}
+[4.430234] (-) TimerEvent: {}
+[4.531071] (-) TimerEvent: {}
+[4.631476] (-) TimerEvent: {}
+[4.731890] (-) TimerEvent: {}
+[4.832608] (-) TimerEvent: {}
+[4.932992] (-) TimerEvent: {}
+[5.033325] (-) TimerEvent: {}
+[5.133734] (-) TimerEvent: {}
+[5.234542] (-) TimerEvent: {}
+[5.334900] (-) TimerEvent: {}
+[5.435282] (-) TimerEvent: {}
+[5.535666] (-) TimerEvent: {}
+[5.636521] (-) TimerEvent: {}
+[5.737493] (-) TimerEvent: {}
+[5.838253] (-) TimerEvent: {}
+[5.939169] (-) TimerEvent: {}
+[6.040032] (-) TimerEvent: {}
+[6.140375] (-) TimerEvent: {}
+[6.240779] (-) TimerEvent: {}
+[6.341132] (-) TimerEvent: {}
+[6.441523] (-) TimerEvent: {}
+[6.542425] (-) TimerEvent: {}
+[6.643359] (-) TimerEvent: {}
+[6.744204] (-) TimerEvent: {}
+[6.823408] (robot) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable robot\x1b[0m\n'}
+[6.844559] (-) TimerEvent: {}
+[6.945402] (-) TimerEvent: {}
+[7.045872] (-) TimerEvent: {}
+[7.146232] (-) TimerEvent: {}
+[7.153782] (robot) StdoutLine: {'line': b'[100%] Built target robot\n'}
+[7.164867] (robot) CommandEnded: {'returncode': 0}
+[7.191490] (robot) JobProgress: {'identifier': 'robot', 'progress': 'install'}
+[7.200475] (robot) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/build/robot'], 'cwd': '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/build/robot', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fzq614'), ('SSH_AGENT_PID', '1672'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/fzq614'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1500'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=12bfc3cf328609254536200761fb7e28'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'fzq614'), ('JOURNAL_STREAM', '8:56804'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'fzq614'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/1707,unix/ubuntu:/tmp/.ICE-unix/1707'), ('INVOCATION_ID', 'f60bf18122ac428caed8e7c215faa7b4'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/db1b493b_d89c_4cc9_b225_98f2dc7d1c1c'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.106'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/build/robot'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=12bfc3cf328609254536200761fb7e28'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/teleop_twist_keyboard:/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install:/opt/ros/galactic')]), 'shell': False}
+[7.206852] (robot) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[7.207204] (robot) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[7.207549] (robot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/lib/robot/robot\n'}
+[7.207853] (robot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/ament_index/resource_index/package_run_dependencies/robot\n'}
+[7.208252] (robot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/ament_index/resource_index/parent_prefix_path/robot\n'}
+[7.208571] (robot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/environment/ament_prefix_path.sh\n'}
+[7.208732] (robot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/environment/ament_prefix_path.dsv\n'}
+[7.208813] (robot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/environment/path.sh\n'}
+[7.208991] (robot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/environment/path.dsv\n'}
+[7.209192] (robot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/local_setup.bash\n'}
+[7.209333] (robot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/local_setup.sh\n'}
+[7.209481] (robot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/local_setup.zsh\n'}
+[7.209688] (robot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/local_setup.dsv\n'}
+[7.209882] (robot) StdoutLine: {'line': b'-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/package.dsv\n'}
+[7.217215] (robot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/ament_index/resource_index/packages/robot\n'}
+[7.217420] (robot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/cmake/robotConfig.cmake\n'}
+[7.217599] (robot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/cmake/robotConfig-version.cmake\n'}
+[7.217742] (robot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/package.xml\n'}
+[7.217927] (robot) StdoutLine: {'line': b'-- Up-to-date: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/launch\n'}
+[7.217996] (robot) StdoutLine: {'line': b'-- Up-to-date: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/launch/robot.launch.py\n'}
+[7.218095] (robot) StdoutLine: {'line': b'-- Up-to-date: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/config\n'}
+[7.218146] (robot) StdoutLine: {'line': b'-- Up-to-date: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/install/share/robot/config/params.yaml\n'}
+[7.219502] (robot) CommandEnded: {'returncode': 0}
+[7.246609] (-) TimerEvent: {}
+[7.264592] (robot) JobEnded: {'identifier': 'robot', 'rc': 0}
+[7.265515] (-) EventReactorShutdown: {}

@@ -1,0 +1,28 @@
+# Example setup for astra cameras
+astra_camera_node:
+  ros__parameters:
+    auto_exposure: false
+    auto_white_balance: false
+    color_depth_synchronization: false
+    color_frame_id: openni_color_optical_frame
+    color_time_offset: 0.0
+    data_skip: 0
+    depth_camera_info_url: ''
+    depth_frame_id: openni_depth_optical_frame
+    depth_ir_offset_x: 0.0
+    depth_ir_offset_y: 0.0
+    depth_mode: 13
+    depth_registration: true
+    depth_time_offset: 0.0
+    device_id: '#1'
+    ir_mode: 13
+    ir_time_offset: 0.0
+    rgb_camera_info_url: ''
+    rgb_preferred: true
+    use_color: false
+    use_depth: true
+    use_device_time: false
+    use_ir: true
+    use_sim_time: false
+    z_offset_mm: 0.0
+    z_scaling: 0.0

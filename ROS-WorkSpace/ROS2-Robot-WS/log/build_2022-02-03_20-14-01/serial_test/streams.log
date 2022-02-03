@@ -1,0 +1,41 @@
+[0.012s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test -- -j4 -l4
+[0.054s] [35m[1mScanning dependencies of target serial_test[0m
+[0.079s] [ 33%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_test.cpp.o[0m
+[0.080s] [ 66%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_linux.cpp.o[0m
+[1.645s] In file included from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[1.646s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:24:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+[1.646s]      void write_to_serial(const [01;31m[Kstring[m[K data);
+[1.646s]                                 [01;31m[K^~~~~~[m[K
+[1.646s]                                 [32m[Kstdin[m[K
+[1.646s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:15:30:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kwrite_to_serial[m[K’ declared void
+[1.646s]  void Serial::write_to_serial([01;31m[Kstring[m[K data)
+[1.646s]                               [01;31m[K^~~~~~[m[K
+[1.646s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:15:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ was not declared in this scope
+[1.646s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:15:30:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+[1.646s] In file included from [01m[K/usr/include/c++/8/iosfwd:39[m[K,
+[1.646s]                  from [01m[K/usr/include/c++/8/memory:72[m[K,
+[1.646s]                  from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:154[m[K,
+[1.646s]                  from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+[1.646s]                  from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[1.646s] [01m[K/usr/include/c++/8/bits/stringfwd.h:74:33:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::__cxx11::string[m[K’
+[1.646s]    typedef basic_string<char>    [01;36m[Kstring[m[K;
+[1.646s]                                  [01;36m[K^~~~~~[m[K
+[1.647s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:[m[K In member function ‘[01m[Kvoid Serial::SerialInit(std::__cxx11::string&)[m[K’:
+[1.647s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:40:25:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kconst char*[m[K’ to ‘[01m[Kint[m[K’ [[01;31m[K-fpermissive[m[K]
+[1.647s]          write_to_serial([01;31m[K"Hello World"[m[K);
+[1.647s]                          [01;31m[K^~~~~~~~~~~~~[m[K
+[1.647s] In file included from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[1.648s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:24:39:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid Serial::write_to_serial(int)[m[K’
+[1.648s]      void write_to_serial([01;36m[Kconst string data[m[K);
+[1.648s]                           [01;36m[K~~~~~~~~~~~~~^~~~[m[K
+[1.657s] In file included from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:2[m[K:
+[1.657s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:24:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+[1.657s]      void write_to_serial(const [01;31m[Kstring[m[K data);
+[1.657s]                                 [01;31m[K^~~~~~[m[K
+[1.657s]                                 [32m[Kstdin[m[K
+[2.086s] make[2]: *** [CMakeFiles/serial_test.dir/build.make:76: CMakeFiles/serial_test.dir/src/serial_linux.cpp.o] Error 1
+[2.086s] make[2]: *** Waiting for unfinished jobs....
+[2.109s] make[2]: *** [CMakeFiles/serial_test.dir/build.make:63: CMakeFiles/serial_test.dir/src/serial_test.cpp.o] Error 1
+[2.109s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2
+[2.109s] make: *** [Makefile:141: all] Error 2
+[2.111s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test -- -j4 -l4

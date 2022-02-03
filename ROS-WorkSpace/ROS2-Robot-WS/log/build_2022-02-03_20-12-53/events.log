@@ -1,0 +1,431 @@
+[0.000000] (-) TimerEvent: {}
+[0.000147] (-) JobUnselected: {'identifier': 'astra_camera'}
+[0.000182] (-) JobUnselected: {'identifier': 'robot'}
+[0.000196] (-) JobUnselected: {'identifier': 'robot_sim'}
+[0.000207] (-) JobUnselected: {'identifier': 'robot_sim_2'}
+[0.000217] (-) JobUnselected: {'identifier': 'rplidar_ros2'}
+[0.000228] (-) JobUnselected: {'identifier': 'teleop_twist_keyboard'}
+[0.000240] (serial_test) JobQueued: {'identifier': 'serial_test', 'dependencies': OrderedDict()}
+[0.000254] (serial_test) JobStarted: {'identifier': 'serial_test'}
+[0.009962] (serial_test) JobProgress: {'identifier': 'serial_test', 'progress': 'cmake'}
+[0.010959] (serial_test) JobProgress: {'identifier': 'serial_test', 'progress': 'build'}
+[0.011003] (serial_test) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test', '--', '-j4', '-l4'], 'cwd': '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fzq614'), ('SSH_AGENT_PID', '1672'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/fzq614'), ('OLDPWD', '/home/fzq614'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1500'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'fzq614'), ('JOURNAL_STREAM', '8:58135'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'fzq614'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/1707,unix/ubuntu:/tmp/.ICE-unix/1707'), ('INVOCATION_ID', '082eb5c616bc4b0cb35bf0b2c2453f6c'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/084a1afb_2a9e_46b7_bbf1_1988db2c29e6'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.106'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/teleop_twist_keyboard:/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install:/opt/ros/galactic')]), 'shell': False}
+[0.053511] (serial_test) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target serial_test\x1b[0m\n'}
+[0.078234] (serial_test) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_test.cpp.o\x1b[0m\n'}
+[0.078412] (serial_test) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_linux.cpp.o\x1b[0m\n'}
+[0.098974] (-) TimerEvent: {}
+[0.199611] (-) TimerEvent: {}
+[0.300131] (-) TimerEvent: {}
+[0.400692] (-) TimerEvent: {}
+[0.501304] (-) TimerEvent: {}
+[0.601854] (-) TimerEvent: {}
+[0.702425] (-) TimerEvent: {}
+[0.803005] (-) TimerEvent: {}
+[0.903629] (-) TimerEvent: {}
+[1.004165] (-) TimerEvent: {}
+[1.104790] (-) TimerEvent: {}
+[1.205302] (-) TimerEvent: {}
+[1.305899] (-) TimerEvent: {}
+[1.406467] (-) TimerEvent: {}
+[1.507067] (-) TimerEvent: {}
+[1.607703] (-) TimerEvent: {}
+[1.641710] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:2\x1b[m\x1b[K:\n'}
+[1.641924] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:24:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstring\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Kstdin\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.641976] (serial_test) StderrLine: {'line': b'     void write_to_serial(const \x1b[01;31m\x1b[Kstring\x1b[m\x1b[K data);\n'}
+[1.642018] (serial_test) StderrLine: {'line': b'                                \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.642081] (serial_test) StderrLine: {'line': b'                                \x1b[32m\x1b[Kstdin\x1b[m\x1b[K\n'}
+[1.643997] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.644147] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:24:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstring\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Kstdin\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.644197] (serial_test) StderrLine: {'line': b'     void write_to_serial(const \x1b[01;31m\x1b[Kstring\x1b[m\x1b[K data);\n'}
+[1.644239] (serial_test) StderrLine: {'line': b'                                \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.644280] (serial_test) StderrLine: {'line': b'                                \x1b[32m\x1b[Kstdin\x1b[m\x1b[K\n'}
+[1.645415] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:15:36:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstring\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Kstdin\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.646961] (serial_test) StderrLine: {'line': b' void Serial::write_to_serial(const \x1b[01;31m\x1b[Kstring\x1b[m\x1b[K data)\n'}
+[1.647026] (serial_test) StderrLine: {'line': b'                                    \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.647085] (serial_test) StderrLine: {'line': b'                                    \x1b[32m\x1b[Kstdin\x1b[m\x1b[K\n'}
+[1.647127] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Serial::write_to_serial(int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.647172] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kbuffer(const int&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.647213] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;31m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.647253] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.647293] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.647332] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.647371] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.647411] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.647450] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.647490] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.647530] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:908:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kboost::asio::mutable_buffers_1 boost::asio::buffer(const boost::asio::mutable_buffer&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.647646] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_MUTABLE_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(\n'}
+[1.647689] (serial_test) StderrLine: {'line': b'                                  \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.647730] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:908:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst boost::asio::mutable_buffer&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.647770] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:921:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kboost::asio::mutable_buffers_1 boost::asio::buffer(const boost::asio::mutable_buffer&, std::size_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.647816] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_MUTABLE_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(const mutable_buffer& b,\n'}
+[1.647859] (serial_test) StderrLine: {'line': b'                                  \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.647899] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:921:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 2 arguments, 1 provided\n'}
+[1.647943] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:938:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kboost::asio::const_buffers_1 boost::asio::buffer(const boost::asio::const_buffer&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.647984] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_CONST_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(\n'}
+[1.648023] (serial_test) StderrLine: {'line': b'                                \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.648151] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:938:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst boost::asio::const_buffer&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.648199] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:951:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kboost::asio::const_buffers_1 boost::asio::buffer(const boost::asio::const_buffer&, std::size_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.648239] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_CONST_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(const const_buffer& b,\n'}
+[1.648278] (serial_test) StderrLine: {'line': b'                                \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.648318] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:951:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 2 arguments, 1 provided\n'}
+[1.648357] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:967:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kboost::asio::mutable_buffers_1 boost::asio::buffer(void*, std::size_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.648399] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_MUTABLE_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(void* data,\n'}
+[1.648437] (serial_test) StderrLine: {'line': b'                                  \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.648477] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:967:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 2 arguments, 1 provided\n'}
+[1.648518] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:977:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kboost::asio::const_buffers_1 boost::asio::buffer(const void*, std::size_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.648576] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_CONST_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(const void* data,\n'}
+[1.648619] (serial_test) StderrLine: {'line': b'                                \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.648659] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:977:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 2 arguments, 1 provided\n'}
+[1.648700] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:991:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class PodType, long unsigned int N> boost::asio::mutable_buffers_1 boost::asio::buffer(PodType (&)[N])\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.648742] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_MUTABLE_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(PodType (&data)[N]) BOOST_ASIO_NOEXCEPT\n'}
+[1.648782] (serial_test) StderrLine: {'line': b'                                  \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.648822] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:991:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.648862] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[KPodType [N]\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.648907] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.648947] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.648987] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.649027] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.649082] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.649123] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.649164] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.649205] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.649244] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1004:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class PodType, long unsigned int N> boost::asio::mutable_buffers_1 boost::asio::buffer(PodType (&)[N], std::size_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.649287] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_MUTABLE_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(PodType (&data)[N],\n'}
+[1.649327] (serial_test) StderrLine: {'line': b'                                  \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.649366] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1004:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.649409] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[KPodType [N]\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.649449] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.649488] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.649528] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.649583] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.649628] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.649668] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.649709] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.649751] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.649792] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1020:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class PodType, long unsigned int N> boost::asio::const_buffers_1 boost::asio::buffer(const PodType (&)[N])\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.649836] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_CONST_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(\n'}
+[1.649876] (serial_test) StderrLine: {'line': b'                                \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.649915] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1020:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.649955] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst PodType [N]\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.649995] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.650035] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.650091] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.650132] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.650172] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.650213] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.650253] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.650294] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.650332] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1034:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class PodType, long unsigned int N> boost::asio::const_buffers_1 boost::asio::buffer(const PodType (&)[N], std::size_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.650372] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_CONST_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(const PodType (&data)[N],\n'}
+[1.650413] (serial_test) StderrLine: {'line': b'                                \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.650452] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1034:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.650491] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst PodType [N]\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.650530] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.650585] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.650626] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.650670] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.650714] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.650753] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.650792] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.650831] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.650871] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1120:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class PodType, long unsigned int N> boost::asio::mutable_buffers_1 boost::asio::buffer(boost::array<PodType, N>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.650911] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_MUTABLE_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(\n'}
+[1.650950] (serial_test) StderrLine: {'line': b'                                  \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.650990] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1120:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.651031] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kboost::array<PodType, N>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.651090] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.651130] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.651174] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.651214] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.651253] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.651292] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.651332] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.651371] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.651411] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1135:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class PodType, long unsigned int N> boost::asio::mutable_buffers_1 boost::asio::buffer(boost::array<PodType, N>&, std::size_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.651450] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_MUTABLE_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(boost::array<PodType, N>& data,\n'}
+[1.651489] (serial_test) StderrLine: {'line': b'                                  \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.651528] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1135:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.651652] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kboost::array<PodType, N>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.651703] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.651743] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.651783] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.651824] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.651864] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.651903] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.651943] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.651983] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.652026] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1151:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class PodType, long unsigned int N> boost::asio::const_buffers_1 boost::asio::buffer(boost::array<const PodType, N>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.652086] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_CONST_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(\n'}
+[1.652132] (serial_test) StderrLine: {'line': b'                                \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.652173] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1151:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.652213] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kboost::array<const PodType, N>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.652255] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.652295] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.652335] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.652374] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.652412] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.652451] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.652489] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.652528] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.652585] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1165:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class PodType, long unsigned int N> boost::asio::const_buffers_1 boost::asio::buffer(boost::array<const PodType, N>&, std::size_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.652634] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_CONST_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(boost::array<const PodType, N>& data,\n'}
+[1.652674] (serial_test) StderrLine: {'line': b'                                \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.652714] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1165:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.652758] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kboost::array<const PodType, N>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.652800] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.652839] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.652879] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.652919] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.652959] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.653001] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.653050] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.653098] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.653139] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1183:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class PodType, long unsigned int N> boost::asio::const_buffers_1 boost::asio::buffer(const boost::array<PodType, N>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.653181] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_CONST_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(\n'}
+[1.653221] (serial_test) StderrLine: {'line': b'                                \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.653260] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1183:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.653300] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst boost::array<PodType, N>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.653340] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.653379] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.653418] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.653457] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.653503] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.653553] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.653598] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.653639] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.653678] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1197:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class PodType, long unsigned int N> boost::asio::const_buffers_1 boost::asio::buffer(const boost::array<PodType, N>&, std::size_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.653718] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_CONST_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(const boost::array<PodType, N>& data,\n'}
+[1.653756] (serial_test) StderrLine: {'line': b'                                \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.653796] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1197:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.653834] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst boost::array<PodType, N>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.653876] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.653916] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.653955] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.653994] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.654033] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.654087] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.654127] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.654170] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.654210] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1215:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class PodType, long unsigned int N> boost::asio::mutable_buffers_1 boost::asio::buffer(std::array<_Tp, _Nm>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.654253] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_MUTABLE_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(\n'}
+[1.654292] (serial_test) StderrLine: {'line': b'                                  \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.654332] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1215:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.654375] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::array<_Tp, _Nm>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.654419] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.654458] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.654496] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.654534] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.654589] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.654631] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.654671] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.654712] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.654753] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1229:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class PodType, long unsigned int N> boost::asio::mutable_buffers_1 boost::asio::buffer(std::array<_Tp, _Nm>&, std::size_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.654793] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_MUTABLE_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(std::array<PodType, N>& data,\n'}
+[1.654834] (serial_test) StderrLine: {'line': b'                                  \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.654876] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1229:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.654917] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::array<_Tp, _Nm>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.654958] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.654997] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.655048] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.655093] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.655133] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.655172] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.655212] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.655252] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.655292] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1245:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class PodType, long unsigned int N> boost::asio::const_buffers_1 boost::asio::buffer(std::array<const PodType, N>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.655336] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_CONST_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(\n'}
+[1.655375] (serial_test) StderrLine: {'line': b'                                \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.655414] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1245:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.655454] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::array<const PodType, N>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.655495] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.655534] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.655682] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.655734] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.655775] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.655817] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.655857] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.655896] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.655935] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1259:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class PodType, long unsigned int N> boost::asio::const_buffers_1 boost::asio::buffer(std::array<const PodType, N>&, std::size_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.655977] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_CONST_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(std::array<const PodType, N>& data,\n'}
+[1.656017] (serial_test) StderrLine: {'line': b'                                \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.656074] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1259:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.656117] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::array<const PodType, N>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.656158] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.656197] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.656237] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.656277] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.656320] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.656363] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.656403] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.656444] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.656481] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1275:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class PodType, long unsigned int N> boost::asio::const_buffers_1 boost::asio::buffer(const std::array<_Tp, _Nm>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.656521] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_CONST_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(\n'}
+[1.656579] (serial_test) StderrLine: {'line': b'                                \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.656622] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1275:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.656664] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst std::array<_Tp, _Nm>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.656703] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.656743] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.656782] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.656821] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.656860] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.656898] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.656936] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.656974] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.657013] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1289:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class PodType, long unsigned int N> boost::asio::const_buffers_1 boost::asio::buffer(const std::array<_Tp, _Nm>&, std::size_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.657067] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_CONST_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(const std::array<PodType, N>& data,\n'}
+[1.657111] (serial_test) StderrLine: {'line': b'                                \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.657151] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1289:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.657193] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst std::array<_Tp, _Nm>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.657239] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.657278] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.657318] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.657356] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.657396] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.657435] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.657473] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.657511] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.657562] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1310:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class PodType, class Allocator> boost::asio::mutable_buffers_1 boost::asio::buffer(std::vector<_Tp, _Alloc>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.657606] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_MUTABLE_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(\n'}
+[1.657646] (serial_test) StderrLine: {'line': b'                                  \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.657685] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1310:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.657727] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<_Tp, _Alloc>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.657767] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.657805] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.657846] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.657886] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.657925] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.657964] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.658004] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.658054] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.658110] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1334:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class PodType, class Allocator> boost::asio::mutable_buffers_1 boost::asio::buffer(std::vector<_Tp, _Alloc>&, std::size_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.658158] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_MUTABLE_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(std::vector<PodType, Allocator>& data,\n'}
+[1.658199] (serial_test) StderrLine: {'line': b'                                  \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.658239] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1334:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.658279] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<_Tp, _Alloc>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.658320] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.658361] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.658402] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.658442] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.658481] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.658521] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.658578] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.658622] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.658662] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1359:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class PodType, class Allocator> boost::asio::const_buffers_1 boost::asio::buffer(const std::vector<_Tp, _Alloc>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.658707] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_CONST_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(\n'}
+[1.658750] (serial_test) StderrLine: {'line': b'                                \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.658790] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1359:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.658830] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst std::vector<_Tp, _Alloc>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.658869] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.658908] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.658947] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.658984] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.659028] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.659084] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.659125] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.659167] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.659207] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1383:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class PodType, class Allocator> boost::asio::const_buffers_1 boost::asio::buffer(const std::vector<_Tp, _Alloc>&, std::size_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.659247] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_CONST_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(\n'}
+[1.659285] (serial_test) StderrLine: {'line': b'                                \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.659323] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1383:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.659364] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst std::vector<_Tp, _Alloc>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.659404] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.659442] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.659480] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.659519] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.659661] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.659733] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.659773] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.659813] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.659853] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1407:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class Elem, class Traits, class Allocator> boost::asio::mutable_buffers_1 boost::asio::buffer(std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.659894] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_MUTABLE_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(\n'}
+[1.659934] (serial_test) StderrLine: {'line': b'                                  \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.659974] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1407:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.660013] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::__cxx11::basic_string<_CharT, _Traits, _Allocator>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.660078] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.660119] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.660158] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.660197] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.660236] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.660278] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.660316] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.660359] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.660399] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1431:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class Elem, class Traits, class Allocator> boost::asio::mutable_buffers_1 boost::asio::buffer(std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, std::size_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.660440] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_MUTABLE_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(\n'}
+[1.660479] (serial_test) StderrLine: {'line': b'                                  \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.660518] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1431:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.660576] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::__cxx11::basic_string<_CharT, _Traits, _Allocator>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.660619] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.660660] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.660699] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.660738] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.660777] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.660815] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.660853] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.660893] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.660935] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1454:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class Elem, class Traits, class Allocator> boost::asio::const_buffers_1 boost::asio::buffer(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.660976] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_CONST_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(\n'}
+[1.661016] (serial_test) StderrLine: {'line': b'                                \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.661069] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1454:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.661115] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Allocator>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.661154] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.661193] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.661232] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.661271] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.661310] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.661349] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.661388] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.661426] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.661466] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1477:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class Elem, class Traits, class Allocator> boost::asio::const_buffers_1 boost::asio::buffer(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, std::size_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.661505] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_CONST_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(\n'}
+[1.661552] (serial_test) StderrLine: {'line': b'                                \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.661602] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1477:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.661643] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Allocator>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.661688] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.661730] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.661772] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.661812] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.661850] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.661891] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.661930] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.661968] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.662006] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1501:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class Elem, class Traits> boost::asio::const_buffers_1 boost::asio::buffer(std::basic_string_view<_CharT, _Traits>)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.662058] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_CONST_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(\n'}
+[1.662101] (serial_test) StderrLine: {'line': b'                                \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.662140] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1501:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.662180] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::basic_string_view<_CharT, _Traits>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.662220] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.662258] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.662297] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:22\x1b[m\x1b[K,\n'}
+[1.662335] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_socket.hpp:36\x1b[m\x1b[K,\n'}
+[1.662374] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/basic_datagram_socket.hpp:20\x1b[m\x1b[K,\n'}
+[1.662412] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:24\x1b[m\x1b[K,\n'}
+[1.662451] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[1.662490] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[1.662529] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1522:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class Elem, class Traits> boost::asio::const_buffers_1 boost::asio::buffer(std::basic_string_view<_CharT, _Traits>, std::size_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.662586] (serial_test) StderrLine: {'line': b' inline BOOST_ASIO_CONST_BUFFER \x1b[01;36m\x1b[Kbuffer\x1b[m\x1b[K(\n'}
+[1.662627] (serial_test) StderrLine: {'line': b'                                \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.662666] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/buffer.hpp:1522:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[1.662710] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:24:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::basic_string_view<_CharT, _Traits>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.662750] (serial_test) StderrLine: {'line': b'     boost::asio::write(*serial_port_, boost::asio::buffer(data\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.662789] (serial_test) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.662828] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Serial::SerialInit(std::__cxx11::string&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.662868] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:46:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K-fpermissive\x1b[m\x1b[K]\n'}
+[1.662908] (serial_test) StderrLine: {'line': b'         write_to_serial(\x1b[01;31m\x1b[K"Hello World"\x1b[m\x1b[K);\n'}
+[1.662946] (serial_test) StderrLine: {'line': b'                         \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.662985] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:15:43:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 1 of \xe2\x80\x98\x1b[01m\x1b[Kvoid Serial::write_to_serial(int)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.663028] (serial_test) StderrLine: {'line': b' void Serial::write_to_serial(\x1b[01;36m\x1b[Kconst string data\x1b[m\x1b[K)\n'}
+[1.663084] (serial_test) StderrLine: {'line': b'                              \x1b[01;36m\x1b[K~~~~~~~~~~~~~^~~~\x1b[m\x1b[K\n'}
+[1.708239] (-) TimerEvent: {}
+[1.808833] (-) TimerEvent: {}
+[1.909378] (-) TimerEvent: {}
+[2.009983] (-) TimerEvent: {}
+[2.093481] (serial_test) StderrLine: {'line': b'make[2]: *** [CMakeFiles/serial_test.dir/build.make:76: CMakeFiles/serial_test.dir/src/serial_linux.cpp.o] Error 1\n'}
+[2.093814] (serial_test) StderrLine: {'line': b'make[2]: *** Waiting for unfinished jobs....\n'}
+[2.093883] (serial_test) StderrLine: {'line': b'make[2]: *** [CMakeFiles/serial_test.dir/build.make:63: CMakeFiles/serial_test.dir/src/serial_test.cpp.o] Error 1\n'}
+[2.094052] (serial_test) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2\n'}
+[2.094204] (serial_test) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[2.096279] (serial_test) CommandEnded: {'returncode': 2}
+[2.110553] (-) TimerEvent: {}
+[2.139202] (serial_test) JobEnded: {'identifier': 'serial_test', 'rc': 2}
+[2.149935] (-) EventReactorShutdown: {}

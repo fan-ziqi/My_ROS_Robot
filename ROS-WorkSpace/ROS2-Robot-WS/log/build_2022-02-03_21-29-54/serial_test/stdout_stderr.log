@@ -1,0 +1,573 @@
+[35m[1mScanning dependencies of target serial_test[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_linux.cpp.o[0m
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:[m[K In member function ‘[01m[Kvoid Serial::write_to_serial(std::__cxx11::string)[m[K’:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:37:12:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Klen[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+     size_t [01;35m[Klen[m[K;
+            [01;35m[K^~~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:[m[K In member function ‘[01m[Kvoid Serial::read_from_serial()[m[K’:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:19:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator<<[m[K’ (operand types are ‘[01m[Kstd::ostream[m[K’ {aka ‘[01m[Kstd::basic_ostream<char>[m[K’} and ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’})
+         [01;31m[Kstd::cout << response[m[K << std::endl;
+         [01;31m[K~~~~~~~~~~^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/8/iostream:39[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:22[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/ostream:108:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+       [01;36m[Koperator[m[K<<(__ostream_type& (*__pf)(__ostream_type&))
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/ostream:108:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’} to ‘[01m[Kstd::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&)[m[K’ {aka ‘[01m[Kstd::basic_ostream<char>& (*)(std::basic_ostream<char>&)[m[K’}
+[01m[K/usr/include/c++/8/ostream:117:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>][m[K’
+       [01;36m[Koperator[m[K<<(__ios_type& (*__pf)(__ios_type&))
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/ostream:117:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’} to ‘[01m[Kstd::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&)[m[K’ {aka ‘[01m[Kstd::basic_ios<char>& (*)(std::basic_ios<char>&)[m[K’}
+[01m[K/usr/include/c++/8/ostream:127:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+       [01;36m[Koperator[m[K<<(ios_base& (*__pf) (ios_base&))
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/ostream:127:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’} to ‘[01m[Kstd::ios_base& (*)(std::ios_base&)[m[K’
+[01m[K/usr/include/c++/8/ostream:166:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+       [01;36m[Koperator[m[K<<(long __n)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/ostream:166:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’} to ‘[01m[Klong int[m[K’
+[01m[K/usr/include/c++/8/ostream:170:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+       [01;36m[Koperator[m[K<<(unsigned long __n)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/ostream:170:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’} to ‘[01m[Klong unsigned int[m[K’
+[01m[K/usr/include/c++/8/ostream:174:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+       [01;36m[Koperator[m[K<<(bool __n)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/ostream:174:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’} to ‘[01m[Kbool[m[K’
+In file included from [01m[K/usr/include/c++/8/ostream:696[m[K,
+                 from [01m[K/usr/include/c++/8/iostream:39[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:22[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/bits/ostream.tcc:91:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>][m[K’
+     [01;36m[Kbasic_ostream<_CharT, _Traits>[m[K::
+     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/8/bits/ostream.tcc:91:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’} to ‘[01m[Kshort int[m[K’
+In file included from [01m[K/usr/include/c++/8/iostream:39[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:22[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/ostream:181:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+       [01;36m[Koperator[m[K<<(unsigned short __n)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/ostream:181:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’} to ‘[01m[Kshort unsigned int[m[K’
+In file included from [01m[K/usr/include/c++/8/ostream:696[m[K,
+                 from [01m[K/usr/include/c++/8/iostream:39[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:22[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/bits/ostream.tcc:105:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>][m[K’
+     [01;36m[Kbasic_ostream<_CharT, _Traits>[m[K::
+     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/8/bits/ostream.tcc:105:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’} to ‘[01m[Kint[m[K’
+In file included from [01m[K/usr/include/c++/8/iostream:39[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:22[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/ostream:192:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+       [01;36m[Koperator[m[K<<(unsigned int __n)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/ostream:192:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’} to ‘[01m[Kunsigned int[m[K’
+[01m[K/usr/include/c++/8/ostream:201:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+       [01;36m[Koperator[m[K<<(long long __n)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/ostream:201:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’} to ‘[01m[Klong long int[m[K’
+[01m[K/usr/include/c++/8/ostream:205:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+       [01;36m[Koperator[m[K<<(unsigned long long __n)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/ostream:205:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’} to ‘[01m[Klong long unsigned int[m[K’
+[01m[K/usr/include/c++/8/ostream:220:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+       [01;36m[Koperator[m[K<<(double __f)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/ostream:220:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’} to ‘[01m[Kdouble[m[K’
+[01m[K/usr/include/c++/8/ostream:224:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+       [01;36m[Koperator[m[K<<(float __f)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/ostream:224:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’} to ‘[01m[Kfloat[m[K’
+[01m[K/usr/include/c++/8/ostream:232:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+       [01;36m[Koperator[m[K<<(long double __f)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/ostream:232:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’} to ‘[01m[Klong double[m[K’
+[01m[K/usr/include/c++/8/ostream:245:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+       [01;36m[Koperator[m[K<<(const void* __p)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/ostream:245:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’} to ‘[01m[Kconst void*[m[K’
+In file included from [01m[K/usr/include/c++/8/ostream:696[m[K,
+                 from [01m[K/usr/include/c++/8/iostream:39[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:22[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/bits/ostream.tcc:119:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>][m[K’
+     [01;36m[Kbasic_ostream<_CharT, _Traits>[m[K::
+     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/8/bits/ostream.tcc:119:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’} to ‘[01m[Kstd::basic_ostream<char>::__streambuf_type*[m[K’ {aka ‘[01m[Kstd::basic_streambuf<char>*[m[K’}
+In file included from [01m[K/usr/include/c++/8/bits/basic_string.h:48[m[K,
+                 from [01m[K/usr/include/c++/8/string:52[m[K,
+                 from [01m[K/usr/include/c++/8/stdexcept:39[m[K,
+                 from [01m[K/usr/include/c++/8/array:39[m[K,
+                 from [01m[K/usr/include/c++/8/tuple:39[m[K,
+                 from [01m[K/usr/include/c++/8/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/8/memory:80[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:154[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/string_view:545:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::basic_string_view<_CharT, _Traits>)[m[K’
+     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/string_view:545:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::asio::basic_streambuf<>[m[K’ is not derived from ‘[01m[Kstd::basic_string_view<_CharT, _Traits>[m[K’
+         std::cout << [01;36m[Kresponse[m[K << std::endl;
+                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/8/string:52[m[K,
+                 from [01m[K/usr/include/c++/8/stdexcept:39[m[K,
+                 from [01m[K/usr/include/c++/8/array:39[m[K,
+                 from [01m[K/usr/include/c++/8/tuple:39[m[K,
+                 from [01m[K/usr/include/c++/8/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/8/memory:80[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:154[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/bits/basic_string.h:6323:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)[m[K’
+     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/bits/basic_string.h:6323:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’} is not derived from ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Allocator>[m[K’
+         std::cout << [01;36m[Kresponse[m[K << std::endl;
+                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/8/memory:81[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:154[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/bits/shared_ptr.h:66:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Ch, class _Tr, class _Tp, __gnu_cxx::_Lock_policy _Lp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__shared_ptr<_Tp, _Lp>&)[m[K’
+     [01;36m[Koperator[m[K<<(std::basic_ostream<_Ch, _Tr>& __os,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/bits/shared_ptr.h:66:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’} is not derived from ‘[01m[Kconst std::__shared_ptr<_Tp, _Lp>[m[K’
+         std::cout << [01;36m[Kresponse[m[K << std::endl;
+                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/8/mutex:42[m[K,
+                 from [01m[K/usr/include/c++/8/future:38[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/system_error:217:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)[m[K’
+     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/system_error:217:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kresponse[m[K’ (type ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’}) to type ‘[01m[Kconst std::error_code&[m[K’
+         std::cout << [01;36m[Kresponse[m[K << std::endl;
+                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/8/future:39[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/thread:323:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::thread::id)[m[K’
+     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, thread::id __id)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/thread:323:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kresponse[m[K’ (type ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’}) to type ‘[01m[Kstd::thread::id[m[K’
+         std::cout << [01;36m[Kresponse[m[K << std::endl;
+                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/8/iostream:39[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:22[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/ostream:500:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)[m[K’
+     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/ostream:500:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K [01;36m[Knote: [m[K  deduced conflicting types for parameter ‘[01m[K_CharT[m[K’ (‘[01m[Kchar[m[K’ and ‘[01m[Kboost::asio::basic_streambuf<>[m[K’)
+         std::cout << [01;36m[Kresponse[m[K << std::endl;
+                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/8/iostream:39[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:22[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/ostream:505:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)[m[K’
+     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/ostream:505:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kresponse[m[K’ (type ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’}) to type ‘[01m[Kchar[m[K’
+         std::cout << [01;36m[Kresponse[m[K << std::endl;
+                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/8/iostream:39[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:22[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/ostream:511:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)[m[K’
+     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, char __c)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/ostream:511:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kresponse[m[K’ (type ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’}) to type ‘[01m[Kchar[m[K’
+         std::cout << [01;36m[Kresponse[m[K << std::endl;
+                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/8/iostream:39[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:22[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/ostream:517:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)[m[K’
+     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/ostream:517:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kresponse[m[K’ (type ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’}) to type ‘[01m[Ksigned char[m[K’
+         std::cout << [01;36m[Kresponse[m[K << std::endl;
+                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/8/iostream:39[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:22[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/ostream:522:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)[m[K’
+     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/ostream:522:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kresponse[m[K’ (type ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’}) to type ‘[01m[Kunsigned char[m[K’
+         std::cout << [01;36m[Kresponse[m[K << std::endl;
+                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/8/iostream:39[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:22[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/ostream:542:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)[m[K’
+     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/ostream:542:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst _CharT*[m[K’ and ‘[01m[Kboost::asio::basic_streambuf<>[m[K’
+         std::cout << [01;36m[Kresponse[m[K << std::endl;
+                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/8/ostream:696[m[K,
+                 from [01m[K/usr/include/c++/8/iostream:39[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:22[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/bits/ostream.tcc:321:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)[m[K’
+     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/bits/ostream.tcc:321:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kresponse[m[K’ (type ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’}) to type ‘[01m[Kconst char*[m[K’
+         std::cout << [01;36m[Kresponse[m[K << std::endl;
+                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/8/iostream:39[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:22[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/ostream:559:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)[m[K’
+     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/ostream:559:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kresponse[m[K’ (type ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’}) to type ‘[01m[Kconst char*[m[K’
+         std::cout << [01;36m[Kresponse[m[K << std::endl;
+                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/8/iostream:39[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:22[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/ostream:572:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)[m[K’
+     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/ostream:572:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kresponse[m[K’ (type ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’}) to type ‘[01m[Kconst signed char*[m[K’
+         std::cout << [01;36m[Kresponse[m[K << std::endl;
+                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/8/iostream:39[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:22[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/ostream:577:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)[m[K’
+     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/ostream:577:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kresponse[m[K’ (type ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’}) to type ‘[01m[Kconst unsigned char*[m[K’
+         std::cout << [01;36m[Kresponse[m[K << std::endl;
+                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/8/iostream:39[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:22[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/ostream:685:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&)[m[K’
+     [01;36m[Koperator[m[K<<(_Ostream&& __os, const _Tp& __x)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/ostream:685:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+/usr/include/c++/8/ostream: In substitution of ‘[01m[Ktemplate<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&) [with _Ostream = std::basic_ostream<char>&; _Tp = boost::asio::basic_streambuf<>][m[K’:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K   required from here
+[01m[K/usr/include/c++/8/ostream:685:5:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, std::basic_ostream<char>&>[m[K’
+In file included from [01m[K/opt/ros/galactic/include/rosidl_runtime_cpp/traits.hpp:19[m[K,
+                 from [01m[K/opt/ros/galactic/include/builtin_interfaces/msg/detail/duration__traits.hpp:10[m[K,
+                 from [01m[K/opt/ros/galactic/include/builtin_interfaces/msg/duration.hpp:9[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/duration.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:34[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:36[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/iomanip:79:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Resetiosflags)[m[K’
+     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/iomanip:79:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kresponse[m[K’ (type ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’}) to type ‘[01m[Kstd::_Resetiosflags[m[K’
+         std::cout << [01;36m[Kresponse[m[K << std::endl;
+                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/galactic/include/rosidl_runtime_cpp/traits.hpp:19[m[K,
+                 from [01m[K/opt/ros/galactic/include/builtin_interfaces/msg/detail/duration__traits.hpp:10[m[K,
+                 from [01m[K/opt/ros/galactic/include/builtin_interfaces/msg/duration.hpp:9[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/duration.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:34[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:36[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/iomanip:109:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setiosflags)[m[K’
+     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/iomanip:109:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kresponse[m[K’ (type ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’}) to type ‘[01m[Kstd::_Setiosflags[m[K’
+         std::cout << [01;36m[Kresponse[m[K << std::endl;
+                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/galactic/include/rosidl_runtime_cpp/traits.hpp:19[m[K,
+                 from [01m[K/opt/ros/galactic/include/builtin_interfaces/msg/detail/duration__traits.hpp:10[m[K,
+                 from [01m[K/opt/ros/galactic/include/builtin_interfaces/msg/duration.hpp:9[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/duration.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:34[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:36[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/iomanip:143:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setbase)[m[K’
+     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/iomanip:143:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kresponse[m[K’ (type ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’}) to type ‘[01m[Kstd::_Setbase[m[K’
+         std::cout << [01;36m[Kresponse[m[K << std::endl;
+                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/galactic/include/rosidl_runtime_cpp/traits.hpp:19[m[K,
+                 from [01m[K/opt/ros/galactic/include/builtin_interfaces/msg/detail/duration__traits.hpp:10[m[K,
+                 from [01m[K/opt/ros/galactic/include/builtin_interfaces/msg/duration.hpp:9[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/duration.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:34[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:36[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/iomanip:178:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setfill<_CharT>)[m[K’
+     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/iomanip:178:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::asio::basic_streambuf<>[m[K’ is not derived from ‘[01m[Kstd::_Setfill<_CharT>[m[K’
+         std::cout << [01;36m[Kresponse[m[K << std::endl;
+                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/galactic/include/rosidl_runtime_cpp/traits.hpp:19[m[K,
+                 from [01m[K/opt/ros/galactic/include/builtin_interfaces/msg/detail/duration__traits.hpp:10[m[K,
+                 from [01m[K/opt/ros/galactic/include/builtin_interfaces/msg/duration.hpp:9[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/duration.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:34[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:36[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/iomanip:208:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setprecision)[m[K’
+     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/iomanip:208:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kresponse[m[K’ (type ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’}) to type ‘[01m[Kstd::_Setprecision[m[K’
+         std::cout << [01;36m[Kresponse[m[K << std::endl;
+                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/galactic/include/rosidl_runtime_cpp/traits.hpp:19[m[K,
+                 from [01m[K/opt/ros/galactic/include/builtin_interfaces/msg/detail/duration__traits.hpp:10[m[K,
+                 from [01m[K/opt/ros/galactic/include/builtin_interfaces/msg/duration.hpp:9[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/duration.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:34[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:36[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/iomanip:238:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setw)[m[K’
+     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/iomanip:238:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kresponse[m[K’ (type ‘[01m[Kboost::asio::streambuf[m[K’ {aka ‘[01m[Kboost::asio::basic_streambuf<>[m[K’}) to type ‘[01m[Kstd::_Setw[m[K’
+         std::cout << [01;36m[Kresponse[m[K << std::endl;
+                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/galactic/include/rosidl_runtime_cpp/traits.hpp:19[m[K,
+                 from [01m[K/opt/ros/galactic/include/builtin_interfaces/msg/detail/duration__traits.hpp:10[m[K,
+                 from [01m[K/opt/ros/galactic/include/builtin_interfaces/msg/duration.hpp:9[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/duration.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:34[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:36[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/iomanip:311:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _MoneyT> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_money<_MoneyT>)[m[K’
+     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Put_money<_MoneyT> __f)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/iomanip:311:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::asio::basic_streambuf<>[m[K’ is not derived from ‘[01m[Kstd::_Put_money<_MoneyT>[m[K’
+         std::cout << [01;36m[Kresponse[m[K << std::endl;
+                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/galactic/include/rosidl_runtime_cpp/traits.hpp:19[m[K,
+                 from [01m[K/opt/ros/galactic/include/builtin_interfaces/msg/detail/duration__traits.hpp:10[m[K,
+                 from [01m[K/opt/ros/galactic/include/builtin_interfaces/msg/duration.hpp:9[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/duration.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:34[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:36[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/iomanip:363:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_time<_CharT>)[m[K’
+     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Put_time<_CharT> __f)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/iomanip:363:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::asio::basic_streambuf<>[m[K’ is not derived from ‘[01m[Kstd::_Put_time<_CharT>[m[K’
+         std::cout << [01;36m[Kresponse[m[K << std::endl;
+                      [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/galactic/include/rclcpp/experimental/buffers/ring_buffer_implementation.hpp:19[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/experimental/create_intra_process_buffer.hpp:25[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/experimental/subscription_intra_process.hpp:31[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/experimental/intra_process_manager.hpp:34[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/subscription_base.hpp:30[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:36[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/cstddef:124:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IntegerType> constexpr std::__byte_op_t<_IntegerType> std::operator<<(std::byte, _IntegerType)[m[K’
+     [01;36m[Koperator[m[K<<(byte __b, _IntegerType __shift) noexcept
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/8/cstddef:124:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:51:22:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kstd::cout[m[K’ (type ‘[01m[Kstd::ostream[m[K’ {aka ‘[01m[Kstd::basic_ostream<char>[m[K’}) to type ‘[01m[Kstd::byte[m[K’
+         std::cout << [01;36m[Kresponse[m[K << std::endl;
+                      [01;36m[K^~~~~~~~[m[K
+make[2]: *** [CMakeFiles/serial_test.dir/build.make:76: CMakeFiles/serial_test.dir/src/serial_linux.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

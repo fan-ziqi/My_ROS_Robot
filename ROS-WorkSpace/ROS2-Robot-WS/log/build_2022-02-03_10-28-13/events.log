@@ -1,0 +1,9 @@
+[0.000000] (-) TimerEvent: {}
+[0.000226] (-) JobUnselected: {'identifier': 'astra_camera'}
+[0.000277] (-) JobUnselected: {'identifier': 'robot'}
+[0.000297] (-) JobUnselected: {'identifier': 'robot_sim'}
+[0.000343] (-) JobUnselected: {'identifier': 'robot_sim_2'}
+[0.000363] (-) JobUnselected: {'identifier': 'rplidar_ros2'}
+[0.000412] (-) JobUnselected: {'identifier': 'serial_test'}
+[0.000433] (-) JobUnselected: {'identifier': 'teleop_twist_keyboard'}
+[0.000909] (-) EventReactorShutdown: {}

@@ -1,0 +1,18 @@
+[35m[1mScanning dependencies of target serial_test[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_linux.cpp.o[0m
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:[m[K In member function ‘[01m[Kbool Serial::SerialRead(double*, unsigned char*)[m[K’:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:204:31:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kfor[m[K’
+     std::cout << "Read:(HEX) "
+                               [01;31m[K^[m[K
+                               [32m[K;[m[K
+     [32m[Kfor[m[K(int i = 0; i < ReceiveLength; i++)
+     [32m[K~~~[m[K                        
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:205:20:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ was not declared in this scope
+     for(int i = 0; [01;31m[Ki[m[K < ReceiveLength; i++)
+                    [01;31m[K^[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:165:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KReceiveData[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ bool Serial::SerialRead([01;35m[Kdouble * ReceiveData[m[K, unsigned char * ReceiveCode)
+                         [01;35m[K~~~~~~~~~^~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/serial_test.dir/build.make:76: CMakeFiles/serial_test.dir/src/serial_linux.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

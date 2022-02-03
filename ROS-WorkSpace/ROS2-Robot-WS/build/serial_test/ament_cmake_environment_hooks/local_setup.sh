@@ -2,7 +2,7 @@
 
 # since this file is sourced use either the provided AMENT_CURRENT_PREFIX
 # or fall back to the destination set at configure time
-: ${AMENT_CURRENT_PREFIX:="/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install"}
+: ${AMENT_CURRENT_PREFIX:="/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install"}
 if [ ! -d "$AMENT_CURRENT_PREFIX" ]; then
   if [ -z "$COLCON_CURRENT_PREFIX" ]; then
     echo "The compile time prefix path '$AMENT_CURRENT_PREFIX' doesn't " \

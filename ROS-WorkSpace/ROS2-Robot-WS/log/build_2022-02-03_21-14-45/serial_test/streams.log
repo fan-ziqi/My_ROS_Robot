@@ -1,0 +1,64 @@
+[0.012s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test -- -j4 -l4
+[0.055s] [35m[1mScanning dependencies of target serial_test[0m
+[0.080s] [ 33%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_test.cpp.o[0m
+[0.080s] [ 66%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_linux.cpp.o[0m
+[1.646s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:[m[K In member function ‘[01m[Kvoid Serial::write_to_serial(std::__cxx11::string)[m[K’:
+[1.646s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:37:12:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Klen[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+[1.646s]      size_t [01;35m[Klen[m[K;
+[1.646s]             [01;35m[K^~~[m[K
+[1.646s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:[m[K In member function ‘[01m[Kvoid Serial::handle_read(char*, boost::system::error_code, std::size_t)[m[K’:
+[1.646s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:42:64:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kec[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.646s]  void Serial::handle_read(char buf[], [01;35m[Kboost::system::error_code ec[m[K, std::size_t bytes_transferred)
+[1.646s]                                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[1.646s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:[m[K In member function ‘[01m[Kvoid Serial::read_from_serial()[m[K’:
+[1.646s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:52:78:[m[K [01;31m[Kerror: [m[K‘[01m[Kbind[m[K’ is not a member of ‘[01m[Kboost[m[K’
+[1.646s]         boost::asio::async_read(*serial_port_, boost::asio::buffer(v), boost::[01;31m[Kbind[m[K(&Serial::handle_read, this, v, std::placeholders::_1, std::placeholders::_2));
+[1.646s]                                                                               [01;31m[K^~~~[m[K
+[1.647s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:52:78:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[1.647s] In file included from [01m[K/usr/include/netinet/in.h:23[m[K,
+[1.647s]                  from [01m[K/usr/include/netdb.h:27[m[K,
+[1.647s]                  from [01m[K/usr/include/boost/asio/error.hpp:28[m[K,
+[1.647s]                  from [01m[K/usr/include/boost/asio/detail/impl/posix_mutex.ipp:24[m[K,
+[1.647s]                  from [01m[K/usr/include/boost/asio/detail/posix_mutex.hpp:73[m[K,
+[1.647s]                  from [01m[K/usr/include/boost/asio/detail/mutex.hpp:25[m[K,
+[1.647s]                  from [01m[K/usr/include/boost/asio/detail/service_registry.hpp:20[m[K,
+[1.647s]                  from [01m[K/usr/include/boost/asio/impl/execution_context.hpp:20[m[K,
+[1.647s]                  from [01m[K/usr/include/boost/asio/execution_context.hpp:409[m[K,
+[1.647s]                  from [01m[K/usr/include/boost/asio/detail/scheduler.hpp:21[m[K,
+[1.647s]                  from [01m[K/usr/include/boost/asio/system_context.hpp:19[m[K,
+[1.647s]                  from [01m[K/usr/include/boost/asio/impl/system_executor.hpp:22[m[K,
+[1.647s]                  from [01m[K/usr/include/boost/asio/system_executor.hpp:129[m[K,
+[1.647s]                  from [01m[K/usr/include/boost/asio/associated_executor.hpp:21[m[K,
+[1.647s]                  from [01m[K/usr/include/boost/asio.hpp:21[m[K,
+[1.647s]                  from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5[m[K,
+[1.647s]                  from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[1.648s] [01m[K/usr/include/x86_64-linux-gnu/sys/socket.h:112:12:[m[K [01;36m[Knote: [m[K  ‘[01m[Kbind[m[K’
+[1.648s]  extern int [01;36m[Kbind[m[K (int __fd, __CONST_SOCKADDR_ARG __addr, socklen_t __len)
+[1.648s]             [01;36m[K^~~~[m[K
+[1.648s] In file included from [01m[K/opt/ros/galactic/include/rclcpp/context.hpp:19[m[K,
+[1.648s]                  from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:33[m[K,
+[1.648s]                  from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.648s]                  from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+[1.648s]                  from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+[1.648s]                  from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:4[m[K,
+[1.648s]                  from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[1.648s] [01m[K/usr/include/c++/8/functional:832:5:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::bind[m[K’
+[1.648s]      [01;36m[Kbind[m[K(_Func&& __f, _BoundArgs&&... __args)
+[1.648s]      [01;36m[K^~~~[m[K
+[1.648s] In file included from [01m[K/usr/include/boost/asio/detail/socket_ops.hpp:336[m[K,
+[1.648s]                  from [01m[K/usr/include/boost/asio/detail/socket_holder.hpp:20[m[K,
+[1.648s]                  from [01m[K/usr/include/boost/asio/detail/reactive_socket_accept_op.hpp:24[m[K,
+[1.648s]                  from [01m[K/usr/include/boost/asio/detail/reactive_socket_service.hpp:30[m[K,
+[1.648s]                  from [01m[K/usr/include/boost/asio/basic_socket.hpp:36[m[K,
+[1.648s]                  from [01m[K/usr/include/boost/asio/basic_datagram_socket.hpp:20[m[K,
+[1.648s]                  from [01m[K/usr/include/boost/asio.hpp:24[m[K,
+[1.648s]                  from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:5[m[K,
+[1.648s]                  from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[1.648s] [01m[K/usr/include/boost/asio/detail/impl/socket_ops.ipp:277:5:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::asio::detail::socket_ops::bind[m[K’
+[1.648s]  int [01;36m[Kbind[m[K(socket_type s, const socket_addr_type* addr,
+[1.649s]      [01;36m[K^~~~[m[K
+[2.085s] make[2]: *** [CMakeFiles/serial_test.dir/build.make:76: CMakeFiles/serial_test.dir/src/serial_linux.cpp.o] Error 1
+[2.085s] make[2]: *** Waiting for unfinished jobs....
+[2.337s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2
+[2.338s] make: *** [Makefile:141: all] Error 2
+[2.340s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test -- -j4 -l4

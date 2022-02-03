@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -123,7 +123,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +181,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +251,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/${destination}")
+      set(destination "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -292,7 +292,7 @@ function(_ament_cmake_symlink_install_create_symlink absolute_file symlink)
   endif()
 
   execute_process(
-    COMMAND "/usr/local/Cellar/cmake/3.21.2/bin/cmake" "-E" "create_symlink"
+    COMMAND "/usr/bin/cmake" "-E" "create_symlink"
       "${absolute_file}"
       "${symlink}"
   )
@@ -311,46 +311,46 @@ message(STATUS "Execute custom install script")
 # begin of custom install code
 
 # install("TARGETS" "serial_test" "DESTINATION" "lib/serial_test")
-include("/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install(FILES "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/serial_test" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/serial_test" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/serial_test" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/serial_test" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
-# install(FILES "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/serial_test" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/serial_test" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/serial_test" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/serial_test" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
-# install(FILES "/Users/fanziqi/ros2_foxy/ros2-osx/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/serial_test/environment")
-ament_cmake_symlink_install_files("/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/Users/fanziqi/ros2_foxy/ros2-osx/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/serial_test/environment")
+# install(FILES "/opt/ros/galactic/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/serial_test/environment")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/opt/ros/galactic/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/serial_test/environment")
 
-# install(FILES "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/serial_test/environment")
-ament_cmake_symlink_install_files("/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/serial_test/environment")
+# install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/serial_test/environment")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/serial_test/environment")
 
-# install(FILES "/Users/fanziqi/ros2_foxy/ros2-osx/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/serial_test/environment")
-ament_cmake_symlink_install_files("/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/Users/fanziqi/ros2_foxy/ros2-osx/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/serial_test/environment")
+# install(FILES "/opt/ros/galactic/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/serial_test/environment")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/opt/ros/galactic/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/serial_test/environment")
 
-# install(FILES "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/serial_test/environment")
-ament_cmake_symlink_install_files("/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/serial_test/environment")
+# install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/serial_test/environment")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/serial_test/environment")
 
-# install(FILES "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/serial_test")
-ament_cmake_symlink_install_files("/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/serial_test")
+# install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/serial_test")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/serial_test")
 
-# install(FILES "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/serial_test")
-ament_cmake_symlink_install_files("/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/serial_test")
+# install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/serial_test")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/serial_test")
 
-# install(FILES "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/serial_test")
-ament_cmake_symlink_install_files("/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/serial_test")
+# install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/serial_test")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/serial_test")
 
-# install(FILES "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/serial_test")
-ament_cmake_symlink_install_files("/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/serial_test")
+# install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/serial_test")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/serial_test")
 
-# install(FILES "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/serial_test")
-ament_cmake_symlink_install_files("/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/serial_test")
+# install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/serial_test")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/serial_test")
 
-# install(FILES "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_index/share/ament_index/resource_index/packages/serial_test" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_index/share/ament_index/resource_index/packages/serial_test" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_index/share/ament_index/resource_index/packages/serial_test" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_index/share/ament_index/resource_index/packages/serial_test" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_core/serial_testConfig.cmake" "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_core/serial_testConfig-version.cmake" "DESTINATION" "share/serial_test/cmake")
-ament_cmake_symlink_install_files("/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_core/serial_testConfig.cmake" "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_core/serial_testConfig-version.cmake" "DESTINATION" "share/serial_test/cmake")
+# install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_core/serial_testConfig.cmake" "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_core/serial_testConfig-version.cmake" "DESTINATION" "share/serial_test/cmake")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_core/serial_testConfig.cmake" "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_core/serial_testConfig-version.cmake" "DESTINATION" "share/serial_test/cmake")
 
-# install(FILES "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/package.xml" "DESTINATION" "share/serial_test")
-ament_cmake_symlink_install_files("/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/Users/fanziqi/Desktop/我的文件/科研/A项目库/ROS/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/package.xml" "DESTINATION" "share/serial_test")
+# install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/package.xml" "DESTINATION" "share/serial_test")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/package.xml" "DESTINATION" "share/serial_test")

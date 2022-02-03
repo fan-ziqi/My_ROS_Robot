@@ -1,0 +1,70 @@
+[0.024s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera -- -j4 -l4
+[0.080s] -- Found ament_cmake: 1.1.4 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.121s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.211s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.249s] -- Found rclcpp: 9.2.0 (/opt/ros/galactic/share/rclcpp/cmake)
+[0.332s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.340s] -- Found rosidl_adapter: 2.2.1 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[0.535s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.635s] -- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+[0.641s] -- Found rmw_cyclonedds_cpp: 0.22.4 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+[0.671s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.868s] -- Found sensor_msgs: 2.2.3 (/opt/ros/galactic/share/sensor_msgs/cmake)
+[1.154s] -- Configuring done
+[1.189s] -- Generating done
+[1.193s] -- Build files have been written to: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera
+[1.246s] [  4%] [34m[1mPerforming download step (git clone) for 'astra_openni2'[0m
+[1.308s] Cloning into 'astra_openni2'...
+[7.222s] Switched to a new branch 'orbbec_ros'
+[7.222s] Branch 'orbbec_ros' set up to track remote branch 'orbbec_ros' from 'origin'.
+[7.311s] [  9%] [34m[1mPerforming patch step for 'astra_openni2'[0m
+[7.312s] [ 14%] [34m[1mPerforming update step for 'astra_openni2'[0m
+[7.327s] patching file Source/Drivers/orbbec/Formats/XnFormatsMirror.cpp
+[7.328s] patching file Source/Drivers/orbbec/Sensor/XnFrameStreamProcessor.cpp
+[7.328s] patching file Source/Drivers/orbbec/Sensor/XnSensorFirmwareParams.cpp
+[8.374s] Current branch orbbec_ros is up to date.
+[8.477s] [ 19%] [34m[1mPerforming configure step for 'astra_openni2'[0m
+[8.479s] no need to configure
+[8.502s] [ 23%] [34m[1mPerforming build step for 'astra_openni2'[0m
+[8.508s] make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+[8.514s] ThirdParty/PSCommon/BuildSystem/CommonDefs.mak:40: HOST_PLATFORM is x64
+[8.524s] ../../BuildSystem/CommonDefs.mak:40: HOST_PLATFORM is x64
+[19.289s] ../../ThirdParty/PSCommon/BuildSystem/CommonDefs.mak:40: HOST_PLATFORM is x64
+[23.910s] ../../ThirdParty/PSCommon/BuildSystem/CommonDefs.mak:40: HOST_PLATFORM is x64
+[24.143s] ../../../ThirdParty/PSCommon/BuildSystem/CommonDefs.mak:40: HOST_PLATFORM is x64
+[34.891s] In file included from [01m[K../../../ThirdParty/PSCommon/XnLib/Include/XnHash.h:26[m[K,
+[34.891s]                  from [01m[K../../../ThirdParty/PSCommon/XnLib/Include/XnStringsHash.h:27[m[K,
+[34.891s]                  from [01m[KSensor/XnDeviceSensorIO.h:34[m[K,
+[34.891s]                  from [01m[KSensor/XnDeviceSensor.h:30[m[K,
+[34.891s]                  from [01m[KSensor/XnFirmwareCommands.h:27[m[K,
+[34.891s]                  from [01m[KSensor/XnSensorFirmware.h:28[m[K,
+[34.891s]                  from [01m[KSensor/XnSensorStreamHelper.h:28[m[K,
+[34.891s]                  from [01m[KSensor/XnSensorStreamHelper.cpp:24[m[K:
+[34.891s] [01m[K../../../ThirdParty/PSCommon/XnLib/Include/XnPair.h:[m[K In member function ‘[01m[KXnStatus XnSensorStreamHelper::MapFirmwareProperty(XnActualIntProperty&, XnActualIntProperty&, XnBool, XnSensorStreamHelper::ConvertCallback)[m[K’:
+[34.891s] [01m[K../../../ThirdParty/PSCommon/XnLib/Include/XnPair.h:32:67:[m[K [01;31m[Kerror: [m[K‘[01m[K*((void*)& cookie +36)[m[K’ may be used uninitialized in this function [[01;31m[K-Werror=maybe-uninitialized[m[K]
+[34.891s]   Pair(const Pair& other) : first(other.first), second(other.second[01;31m[K)[m[K {}
+[34.892s]                                                                    [01;31m[K^[m[K
+[34.892s] [01m[KSensor/XnSensorStreamHelper.cpp:179:29:[m[K [01;36m[Knote: [m[K‘[01m[K*((void*)& cookie +36)[m[K’ was declared here
+[34.892s]   XnSensorStreamHelperCookie [01;36m[Kcookie[m[K(&Property, &FirmwareProperty, bAllowChangeWhileOpen, pStreamToFirmwareFunc);
+[34.892s]                              [01;36m[K^~~~~~[m[K
+[34.892s] In file included from [01m[K../../../ThirdParty/PSCommon/XnLib/Include/XnHash.h:26[m[K,
+[34.892s]                  from [01m[K../../../ThirdParty/PSCommon/XnLib/Include/XnStringsHash.h:27[m[K,
+[34.892s]                  from [01m[KSensor/XnDeviceSensorIO.h:34[m[K,
+[34.892s]                  from [01m[KSensor/XnDeviceSensor.h:30[m[K,
+[34.892s]                  from [01m[KSensor/XnFirmwareCommands.h:27[m[K,
+[34.892s]                  from [01m[KSensor/XnSensorFirmware.h:28[m[K,
+[34.892s]                  from [01m[KSensor/XnSensorStreamHelper.h:28[m[K,
+[34.892s]                  from [01m[KSensor/XnSensorStreamHelper.cpp:24[m[K:
+[34.892s] [01m[K../../../ThirdParty/PSCommon/XnLib/Include/XnPair.h:32:67:[m[K [01;31m[Kerror: [m[K‘[01m[K*((void*)& cookie +40)[m[K’ may be used uninitialized in this function [[01;31m[K-Werror=maybe-uninitialized[m[K]
+[34.892s]   Pair(const Pair& other) : first(other.first), second(other.second[01;31m[K)[m[K {}
+[34.892s]                                                                    [01;31m[K^[m[K
+[34.893s] [01m[KSensor/XnSensorStreamHelper.cpp:179:29:[m[K [01;36m[Knote: [m[K‘[01m[K*((void*)& cookie +40)[m[K’ was declared here
+[34.893s]   XnSensorStreamHelperCookie [01;36m[Kcookie[m[K(&Property, &FirmwareProperty, bAllowChangeWhileOpen, pStreamToFirmwareFunc);
+[34.893s]                              [01;36m[K^~~~~~[m[K
+[34.958s] cc1plus: all warnings being treated as errors
+[34.960s] make[4]: *** [../../../ThirdParty/PSCommon/BuildSystem/CommonCppMakefile:141: ../../../Bin/Intermediate/x64-Release/liborbbec.so/XnSensorStreamHelper.o] Error 1
+[34.960s] make[3]: *** [Makefile:131: Source/Drivers/orbbec] Error 2
+[34.961s] make[2]: *** [CMakeFiles/astra_openni2.dir/build.make:112: astra_openni2/src/astra_openni2-stamp/astra_openni2-build] Error 2
+[34.961s] make[1]: *** [CMakeFiles/Makefile2:168: CMakeFiles/astra_openni2.dir/all] Error 2
+[34.961s] make: *** [Makefile:141: all] Error 2
+[34.965s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera -- -j4 -l4

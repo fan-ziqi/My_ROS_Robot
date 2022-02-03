@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera/astra_camera_node" "TARGETS" "astra_camera_node" "DESTINATION" "lib/astra_camera")

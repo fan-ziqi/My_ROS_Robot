@@ -1,0 +1,20 @@
+running develop
+running egg_info
+creating teleop_twist_keyboard.egg-info
+writing teleop_twist_keyboard.egg-info/PKG-INFO
+writing dependency_links to teleop_twist_keyboard.egg-info/dependency_links.txt
+writing entry points to teleop_twist_keyboard.egg-info/entry_points.txt
+writing requirements to teleop_twist_keyboard.egg-info/requires.txt
+writing top-level names to teleop_twist_keyboard.egg-info/top_level.txt
+writing manifest file 'teleop_twist_keyboard.egg-info/SOURCES.txt'
+reading manifest file 'teleop_twist_keyboard.egg-info/SOURCES.txt'
+writing manifest file 'teleop_twist_keyboard.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/python3.8/site-packages/site.py
+Creating /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/python3.8/site-packages/teleop-twist-keyboard.egg-link (link to .)
+Installing teleop_twist_keyboard script to /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/teleop_twist_keyboard
+
+Installed /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/teleop_twist_keyboard
+running install_data
+copying resource/teleop_twist_keyboard -> /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/ament_index/resource_index/packages
+copying package.xml -> /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/teleop_twist_keyboard

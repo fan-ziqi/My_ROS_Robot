@@ -1,0 +1,24 @@
+[0.014s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test -- -j4 -l4
+[0.053s] [35m[1mScanning dependencies of target serial_test[0m
+[0.078s] [ 33%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_test.cpp.o[0m
+[1.622s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:[m[K In member function ‘[01m[Kvoid SerialNode::timer_callback()[m[K’:
+[1.622s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:44:56:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KSerial::SerialWrite(short int [4], int, unsigned char&)[m[K’
+[1.622s]          my_serial.SerialWrite(SendTest, 4, SendCodeTest[01;31m[K)[m[K;
+[1.623s]                                                         [01;31m[K^[m[K
+[1.623s] In file included from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:2[m[K:
+[1.623s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:23:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid Serial::SerialWrite(double*, unsigned char, unsigned char)[m[K’
+[1.623s]      void [01;36m[KSerialWrite[m[K(double * WriteData, unsigned char MessageLenth, unsigned char MessageCode);
+[1.623s]           [01;36m[K^~~~~~~~~~~[m[K
+[1.623s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:23:10:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kshort int [4][m[K’ to ‘[01m[Kdouble*[m[K’
+[1.623s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:49:59:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KSerial::SerialRead(short int [4], unsigned char*)[m[K’
+[1.623s]          my_serial.SerialRead(ReceiveTest, &ReceiveCodeTest[01;31m[K)[m[K;
+[1.623s]                                                            [01;31m[K^[m[K
+[1.623s] In file included from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_test.cpp:2[m[K:
+[1.623s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:24:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool Serial::SerialRead(double*, unsigned char*)[m[K’
+[1.623s]      bool [01;36m[KSerialRead[m[K(double * ReceiveData, unsigned char * ReceiveCode);
+[1.623s]           [01;36m[K^~~~~~~~~~[m[K
+[1.623s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:24:10:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kshort int [4][m[K’ to ‘[01m[Kdouble*[m[K’
+[2.041s] make[2]: *** [CMakeFiles/serial_test.dir/build.make:63: CMakeFiles/serial_test.dir/src/serial_test.cpp.o] Error 1
+[2.041s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2
+[2.041s] make: *** [Makefile:141: all] Error 2
+[2.045s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test -- -j4 -l4

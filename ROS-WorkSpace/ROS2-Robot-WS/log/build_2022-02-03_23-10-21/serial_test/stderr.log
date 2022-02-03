@@ -1,0 +1,14 @@
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:[m[K In member function ‘[01m[Kbool Serial::SerialRead(short int*, unsigned int*)[m[K’:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:229:35:[m[K [01;31m[Kerror: [m[Kcast from ‘[01m[Kunsigned char*[m[K’ to ‘[01m[Kunsigned int[m[K’ loses precision [[01;31m[K-fpermissive[m[K]
+     CrcNum = CalCrc((unsigned int)[01;31m[KReceiveBuf[m[K, ReceiveLength + 4); //求得校验码
+                                   [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:229:21:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kunsigned int[m[K’ to ‘[01m[Kunsigned char*[m[K’ [[01;31m[K-fpermissive[m[K]
+     CrcNum = CalCrc([01;31m[K(unsigned int)ReceiveBuf[m[K, ReceiveLength + 4); //求得校验码
+                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:1[m[K:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp:25:42:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kunsigned char Serial::CalCrc(unsigned char*, short unsigned int)[m[K’
+     unsigned char CalCrc([01;36m[Kunsigned char * VectorData[m[K, unsigned short len);
+                          [01;36m[K~~~~~~~~~~~~~~~~^~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/serial_test.dir/build.make:76: CMakeFiles/serial_test.dir/src/serial_linux.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

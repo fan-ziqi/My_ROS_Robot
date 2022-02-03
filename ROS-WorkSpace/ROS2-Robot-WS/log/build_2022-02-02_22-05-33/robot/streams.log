@@ -1,0 +1,91 @@
+[0.046s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/robot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install
+[0.231s] -- The C compiler identification is GNU 8.4.0
+[0.310s] -- The CXX compiler identification is GNU 8.4.0
+[0.323s] -- Check for working C compiler: /usr/bin/cc
+[0.422s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.425s] -- Detecting C compiler ABI info
+[0.529s] -- Detecting C compiler ABI info - done
+[0.539s] -- Detecting C compile features
+[0.540s] -- Detecting C compile features - done
+[0.544s] -- Check for working CXX compiler: /usr/bin/c++
+[0.666s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.667s] -- Detecting CXX compiler ABI info
+[0.775s] -- Detecting CXX compiler ABI info - done
+[0.790s] -- Detecting CXX compile features
+[0.790s] -- Detecting CXX compile features - done
+[0.798s] -- Found ament_cmake: 1.1.4 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.835s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.835s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.922s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.975s] -- Found rclcpp: 9.2.0 (/opt/ros/galactic/share/rclcpp/cmake)
+[1.055s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.067s] -- Found rosidl_adapter: 2.2.1 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[1.189s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.231s] -- Found FastRTPS: /opt/ros/galactic/include  
+[1.345s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.440s] -- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+[1.447s] -- Found rmw_cyclonedds_cpp: 0.22.4 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+[1.478s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[1.479s] -- Looking for pthread.h
+[1.589s] -- Looking for pthread.h - found
+[1.589s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.691s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.692s] -- Looking for pthread_create in pthreads
+[1.783s] -- Looking for pthread_create in pthreads - not found
+[1.783s] -- Looking for pthread_create in pthread
+[1.883s] -- Looking for pthread_create in pthread - found
+[1.885s] -- Found Threads: TRUE  
+[2.095s] -- Found rclpy: 1.9.0 (/opt/ros/galactic/share/rclpy/cmake)
+[2.097s] -- Found geometry_msgs: 2.2.3 (/opt/ros/galactic/share/geometry_msgs/cmake)
+[2.147s] -- Found sensor_msgs: 2.2.3 (/opt/ros/galactic/share/sensor_msgs/cmake)
+[2.253s] -- Found nav_msgs: 2.2.3 (/opt/ros/galactic/share/nav_msgs/cmake)
+[2.359s] -- Found tf2: 0.17.2 (/opt/ros/galactic/share/tf2/cmake)
+[2.378s] -- Found tf2_ros: 0.17.2 (/opt/ros/galactic/share/tf2_ros/cmake)
+[2.979s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0") found components: system filesystem thread 
+[2.997s] -- Found ament_lint_auto: 0.10.6 (/opt/ros/galactic/share/ament_lint_auto/cmake)
+[3.201s] -- Added test 'copyright' to check source files copyright and LICENSE
+[3.219s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.221s] -- Configured cppcheck include dirs: 
+[3.221s] -- Configured cppcheck exclude dirs and/or files: 
+[3.222s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[3.223s] -- Configured cpplint exclude dirs and/or files: 
+[3.224s] -- Added test 'flake8' to check Python code syntax and style conventions
+[3.225s] -- Added test 'lint_cmake' to check CMake code style
+[3.225s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[3.226s] -- Added test 'uncrustify' to check C / C++ code style
+[3.227s] -- Configured uncrustify additional arguments: 
+[3.228s] -- Added test 'xmllint' to check XML markup files
+[3.246s] -- Configuring done
+[3.264s] -- Generating done
+[3.273s] -- Build files have been written to: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/robot
+[3.298s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/robot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install
+[3.300s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/robot -- -j4 -l4
+[3.389s] [35m[1mScanning dependencies of target robot[0m
+[3.565s] [ 50%] [32mBuilding CXX object CMakeFiles/robot.dir/src/robot.cpp.o[0m
+[18.883s] [100%] [32m[1mLinking CXX executable robot[0m
+[19.470s] [100%] Built target robot
+[19.488s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/robot -- -j4 -l4
+[19.535s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/robot
+[19.547s] -- Install configuration: ""
+[19.549s] -- Execute custom install script
+[19.550s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/robot/robot
+[19.562s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/ament_index/resource_index/package_run_dependencies/robot
+[19.575s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/ament_index/resource_index/parent_prefix_path/robot
+[19.587s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/robot/environment/ament_prefix_path.sh
+[19.598s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/robot/environment/ament_prefix_path.dsv
+[19.611s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/robot/environment/path.sh
+[19.622s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/robot/environment/path.dsv
+[19.633s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/robot/local_setup.bash
+[19.642s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/robot/local_setup.sh
+[19.652s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/robot/local_setup.zsh
+[19.662s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/robot/local_setup.dsv
+[19.672s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/robot/package.dsv
+[19.683s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/ament_index/resource_index/packages/robot
+[19.696s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/robot/cmake/robotConfig.cmake
+[19.707s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/robot/cmake/robotConfig-version.cmake
+[19.720s] -- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/robot/package.xml
+[19.730s] -- Installing: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/robot/launch
+[19.731s] -- Installing: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/robot/launch/robot.launch.py
+[19.732s] -- Installing: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/robot/config
+[19.732s] -- Installing: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/robot/config/params.yaml
+[19.737s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/robot

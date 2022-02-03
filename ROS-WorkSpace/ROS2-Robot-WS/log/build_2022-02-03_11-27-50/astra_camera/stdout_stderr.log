@@ -1,0 +1,129 @@
+[  5%] [32mBuilding CXX object CMakeFiles/astra_driver_lib.dir/src/astra_driver.cpp.o[0m
+[ 10%] [32mBuilding CXX object CMakeFiles/astra_driver_lib.dir/src/astra_device_type.cpp.o[0m
+[ 15%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_frame_listener.cpp.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_device.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_device_manager.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_device_type.cpp.o[0m
+In file included from [01m[K/usr/include/c++/8/map:60[m[K,
+                 from [01m[K/usr/include/boost/system/detail/std_interoperability.hpp:11[m[K,
+                 from [01m[K/usr/include/boost/system/error_code.hpp:959[m[K,
+                 from [01m[K/usr/include/boost/system/system_error.hpp:11[m[K,
+                 from [01m[K/usr/include/boost/thread/exceptions.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/thread/pthread/mutex.hpp:14[m[K,
+                 from [01m[K/usr/include/boost/thread/mutex.hpp:16[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/include/astra_camera/astra_device_manager.h:38[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_device_manager.cpp:33[m[K:
+/usr/include/c++/8/bits/stl_tree.h: In instantiation of ‘[01m[Kstatic const _Key& std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_S_key(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Const_Link_type) [with _Key = astra_wrapper::AstraDeviceInfo; _Val = astra_wrapper::AstraDeviceInfo; _KeyOfValue = std::_Identity<astra_wrapper::AstraDeviceInfo>; _Compare = astra_wrapper::AstraDeviceInfoComparator; _Alloc = std::allocator<astra_wrapper::AstraDeviceInfo>; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Const_Link_type = const std::_Rb_tree_node<astra_wrapper::AstraDeviceInfo>*][m[K’:
+[01m[K/usr/include/c++/8/bits/stl_tree.h:1963:37:[m[K   required from ‘[01m[Kstd::pair<std::_Rb_tree_iterator<_Val>, std::_Rb_tree_iterator<_Val> > std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::equal_range(const _Key&) [with _Key = astra_wrapper::AstraDeviceInfo; _Val = astra_wrapper::AstraDeviceInfo; _KeyOfValue = std::_Identity<astra_wrapper::AstraDeviceInfo>; _Compare = astra_wrapper::AstraDeviceInfoComparator; _Alloc = std::allocator<astra_wrapper::AstraDeviceInfo>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_tree.h:2523:32:[m[K   required from ‘[01m[Kstd::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::size_type std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::erase(const _Key&) [with _Key = astra_wrapper::AstraDeviceInfo; _Val = astra_wrapper::AstraDeviceInfo; _KeyOfValue = std::_Identity<astra_wrapper::AstraDeviceInfo>; _Compare = astra_wrapper::AstraDeviceInfoComparator; _Alloc = std::allocator<astra_wrapper::AstraDeviceInfo>; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::size_type = long unsigned int][m[K’
+[01m[K/usr/include/c++/8/bits/stl_set.h:685:30:[m[K   required from ‘[01m[Kstd::set<_Key, _Compare, _Alloc>::size_type std::set<_Key, _Compare, _Alloc>::erase(const key_type&) [with _Key = astra_wrapper::AstraDeviceInfo; _Compare = astra_wrapper::AstraDeviceInfoComparator; _Alloc = std::allocator<astra_wrapper::AstraDeviceInfo>; std::set<_Key, _Compare, _Alloc>::size_type = long unsigned int; std::set<_Key, _Compare, _Alloc>::key_type = astra_wrapper::AstraDeviceInfo][m[K’
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_device_manager.cpp:120:42:[m[K   required from here
+[01m[K/usr/include/c++/8/bits/stl_tree.h:777:8:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: comparison object must be invocable as const
+        [01;31m[Kis_invocable_v<const _Compare&, const _Key&, const _Key&>[m[K,
+        [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/astra_wrapper.dir/build.make:128: CMakeFiles/astra_wrapper.dir/src/astra_device_manager.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:[m[K In constructor ‘[01m[Kastra_wrapper::AstraDriver::AstraDriver(const string&, const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:67:44:[m[K [01;35m[Kwarning: [m[K‘[01m[Krclcpp::Duration::Duration(rcl_duration_value_t)[m[K’ is deprecated: Use Duration::from_nanoseconds instead or std::chrono_literals. For example:rclcpp::Duration::from_nanoseconds(int64_variable);rclcpp::Duration(0ns); [[01;35m[K-Wdeprecated-declarations[m[K]
+   , depth_time_offset_(rclcpp::Duration(0.0[01;35m[K)[m[K)
+                                            [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/galactic/include/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:34[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node.hpp:40[m[K,
+                 from [01m[K/opt/ros/galactic/include/camera_info_manager/camera_info_manager.hpp:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/include/astra_camera/astra_driver.h:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:33[m[K:
+[01m[K/opt/ros/galactic/include/rclcpp/duration.hpp:46:12:[m[K [01;36m[Knote: [m[Kdeclared here
+   explicit [01;36m[KDuration[m[K(rcl_duration_value_t nanoseconds);
+            [01;36m[K^~~~~~~~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:68:41:[m[K [01;35m[Kwarning: [m[K‘[01m[Krclcpp::Duration::Duration(rcl_duration_value_t)[m[K’ is deprecated: Use Duration::from_nanoseconds instead or std::chrono_literals. For example:rclcpp::Duration::from_nanoseconds(int64_variable);rclcpp::Duration(0ns); [[01;35m[K-Wdeprecated-declarations[m[K]
+   , ir_time_offset_(rclcpp::Duration(0.0[01;35m[K)[m[K)
+                                         [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/galactic/include/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:34[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node.hpp:40[m[K,
+                 from [01m[K/opt/ros/galactic/include/camera_info_manager/camera_info_manager.hpp:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/include/astra_camera/astra_driver.h:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:33[m[K:
+[01m[K/opt/ros/galactic/include/rclcpp/duration.hpp:46:12:[m[K [01;36m[Knote: [m[Kdeclared here
+   explicit [01;36m[KDuration[m[K(rcl_duration_value_t nanoseconds);
+            [01;36m[K^~~~~~~~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:69:44:[m[K [01;35m[Kwarning: [m[K‘[01m[Krclcpp::Duration::Duration(rcl_duration_value_t)[m[K’ is deprecated: Use Duration::from_nanoseconds instead or std::chrono_literals. For example:rclcpp::Duration::from_nanoseconds(int64_variable);rclcpp::Duration(0ns); [[01;35m[K-Wdeprecated-declarations[m[K]
+   , color_time_offset_(rclcpp::Duration(0.0[01;35m[K)[m[K)
+                                            [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/galactic/include/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:34[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node.hpp:40[m[K,
+                 from [01m[K/opt/ros/galactic/include/camera_info_manager/camera_info_manager.hpp:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/include/astra_camera/astra_driver.h:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:33[m[K:
+[01m[K/opt/ros/galactic/include/rclcpp/duration.hpp:46:12:[m[K [01;36m[Knote: [m[Kdeclared here
+   explicit [01;36m[KDuration[m[K(rcl_duration_value_t nanoseconds);
+            [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node.hpp:40[m[K,
+                 from [01m[K/opt/ros/galactic/include/camera_info_manager/camera_info_manager.hpp:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/include/astra_camera/astra_driver.h:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:33[m[K:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:[m[K In member function ‘[01m[Kstd::__cxx11::string astra_wrapper::AstraDriver::resolveDeviceURI(const string&)[m[K’:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:776:14:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 5 has type ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wformat=[m[K]
+     ROS_WARN([01;35m[K"------------id %d, available_device_uri is %s-----------"[m[K, [32m[Ki[m[K, s.c_str());
+              [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:776:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_WARN[m[K’
+     [01;36m[KROS_WARN[m[K("------------id %d, available_device_uri is %s-----------", i, s.c_str());
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:[m[K In member function ‘[01m[Krcl_interfaces::msg::SetParametersResult astra_wrapper::AstraDriver::configCb(const std::vector<rclcpp::Parameter>&)[m[K’:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:1269:68:[m[K [01;35m[Kwarning: [m[K‘[01m[Krclcpp::Duration::Duration(rcl_duration_value_t)[m[K’ is deprecated: Use Duration::from_nanoseconds instead or std::chrono_literals. For example:rclcpp::Duration::from_nanoseconds(int64_variable);rclcpp::Duration(0ns); [[01;35m[K-Wdeprecated-declarations[m[K]
+       ir_time_offset_ = rclcpp::Duration(config.get_value<double>()[01;35m[K)[m[K;
+                                                                    [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/galactic/include/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:34[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node.hpp:40[m[K,
+                 from [01m[K/opt/ros/galactic/include/camera_info_manager/camera_info_manager.hpp:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/include/astra_camera/astra_driver.h:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:33[m[K:
+[01m[K/opt/ros/galactic/include/rclcpp/duration.hpp:46:12:[m[K [01;36m[Knote: [m[Kdeclared here
+   explicit [01;36m[KDuration[m[K(rcl_duration_value_t nanoseconds);
+            [01;36m[K^~~~~~~~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:1273:71:[m[K [01;35m[Kwarning: [m[K‘[01m[Krclcpp::Duration::Duration(rcl_duration_value_t)[m[K’ is deprecated: Use Duration::from_nanoseconds instead or std::chrono_literals. For example:rclcpp::Duration::from_nanoseconds(int64_variable);rclcpp::Duration(0ns); [[01;35m[K-Wdeprecated-declarations[m[K]
+       color_time_offset_ = rclcpp::Duration(config.get_value<double>()[01;35m[K)[m[K;
+                                                                       [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/galactic/include/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:34[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node.hpp:40[m[K,
+                 from [01m[K/opt/ros/galactic/include/camera_info_manager/camera_info_manager.hpp:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/include/astra_camera/astra_driver.h:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:33[m[K:
+[01m[K/opt/ros/galactic/include/rclcpp/duration.hpp:46:12:[m[K [01;36m[Knote: [m[Kdeclared here
+   explicit [01;36m[KDuration[m[K(rcl_duration_value_t nanoseconds);
+            [01;36m[K^~~~~~~~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:1277:71:[m[K [01;35m[Kwarning: [m[K‘[01m[Krclcpp::Duration::Duration(rcl_duration_value_t)[m[K’ is deprecated: Use Duration::from_nanoseconds instead or std::chrono_literals. For example:rclcpp::Duration::from_nanoseconds(int64_variable);rclcpp::Duration(0ns); [[01;35m[K-Wdeprecated-declarations[m[K]
+       depth_time_offset_ = rclcpp::Duration(config.get_value<double>()[01;35m[K)[m[K;
+                                                                       [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/galactic/include/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:34[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node.hpp:40[m[K,
+                 from [01m[K/opt/ros/galactic/include/camera_info_manager/camera_info_manager.hpp:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/include/astra_camera/astra_driver.h:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:33[m[K:
+[01m[K/opt/ros/galactic/include/rclcpp/duration.hpp:46:12:[m[K [01;36m[Knote: [m[Kdeclared here
+   explicit [01;36m[KDuration[m[K(rcl_duration_value_t nanoseconds);
+            [01;36m[K^~~~~~~~[m[K
+make[1]: *** [CMakeFiles/Makefile2:168: CMakeFiles/astra_wrapper.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[ 36%] [32m[1mLinking CXX static library libastra_driver_lib.a[0m
+[ 36%] Built target astra_driver_lib
+make: *** [Makefile:141: all] Error 2
