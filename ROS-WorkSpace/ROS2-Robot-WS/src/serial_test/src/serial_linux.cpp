@@ -10,15 +10,42 @@ union SerialMessageUnion
 	unsigned char data_transmit[2];
 }SendUnion, ReceiveUnion;
 
-Serial::Serial(const std::string &port_name_):serial_port_(NULL)
+Serial::Serial(const std::string &port_name_):Serial_EC(0)
 {
-    Serial_EC = 0;
-    serial_port_ = new boost::asio::serial_port(io_service_);
-    std::cout << "New Serial_port" << std::endl;
+    //use normal pointer step2
+    // serial_port_ = new boost::asio::serial_port(io_service_, port_name_);
+    //use shared_ptr step2
+    serial_port_ = std::make_shared<boost::asio::serial_port>(io_service_, port_name_);
+    
+    //or need to be opened later
+    //use normal pointer step2
+    // serial_port_ = new boost::asio::serial_port(io_service_);
+    //use shared_ptr step2
+    // serial_port_ = std::make_shared<boost::asio::serial_port>(io_service_);
+    
     if(serial_port_)
     {
-        SerialInit(port_name_);
+        std::cout << "New Serial_port Success" << std::endl;
+        
+        //if didn't fill port_name_, then now need to open it
+        // serial_port_->open(port_name_, error_code_);
+        // if(error_code_)
+        // {
+        //     Serial_EC = 2;
+        //     std::cout << "[Error] serial_port_->open() failed. port_name=" << port_name_ << ", reason: " << error_code_.message().c_str() << std::endl;
+        // }
+
+        SerialInit();
     }
+    else
+    {
+        Serial_EC = 1;
+        std::cout << "New Serial_port Failed" << std::endl;
+    }
+
+    Serial_EC = 0;
+
+    
 }
 
 Serial::~Serial()
@@ -26,12 +53,14 @@ Serial::~Serial()
     if(serial_port_)
     {
         std::cout << "Delete Serial_port" << std::endl;
-        delete serial_port_;
+
+        //use normal pointer need to delete
+        // delete serial_port_;
+
+        //use shared_ptr don't need to delete
     }
 }
 
-
-//Define wirte_to_serial to write data to serial
 void Serial::write_to_serial(std::string data)
 {
     boost::asio::write(*serial_port_, boost::asio::buffer(data), error_code_);//return lenth
@@ -57,44 +86,25 @@ void Serial::read_from_serial()
 // 消息头1 消息头2 消息长度 消息码 [消息内容] 校验码 消息尾1 消息尾2
 
 // 串口初始化
-bool Serial::SerialInit(const std::string & port_name_)
+bool Serial::SerialInit()
 {
-    // auto serial_port_ = std::make_shared<boost::asio::serial_port>(io_service_, port_name_);
-
-    // serial_port_ = new boost::asio::serial_port(io_service_);
-
-    // new failed
-	if (!serial_port_)
-    {
-        Serial_EC = 1;
-		return false;
-	}
-
-    serial_port_->open(port_name_, error_code_);
-
-    if(error_code_)
-    {
-        Serial_EC = 2;
-        std::cout << "[Error] serial_port_->open() failed. port_name=" << port_name_ << ", reason: " << error_code_.message().c_str() << std::endl;
-        return false;
-    }
-
+    // set serial option
     serial_port_->set_option(boost::asio::serial_port::baud_rate(115200));
     serial_port_->set_option(boost::asio::serial_port::flow_control(boost::asio::serial_port::flow_control::none));
     serial_port_->set_option(boost::asio::serial_port::parity(boost::asio::serial_port::parity::none));
     serial_port_->set_option(boost::asio::serial_port::stop_bits(boost::asio::serial_port::stop_bits::one));
     serial_port_->set_option(boost::asio::serial_port::character_size(8));    
 
-    // for(int i=0;i<1000;i++)
+    // // DEBUG
+    // for(int i=0;i<10;i++)
     // {
-    //     write_to_serial("Hello World");
+    //     write_to_serial("Hello World\r\n");
     //     // boost::asio::write(*serial_port_, boost::asio::buffer("Hello world", 12));
     // }
 
     SendUnion.data = 0;
     ReceiveUnion.data = 0;
 
-    Serial_EC = 0;
     return true;
 }
 

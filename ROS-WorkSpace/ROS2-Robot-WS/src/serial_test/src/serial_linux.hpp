@@ -19,7 +19,7 @@ public:
     char Serial_EC;
     Serial(const std::string &port_name_);
     ~Serial();
-    bool SerialInit(const std::string &port_name_);
+    bool SerialInit();
     bool SerialWrite(short * WriteData, unsigned char MessageLenth, unsigned int MessageCode);
     bool SerialRead(short * ReceiveData, unsigned int * ReceiveCode);
     unsigned char CalCrc(unsigned char * VectorData, unsigned short len);
@@ -28,18 +28,16 @@ public:
     void write_to_serial(std::string data);
     void read_from_serial();
 
-
-
+private:
     boost::system::error_code error_code_;
     boost::asio::io_service io_service_;
-    boost::asio::serial_port *serial_port_;
-    // std::shared_ptr<boost::asio::serial_port> serial_port_;
 
-    
+    //use normal pointer step1
+    // boost::asio::serial_port *serial_port_;
 
-private:
-    
-    
+    //use shared_ptr step1
+    std::shared_ptr<boost::asio::serial_port> serial_port_;
     
 };
 #endif
+

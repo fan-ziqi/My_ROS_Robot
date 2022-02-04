@@ -1,0 +1,7 @@
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:[m[K In constructor ‘[01m[KSerial::Serial(const string&)[m[K’:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:36:20:[m[K [01;31m[Kerror: [m[Kreturning a value from a constructor
+             return [01;31m[Kfalse[m[K;
+                    [01;31m[K^~~~~[m[K
+make[2]: *** [CMakeFiles/serial_test.dir/build.make:76: CMakeFiles/serial_test.dir/src/serial_linux.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

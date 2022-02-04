@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp
+serial_linux.hpp
+/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp
+
 /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.hpp
 rclcpp/rclcpp.hpp
 -

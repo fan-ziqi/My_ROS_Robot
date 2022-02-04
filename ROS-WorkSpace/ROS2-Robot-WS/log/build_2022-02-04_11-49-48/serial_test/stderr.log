@@ -1,0 +1,4 @@
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:[m[K In constructor ‘[01m[KSerial::Serial(const string&)[m[K’:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:13:35:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kport_name_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ Serial::Serial([01;35m[Kconst std::string &port_name_[m[K):Serial_EC(0)
+                [01;35m[K~~~~~~~~~~~~~~~~~~~^~~~~~~~~~[m[K
