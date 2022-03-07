@@ -1,9 +1,0 @@
-[  4%] [34m[1mPerforming update step for 'astra_openni2'[0m
-fatal: unable to access 'https://github.com/orbbec/OpenNI2.git/': Failed to connect to github.com port 443: Connection refused
-CMake Error at /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera/astra_openni2/tmp/astra_openni2-gitupdate.cmake:55 (message):
-  Failed to fetch repository 'https://github.com/orbbec/OpenNI2.git'
-
-
-make[2]: *** [CMakeFiles/astra_openni2.dir/build.make:96: astra_openni2/src/astra_openni2-stamp/astra_openni2-update] Error 1
-make[1]: *** [CMakeFiles/Makefile2:168: CMakeFiles/astra_openni2.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2

@@ -314,43 +314,43 @@ message(STATUS "Execute custom install script")
 include("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/serial_test" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/serial_test" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/serial_test" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
 # install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/serial_test" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/serial_test" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/serial_test" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/galactic/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/serial_test/environment")
-ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/opt/ros/galactic/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/serial_test/environment")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux" FILES "/opt/ros/galactic/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/serial_test/environment")
 
 # install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/serial_test/environment")
-ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/serial_test/environment")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/serial_test/environment")
 
 # install(FILES "/opt/ros/galactic/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/serial_test/environment")
-ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/opt/ros/galactic/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/serial_test/environment")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux" FILES "/opt/ros/galactic/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/serial_test/environment")
 
 # install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/serial_test/environment")
-ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/serial_test/environment")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/serial_test/environment")
 
 # install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/serial_test")
-ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/serial_test")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/serial_test")
 
 # install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/serial_test")
-ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/serial_test")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/serial_test")
 
 # install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/serial_test")
-ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/serial_test")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/serial_test")
 
 # install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/serial_test")
-ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/serial_test")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/serial_test")
 
 # install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/serial_test")
-ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/serial_test")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/serial_test")
 
 # install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_index/share/ament_index/resource_index/packages/serial_test" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_index/share/ament_index/resource_index/packages/serial_test" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_index/share/ament_index/resource_index/packages/serial_test" "DESTINATION" "share/ament_index/resource_index/packages")
 
 # install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_core/serial_testConfig.cmake" "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_core/serial_testConfig-version.cmake" "DESTINATION" "share/serial_test/cmake")
-ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_core/serial_testConfig.cmake" "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_core/serial_testConfig-version.cmake" "DESTINATION" "share/serial_test/cmake")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_core/serial_testConfig.cmake" "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test/ament_cmake_core/serial_testConfig-version.cmake" "DESTINATION" "share/serial_test/cmake")
 
-# install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/package.xml" "DESTINATION" "share/serial_test")
-ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/package.xml" "DESTINATION" "share/serial_test")
+# install(FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/package.xml" "DESTINATION" "share/serial_test")
+ament_cmake_symlink_install_files("/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux" FILES "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/package.xml" "DESTINATION" "share/serial_test")

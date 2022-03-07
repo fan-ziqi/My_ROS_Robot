@@ -504,7 +504,7 @@ rosidl_typesupport_introspection_cpp_DIR:PATH=/opt/ros/galactic/share/rosidl_typ
 serial_test_BINARY_DIR:STATIC=/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test
 
 //Value Computed by CMake
-serial_test_SOURCE_DIR:STATIC=/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test
+serial_test_SOURCE_DIR:STATIC=/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux
 
 //The directory containing a CMake configuration file for statistics_msgs.
 statistics_msgs_DIR:PATH=/opt/ros/galactic/share/statistics_msgs/cmake
@@ -616,7 +616,7 @@ CMAKE_HAVE_PTHREAD_CREATE:INTERNAL=1
 CMAKE_HAVE_PTHREAD_H:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER

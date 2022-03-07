@@ -1,0 +1,35 @@
+[ 15%] Built target astra_driver_lib
+[ 68%] Built target astra_wrapper
+[ 78%] Built target astra_camera_node
+[ 89%] Built target astra_list_devices
+[100%] Built target astra_test_wrapper
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/astra_camera/astra_camera_node
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/astra_camera/astra_list_devices
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/astra_camera/astra_test_wrapper
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/astra_camera/libOpenNI2.so
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/astra_camera/OpenNI2
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/libastra_wrapper.a
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/libastra_driver_lib.a
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/launch/astra_launch.py
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/config/astra.yaml
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/environment/library_path.sh
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/environment/library_path.dsv
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/ament_index/resource_index/package_run_dependencies/astra_camera
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/ament_index/resource_index/parent_prefix_path/astra_camera
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/environment/path.sh
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/environment/path.dsv
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/local_setup.bash
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/local_setup.sh
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/local_setup.zsh
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/local_setup.dsv
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/package.dsv
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/ament_index/resource_index/packages/astra_camera
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/cmake/astra_cameraConfig.cmake
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/cmake/astra_cameraConfig-version.cmake
+-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/package.xml

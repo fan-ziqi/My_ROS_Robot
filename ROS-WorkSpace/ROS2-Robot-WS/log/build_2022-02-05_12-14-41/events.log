@@ -1,0 +1,170 @@
+[0.000000] (-) TimerEvent: {}
+[0.007468] (-) JobUnselected: {'identifier': 'astra_camera'}
+[0.007601] (-) JobUnselected: {'identifier': 'robot'}
+[0.007661] (-) JobUnselected: {'identifier': 'robot_sim'}
+[0.007710] (-) JobUnselected: {'identifier': 'robot_sim_2'}
+[0.007981] (-) JobUnselected: {'identifier': 'rplidar_ros2'}
+[0.008065] (-) JobUnselected: {'identifier': 'teleop_twist_keyboard'}
+[0.008125] (serial_test) JobQueued: {'identifier': 'serial_test', 'dependencies': OrderedDict()}
+[0.008355] (serial_test) JobStarted: {'identifier': 'serial_test'}
+[0.049237] (serial_test) JobProgress: {'identifier': 'serial_test', 'progress': 'cmake'}
+[0.054024] (serial_test) JobProgress: {'identifier': 'serial_test', 'progress': 'build'}
+[0.056484] (serial_test) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test', '--', '-j4', '-l4'], 'cwd': '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fzq614'), ('SSH_AGENT_PID', '1660'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/fzq614'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1482'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=813d1838539ad224cfd2ed2761fded1d'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'fzq614'), ('JOURNAL_STREAM', '8:55976'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'fzq614'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/1695,unix/ubuntu:/tmp/.ICE-unix/1695'), ('INVOCATION_ID', 'a214ea5420ee4763833bfecb6590737e'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/1bb99675_77c6_464f_9ca3_8fe56386109d'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.132'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=813d1838539ad224cfd2ed2761fded1d'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/teleop_twist_keyboard:/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install:/opt/ros/galactic')]), 'shell': False}
+[0.103368] (-) TimerEvent: {}
+[0.204601] (-) TimerEvent: {}
+[0.274690] (serial_test) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target serial_test\x1b[0m\n'}
+[0.305105] (-) TimerEvent: {}
+[0.396530] (serial_test) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_test.cpp.o\x1b[0m\n'}
+[0.400079] (serial_test) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_linux.cpp.o\x1b[0m\n'}
+[0.405726] (-) TimerEvent: {}
+[0.506567] (-) TimerEvent: {}
+[0.608489] (-) TimerEvent: {}
+[0.709779] (-) TimerEvent: {}
+[0.810568] (-) TimerEvent: {}
+[0.911568] (-) TimerEvent: {}
+[1.012523] (-) TimerEvent: {}
+[1.113585] (-) TimerEvent: {}
+[1.214517] (-) TimerEvent: {}
+[2.575190] (-) TimerEvent: {}
+[2.676120] (-) TimerEvent: {}
+[2.777107] (-) TimerEvent: {}
+[2.878018] (-) TimerEvent: {}
+[2.979088] (-) TimerEvent: {}
+[3.080153] (-) TimerEvent: {}
+[3.181001] (-) TimerEvent: {}
+[3.282050] (-) TimerEvent: {}
+[3.383011] (-) TimerEvent: {}
+[3.484072] (-) TimerEvent: {}
+[3.585045] (-) TimerEvent: {}
+[3.686131] (-) TimerEvent: {}
+[3.790711] (-) TimerEvent: {}
+[3.892092] (-) TimerEvent: {}
+[3.993018] (-) TimerEvent: {}
+[4.094034] (-) TimerEvent: {}
+[4.195100] (-) TimerEvent: {}
+[4.296332] (-) TimerEvent: {}
+[4.400513] (-) TimerEvent: {}
+[4.502097] (-) TimerEvent: {}
+[4.603083] (-) TimerEvent: {}
+[4.704228] (-) TimerEvent: {}
+[4.811553] (-) TimerEvent: {}
+[4.912650] (-) TimerEvent: {}
+[5.015608] (-) TimerEvent: {}
+[5.116631] (-) TimerEvent: {}
+[5.217831] (-) TimerEvent: {}
+[5.319352] (-) TimerEvent: {}
+[5.424007] (-) TimerEvent: {}
+[5.532323] (-) TimerEvent: {}
+[5.633673] (-) TimerEvent: {}
+[5.734538] (-) TimerEvent: {}
+[5.835728] (-) TimerEvent: {}
+[5.937240] (-) TimerEvent: {}
+[6.038055] (-) TimerEvent: {}
+[6.139307] (-) TimerEvent: {}
+[6.240542] (-) TimerEvent: {}
+[6.341630] (-) TimerEvent: {}
+[6.443073] (-) TimerEvent: {}
+[6.544129] (-) TimerEvent: {}
+[6.645036] (-) TimerEvent: {}
+[6.746089] (-) TimerEvent: {}
+[6.847140] (-) TimerEvent: {}
+[6.948092] (-) TimerEvent: {}
+[7.049298] (-) TimerEvent: {}
+[7.151310] (-) TimerEvent: {}
+[7.252504] (-) TimerEvent: {}
+[7.353520] (-) TimerEvent: {}
+[7.454610] (-) TimerEvent: {}
+[7.556035] (-) TimerEvent: {}
+[7.657098] (-) TimerEvent: {}
+[7.758063] (-) TimerEvent: {}
+[7.815922] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:\x1b[m\x1b[K In static member function \xe2\x80\x98\x1b[01m\x1b[Kstatic void Serial::readHandler(const boost::system::error_code&, std::size_t)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.816898] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:93:59:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kerror\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[7.817174] (serial_test) StderrLine: {'line': b' void Serial::readHandler(\x1b[01;35m\x1b[Kconst boost::system::error_code& error\x1b[m\x1b[K,std::size_t bytes_transferred)\n'}
+[7.817428] (serial_test) StderrLine: {'line': b'                          \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[7.817610] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:93:77:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kbytes_transferred\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[7.817834] (serial_test) StderrLine: {'line': b' void Serial::readHandler(const boost::system::error_code& error,\x1b[01;35m\x1b[Kstd::size_t bytes_transferred\x1b[m\x1b[K)\n'}
+[7.818029] (serial_test) StderrLine: {'line': b'                                                                 \x1b[01;35m\x1b[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.858581] (-) TimerEvent: {}
+[7.959578] (-) TimerEvent: {}
+[8.064196] (-) TimerEvent: {}
+[8.167014] (-) TimerEvent: {}
+[8.268668] (-) TimerEvent: {}
+[8.371381] (-) TimerEvent: {}
+[8.473133] (-) TimerEvent: {}
+[8.574545] (-) TimerEvent: {}
+[8.675513] (-) TimerEvent: {}
+[8.776574] (-) TimerEvent: {}
+[8.877715] (-) TimerEvent: {}
+[8.978797] (-) TimerEvent: {}
+[9.079961] (-) TimerEvent: {}
+[9.156913] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/asio/impl/execution_context.hpp:18\x1b[m\x1b[K,\n'}
+[9.157477] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/execution_context.hpp:409\x1b[m\x1b[K,\n'}
+[9.157690] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/detail/scheduler.hpp:21\x1b[m\x1b[K,\n'}
+[9.158143] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/system_context.hpp:19\x1b[m\x1b[K,\n'}
+[9.158786] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/impl/system_executor.hpp:22\x1b[m\x1b[K,\n'}
+[9.159276] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/system_executor.hpp:129\x1b[m\x1b[K,\n'}
+[9.159494] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio/associated_executor.hpp:21\x1b[m\x1b[K,\n'}
+[9.159668] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/asio.hpp:21\x1b[m\x1b[K,\n'}
+[9.159863] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.hpp:5\x1b[m\x1b[K,\n'}
+[9.160119] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[9.160295] (serial_test) StderrLine: {'line': b'/usr/include/boost/asio/impl/read_until.hpp: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kvoid boost::asio::detail::initiate_async_read_until_delim_string_v1::operator()(ReadHandler&&, AsyncReadStream*, DynamicBuffer_v1&&, const string&) const [with ReadHandler = std::_Bind<void (*(boost::arg<1> (*)(), boost::arg<2> (*)()))(const boost::system::error_code&, long unsigned int)>; AsyncReadStream = boost::asio::basic_serial_port<>; DynamicBuffer_v1 = boost::asio::basic_streambuf_ref<std::allocator<char> >; std::__cxx11::string = std::__cxx11::basic_string<char>]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[9.160555] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/async_result.hpp:82:49:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstatic boost::asio::async_result<CompletionToken, Signature>::return_type boost::asio::async_result<CompletionToken, Signature>::initiate(Initiation&&, RawCompletionToken&&, Args&& ...) [with Initiation = boost::asio::detail::initiate_async_read_until_delim_string_v1; RawCompletionToken = std::_Bind<void (*(boost::arg<1> (*)(), boost::arg<2> (*)()))(const boost::system::error_code&, long unsigned int)>; Args = {boost::asio::basic_serial_port<boost::asio::executor>*, boost::asio::basic_streambuf_ref<std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >}; CompletionToken = std::_Bind<void (*(boost::arg<1> (*)(), boost::arg<2> (*)()))(const boost::system::error_code&, long unsigned int)>; Signature = void(boost::system::error_code, long unsigned int); boost::asio::async_result<CompletionToken, Signature>::return_type = void]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[9.160791] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/async_result.hpp:257:25:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Ktypename std::enable_if<boost::asio::detail::async_result_has_initiate_memfn<CompletionToken, Signature>::value, typename boost::asio::async_result<typename std::decay<_Tp>::type, Signature>::return_type>::type boost::asio::async_initiate(Initiation&&, CompletionToken&, Args&& ...) [with CompletionToken = std::_Bind<void (*(boost::arg<1> (*)(), boost::arg<2> (*)()))(const boost::system::error_code&, long unsigned int)>; Signature = void(boost::system::error_code, long unsigned int); Initiation = boost::asio::detail::initiate_async_read_until_delim_string_v1; Args = {boost::asio::basic_serial_port<boost::asio::executor>*, boost::asio::basic_streambuf_ref<std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >}; typename std::enable_if<boost::asio::detail::async_result_has_initiate_memfn<CompletionToken, Signature>::value, typename boost::asio::async_result<typename std::decay<_Tp>::type, Signature>::return_type>::type = void]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[9.161081] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/impl/read_until.hpp:1298:51:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Ktypename boost::asio::async_result<typename std::decay<WriteHandler>::type, void(boost::system::error_code, long unsigned int)>::return_type boost::asio::async_read_until(AsyncReadStream&, DynamicBuffer_v1&&, std::string_view, ReadHandler&&, typename std::enable_if<(boost::asio::is_dynamic_buffer_v1<typename std::decay<_Arg>::type>::value && (! boost::asio::is_dynamic_buffer_v2<typename std::decay<_Arg>::type>::value))>::type*) [with AsyncReadStream = boost::asio::basic_serial_port<>; DynamicBuffer_v1 = boost::asio::basic_streambuf_ref<std::allocator<char> >; ReadHandler = std::_Bind<void (*(boost::arg<1> (*)(), boost::arg<2> (*)()))(const boost::system::error_code&, long unsigned int)>; typename boost::asio::async_result<typename std::decay<WriteHandler>::type, void(boost::system::error_code, long unsigned int)>::return_type = void; std::string_view = std::basic_string_view<char>; typename std::enable_if<(boost::asio::is_dynamic_buffer_v1<typename std::decay<_Arg>::type>::value && (! boost::asio::is_dynamic_buffer_v2<typename std::decay<_Arg>::type>::value))>::type = void]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[9.161277] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/impl/read_until.hpp:1870:26:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Ktypename boost::asio::async_result<typename std::decay<WriteHandler>::type, void(boost::system::error_code, long unsigned int)>::return_type boost::asio::async_read_until(AsyncReadStream&, boost::asio::basic_streambuf<Allocator>&, std::string_view, ReadHandler&&) [with AsyncReadStream = boost::asio::basic_serial_port<>; Allocator = std::allocator<char>; ReadHandler = std::_Bind<void (*(boost::arg<1> (*)(), boost::arg<2> (*)()))(const boost::system::error_code&, long unsigned int)>; typename boost::asio::async_result<typename std::decay<WriteHandler>::type, void(boost::system::error_code, long unsigned int)>::return_type = void; std::string_view = std::basic_string_view<char>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[9.161525] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:77:70:\x1b[m\x1b[K   required from here\n'}
+[9.163455] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/impl/read_until.hpp:1232:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kstatic assertion failed: ReadHandler type requirements not met\n'}
+[9.163647] (serial_test) StderrLine: {'line': b'       \x1b[01;31m\x1b[KBOOST_ASIO_READ_HANDLER_CHECK\x1b[m\x1b[K(ReadHandler, handler) type_check;\n'}
+[9.163818] (serial_test) StderrLine: {'line': b'       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[9.164069] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/asio/impl/buffered_read_stream.hpp:151:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno match for call to \xe2\x80\x98\x1b[01m\x1b[K(std::_Bind<void (*(boost::arg<1> (*)(), boost::arg<2> (*)()))(const boost::system::error_code&, long unsigned int)>) (const boost::system::error_code&, const long unsigned int&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[9.164282] (serial_test) StderrLine: {'line': b'       \x1b[01;31m\x1b[KBOOST_ASIO_READ_HANDLER_CHECK\x1b[m\x1b[K(ReadHandler, handler) type_check;\n'}
+[9.164512] (serial_test) StderrLine: {'line': b'       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[9.164688] (serial_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/context.hpp:19\x1b[m\x1b[K,\n'}
+[9.164894] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[9.165095] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[9.165263] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[9.165515] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156\x1b[m\x1b[K,\n'}
+[9.165694] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.hpp:4\x1b[m\x1b[K,\n'}
+[9.165932] (serial_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:1\x1b[m\x1b[K:\n'}
+[9.166127] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/8/functional:480:2:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ... _Args, class _Result> _Result std::_Bind<_Functor(_Bound_args ...)>::operator()(_Args&& ...) [with _Args = {_Args ...}; _Result = _Result; _Functor = void (*)(const boost::system::error_code&, long unsigned int); _Bound_args = {boost::arg<1> (*)(), boost::arg<2> (*)()}]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[9.166313] (serial_test) StderrLine: {'line': b'  \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K()(_Args&&... __args)\n'}
+[9.166541] (serial_test) StderrLine: {'line': b'  \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[9.166710] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/8/functional:480:2:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[9.166920] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/8/functional:491:2:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ... _Args, class _Result> _Result std::_Bind<_Functor(_Bound_args ...)>::operator()(_Args&& ...) const [with _Args = {_Args ...}; _Result = _Result; _Functor = void (*)(const boost::system::error_code&, long unsigned int); _Bound_args = {boost::arg<1> (*)(), boost::arg<2> (*)()}]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[9.167405] (serial_test) StderrLine: {'line': b'  \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K()(_Args&&... __args) const\n'}
+[9.167593] (serial_test) StderrLine: {'line': b'  \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[9.167764] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/8/functional:491:2:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[9.168001] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/8/functional:509:2:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ... _Args, class _Result> _Result std::_Bind<_Functor(_Bound_args ...)>::operator()(_Args&& ...) volatile [with _Args = {_Args ...}; _Result = _Result; _Functor = void (*)(const boost::system::error_code&, long unsigned int); _Bound_args = {boost::arg<1> (*)(), boost::arg<2> (*)()}]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[9.168190] (serial_test) StderrLine: {'line': b'  \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K()(_Args&&... __args) volatile\n'}
+[9.168396] (serial_test) StderrLine: {'line': b'  \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[9.168598] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/8/functional:509:2:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[9.168804] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/8/functional:521:2:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ... _Args, class _Result> _Result std::_Bind<_Functor(_Bound_args ...)>::operator()(_Args&& ...) const volatile [with _Args = {_Args ...}; _Result = _Result; _Functor = void (*)(const boost::system::error_code&, long unsigned int); _Bound_args = {boost::arg<1> (*)(), boost::arg<2> (*)()}]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[9.169009] (serial_test) StderrLine: {'line': b'  \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K()(_Args&&... __args) const volatile\n'}
+[9.169179] (serial_test) StderrLine: {'line': b'  \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[9.169422] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/8/functional:521:2:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[9.180506] (-) TimerEvent: {}
+[9.281615] (-) TimerEvent: {}
+[9.382542] (-) TimerEvent: {}
+[9.484141] (-) TimerEvent: {}
+[9.585566] (-) TimerEvent: {}
+[9.687203] (-) TimerEvent: {}
+[9.788190] (-) TimerEvent: {}
+[9.841583] (serial_test) StderrLine: {'line': b'make[2]: *** [CMakeFiles/serial_test.dir/build.make:76: CMakeFiles/serial_test.dir/src/serial_linux.cpp.o] Error 1\n'}
+[9.842113] (serial_test) StderrLine: {'line': b'make[2]: *** Waiting for unfinished jobs....\n'}
+[9.888527] (-) TimerEvent: {}
+[9.989580] (-) TimerEvent: {}
+[10.090600] (-) TimerEvent: {}
+[10.192051] (-) TimerEvent: {}
+[10.293082] (-) TimerEvent: {}
+[10.394037] (-) TimerEvent: {}
+[10.495158] (-) TimerEvent: {}
+[10.596077] (-) TimerEvent: {}
+[10.697134] (-) TimerEvent: {}
+[10.797653] (serial_test) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2\n'}
+[10.798152] (-) TimerEvent: {}
+[10.798717] (serial_test) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[10.804926] (serial_test) CommandEnded: {'returncode': 2}
+[10.898619] (-) TimerEvent: {}
+[11.000408] (-) TimerEvent: {}
+[11.029727] (serial_test) JobEnded: {'identifier': 'serial_test', 'rc': 2}
+[11.041518] (-) EventReactorShutdown: {}

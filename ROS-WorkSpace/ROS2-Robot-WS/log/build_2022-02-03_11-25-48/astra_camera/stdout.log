@@ -1,8 +1,0 @@
-[35m[1mScanning dependencies of target astra_driver_lib[0m
-[35m[1mScanning dependencies of target astra_wrapper[0m
-[  5%] [32mBuilding CXX object CMakeFiles/astra_driver_lib.dir/src/astra_driver.cpp.o[0m
-[ 10%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_convert.cpp.o[0m
-[ 15%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_timer_filter.cpp.o[0m
-[ 21%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_device.cpp.o[0m
-[ 26%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_frame_listener.cpp.o[0m
-[ 31%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_device_manager.cpp.o[0m

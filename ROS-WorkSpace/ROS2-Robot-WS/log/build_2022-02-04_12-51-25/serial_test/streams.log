@@ -1,0 +1,49 @@
+[0.039s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test -- -j4 -l4
+[0.210s] [35m[1mScanning dependencies of target serial_test[0m
+[0.210s] [ 33%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_test.cpp.o[0m
+[1.679s] In file included from [01m[K/opt/ros/galactic/include/rclcpp/service.hpp:34[m[K,
+[1.679s]                  from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:25[m[K,
+[1.679s]                  from [01m[K/opt/ros/galactic/include/rclcpp/any_executable.hpp:20[m[K,
+[1.679s]                  from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategy.hpp:25[m[K,
+[1.679s]                  from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.679s]                  from [01m[K/opt/ros/galactic/include/rclcpp/executor_options.hpp:20[m[K,
+[1.679s]                  from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:36[m[K,
+[1.679s]                  from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.679s]                  from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+[1.679s]                  from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+[1.679s]                  from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_test.cpp:1[m[K:
+[1.679s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_test.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[1.679s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_test.cpp:77:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[1.679s]      RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Read test string");
+[1.679s]                  [01;31m[K^~~~[m[K
+[1.679s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_test.cpp:77:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[1.679s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_test.cpp:77:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.680s]      [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Read test string");
+[1.680s]      [01;31m[K^~~~~~~~~~~[m[K
+[1.680s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_test.cpp:77:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.680s]      [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Read test string");
+[1.680s]      [01;31m[K^~~~~~~~~~~[m[K
+[1.680s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_test.cpp:77:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.680s]      [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Read test string");
+[1.680s]      [01;31m[K^~~~~~~~~~~[m[K
+[1.680s] In file included from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:40[m[K,
+[1.680s]                  from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+[1.680s]                  from [01m[K/opt/ros/galactic/include/rclcpp/any_executable.hpp:20[m[K,
+[1.680s]                  from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategy.hpp:25[m[K,
+[1.680s]                  from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.680s]                  from [01m[K/opt/ros/galactic/include/rclcpp/executor_options.hpp:20[m[K,
+[1.680s]                  from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:36[m[K,
+[1.680s]                  from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.680s]                  from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+[1.680s]                  from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+[1.680s]                  from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_test.cpp:1[m[K:
+[1.680s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_test.cpp:77:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[1.680s]      RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Read test string");
+[1.680s]                  [01;31m[K^~~~[m[K
+[1.680s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_test.cpp:77:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[1.680s]      RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Read test string");
+[1.680s]                  [01;31m[K^~~~[m[K
+[2.089s] make[2]: *** [CMakeFiles/serial_test.dir/build.make:63: CMakeFiles/serial_test.dir/src/serial_test.cpp.o] Error 1
+[2.089s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2
+[2.090s] make: *** [Makefile:141: all] Error 2
+[2.092s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test -- -j4 -l4

@@ -1,0 +1,3 @@
+/home/fzq614/Desktop/serial-port/test/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/fzq614/Desktop/serial-port/test/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/fzq614/Desktop/serial-port/test/cmake-build-debug/CMakeFiles/test.dir

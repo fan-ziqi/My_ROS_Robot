@@ -1,4 +1,0 @@
-[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:[m[K In member function ‘[01m[Kvoid Serial::write_to_serial(std::__cxx11::string)[m[K’:
-[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test/src/serial_linux.cpp:35:12:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Klen[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
-     size_t [01;35m[Klen[m[K;
-            [01;35m[K^~~[m[K

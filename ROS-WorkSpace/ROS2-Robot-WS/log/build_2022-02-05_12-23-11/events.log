@@ -1,0 +1,124 @@
+[0.000000] (-) TimerEvent: {}
+[0.007126] (-) JobUnselected: {'identifier': 'astra_camera'}
+[0.007727] (-) JobUnselected: {'identifier': 'robot'}
+[0.007867] (-) JobUnselected: {'identifier': 'robot_sim'}
+[0.007992] (-) JobUnselected: {'identifier': 'robot_sim_2'}
+[0.008116] (-) JobUnselected: {'identifier': 'rplidar_ros2'}
+[0.008172] (-) JobUnselected: {'identifier': 'teleop_twist_keyboard'}
+[0.008295] (serial_test) JobQueued: {'identifier': 'serial_test', 'dependencies': OrderedDict()}
+[0.008430] (serial_test) JobStarted: {'identifier': 'serial_test'}
+[0.082566] (serial_test) JobProgress: {'identifier': 'serial_test', 'progress': 'cmake'}
+[0.082796] (serial_test) JobProgress: {'identifier': 'serial_test', 'progress': 'build'}
+[0.082867] (serial_test) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test', '--', '-j4', '-l4'], 'cwd': '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fzq614'), ('SSH_AGENT_PID', '1660'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/fzq614'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1482'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=813d1838539ad224cfd2ed2761fded1d'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'fzq614'), ('JOURNAL_STREAM', '8:55976'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'fzq614'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/1695,unix/ubuntu:/tmp/.ICE-unix/1695'), ('INVOCATION_ID', 'a214ea5420ee4763833bfecb6590737e'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/1bb99675_77c6_464f_9ca3_8fe56386109d'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.132'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=813d1838539ad224cfd2ed2761fded1d'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/teleop_twist_keyboard:/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install:/opt/ros/galactic')]), 'shell': False}
+[0.098911] (-) TimerEvent: {}
+[0.202397] (-) TimerEvent: {}
+[0.235720] (serial_test) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target serial_test\x1b[0m\n'}
+[0.302845] (-) TimerEvent: {}
+[0.340726] (serial_test) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_linux.cpp.o\x1b[0m\n'}
+[0.403425] (-) TimerEvent: {}
+[0.504419] (-) TimerEvent: {}
+[0.605361] (-) TimerEvent: {}
+[0.706291] (-) TimerEvent: {}
+[0.807302] (-) TimerEvent: {}
+[0.908140] (-) TimerEvent: {}
+[1.008988] (-) TimerEvent: {}
+[1.109822] (-) TimerEvent: {}
+[1.211380] (-) TimerEvent: {}
+[1.312879] (-) TimerEvent: {}
+[1.414485] (-) TimerEvent: {}
+[1.516366] (-) TimerEvent: {}
+[1.622937] (-) TimerEvent: {}
+[1.724342] (-) TimerEvent: {}
+[1.825379] (-) TimerEvent: {}
+[1.926857] (-) TimerEvent: {}
+[2.027915] (-) TimerEvent: {}
+[2.129357] (-) TimerEvent: {}
+[2.230843] (-) TimerEvent: {}
+[2.331935] (-) TimerEvent: {}
+[2.432828] (-) TimerEvent: {}
+[2.533833] (-) TimerEvent: {}
+[2.635331] (-) TimerEvent: {}
+[2.736339] (-) TimerEvent: {}
+[2.837286] (-) TimerEvent: {}
+[2.938335] (-) TimerEvent: {}
+[3.039299] (-) TimerEvent: {}
+[3.140316] (-) TimerEvent: {}
+[3.241297] (-) TimerEvent: {}
+[3.342417] (-) TimerEvent: {}
+[3.443285] (-) TimerEvent: {}
+[3.544313] (-) TimerEvent: {}
+[3.645354] (-) TimerEvent: {}
+[3.746295] (-) TimerEvent: {}
+[3.847315] (-) TimerEvent: {}
+[3.948347] (-) TimerEvent: {}
+[4.049299] (-) TimerEvent: {}
+[4.150616] (-) TimerEvent: {}
+[4.251833] (-) TimerEvent: {}
+[4.352765] (-) TimerEvent: {}
+[4.453819] (-) TimerEvent: {}
+[4.555324] (-) TimerEvent: {}
+[4.656341] (-) TimerEvent: {}
+[4.757500] (-) TimerEvent: {}
+[4.858906] (-) TimerEvent: {}
+[4.959906] (-) TimerEvent: {}
+[5.060813] (-) TimerEvent: {}
+[5.161850] (-) TimerEvent: {}
+[5.263481] (-) TimerEvent: {}
+[5.364574] (-) TimerEvent: {}
+[5.465875] (-) TimerEvent: {}
+[5.567325] (-) TimerEvent: {}
+[5.668475] (-) TimerEvent: {}
+[5.769901] (-) TimerEvent: {}
+[5.871156] (-) TimerEvent: {}
+[5.972462] (-) TimerEvent: {}
+[6.073521] (-) TimerEvent: {}
+[6.174805] (-) TimerEvent: {}
+[6.276129] (-) TimerEvent: {}
+[6.377323] (-) TimerEvent: {}
+[6.478500] (-) TimerEvent: {}
+[6.579330] (-) TimerEvent: {}
+[6.680468] (-) TimerEvent: {}
+[6.781433] (-) TimerEvent: {}
+[6.882642] (-) TimerEvent: {}
+[6.983937] (-) TimerEvent: {}
+[7.084900] (-) TimerEvent: {}
+[7.185981] (-) TimerEvent: {}
+[7.256903] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:\x1b[m\x1b[K In static member function \xe2\x80\x98\x1b[01m\x1b[Kstatic void Serial::readHandler(const boost::system::error_code&, std::size_t)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.257803] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:94:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot call member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Serial::read_from_serial()\x1b[m\x1b[K\xe2\x80\x99 without object\n'}
+[7.258132] (serial_test) StderrLine: {'line': b'     read_from_serial(\x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[7.258686] (serial_test) StderrLine: {'line': b'                      \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[7.259552] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:92:59:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kerror\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[7.259831] (serial_test) StderrLine: {'line': b' void Serial::readHandler(\x1b[01;35m\x1b[Kconst boost::system::error_code& error\x1b[m\x1b[K,std::size_t bytes_transferred)\n'}
+[7.260011] (serial_test) StderrLine: {'line': b'                          \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[7.260255] (serial_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:92:77:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kbytes_transferred\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[7.260440] (serial_test) StderrLine: {'line': b'  Serial::readHandler(const boost::system::error_code& error,\x1b[01;35m\x1b[Kstd::size_t bytes_transferred\x1b[m\x1b[K)\n'}
+[7.260662] (serial_test) StderrLine: {'line': b'                                                             \x1b[01;35m\x1b[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.260857] (serial_test) StderrLine: {'line': b'\n'}
+[7.286450] (-) TimerEvent: {}
+[7.387409] (-) TimerEvent: {}
+[7.488460] (-) TimerEvent: {}
+[7.589618] (-) TimerEvent: {}
+[7.691079] (-) TimerEvent: {}
+[7.792502] (-) TimerEvent: {}
+[7.893448] (-) TimerEvent: {}
+[7.994456] (-) TimerEvent: {}
+[8.095479] (-) TimerEvent: {}
+[8.196488] (-) TimerEvent: {}
+[8.297429] (-) TimerEvent: {}
+[8.398305] (-) TimerEvent: {}
+[8.499451] (-) TimerEvent: {}
+[8.600536] (-) TimerEvent: {}
+[8.701453] (-) TimerEvent: {}
+[8.802650] (-) TimerEvent: {}
+[8.903986] (-) TimerEvent: {}
+[9.004934] (-) TimerEvent: {}
+[9.106019] (-) TimerEvent: {}
+[9.207455] (-) TimerEvent: {}
+[9.220836] (serial_test) StderrLine: {'line': b'make[2]: *** [CMakeFiles/serial_test.dir/build.make:76: CMakeFiles/serial_test.dir/src/serial_linux.cpp.o] Error 1\n'}
+[9.222519] (serial_test) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2\n'}
+[9.222942] (serial_test) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[9.228560] (serial_test) CommandEnded: {'returncode': 2}
+[9.308260] (-) TimerEvent: {}
+[9.401436] (serial_test) JobEnded: {'identifier': 'serial_test', 'rc': 2}
+[9.408872] (-) TimerEvent: {}
+[9.413613] (-) EventReactorShutdown: {}

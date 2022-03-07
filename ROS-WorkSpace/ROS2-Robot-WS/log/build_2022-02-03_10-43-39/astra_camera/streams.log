@@ -1,5 +1,0 @@
-[0.022s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera -- -j4 -l4
-[0.052s] CMake Error: The source directory "/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera" does not exist.
-[0.053s] Specify --help for usage, or press the help button on the CMake GUI.
-[0.054s] make: *** [Makefile:578: cmake_check_build_system] Error 1
-[0.058s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera -- -j4 -l4

@@ -1,0 +1,50 @@
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:72:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid Serial::handle_read(char*, boost::system::error_code, std::size_t)[m[K’
+ void [01;31m[KSerial[m[K::handle_read( char buf[], boost::system::error_code ec, std::size_t bytes_transferred )
+      [01;31m[K^~~~~~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:72:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid Serial::handle_read(char*, boost::system::error_code, std::size_t)[m[K’
+In file included from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:1[m[K:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.hpp:16:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass Serial[m[K’ defined here
+ class [01;36m[KSerial[m[K
+       [01;36m[K^~~~~~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:[m[K In member function ‘[01m[Kvoid Serial::read_from_serial()[m[K’:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:83:88:[m[K [01;31m[Kerror: [m[K‘[01m[Khandle_read[m[K’ is not a member of ‘[01m[KSerial[m[K’
+ ync_read_until(*serial_port_, response, "\r\n", std::bind( &Serial::[01;31m[Khandle_read[m[K, this, v, _1, _2));
+                                                                     [01;31m[K^~~~~~~~~~~[m[K
+
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:83:107:[m[K [01;31m[Kerror: [m[K‘[01m[Kv[m[K’ was not declared in this scope
+ ial_port_, response, "\r\n", std::bind( &Serial::handle_read, this, [01;31m[Kv[m[K, _1, _2));
+                                                                     [01;31m[K^[m[K
+
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:83:110:[m[K [01;31m[Kerror: [m[K‘[01m[K_1[m[K’ was not declared in this scope
+ al_port_, response, "\r\n", std::bind( &Serial::handle_read, this, v, [01;31m[K_1[m[K, _2));
+                                                                       [01;31m[K^~[m[K
+
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:83:110:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/opt/ros/galactic/include/rclcpp/context.hpp:19[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/functional:211:34:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::placeholders::_1[m[K’
+     extern const _Placeholder<1> [01;36m[K_1[m[K;
+                                  [01;36m[K^~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:83:114:[m[K [01;31m[Kerror: [m[K‘[01m[K_2[m[K’ was not declared in this scope
+ al_port_, response, "\r\n", std::bind( &Serial::handle_read, this, v, _1, [01;31m[K_2[m[K));
+                                                                           [01;31m[K^~[m[K
+
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:83:114:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/opt/ros/galactic/include/rclcpp/context.hpp:19[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.hpp:4[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:1[m[K:
+[01m[K/usr/include/c++/8/functional:212:34:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::placeholders::_2[m[K’
+     extern const _Placeholder<2> [01;36m[K_2[m[K;
+                                  [01;36m[K^~[m[K
+make[2]: *** [CMakeFiles/serial_test.dir/build.make:76: CMakeFiles/serial_test.dir/src/serial_linux.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

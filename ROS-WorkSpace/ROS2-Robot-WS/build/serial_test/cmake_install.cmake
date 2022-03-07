@@ -1,4 +1,4 @@
-# Install script for directory: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/serial_test
+# Install script for directory: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

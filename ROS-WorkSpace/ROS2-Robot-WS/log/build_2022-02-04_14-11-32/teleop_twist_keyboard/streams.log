@@ -1,0 +1,17 @@
+[0.588s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/teleop_twist_keyboard': PYTHONPATH=/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install --editable --build-directory /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/teleop_twist_keyboard/build --no-deps install_data --install-dir /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install
+[0.773s] running develop
+[0.870s] running egg_info
+[0.870s] writing teleop_twist_keyboard.egg-info/PKG-INFO
+[0.870s] writing dependency_links to teleop_twist_keyboard.egg-info/dependency_links.txt
+[0.870s] writing entry points to teleop_twist_keyboard.egg-info/entry_points.txt
+[0.871s] writing requirements to teleop_twist_keyboard.egg-info/requires.txt
+[0.871s] writing top-level names to teleop_twist_keyboard.egg-info/top_level.txt
+[0.894s] reading manifest file 'teleop_twist_keyboard.egg-info/SOURCES.txt'
+[0.894s] writing manifest file 'teleop_twist_keyboard.egg-info/SOURCES.txt'
+[0.921s] running build_ext
+[0.921s] Creating /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/python3.8/site-packages/teleop-twist-keyboard.egg-link (link to .)
+[0.922s] Installing teleop_twist_keyboard script to /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/teleop_twist_keyboard
+[0.922s] 
+[0.922s] Installed /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/teleop_twist_keyboard
+[0.922s] running install_data
+[0.944s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/teleop_twist_keyboard' returned '0': PYTHONPATH=/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install --editable --build-directory /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/teleop_twist_keyboard/build --no-deps install_data --install-dir /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install

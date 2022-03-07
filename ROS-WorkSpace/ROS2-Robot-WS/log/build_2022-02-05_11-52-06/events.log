@@ -1,0 +1,150 @@
+[0.000000] (-) TimerEvent: {}
+[0.000483] (-) JobUnselected: {'identifier': 'astra_camera'}
+[0.000901] (-) JobUnselected: {'identifier': 'robot'}
+[0.001077] (-) JobUnselected: {'identifier': 'robot_sim'}
+[0.001198] (-) JobUnselected: {'identifier': 'robot_sim_2'}
+[0.001313] (-) JobUnselected: {'identifier': 'rplidar_ros2'}
+[0.001437] (-) JobUnselected: {'identifier': 'teleop_twist_keyboard'}
+[0.001593] (serial_test) JobQueued: {'identifier': 'serial_test', 'dependencies': OrderedDict()}
+[0.001727] (serial_test) JobStarted: {'identifier': 'serial_test'}
+[0.044761] (serial_test) JobProgress: {'identifier': 'serial_test', 'progress': 'cmake'}
+[0.051061] (serial_test) JobProgress: {'identifier': 'serial_test', 'progress': 'build'}
+[0.051308] (serial_test) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test', '--', '-j4', '-l4'], 'cwd': '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fzq614'), ('SSH_AGENT_PID', '1660'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/fzq614'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1482'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=813d1838539ad224cfd2ed2761fded1d'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'fzq614'), ('JOURNAL_STREAM', '8:55976'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'fzq614'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/1695,unix/ubuntu:/tmp/.ICE-unix/1695'), ('INVOCATION_ID', 'a214ea5420ee4763833bfecb6590737e'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/1bb99675_77c6_464f_9ca3_8fe56386109d'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.132'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=813d1838539ad224cfd2ed2761fded1d'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/teleop_twist_keyboard:/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install:/opt/ros/galactic')]), 'shell': False}
+[0.096491] (-) TimerEvent: {}
+[0.197803] (-) TimerEvent: {}
+[0.214178] (serial_test) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target serial_test\x1b[0m\n'}
+[0.298299] (-) TimerEvent: {}
+[0.318412] (serial_test) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_test.cpp.o\x1b[0m\n'}
+[0.398782] (-) TimerEvent: {}
+[0.499929] (-) TimerEvent: {}
+[0.600790] (-) TimerEvent: {}
+[0.701937] (-) TimerEvent: {}
+[0.803282] (-) TimerEvent: {}
+[0.904458] (-) TimerEvent: {}
+[1.005342] (-) TimerEvent: {}
+[1.106307] (-) TimerEvent: {}
+[1.207350] (-) TimerEvent: {}
+[1.308441] (-) TimerEvent: {}
+[1.409358] (-) TimerEvent: {}
+[1.510564] (-) TimerEvent: {}
+[1.611835] (-) TimerEvent: {}
+[1.712901] (-) TimerEvent: {}
+[1.813878] (-) TimerEvent: {}
+[1.915301] (-) TimerEvent: {}
+[2.016338] (-) TimerEvent: {}
+[2.117427] (-) TimerEvent: {}
+[2.218486] (-) TimerEvent: {}
+[2.319783] (-) TimerEvent: {}
+[2.420809] (-) TimerEvent: {}
+[2.521912] (-) TimerEvent: {}
+[2.623432] (-) TimerEvent: {}
+[2.724853] (-) TimerEvent: {}
+[2.825789] (-) TimerEvent: {}
+[2.926833] (-) TimerEvent: {}
+[3.027783] (-) TimerEvent: {}
+[3.128989] (-) TimerEvent: {}
+[3.229821] (-) TimerEvent: {}
+[3.331311] (-) TimerEvent: {}
+[3.432303] (-) TimerEvent: {}
+[3.533396] (-) TimerEvent: {}
+[3.634334] (-) TimerEvent: {}
+[3.735317] (-) TimerEvent: {}
+[3.836116] (-) TimerEvent: {}
+[3.938313] (-) TimerEvent: {}
+[4.039400] (-) TimerEvent: {}
+[4.140298] (-) TimerEvent: {}
+[4.241470] (-) TimerEvent: {}
+[4.342296] (-) TimerEvent: {}
+[4.443271] (-) TimerEvent: {}
+[4.544277] (-) TimerEvent: {}
+[4.645275] (-) TimerEvent: {}
+[4.746377] (-) TimerEvent: {}
+[4.847313] (-) TimerEvent: {}
+[4.948327] (-) TimerEvent: {}
+[5.049229] (-) TimerEvent: {}
+[5.150337] (-) TimerEvent: {}
+[5.251331] (-) TimerEvent: {}
+[5.352284] (-) TimerEvent: {}
+[5.453398] (-) TimerEvent: {}
+[5.554340] (-) TimerEvent: {}
+[5.655337] (-) TimerEvent: {}
+[5.756477] (-) TimerEvent: {}
+[5.857290] (-) TimerEvent: {}
+[5.958373] (-) TimerEvent: {}
+[6.059337] (-) TimerEvent: {}
+[6.160331] (-) TimerEvent: {}
+[6.261317] (-) TimerEvent: {}
+[6.362377] (-) TimerEvent: {}
+[6.463386] (-) TimerEvent: {}
+[6.564338] (-) TimerEvent: {}
+[6.665335] (-) TimerEvent: {}
+[6.766329] (-) TimerEvent: {}
+[6.867407] (-) TimerEvent: {}
+[6.968380] (-) TimerEvent: {}
+[7.069344] (-) TimerEvent: {}
+[7.170301] (-) TimerEvent: {}
+[7.271308] (-) TimerEvent: {}
+[7.372402] (-) TimerEvent: {}
+[7.473309] (-) TimerEvent: {}
+[7.574318] (-) TimerEvent: {}
+[7.675280] (-) TimerEvent: {}
+[7.776288] (-) TimerEvent: {}
+[7.877270] (-) TimerEvent: {}
+[7.978333] (-) TimerEvent: {}
+[8.079345] (-) TimerEvent: {}
+[8.180423] (-) TimerEvent: {}
+[8.281281] (-) TimerEvent: {}
+[8.382414] (-) TimerEvent: {}
+[8.483328] (-) TimerEvent: {}
+[8.584449] (-) TimerEvent: {}
+[8.685360] (-) TimerEvent: {}
+[8.786342] (-) TimerEvent: {}
+[8.887392] (-) TimerEvent: {}
+[8.988323] (-) TimerEvent: {}
+[9.089385] (-) TimerEvent: {}
+[9.190398] (-) TimerEvent: {}
+[9.291338] (-) TimerEvent: {}
+[9.392300] (-) TimerEvent: {}
+[9.493504] (-) TimerEvent: {}
+[9.594490] (-) TimerEvent: {}
+[9.695380] (-) TimerEvent: {}
+[9.796338] (-) TimerEvent: {}
+[9.897415] (-) TimerEvent: {}
+[9.998322] (-) TimerEvent: {}
+[10.099264] (-) TimerEvent: {}
+[10.116960] (serial_test) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX executable serial_test\x1b[0m\n'}
+[10.199803] (-) TimerEvent: {}
+[10.300790] (-) TimerEvent: {}
+[10.401776] (-) TimerEvent: {}
+[10.503314] (-) TimerEvent: {}
+[10.604308] (-) TimerEvent: {}
+[10.636099] (serial_test) StdoutLine: {'line': b'[100%] Built target serial_test\n'}
+[10.668783] (serial_test) CommandEnded: {'returncode': 0}
+[10.705071] (-) TimerEvent: {}
+[10.799229] (serial_test) JobProgress: {'identifier': 'serial_test', 'progress': 'install'}
+[10.805450] (-) TimerEvent: {}
+[10.830680] (serial_test) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test'], 'cwd': '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fzq614'), ('SSH_AGENT_PID', '1660'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/fzq614'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1482'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=813d1838539ad224cfd2ed2761fded1d'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'fzq614'), ('JOURNAL_STREAM', '8:55976'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'fzq614'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/1695,unix/ubuntu:/tmp/.ICE-unix/1695'), ('INVOCATION_ID', 'a214ea5420ee4763833bfecb6590737e'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/1bb99675_77c6_464f_9ca3_8fe56386109d'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.132'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=813d1838539ad224cfd2ed2761fded1d'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/teleop_twist_keyboard:/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install:/opt/ros/galactic')]), 'shell': False}
+[10.855430] (serial_test) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[10.857034] (serial_test) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[10.858728] (serial_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/serial_test/serial_test\n'}
+[10.859917] (serial_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/ament_index/resource_index/package_run_dependencies/serial_test\n'}
+[10.860971] (serial_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/ament_index/resource_index/parent_prefix_path/serial_test\n'}
+[10.862352] (serial_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/serial_test/environment/ament_prefix_path.sh\n'}
+[10.863334] (serial_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/serial_test/environment/ament_prefix_path.dsv\n'}
+[10.864051] (serial_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/serial_test/environment/path.sh\n'}
+[10.865262] (serial_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/serial_test/environment/path.dsv\n'}
+[10.865869] (serial_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/serial_test/local_setup.bash\n'}
+[10.866904] (serial_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/serial_test/local_setup.sh\n'}
+[10.867469] (serial_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/serial_test/local_setup.zsh\n'}
+[10.868265] (serial_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/serial_test/local_setup.dsv\n'}
+[10.868946] (serial_test) StdoutLine: {'line': b'-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/serial_test/package.dsv\n'}
+[10.897112] (serial_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/ament_index/resource_index/packages/serial_test\n'}
+[10.898399] (serial_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/serial_test/cmake/serial_testConfig.cmake\n'}
+[10.898806] (serial_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/serial_test/cmake/serial_testConfig-version.cmake\n'}
+[10.899633] (serial_test) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/serial_test/package.xml\n'}
+[10.909983] (serial_test) CommandEnded: {'returncode': 0}
+[10.912764] (-) TimerEvent: {}
+[11.013751] (-) TimerEvent: {}
+[11.115892] (-) TimerEvent: {}
+[11.122749] (serial_test) JobEnded: {'identifier': 'serial_test', 'rc': 0}
+[11.126537] (-) EventReactorShutdown: {}

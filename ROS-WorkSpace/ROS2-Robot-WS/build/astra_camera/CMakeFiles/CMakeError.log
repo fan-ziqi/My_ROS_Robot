@@ -1,21 +1,21 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_700ac/fast && /usr/bin/make -f CMakeFiles/cmTC_700ac.dir/build.make CMakeFiles/cmTC_700ac.dir/build
+Run Build Command(s):/usr/bin/make cmTC_3d52b/fast && /usr/bin/make -f CMakeFiles/cmTC_3d52b.dir/build.make CMakeFiles/cmTC_3d52b.dir/build
 make[1]: Entering directory '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_700ac.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_700ac.dir/src.c.o   -c /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_700ac
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_700ac.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_700ac.dir/src.c.o  -o cmTC_700ac 
-/usr/bin/ld: CMakeFiles/cmTC_700ac.dir/src.c.o: in function `main':
+Building C object CMakeFiles/cmTC_3d52b.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_3d52b.dir/src.c.o   -c /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_3d52b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3d52b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_3d52b.dir/src.c.o  -o cmTC_3d52b 
+/usr/bin/ld: CMakeFiles/cmTC_3d52b.dir/src.c.o: in function `main':
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_700ac.dir/build.make:87: cmTC_700ac] Error 1
+make[1]: *** [CMakeFiles/cmTC_3d52b.dir/build.make:87: cmTC_3d52b] Error 1
 make[1]: Leaving directory '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_700ac/fast] Error 2
+make: *** [Makefile:121: cmTC_3d52b/fast] Error 2
 
 
 Source file was:
@@ -41,18 +41,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_c086a/fast && /usr/bin/make -f CMakeFiles/cmTC_c086a.dir/build.make CMakeFiles/cmTC_c086a.dir/build
+Run Build Command(s):/usr/bin/make cmTC_09af5/fast && /usr/bin/make -f CMakeFiles/cmTC_09af5.dir/build.make CMakeFiles/cmTC_09af5.dir/build
 make[1]: Entering directory '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c086a.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_c086a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_c086a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c086a.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_c086a.dir/CheckFunctionExists.c.o  -o cmTC_c086a  -lpthreads 
+Building C object CMakeFiles/cmTC_09af5.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_09af5.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_09af5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_09af5.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_09af5.dir/CheckFunctionExists.c.o  -o cmTC_09af5  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_c086a.dir/build.make:87: cmTC_c086a] Error 1
+make[1]: *** [CMakeFiles/cmTC_09af5.dir/build.make:87: cmTC_09af5] Error 1
 make[1]: Leaving directory '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_c086a/fast] Error 2
+make: *** [Makefile:121: cmTC_09af5/fast] Error 2
 
 
 

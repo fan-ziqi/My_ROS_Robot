@@ -1,0 +1,205 @@
+-- The C compiler identification is GNU 8.4.0
+-- The CXX compiler identification is GNU 8.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.1.4 (/opt/ros/galactic/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 9.2.0 (/opt/ros/galactic/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 2.2.1 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+-- Found FastRTPS: /opt/ros/galactic/include  
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 0.22.4 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found sensor_msgs: 2.2.3 (/opt/ros/galactic/share/sensor_msgs/cmake)
+-- Found image_transport: 2.3.0 (/opt/ros/galactic/share/image_transport/cmake)
+-- Found camera_info_manager: 2.3.0 (/opt/ros/galactic/share/camera_info_manager/cmake)
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0") found components: system thread 
+-- ORRBEC Machine : x86_64
+
+-- ORRBEC Machine Bits : 64
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/astra_camera
+[35m[1mScanning dependencies of target astra_driver_lib[0m
+[35m[1mScanning dependencies of target astra_wrapper[0m
+[  5%] [32mBuilding CXX object CMakeFiles/astra_driver_lib.dir/src/astra_driver.cpp.o[0m
+[ 10%] [32mBuilding CXX object CMakeFiles/astra_driver_lib.dir/src/astra_device_type.cpp.o[0m
+[ 15%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_convert.cpp.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_device.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_device_info.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_timer_filter.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_frame_listener.cpp.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_device_manager.cpp.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_exception.cpp.o[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_video_mode.cpp.o[0m
+[ 57%] [32mBuilding CXX object CMakeFiles/astra_wrapper.dir/src/astra_device_type.cpp.o[0m
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:[m[K In constructor ‘[01m[Kastra_wrapper::AstraDriver::AstraDriver(const string&, const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:67:44:[m[K [01;35m[Kwarning: [m[K‘[01m[Krclcpp::Duration::Duration(rcl_duration_value_t)[m[K’ is deprecated: Use Duration::from_nanoseconds instead or std::chrono_literals. For example:rclcpp::Duration::from_nanoseconds(int64_variable);rclcpp::Duration(0ns); [[01;35m[K-Wdeprecated-declarations[m[K]
+   , depth_time_offset_(rclcpp::Duration(0.0[01;35m[K)[m[K)
+                                            [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/galactic/include/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:34[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node.hpp:40[m[K,
+                 from [01m[K/opt/ros/galactic/include/camera_info_manager/camera_info_manager.hpp:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/include/astra_camera/astra_driver.h:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:33[m[K:
+[01m[K/opt/ros/galactic/include/rclcpp/duration.hpp:46:12:[m[K [01;36m[Knote: [m[Kdeclared here
+   explicit [01;36m[KDuration[m[K(rcl_duration_value_t nanoseconds);
+            [01;36m[K^~~~~~~~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:68:41:[m[K [01;35m[Kwarning: [m[K‘[01m[Krclcpp::Duration::Duration(rcl_duration_value_t)[m[K’ is deprecated: Use Duration::from_nanoseconds instead or std::chrono_literals. For example:rclcpp::Duration::from_nanoseconds(int64_variable);rclcpp::Duration(0ns); [[01;35m[K-Wdeprecated-declarations[m[K]
+   , ir_time_offset_(rclcpp::Duration(0.0[01;35m[K)[m[K)
+                                         [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/galactic/include/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:34[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node.hpp:40[m[K,
+                 from [01m[K/opt/ros/galactic/include/camera_info_manager/camera_info_manager.hpp:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/include/astra_camera/astra_driver.h:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:33[m[K:
+[01m[K/opt/ros/galactic/include/rclcpp/duration.hpp:46:12:[m[K [01;36m[Knote: [m[Kdeclared here
+   explicit [01;36m[KDuration[m[K(rcl_duration_value_t nanoseconds);
+            [01;36m[K^~~~~~~~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:69:44:[m[K [01;35m[Kwarning: [m[K‘[01m[Krclcpp::Duration::Duration(rcl_duration_value_t)[m[K’ is deprecated: Use Duration::from_nanoseconds instead or std::chrono_literals. For example:rclcpp::Duration::from_nanoseconds(int64_variable);rclcpp::Duration(0ns); [[01;35m[K-Wdeprecated-declarations[m[K]
+   , color_time_offset_(rclcpp::Duration(0.0[01;35m[K)[m[K)
+                                            [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/galactic/include/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:34[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node.hpp:40[m[K,
+                 from [01m[K/opt/ros/galactic/include/camera_info_manager/camera_info_manager.hpp:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/include/astra_camera/astra_driver.h:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:33[m[K:
+[01m[K/opt/ros/galactic/include/rclcpp/duration.hpp:46:12:[m[K [01;36m[Knote: [m[Kdeclared here
+   explicit [01;36m[KDuration[m[K(rcl_duration_value_t nanoseconds);
+            [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node.hpp:40[m[K,
+                 from [01m[K/opt/ros/galactic/include/camera_info_manager/camera_info_manager.hpp:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/include/astra_camera/astra_driver.h:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:33[m[K:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:[m[K In member function ‘[01m[Kstd::__cxx11::string astra_wrapper::AstraDriver::resolveDeviceURI(const string&)[m[K’:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:776:14:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 5 has type ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wformat=[m[K]
+     ROS_WARN([01;35m[K"------------id %d, available_device_uri is %s-----------"[m[K, [32m[Ki[m[K, s.c_str());
+              [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:776:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_WARN[m[K’
+     [01;36m[KROS_WARN[m[K("------------id %d, available_device_uri is %s-----------", i, s.c_str());
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:[m[K In member function ‘[01m[Krcl_interfaces::msg::SetParametersResult astra_wrapper::AstraDriver::configCb(const std::vector<rclcpp::Parameter>&)[m[K’:
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:1269:68:[m[K [01;35m[Kwarning: [m[K‘[01m[Krclcpp::Duration::Duration(rcl_duration_value_t)[m[K’ is deprecated: Use Duration::from_nanoseconds instead or std::chrono_literals. For example:rclcpp::Duration::from_nanoseconds(int64_variable);rclcpp::Duration(0ns); [[01;35m[K-Wdeprecated-declarations[m[K]
+       ir_time_offset_ = rclcpp::Duration(config.get_value<double>()[01;35m[K)[m[K;
+                                                                    [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/galactic/include/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:34[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node.hpp:40[m[K,
+                 from [01m[K/opt/ros/galactic/include/camera_info_manager/camera_info_manager.hpp:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/include/astra_camera/astra_driver.h:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:33[m[K:
+[01m[K/opt/ros/galactic/include/rclcpp/duration.hpp:46:12:[m[K [01;36m[Knote: [m[Kdeclared here
+   explicit [01;36m[KDuration[m[K(rcl_duration_value_t nanoseconds);
+            [01;36m[K^~~~~~~~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:1273:71:[m[K [01;35m[Kwarning: [m[K‘[01m[Krclcpp::Duration::Duration(rcl_duration_value_t)[m[K’ is deprecated: Use Duration::from_nanoseconds instead or std::chrono_literals. For example:rclcpp::Duration::from_nanoseconds(int64_variable);rclcpp::Duration(0ns); [[01;35m[K-Wdeprecated-declarations[m[K]
+       color_time_offset_ = rclcpp::Duration(config.get_value<double>()[01;35m[K)[m[K;
+                                                                       [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/galactic/include/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:34[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node.hpp:40[m[K,
+                 from [01m[K/opt/ros/galactic/include/camera_info_manager/camera_info_manager.hpp:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/include/astra_camera/astra_driver.h:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:33[m[K:
+[01m[K/opt/ros/galactic/include/rclcpp/duration.hpp:46:12:[m[K [01;36m[Knote: [m[Kdeclared here
+   explicit [01;36m[KDuration[m[K(rcl_duration_value_t nanoseconds);
+            [01;36m[K^~~~~~~~[m[K
+[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:1277:71:[m[K [01;35m[Kwarning: [m[K‘[01m[Krclcpp::Duration::Duration(rcl_duration_value_t)[m[K’ is deprecated: Use Duration::from_nanoseconds instead or std::chrono_literals. For example:rclcpp::Duration::from_nanoseconds(int64_variable);rclcpp::Duration(0ns); [[01;35m[K-Wdeprecated-declarations[m[K]
+       depth_time_offset_ = rclcpp::Duration(config.get_value<double>()[01;35m[K)[m[K;
+                                                                       [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/galactic/include/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:34[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/node.hpp:40[m[K,
+                 from [01m[K/opt/ros/galactic/include/camera_info_manager/camera_info_manager.hpp:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/include/astra_camera/astra_driver.h:45[m[K,
+                 from [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/src/astra_driver.cpp:33[m[K:
+[01m[K/opt/ros/galactic/include/rclcpp/duration.hpp:46:12:[m[K [01;36m[Knote: [m[Kdeclared here
+   explicit [01;36m[KDuration[m[K(rcl_duration_value_t nanoseconds);
+            [01;36m[K^~~~~~~~[m[K
+[ 63%] [32m[1mLinking CXX static library libastra_wrapper.a[0m
+[ 63%] Built target astra_wrapper
+[35m[1mScanning dependencies of target astra_list_devices[0m
+[35m[1mScanning dependencies of target astra_test_wrapper[0m
+[ 68%] [32mBuilding CXX object CMakeFiles/astra_list_devices.dir/src/list_devices.cpp.o[0m
+[ 73%] [32mBuilding CXX object CMakeFiles/astra_test_wrapper.dir/test/test_wrapper.cpp.o[0m
+[ 78%] [32m[1mLinking CXX static library libastra_driver_lib.a[0m
+[ 78%] Built target astra_driver_lib
+[35m[1mScanning dependencies of target astra_camera_node[0m
+[ 84%] [32mBuilding CXX object CMakeFiles/astra_camera_node.dir/ros/astra_camera_node.cpp.o[0m
+[ 89%] [32m[1mLinking CXX executable astra_list_devices[0m
+[ 89%] Built target astra_list_devices
+[ 94%] [32m[1mLinking CXX executable astra_test_wrapper[0m
+[ 94%] Built target astra_test_wrapper
+[100%] [32m[1mLinking CXX executable astra_camera_node[0m
+[100%] Built target astra_camera_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/astra_camera/astra_camera_node
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/astra_camera/astra_list_devices
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/astra_camera/astra_test_wrapper
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/astra_camera/libOpenNI2.so
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/astra_camera/OpenNI2
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/libastra_wrapper.a
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/lib/libastra_driver_lib.a
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/launch/astra_launch.py
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/config/astra.yaml
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/environment/library_path.sh
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/environment/library_path.dsv
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/ament_index/resource_index/package_run_dependencies/astra_camera
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/ament_index/resource_index/parent_prefix_path/astra_camera
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/environment/ament_prefix_path.sh
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/environment/ament_prefix_path.dsv
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/environment/path.sh
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/environment/path.dsv
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/local_setup.bash
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/local_setup.sh
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/local_setup.zsh
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/local_setup.dsv
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/package.dsv
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/ament_index/resource_index/packages/astra_camera
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/cmake/astra_cameraConfig.cmake
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/cmake/astra_cameraConfig-version.cmake
+-- Symlinking: /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/install/share/astra_camera/package.xml

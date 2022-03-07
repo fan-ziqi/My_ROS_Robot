@@ -1,0 +1,4 @@
+# ninja log v5
+0	1200	1645096464321594645	CMakeFiles/simple_screen.dir/main.cpp.o	1830b915a90747bd
+7	1729	1645096464849580897	CMakeFiles/simple_screen.dir/AsyncSerial.cpp.o	99b462afe55bd596
+1729	1802	1645096464925578919	simple_screen	feaf6c472c418d34

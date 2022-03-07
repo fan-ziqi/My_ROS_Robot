@@ -1,3 +1,0 @@
-[35m[1mScanning dependencies of target serial_test[0m
-[ 66%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_linux.cpp.o[0m
-[ 66%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_test.cpp.o[0m

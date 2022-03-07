@@ -1,0 +1,19 @@
+[0.065s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test -- -j4 -l4
+[0.333s] [35m[1mScanning dependencies of target serial_test[0m
+[0.504s] [ 33%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_test.cpp.o[0m
+[0.528s] [ 66%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_linux.cpp.o[0m
+[9.346s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:[m[K In static member function ‘[01m[Kstatic void Serial::readHandler(const boost::system::error_code&, std::size_t)[m[K’:
+[9.346s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:84:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[9.346s]  void Serial::readHandler([01;35m[Kconst boost::system::error_code& error[m[K,std::size_t bytes_transferred)
+[9.346s]                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[9.347s] [01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:84:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kbytes_transferred[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[9.347s]  void Serial::readHandler(const boost::system::error_code& error,[01;35m[Kstd::size_t bytes_transferred[m[K)
+[9.347s]                                                                  [01;35m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+[14.426s] [100%] [32m[1mLinking CXX executable serial_test[0m
+[14.908s] /usr/bin/ld: CMakeFiles/serial_test.dir/src/serial_test.cpp.o: in function `test_function()':
+[14.909s] serial_test.cpp:(.text+0x129): undefined reference to `Serial::runService()'
+[14.909s] collect2: error: ld returned 1 exit status
+[14.913s] make[2]: *** [CMakeFiles/serial_test.dir/build.make:149: serial_test] Error 1
+[14.914s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2
+[14.914s] make: *** [Makefile:141: all] Error 2
+[14.921s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test -- -j4 -l4

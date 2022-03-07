@@ -1,8 +1,0 @@
-[0.011s] Invoking command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test -- -j4 -l4
-[0.069s] [ 33%] [32m[1mLinking CXX executable serial_test[0m
-[0.183s] /usr/bin/ld: CMakeFiles/serial_test.dir/src/serial_linux.cpp.o:(.bss+0x0): multiple definition of `serial_port_'; CMakeFiles/serial_test.dir/src/serial_test.cpp.o:(.bss+0x0): first defined here
-[0.184s] collect2: error: ld returned 1 exit status
-[0.185s] make[2]: *** [CMakeFiles/serial_test.dir/build.make:149: serial_test] Error 1
-[0.185s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2
-[0.185s] make: *** [Makefile:141: all] Error 2
-[0.190s] Invoked command in '/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/serial_test -- -j4 -l4
