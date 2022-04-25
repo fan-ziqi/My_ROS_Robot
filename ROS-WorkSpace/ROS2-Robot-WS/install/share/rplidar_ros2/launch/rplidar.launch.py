@@ -1,1 +1,0 @@
-/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/rplidar_ros2/launch/rplidar.launch.py

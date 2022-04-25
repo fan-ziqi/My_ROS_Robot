@@ -1,4 +1,0 @@
-/home/fzq614/Desktop/serial-port/5_Qt_integration/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/fzq614/Desktop/serial-port/5_Qt_integration/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/fzq614/Desktop/serial-port/5_Qt_integration/cmake-build-debug/CMakeFiles/SerialGUI.dir
-/home/fzq614/Desktop/serial-port/5_Qt_integration/cmake-build-debug/CMakeFiles/SerialGUI_autogen.dir

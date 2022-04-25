@@ -33,7 +33,10 @@ find_package(Boost REQUIRED COMPONENTS system filesystem thread)
 
 include_directories(${Boost_INCLUDE_DIRS})
 
-add_executable(robot src/robot.cpp)
+add_executable(robot 
+    src/robot.cpp 
+    src/serial_linux.cpp
+)
 
 target_link_libraries(robot ${Boost_LIBRARIES})
 

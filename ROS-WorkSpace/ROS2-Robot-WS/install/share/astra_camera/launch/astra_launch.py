@@ -1,1 +1,0 @@
-/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/ros_astra_camera/launch/astra_launch.py

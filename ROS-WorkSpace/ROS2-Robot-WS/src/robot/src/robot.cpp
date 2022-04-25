@@ -1,28 +1,17 @@
 #include "../include/robot/robot.hpp"
 
 Robot::Robot() : 
-    Node("RobotNode"), 
-    // first_init_(false), 
-    packet_finder_state_(WAITING_FOR_HEAD1)
+    Node("RobotNode")
 {
-    RCLCPP_INFO(this->get_logger(), "Creating RobotNode");
+    rcutils_logging_set_logger_level(this->get_name(), RCUTILS_LOG_SEVERITY_DEBUG);
+
+    RCLCPP_INFO(this->get_logger(), "创建机器人节点RobotNode");
     robot_loop();
 }
 
 Robot::~Robot()
 {
-    std::unique_lock<std::mutex> look(mutex_);
-    recv_flag_ = false;
-    if(serial_port_)
-    {
-        serial_port_->cancel();
-        serial_port_->close();
-        serial_port_.reset();
-        RCLCPP_INFO(this->get_logger(), "Closing Serial");
-    }
-    io_service_.stop();
-    io_service_.reset();
-    RCLCPP_INFO(this->get_logger(), "Destroying RobotNode");
+    RCLCPP_INFO(this->get_logger(), "销毁机器人节点RobotNode");
 }
 
 // TBD 动态调参
@@ -30,7 +19,6 @@ Robot::~Robot()
 // 主循环函数
 void Robot::robot_loop()
 {
-    using std::placeholders::_1;
     using namespace std::chrono_literals;
 
     // TBD? qos
@@ -42,10 +30,8 @@ void Robot::robot_loop()
     wheelvel_set_vector_.resize(4,0);
     wheelvel_get_vector_.resize(4,0);
 
-    if(!serial_init())
-    {
-        RCLCPP_INFO(this->get_logger(), "serial init faild");
-    }
+    //初始化串口
+    my_serial = std::make_shared<Serial>(port_name_);
 
     tf_broadcaster_ = std::make_shared<tf2_ros::TransformBroadcaster>(this, rclcpp::SystemDefaultsQoS());
 
@@ -61,26 +47,30 @@ void Robot::robot_loop()
     pub_wheelvel_c_set_ = this->create_publisher<std_msgs::msg::Int32>("robot/cset", 10);
     pub_wheelvel_d_set_ = this->create_publisher<std_msgs::msg::Int32>("robot/dset", 10);
 
-    sub_cmd_  = this->create_subscription<geometry_msgs::msg::Twist>("cmd_vel", 10, std::bind(&Robot::cmd_vel_callback, this, _1));
+    sub_cmd_  = this->create_subscription<geometry_msgs::msg::Twist>(
+        "cmd_vel", 
+        10, 
+        std::bind(&Robot::cmd_vel_callback, this, std::placeholders::_1));
     
     // 串口发送参数
     serial_send_correction(linear_correction_factor_,angular_correction_factor_);
     serial_send_pid(kp_,ki_,kd_);
 
     // 串口发送速度定时器
-    serial_send_speed_timer_ = this->create_wall_timer(std::chrono::duration<double>(1.0/control_rate_), std::bind(&Robot::serial_send_speed_callback, this));
+    serial_send_speed_timer_ = this->create_wall_timer(
+        std::chrono::duration<double>(1.0/control_rate_), 
+        std::bind(&Robot::serial_send_speed_callback, this));
 
     // 串口接收线程
     serial_receive_thread_ = std::make_shared<std::thread>(&Robot::serial_receive_callback, this);
-    serial_receive_thread_->detach();
 
-    RCLCPP_INFO(this->get_logger(), "Robot Running!");
+    RCLCPP_INFO(this->get_logger(), "初始化成功，机器人开始运行");
 }
 
 // 从配置文件中获取机器人参数
 void Robot::get_parameter_from_file()
 {
-    this->declare_parameter<std::string>("port_name", "/dev/pts/3"); // For Ubuntu
+    this->declare_parameter<std::string>("port_name", "/dev/ttyUSB0");
     this->get_parameter("port_name", port_name_);
     this->declare_parameter<std::string>("odom_frame", "odom");
     this->get_parameter("odom_frame", odom_frame_);
@@ -108,58 +98,36 @@ void Robot::get_parameter_from_file()
     this->get_parameter("Ki", ki_);
     this->declare_parameter<int>("Kd", 52000);
     this->get_parameter("Kd", kd_);
-}
-
-// 串口初始化
-bool Robot::serial_init()
-{
-    if(serial_port_)
-    {
-        RCLCPP_INFO(this->get_logger(), "The SerialPort is already opened!");
-        return false;
-    }
-
-    serial_port_ = std::shared_ptr<boost::asio::serial_port>(new boost::asio::serial_port(io_service_, port_name_));
-
-
-    // serial_port_->open(port_name_,serial_port_ec_);
-    // if(serial_port_ec_)
-    // {
-    //     RCLCPP_INFO_STREAM(this->get_logger(), "error : serial_port_->open() failed...port_name=" << port_name_ << ", e=" << serial_port_ec_.message().c_str());
-    //     // return false;
-    // }
-
-    //串口初始化
-    serial_port_->set_option(boost::asio::serial_port_base::baud_rate(baud_rate_)); //波特率
-    serial_port_->set_option(boost::asio::serial_port_base::character_size(8)); //字符大小
-    serial_port_->set_option(boost::asio::serial_port_base::stop_bits(boost::asio::serial_port_base::stop_bits::one)); //停止位 one /onepointfive /two
-    serial_port_->set_option(boost::asio::serial_port_base::parity(boost::asio::serial_port_base::parity::none)); //奇偶校验 none / odd / even
-    serial_port_->set_option(boost::asio::serial_port_base::flow_control(boost::asio::serial_port_base::flow_control::none)); //流控制 none /software /hardware
     
-    return true;
+    RCLCPP_INFO(this->get_logger(), "成功从配置文件中获取参数");
 }
 
-// 串口发送收到的/cmd_vel速度话题
+// 串口发送/cmd_vel速度话题
 void Robot::serial_send_speed_callback()
 {
     double linear_x_speed, linear_y_speed, angular_speed;
 
     if((this->get_clock()->now().seconds() - last_twist_time_.sec) <= 0.5)
     {
-            linear_x_speed = current_twist_.linear.x;
-            linear_y_speed = current_twist_.linear.y;
-            angular_speed = current_twist_.angular.z;
+        linear_x_speed = current_twist_.linear.x;
+        linear_y_speed = current_twist_.linear.y;
+        angular_speed = current_twist_.angular.z;
     }
     else
     {
-            linear_x_speed  = 0;
-            linear_y_speed  = 0;
-            angular_speed = 0;
+        linear_x_speed  = 0;
+        linear_y_speed  = 0;
+        angular_speed = 0;
     }
+    
+    // 如果超过一秒没有接收到里程计消息，则认为连接错误，给出warning
     if((this->get_clock()->now().seconds() - current_time_.sec) >= 1.0)
     {
-        rclcpp::Clock steady_clock{RCL_STEADY_TIME};
-        RCLCPP_WARN_THROTTLE(this->get_logger(), steady_clock, 1000, "Didn't received odom data,Please check your connection!");
+        rclcpp::Clock steady_clock(RCL_STEADY_TIME);
+        RCLCPP_WARN_THROTTLE(this->get_logger(), 
+                             steady_clock, 
+                             1000, 
+                             "与机器人通信错误！");
     }
     serial_send_velocity(linear_x_speed,linear_y_speed,angular_speed);
 }
@@ -167,328 +135,257 @@ void Robot::serial_send_speed_callback()
 // cmd_vel Subscriber的回调函数
 void Robot::cmd_vel_callback(const geometry_msgs::msg::Twist::SharedPtr msg)
 {
-    try
-    {
-        cmd_vel_mutex_.lock();
-        last_twist_time_ = this->get_clock()->now();
-        current_twist_ = *msg.get();
-        cmd_vel_mutex_.unlock();
-    }
-    catch(...)
-    {
-        cmd_vel_mutex_.unlock();
-    }
-}
-
-// 串口通信校验位计算
-void Robot::check_sum(uint8_t* data, size_t len, uint8_t& dest)
-{
-    dest = 0x00;
-    for(size_t i=0;i<len;i++)
-    {
-        dest += *(data + i);
-    }
+    last_twist_time_ = this->get_clock()->now();
+    current_twist_ = *msg.get();
+    RCLCPP_DEBUG(this->get_logger(), "收到cmd_vel信息");
 }
 
 // 串口数据接收线程的回调函数
 void Robot::serial_receive_callback()
 {
-    uint8_t payload_size, check_num, buffer_data[255], payload_type;
-    packet_finder_state_ = WAITING_FOR_HEAD1;
-    recv_flag_ = true;
-    while(recv_flag_)
-    {
-        switch (packet_finder_state_)
+    while(1)
+	{
+        short msg_data[255] = {0};
+        unsigned int msg_lenth = 0;
+        unsigned int msg_code = 0;
+        
+	 	my_serial->SerialRead(msg_data, &msg_lenth, &msg_code);
+		
+		// std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        RCLCPP_DEBUG(this->get_logger(), "串口接收到机器人端发送的数据");
+
+        //数据处理
+        if(msg_code == RESEIVETYPE_PACKAGES)
         {
-            case WAITING_FOR_HEAD1:
-                check_num = 0x00;
-                boost::asio::read(*serial_port_.get(), boost::asio::buffer(&buffer_data[0], 1), serial_port_ec_);
-                packet_finder_state_ = buffer_data[0] == HEAD1 ? WAITING_FOR_HEAD2 : WAITING_FOR_HEAD1;
-                if(packet_finder_state_ == WAITING_FOR_HEAD1)
-                {
-                    RCLCPP_DEBUG_STREAM(this->get_logger(), "recv HEAD1 error : ->" << (int)buffer_data[0]);
-                }
-                break;
-            case WAITING_FOR_HEAD2:
-                boost::asio::read(*serial_port_.get(),boost::asio::buffer(&buffer_data[1],1),serial_port_ec_);
-                packet_finder_state_ = buffer_data[1] == HEAD2 ? WAITING_FOR_PAYLOAD_SIZE : WAITING_FOR_HEAD1;
-                if(packet_finder_state_ == WAITING_FOR_HEAD1)
-                {
-                    RCLCPP_DEBUG_STREAM(this->get_logger(), "recv HEAD2 error : ->" << (int)buffer_data[1]);
-                }
-                break;
-            case WAITING_FOR_PAYLOAD_SIZE:
-                boost::asio::read(*serial_port_.get(),boost::asio::buffer(&buffer_data[2],1),serial_port_ec_);
-                payload_size = buffer_data[2] - 4;
-                packet_finder_state_ = WAITING_FOR_PAYLOAD;
-                break;
-            case WAITING_FOR_PAYLOAD:
-                boost::asio::read(*serial_port_.get(),boost::asio::buffer(&buffer_data[3],payload_size),serial_port_ec_);
-                payload_type = buffer_data[3];
-                packet_finder_state_ = WAITING_FOR_CHECKSUM;
-                break;
-            case WAITING_FOR_CHECKSUM:
-                boost::asio::read(*serial_port_.get(),boost::asio::buffer(&buffer_data[3+payload_size],1),serial_port_ec_);
-                check_sum(buffer_data, 3+payload_size, check_num);
-                packet_finder_state_ = buffer_data[3+payload_size] == check_num ? HANDLE_PAYLOAD : WAITING_FOR_HEAD1;
-                if(packet_finder_state_ == WAITING_FOR_HEAD1)
-                {
-                    RCLCPP_DEBUG_STREAM(this->get_logger(), "check sum error! recv is  : ->" << (int)buffer_data[3 + payload_size] << "  calc is " << check_num);
-                }
-                break;
-            case HANDLE_PAYLOAD:
-                serial_receive_check_and_distribute(payload_type, buffer_data);
-                packet_finder_state_ = WAITING_FOR_HEAD1;
-                break;
-            default:
-                packet_finder_state_ = WAITING_FOR_HEAD1;
-                break;
+            serial_receive_classify(msg_data, msg_lenth, msg_code);
         }
-    }
+	}
 }
 
 // 数据校验与分发
-void Robot::serial_receive_check_and_distribute(uint8_t msg_type, uint8_t* buffer_data)
+void Robot::serial_receive_classify(short * msg_data, unsigned int msg_lenth, unsigned int msg_code)
 {
-     if(msg_type == FOUNDTYPE_PACKAGES)
-     {
-        serial_receive_process(buffer_data);
-     }
+    if(msg_code == RESEIVETYPE_PACKAGES)
+    {
+        serial_receive_process(msg_data);
+    }
+    // else...
 }
 
 // 串口数据包解析
-void Robot::serial_receive_process(const uint8_t * buffer_data)
+void Robot::serial_receive_process(const short * buffer_data)
 {
-    // 记录当前时间
-    current_time_ = this->get_clock()->now();
     
-    // imu部分
-    // 解析串口接受的imu数据
-    // gyro
-    imu_get_vector_[0] = ((double)((int16_t)(buffer_data[4] * 256 + buffer_data[5])) / 32768 * 2000 / 180 * 3.1415);
-    imu_get_vector_[1] = ((double)((int16_t)(buffer_data[6] * 256 + buffer_data[7])) / 32768 * 2000 / 180 * 3.1415);
-    imu_get_vector_[2] = ((double)((int16_t)(buffer_data[8] * 256 + buffer_data[9])) / 32768 * 2000 / 180 * 3.1415);
-    // Acc
-    imu_get_vector_[3] = ((double)((int16_t)(buffer_data[10] * 256 + buffer_data[11])) / 32768 * 2 * 9.8);
-    imu_get_vector_[4] = ((double)((int16_t)(buffer_data[12] * 256 + buffer_data[13])) / 32768 * 2 * 9.8);
-    imu_get_vector_[5] = ((double)((int16_t)(buffer_data[14] * 256 + buffer_data[15])) / 32768 * 2 * 9.8);
-    // Angle
-    imu_get_vector_[6] = ((double)((int16_t)(buffer_data[16] * 256 + buffer_data[17])) / 100);
-    imu_get_vector_[7] = ((double)((int16_t)(buffer_data[18] * 256 + buffer_data[19])) / 100);
-    imu_get_vector_[8] = ((double)((int16_t)(buffer_data[20] * 256 + buffer_data[21])) / 100);
-    // 把角度转换成四元数(tf类型)
-    imu_quaternion_tf_.setRPY(0.0, 0.0, (imu_get_vector_[8] / 180 * 3.1415926));
-    tf2::convert(imu_quaternion_tf_, imu_quaternion_msg_); //把tf类型的四元数转换成msg类型
-    // 准备odom的pub数据
-    imu_pub_data_.header.stamp = current_time_;
-    imu_pub_data_.header.frame_id = imu_frame_;
-    imu_pub_data_.orientation = imu_quaternion_msg_;
-    imu_pub_data_.angular_velocity.x = imu_get_vector_[0];
-    imu_pub_data_.angular_velocity.y = imu_get_vector_[1];
-    imu_pub_data_.angular_velocity.z = imu_get_vector_[2];
-    imu_pub_data_.linear_acceleration.x = imu_get_vector_[3];
-    imu_pub_data_.linear_acceleration.y = imu_get_vector_[4];
-    imu_pub_data_.linear_acceleration.z = imu_get_vector_[5];
-    imu_pub_data_.orientation_covariance = 
-        {
-            1e6, 0  , 0   ,
-            0  , 1e6, 0   ,
-            0  , 0  , 1e-6
-        };
-    imu_pub_data_.angular_velocity_covariance = 
-        {
-            1e6, 0  , 0  ,
-            0  , 1e6, 0  ,
-            0  , 0  , 1e-6
-        };
-    imu_pub_data_.linear_acceleration_covariance = 
-        {
-            -1, 0, 0,
-            0 , 0, 0,
-            0 , 0, 0
-        };
-    // pub imu
-    pub_imu_->publish(imu_pub_data_);
+    // // 记录当前时间
+    // current_time_ = this->get_clock()->now();
+    
+    // // imu部分
+    // // 解析串口接受的imu数据
+    // // gyro
+    // imu_get_vector_[0] = ((double)((int16_t)(buffer_data[4] * 256 + buffer_data[5])) / 32768 * 2000 / 180 * 3.1415);
+    // imu_get_vector_[1] = ((double)((int16_t)(buffer_data[6] * 256 + buffer_data[7])) / 32768 * 2000 / 180 * 3.1415);
+    // imu_get_vector_[2] = ((double)((int16_t)(buffer_data[8] * 256 + buffer_data[9])) / 32768 * 2000 / 180 * 3.1415);
+    // // Acc
+    // imu_get_vector_[3] = ((double)((int16_t)(buffer_data[10] * 256 + buffer_data[11])) / 32768 * 2 * 9.8);
+    // imu_get_vector_[4] = ((double)((int16_t)(buffer_data[12] * 256 + buffer_data[13])) / 32768 * 2 * 9.8);
+    // imu_get_vector_[5] = ((double)((int16_t)(buffer_data[14] * 256 + buffer_data[15])) / 32768 * 2 * 9.8);
+    // // Angle
+    // imu_get_vector_[6] = ((double)((int16_t)(buffer_data[16] * 256 + buffer_data[17])) / 100);
+    // imu_get_vector_[7] = ((double)((int16_t)(buffer_data[18] * 256 + buffer_data[19])) / 100);
+    // imu_get_vector_[8] = ((double)((int16_t)(buffer_data[20] * 256 + buffer_data[21])) / 100);
+    // // 把角度转换成四元数(tf类型)
+    // imu_quaternion_tf_.setRPY(0.0, 0.0, (imu_get_vector_[8] / 180 * 3.1415926));
+    // tf2::convert(imu_quaternion_tf_, imu_quaternion_msg_); //把tf类型的四元数转换成msg类型
+    // // 准备odom的pub数据
+    // imu_pub_data_.header.stamp = current_time_;
+    // imu_pub_data_.header.frame_id = imu_frame_;
+    // imu_pub_data_.orientation = imu_quaternion_msg_;
+    // imu_pub_data_.angular_velocity.x = imu_get_vector_[0];
+    // imu_pub_data_.angular_velocity.y = imu_get_vector_[1];
+    // imu_pub_data_.angular_velocity.z = imu_get_vector_[2];
+    // imu_pub_data_.linear_acceleration.x = imu_get_vector_[3];
+    // imu_pub_data_.linear_acceleration.y = imu_get_vector_[4];
+    // imu_pub_data_.linear_acceleration.z = imu_get_vector_[5];
+    // imu_pub_data_.orientation_covariance = 
+    //     {
+    //         1e6, 0  , 0   ,
+    //         0  , 1e6, 0   ,
+    //         0  , 0  , 1e-6
+    //     };
+    // imu_pub_data_.angular_velocity_covariance = 
+    //     {
+    //         1e6, 0  , 0  ,
+    //         0  , 1e6, 0  ,
+    //         0  , 0  , 1e-6
+    //     };
+    // imu_pub_data_.linear_acceleration_covariance = 
+    //     {
+    //         -1, 0, 0,
+    //         0 , 0, 0,
+    //         0 , 0, 0
+    //     };
+    // // pub imu
+    // pub_imu_->publish(imu_pub_data_);
 
-    // odom部分
-    // 解析串口接受的odom数据
-    odom_get_vector_[0] = ((double)((int16_t)(buffer_data[22] * 256 + buffer_data[23])) / 1000);
-    odom_get_vector_[1] = ((double)((int16_t)(buffer_data[24] * 256 + buffer_data[25])) / 1000);
-    odom_get_vector_[2] = ((double)((int16_t)(buffer_data[26] * 256 + buffer_data[27])) / 1000);
-    // dx dy dyaw base_frame
-    odom_get_vector_[3] = ((double)((int16_t)(buffer_data[28] * 256 + buffer_data[29])) / 1000);
-    odom_get_vector_[4] = ((double)((int16_t)(buffer_data[30] * 256 + buffer_data[31])) / 1000);
-    odom_get_vector_[5] = ((double)((int16_t)(buffer_data[32] * 256 + buffer_data[33])) / 1000);
-    // 把角度转换成四元数(tf类型)
-    odom_quaternion_tf_.setRPY(0,0,odom_get_vector_[2]);
-    // 准备odom的pub数据
-    odom_pub_data_.header.stamp    = current_time_;
-    odom_pub_data_.header.frame_id = odom_frame_;
-    odom_pub_data_.child_frame_id  = base_frame_;
-    odom_pub_data_.pose.pose.position.x = odom_get_vector_[0];
-    odom_pub_data_.pose.pose.position.y = odom_get_vector_[1];
-    odom_pub_data_.pose.pose.position.z = 0;
-    odom_pub_data_.pose.pose.orientation.x = odom_quaternion_tf_.getX();
-    odom_pub_data_.pose.pose.orientation.y = odom_quaternion_tf_.getY();
-    odom_pub_data_.pose.pose.orientation.z = odom_quaternion_tf_.getZ();
-    odom_pub_data_.pose.pose.orientation.w = odom_quaternion_tf_.getW();
-    odom_pub_data_.twist.twist.linear.x = odom_get_vector_[3]/((current_time_.sec-last_time_.sec));
-    odom_pub_data_.twist.twist.linear.y = odom_get_vector_[4]/((current_time_.sec-last_time_.sec));
-    odom_pub_data_.twist.twist.angular.z = odom_get_vector_[5]/((current_time_.sec-last_time_.sec));
-    odom_pub_data_.twist.covariance = 
-        {
-            1e-9, 0   , 0   , 0  , 0  , 0  ,
-            0   , 1e-3, 1e-9, 0  , 0  , 0  ,
-            0   , 0   , 1e6 , 0  , 0  , 0  ,
-            0   , 0   , 0   , 1e6, 0  , 0  ,
-            0   , 0   , 0   , 0  , 1e6, 0  ,
-            0   , 0   , 0   , 0  , 0  , 1e-9
-        };
-    odom_pub_data_.pose.covariance = 
-        {
-            1e-9, 0   , 0   , 0  , 0  , 0  ,
-            0   , 1e-3, 1e-9, 0  , 0  , 0  ,
-            0   , 0   , 1e6 , 0  , 0  , 0  ,
-            0   , 0   , 0   , 1e6, 0  , 0  ,
-            0   , 0   , 0   , 0  , 1e6, 0  ,
-            0   , 0   , 0   , 0  , 0  , 1e-9
-        };
-    // pub odom
-    pub_odom_->publish(odom_pub_data_);
+    // // odom部分
+    // // 解析串口接受的odom数据
+    // odom_get_vector_[0] = ((double)((int16_t)(buffer_data[22] * 256 + buffer_data[23])) / 1000);
+    // odom_get_vector_[1] = ((double)((int16_t)(buffer_data[24] * 256 + buffer_data[25])) / 1000);
+    // odom_get_vector_[2] = ((double)((int16_t)(buffer_data[26] * 256 + buffer_data[27])) / 1000);
+    // // dx dy dyaw base_frame
+    // odom_get_vector_[3] = ((double)((int16_t)(buffer_data[28] * 256 + buffer_data[29])) / 1000);
+    // odom_get_vector_[4] = ((double)((int16_t)(buffer_data[30] * 256 + buffer_data[31])) / 1000);
+    // odom_get_vector_[5] = ((double)((int16_t)(buffer_data[32] * 256 + buffer_data[33])) / 1000);
+    // // 把角度转换成四元数(tf类型)
+    // odom_quaternion_tf_.setRPY(0,0,odom_get_vector_[2]);
+    // // 准备odom的pub数据
+    // odom_pub_data_.header.stamp    = current_time_;
+    // odom_pub_data_.header.frame_id = odom_frame_;
+    // odom_pub_data_.child_frame_id  = base_frame_;
+    // odom_pub_data_.pose.pose.position.x = odom_get_vector_[0];
+    // odom_pub_data_.pose.pose.position.y = odom_get_vector_[1];
+    // odom_pub_data_.pose.pose.position.z = 0;
+    // odom_pub_data_.pose.pose.orientation.x = odom_quaternion_tf_.getX();
+    // odom_pub_data_.pose.pose.orientation.y = odom_quaternion_tf_.getY();
+    // odom_pub_data_.pose.pose.orientation.z = odom_quaternion_tf_.getZ();
+    // odom_pub_data_.pose.pose.orientation.w = odom_quaternion_tf_.getW();
+    // odom_pub_data_.twist.twist.linear.x = odom_get_vector_[3]/((current_time_.sec-last_time_.sec));
+    // odom_pub_data_.twist.twist.linear.y = odom_get_vector_[4]/((current_time_.sec-last_time_.sec));
+    // odom_pub_data_.twist.twist.angular.z = odom_get_vector_[5]/((current_time_.sec-last_time_.sec));
+    // odom_pub_data_.twist.covariance = 
+    //     {
+    //         1e-9, 0   , 0   , 0  , 0  , 0  ,
+    //         0   , 1e-3, 1e-9, 0  , 0  , 0  ,
+    //         0   , 0   , 1e6 , 0  , 0  , 0  ,
+    //         0   , 0   , 0   , 1e6, 0  , 0  ,
+    //         0   , 0   , 0   , 0  , 1e6, 0  ,
+    //         0   , 0   , 0   , 0  , 0  , 1e-9
+    //     };
+    // odom_pub_data_.pose.covariance = 
+    //     {
+    //         1e-9, 0   , 0   , 0  , 0  , 0  ,
+    //         0   , 1e-3, 1e-9, 0  , 0  , 0  ,
+    //         0   , 0   , 1e6 , 0  , 0  , 0  ,
+    //         0   , 0   , 0   , 1e6, 0  , 0  ,
+    //         0   , 0   , 0   , 0  , 1e6, 0  ,
+    //         0   , 0   , 0   , 0  , 0  , 1e-9
+    //     };
+    // // pub odom
+    // pub_odom_->publish(odom_pub_data_);
 
-    // 发布tf变换, odom_frame_->base_frame_
-    tf_odom_to_base_data_.header.stamp    = current_time_;
-    tf_odom_to_base_data_.header.frame_id = odom_frame_;
-    tf_odom_to_base_data_.child_frame_id  = base_frame_;
-    tf_odom_to_base_data_.transform.translation.x = odom_get_vector_[0];
-    tf_odom_to_base_data_.transform.translation.y = odom_get_vector_[1];
-    tf_odom_to_base_data_.transform.translation.z = 0.0;
-    tf_odom_to_base_data_.transform.rotation.x = odom_quaternion_tf_.getX();
-    tf_odom_to_base_data_.transform.rotation.y = odom_quaternion_tf_.getY();
-    tf_odom_to_base_data_.transform.rotation.z = odom_quaternion_tf_.getZ();
-    tf_odom_to_base_data_.transform.rotation.w = odom_quaternion_tf_.getW();
-    if(publish_odom_transform_)
-        tf_broadcaster_->sendTransform(tf_odom_to_base_data_);
+    // // 发布tf变换, odom_frame_->base_frame_
+    // tf_odom_to_base_data_.header.stamp    = current_time_;
+    // tf_odom_to_base_data_.header.frame_id = odom_frame_;
+    // tf_odom_to_base_data_.child_frame_id  = base_frame_;
+    // tf_odom_to_base_data_.transform.translation.x = odom_get_vector_[0];
+    // tf_odom_to_base_data_.transform.translation.y = odom_get_vector_[1];
+    // tf_odom_to_base_data_.transform.translation.z = 0.0;
+    // tf_odom_to_base_data_.transform.rotation.x = odom_quaternion_tf_.getX();
+    // tf_odom_to_base_data_.transform.rotation.y = odom_quaternion_tf_.getY();
+    // tf_odom_to_base_data_.transform.rotation.z = odom_quaternion_tf_.getZ();
+    // tf_odom_to_base_data_.transform.rotation.w = odom_quaternion_tf_.getW();
+    // if(publish_odom_transform_)
+    //     tf_broadcaster_->sendTransform(tf_odom_to_base_data_);
 
-    // wheelvel部分
-    // 解析串口接受的wheelvel数据
-    wheelvel_get_vector_[0]=((int16_t)(buffer_data[34]*256+buffer_data[35]));
-    wheelvel_get_vector_[1]=((int16_t)(buffer_data[36]*256+buffer_data[37]));
-    wheelvel_get_vector_[2]=((int16_t)(buffer_data[38]*256+buffer_data[39]));
-    wheelvel_get_vector_[3]=((int16_t)(buffer_data[40]*256+buffer_data[41]));
-    wheelvel_set_vector_[0]=((int16_t)(buffer_data[42]*256+buffer_data[43]));
-    wheelvel_set_vector_[1]=((int16_t)(buffer_data[44]*256+buffer_data[45]));
-    wheelvel_set_vector_[2]=((int16_t)(buffer_data[46]*256+buffer_data[47]));
-    wheelvel_set_vector_[3]=((int16_t)(buffer_data[48]*256+buffer_data[49]));
-    // 准备的pub数据
-    wheelvel_a_get_pub_data_.data = wheelvel_get_vector_[0];
-    wheelvel_b_get_pub_data_.data = wheelvel_get_vector_[1];
-    wheelvel_c_get_pub_data_.data = wheelvel_get_vector_[2];
-    wheelvel_d_get_pub_data_.data = wheelvel_get_vector_[3];
-    wheelvel_a_set_pub_data_.data = wheelvel_set_vector_[0];
-    wheelvel_b_set_pub_data_.data = wheelvel_set_vector_[1];
-    wheelvel_c_set_pub_data_.data = wheelvel_set_vector_[2];
-    wheelvel_d_set_pub_data_.data = wheelvel_set_vector_[3];
-    // pub wheelvel
-    pub_wheelvel_a_get_->publish(wheelvel_a_get_pub_data_);
-    pub_wheelvel_b_get_->publish(wheelvel_b_get_pub_data_);
-    pub_wheelvel_c_get_->publish(wheelvel_c_get_pub_data_);
-    pub_wheelvel_d_get_->publish(wheelvel_d_get_pub_data_);
-    pub_wheelvel_a_set_->publish(wheelvel_a_set_pub_data_);
-    pub_wheelvel_b_set_->publish(wheelvel_b_set_pub_data_);
-    pub_wheelvel_c_set_->publish(wheelvel_c_set_pub_data_);
-    pub_wheelvel_d_set_->publish(wheelvel_d_set_pub_data_);
+    // // wheelvel部分
+    // // 解析串口接受的wheelvel数据
+    // wheelvel_get_vector_[0]=((int16_t)(buffer_data[34]*256+buffer_data[35]));
+    // wheelvel_get_vector_[1]=((int16_t)(buffer_data[36]*256+buffer_data[37]));
+    // wheelvel_get_vector_[2]=((int16_t)(buffer_data[38]*256+buffer_data[39]));
+    // wheelvel_get_vector_[3]=((int16_t)(buffer_data[40]*256+buffer_data[41]));
+    // wheelvel_set_vector_[0]=((int16_t)(buffer_data[42]*256+buffer_data[43]));
+    // wheelvel_set_vector_[1]=((int16_t)(buffer_data[44]*256+buffer_data[45]));
+    // wheelvel_set_vector_[2]=((int16_t)(buffer_data[46]*256+buffer_data[47]));
+    // wheelvel_set_vector_[3]=((int16_t)(buffer_data[48]*256+buffer_data[49]));
+    // // 准备的pub数据
+    // wheelvel_a_get_pub_data_.data = wheelvel_get_vector_[0];
+    // wheelvel_b_get_pub_data_.data = wheelvel_get_vector_[1];
+    // wheelvel_c_get_pub_data_.data = wheelvel_get_vector_[2];
+    // wheelvel_d_get_pub_data_.data = wheelvel_get_vector_[3];
+    // wheelvel_a_set_pub_data_.data = wheelvel_set_vector_[0];
+    // wheelvel_b_set_pub_data_.data = wheelvel_set_vector_[1];
+    // wheelvel_c_set_pub_data_.data = wheelvel_set_vector_[2];
+    // wheelvel_d_set_pub_data_.data = wheelvel_set_vector_[3];
+    // // pub wheelvel
+    // pub_wheelvel_a_get_->publish(wheelvel_a_get_pub_data_);
+    // pub_wheelvel_b_get_->publish(wheelvel_b_get_pub_data_);
+    // pub_wheelvel_c_get_->publish(wheelvel_c_get_pub_data_);
+    // pub_wheelvel_d_get_->publish(wheelvel_d_get_pub_data_);
+    // pub_wheelvel_a_set_->publish(wheelvel_a_set_pub_data_);
+    // pub_wheelvel_b_set_->publish(wheelvel_b_set_pub_data_);
+    // pub_wheelvel_c_set_->publish(wheelvel_c_set_pub_data_);
+    // pub_wheelvel_d_set_->publish(wheelvel_d_set_pub_data_);
 
-    // battery部分
-    // 解析串口接受的battery数据
-    battery_pub_data_.data = (double)(((buffer_data[50]<<8)+buffer_data[51]))/100;
-    // pub battery
-    pub_battery_->publish(battery_pub_data_);
+    // // battery部分
+    // // 解析串口接受的battery数据
+    // battery_pub_data_.data = (double)(((buffer_data[50]<<8)+buffer_data[51]))/100;
+    // // pub battery
+    // pub_battery_->publish(battery_pub_data_);
 
-    // 更新时间
-    last_time_ = current_time_;
+    // // 更新时间
+    // last_time_ = current_time_;
 }
 
 // 串口发送PID参数
 void Robot::serial_send_pid(int p,int i, int d)
 {
-    static uint8_t pid_data[11];
-    pid_data[0] = HEAD1;
-    pid_data[1] = HEAD2;
-    pid_data[2] = 0x0b;
-    pid_data[3] = SENDTYPE_PID;
-    pid_data[4] = (p >> 8) & 0xff;
-    pid_data[5] = p & 0xff;
-    pid_data[6] = (i >> 8) & 0xff;
-    pid_data[7] = i & 0xff;
-    pid_data[8] = (d >> 8) & 0xff;
-    pid_data[9] = d & 0xff;
-    check_sum(pid_data,10,pid_data[10]);
-    RCLCPP_INFO(this->get_logger(), "Send Time: %f", this->get_clock()->now().seconds());
-    boost::asio::write(*serial_port_.get(), boost::asio::buffer(pid_data, 11), serial_port_ec_);
-    RCLCPP_INFO(this->get_logger(), "Send End Time: %f", this->get_clock()->now().seconds());
+    static short pid_data[3];
+    pid_data[0] = p;
+    pid_data[1] = i;
+    pid_data[2] = d;
+    my_serial->SerialWrite(pid_data, 3, SENDTYPE_PID);
+    RCLCPP_INFO(this->get_logger(), 
+                "向机器人发送PID参数：p=%d, i=%d, d=%d", 
+                pid_data[0], pid_data[1], pid_data[2]);
 }
 
 // 串口发送底盘矫正参数
 void Robot::serial_send_correction(double linear_correction,double angular_correction)
 {
-    RCLCPP_INFO(this->get_logger(), "linear_correction:%f angular_correction:%f", linear_correction, angular_correction);
-    static uint8_t param_data[20];
-    param_data[0]  = HEAD1;
-    param_data[1]  = HEAD2;
-    param_data[2]  = 0x09;
-    param_data[3]  = SENDTYPE_PARAMS;
-    param_data[4] = (int16_t)((int16_t)(linear_correction * 1000) >> 8) & 0xff;
-    param_data[5] = (int16_t)(linear_correction * 1000) & 0xff;
-    param_data[6] = (int16_t)((int16_t)(angular_correction * 1000) >> 8) & 0xff;
-    param_data[7] = (int16_t)(angular_correction * 1000) & 0xff;
-    check_sum(param_data, 8, param_data[8]);
-    boost::asio::write(*serial_port_.get(), boost::asio::buffer(param_data, 9), serial_port_ec_);
+    static short param_data[2];
+    param_data[0] = (short)linear_correction * 1000;
+    param_data[1] = (short)angular_correction * 1000;
+    my_serial->SerialWrite(param_data, 2, SENDTYPE_PARAMS);
+    RCLCPP_INFO(this->get_logger(), 
+                "向机器人发送底盘矫正参数：linear_correction=%d, angular_correction=%d",
+                param_data[0], param_data[1]);
 }
 
 // 串口发送底盘速度
 void Robot::serial_send_velocity(double x, double y, double yaw)
 {
-    static uint8_t vel_data[11];
-    vel_data[0] = HEAD1;
-    vel_data[1] = HEAD2;
-    vel_data[2] = 0x0b;
-    vel_data[3] = SENDTYPE_VELOCITY;
-    vel_data[4] = ((int16_t)(x * 1000) >> 8) & 0xff;
-    vel_data[5] = ((int16_t)(x * 1000)) & 0xff;
-    vel_data[6] = ((int16_t)(y * 1000) >> 8) & 0xff;
-    vel_data[7] = ((int16_t)(y * 1000)) & 0xff;
-    vel_data[8] = ((int16_t)(yaw * 1000) >> 8) & 0xff;
-    vel_data[9] = ((int16_t)(yaw * 1000)) & 0xff;
-    check_sum(vel_data, 10, vel_data[10]);
-    boost::asio::write(*serial_port_.get(), boost::asio::buffer(vel_data, 11), serial_port_ec_); //这句没理解,先用着, 以后再说吧
-    // if(x==1&&y==0&&yaw==0) RCLCPP_INFO(this->get_logger(), "DEBUG");
-}
-
-void help_print()
-{
-  printf("使用帮助: \n");
-  printf("robot [-p custom_port_name] [-h]\n");
-  printf("参数:\n");
-  printf("-h 显示帮助\n");
-  printf("-p 自定义串口号\n");
+    static short vel_data[3];
+    vel_data[0] = (short)(x * 1000);
+    vel_data[1] = (short)(y * 1000);
+    vel_data[2] = (short)(yaw * 1000);
+    my_serial->SerialWrite(vel_data, 3, SENDTYPE_VELOCITY);
+    RCLCPP_DEBUG(this->get_logger(), 
+                 "串口发送底盘速度: %d, %d, %d", 
+                 vel_data[0], vel_data[1], vel_data[2]);
+    
 }
 
 int main(int argc, char ** argv)
 {
+    // 强制刷新标准输出缓冲区
+    setvbuf(stdout, NULL, _IONBF, BUFSIZ);
+
     rclcpp::init(argc, argv);
+
+    // 创建一个执行器，负责执行一组节点的回调。所有的回调都将在这个线程（主线程）中被调用。
+    rclcpp::executors::SingleThreadedExecutor executor;
 
     auto node = std::make_shared<Robot>();
 
-    //多线程
-    rclcpp::executors::MultiThreadedExecutor executor;
+    // 向执行器添加节点，这些节点在spin函数中工作。
     executor.add_node(node);
 
-    // node->robot_loop();
-
+    // spin将阻塞直到工作进入，当它可用时执行工作，并保持阻塞。它只会被 Ctrl-C 打断
     executor.spin();
+
     // 底盘速度设为0
     node->serial_send_velocity(0, 0, 0);
+
     rclcpp::shutdown();
     return 0;
 }

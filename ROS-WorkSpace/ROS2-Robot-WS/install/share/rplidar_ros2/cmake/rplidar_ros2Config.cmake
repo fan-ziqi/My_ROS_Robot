@@ -1,1 +1,0 @@
-/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/build/rplidar_ros2/ament_cmake_core/rplidar_ros2Config.cmake

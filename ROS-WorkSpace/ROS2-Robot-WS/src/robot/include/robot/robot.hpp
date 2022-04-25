@@ -33,21 +33,21 @@
 #include <boost/system/error_code.hpp>
 #include <boost/system/system_error.hpp>
 
+#include "../serial_linux/serial_linux.hpp"
+
+
 // 这样就能使用1000ms这种表示方式
 using namespace std::chrono_literals;
-
-//占位符
-using std::placeholders::_1;
 
 #define G_OF_EARTH     9.8
 #define HEAD1 0xAA
 #define HEAD2 0x55
-#define SENDTYPE_VELOCITY    0x11
-#define SENDTYPE_PID         0x12
-#define SENDTYPE_PARAMS      0x13
-#define SENDTYPE_WHEELSPEED  0x14
+#define SENDTYPE_VELOCITY    11
+#define SENDTYPE_PID         12
+#define SENDTYPE_PARAMS      13
+#define SENDTYPE_WHEELSPEED  14
 
-#define FOUNDTYPE_PACKAGES    0x06
+#define RESEIVETYPE_PACKAGES    6
 
 //#define MAX_STEERING_ANGLE    0.87
 //#define M_PI 3.1415926535
@@ -72,20 +72,16 @@ public:
     void serial_send_velocity(double x, double y, double yaw);
 
 private:
-    std::mutex mutex_;
-    // bool first_init_;
 
     // 串口相关
-    boost::asio::io_service io_service_;
-    std::shared_ptr<boost::asio::serial_port> serial_port_;
+    std::shared_ptr<Serial> my_serial;
     // 串口初始化
     bool serial_init();
     void check_sum(uint8_t* data, size_t len, uint8_t& dest);
     std::shared_ptr<std::thread> serial_receive_thread_;
     void serial_receive_callback();
-    boost::system::error_code serial_port_ec_;
-    void serial_receive_check_and_distribute(uint8_t msg_type, uint8_t* buffer_data);
-    void serial_receive_process(const uint8_t* buffer_data);
+    void serial_receive_classify(short * msg_data, unsigned int msg_lenth, unsigned int msg_code);
+    void serial_receive_process(const short* buffer_data);
     void serial_send_pid(int p,int i, int d);
     void serial_send_correction(double linear_correction,double angular_correction);
     SerialState packet_finder_state_;
@@ -128,7 +124,6 @@ private:
 
     rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr sub_cmd_;
     void cmd_vel_callback(const geometry_msgs::msg::Twist::SharedPtr msg);
-    std::mutex cmd_vel_mutex_;
 
     rclcpp::TimerBase::SharedPtr serial_send_speed_timer_;
     void serial_send_speed_callback();

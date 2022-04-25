@@ -1,27 +1,41 @@
 #include "../include/robot_sim/robot_sim.hpp"
-using namespace std::chrono_literals;
-using std::placeholders::_1;
 
-RobotSim::RobotSim() : Node("RobotSimNode")
+#include <memory>
+#include <string>
+
+using namespace std::chrono_literals;
+
+RobotSim::RobotSim() 
+: Node("RobotSimNode")
 {
+    // 初始化ROS参数
     init_parameters();
 
+    // 初始化ROS变量
     init_variables();
 
     auto qos = rclcpp::QoS(rclcpp::KeepLast(10));
 
     // 初始化publishers
-    pub_odom_ = this->create_publisher<nav_msgs::msg::Odometry>("odom", qos);
-
+    odom_pub_         = this->create_publisher<nav_msgs::msg::Odometry>("odom", qos);
     joint_states_pub_ = this->create_publisher<sensor_msgs::msg::JointState>("joint_states", qos);
-
-    pub_tf_ = this->create_publisher<tf2_msgs::msg::TFMessage>("tf", qos);
+    tf_pub_           = this->create_publisher<tf2_msgs::msg::TFMessage>("tf", qos);
 
     // 初始化subscribers
-    sub_cmd_ = this->create_subscription<geometry_msgs::msg::Twist>("cmd_vel", qos, std::bind(&RobotSim::cmd_vel_callback, this, _1));
+    cmd_vel_sub_ = this->create_subscription<geometry_msgs::msg::Twist>(
+        "cmd_vel", 
+        qos, 
+        std::bind(
+            &RobotSim::cmd_vel_callback, 
+            this, 
+            std::placeholders::_1));
 
     // 初始化timer
-    update_timer_ = this->create_wall_timer(std::chrono::duration<double>(1.0/control_rate_), std::bind(&RobotSim::update_callback, this));
+    update_timer_ = this->create_wall_timer(
+        std::chrono::duration<double>(1.0/control_rate_), 
+        std::bind(
+            &RobotSim::update_callback, 
+            this));
 
     RCLCPP_INFO(this->get_logger(), "Robot sim node has been initialised");
 }
@@ -34,31 +48,52 @@ RobotSim::~RobotSim()
 // 从配置文件中获取机器人参数
 void RobotSim::init_parameters()
 {
-    this->declare_parameter<std::string>("joint_states_frame", "base_footprint");
-    this->get_parameter("joint_states_frame", joint_states_.header.frame_id);
+    // // 第一种方式：声明时设置默认值，获取时覆盖默认值
+    // this->declare_parameter<std::string>("joint_states_frame", "base_footprint");
+    // this->get_parameter("joint_states_frame", joint_states_.header.frame_id);
 
-    this->declare_parameter<std::string>("odom_frame", "odom");
-    this->get_parameter("odom_frame", odom_pub_data_.header.frame_id);
-    // this->get_parameter<std::string>("odom_frame", odom_frame_);
+    // this->declare_parameter<std::string>("odom_frame", "odom");
+    // this->get_parameter("odom_frame", odom_pub_data_.header.frame_id);
+    // // this->get_parameter<std::string>("odom_frame", odom_frame_);
 
-    this->declare_parameter<std::string>("base_frame", "base_footprint");
-    this->get_parameter("base_frame", odom_pub_data_.child_frame_id);
-    // this->get_parameter("base_frame", base_frame_);
+    // this->declare_parameter<std::string>("base_frame", "base_footprint");
+    // this->get_parameter("base_frame", odom_pub_data_.child_frame_id);
+    // // this->get_parameter("base_frame", base_frame_);
 
-    this->declare_parameter<double>("wheels.separation", 0.0);
-    this->get_parameter("wheels.separation", wheel_seperation_);
+    // this->declare_parameter<double>("wheels.separation", 0.0);
+    // this->get_parameter("wheels.separation", wheel_seperation_);
 
-    this->declare_parameter<double>("wheels.lx", 0.0);
-    this->get_parameter("wheels.separation", wheel_lx_);
+    // this->declare_parameter<double>("wheels.lx", 0.0);
+    // this->get_parameter("wheels.separation", wheel_lx_);
 
-    this->declare_parameter<double>("wheels.ly", 0.0);
-    this->get_parameter("wheels.separation", wheel_ly_);
+    // this->declare_parameter<double>("wheels.ly", 0.0);
+    // this->get_parameter("wheels.separation", wheel_ly_);
 
-    this->declare_parameter<double>("wheels.radius", 0.0);
-    this->get_parameter("wheels.radius", wheel_radius_);
+    // this->declare_parameter<double>("wheels.radius", 0.0);
+    // this->get_parameter("wheels.radius", wheel_radius_);
 
-    this->declare_parameter<int>("control_rate", 50);
-    this->get_parameter("control_rate", control_rate_);
+    // this->declare_parameter<int>("control_rate", 50);
+    // this->get_parameter("control_rate", control_rate_);
+
+    // 第二种方式：声明时不给默认值，获取时如果没有设置，则使用默认值。
+    this->declare_parameter<std::string>("joint_states_frame");
+    this->declare_parameter<std::string>("odom_frame");
+    this->declare_parameter<std::string>("base_frame");
+    this->declare_parameter<double>("wheels.separation");
+    this->declare_parameter<double>("wheels.lx");
+    this->declare_parameter<double>("wheels.ly");
+    this->declare_parameter<double>("wheels.radius");
+    this->declare_parameter<int>("control_rate");
+
+    this->get_parameter_or<std::string>("joint_states_frame", joint_states_.header.frame_id, "base_footprint");
+    this->get_parameter_or<std::string>("odom_frame", odom_pub_data_.header.frame_id, "odom");
+    this->get_parameter_or<std::string>("base_frame", odom_pub_data_.child_frame_id, "base_footprint");
+    this->get_parameter_or<double>("wheels.separation", wheel_seperation_, 0.0);
+    this->get_parameter_or<double>("wheels.lx", wheel_lx_, 0.0);
+    this->get_parameter_or<double>("wheels.ly", wheel_ly_, 0.0);
+    this->get_parameter_or<double>("wheels.radius", wheel_radius_, 0.0);
+    this->get_parameter_or<int>("control_rate", control_rate_, 50);
+
 }
 
 // 初始化变量
@@ -67,29 +102,41 @@ void RobotSim::init_variables()
     // Initialise variables
     wheel_ax_plus_bx_ = (wheel_lx_ + wheel_ly_) / 2.0;
 
-    wheel_speed_cmd_[FRONT_LEFT] = 0.0;
-    wheel_speed_cmd_[FRONT_RIGHT] = 0.0;
-    wheel_speed_cmd_[BACK_LEFT] = 0.0;
-    wheel_speed_cmd_[BACK_RIGHT] = 0.0;
+    // 四轮转速控制
+    wheel_speed_cmd_[WHEEL_FRONT_LEFT] = 0.0;
+    wheel_speed_cmd_[WHEEL_FRONT_RIGHT] = 0.0;
+    wheel_speed_cmd_[WHEEL_BACK_LEFT] = 0.0;
+    wheel_speed_cmd_[WHEEL_BACK_RIGHT] = 0.0;
+
+    // 车子速度x y θ
     linear_x_speed_ = 0.0;
     linear_y_speed_ = 0.0;
     angular_speed_ = 0.0;
+
+    // 控制timeout
     cmd_vel_timeout_ = 0.1;
-    last_position_[FRONT_LEFT] = 0.0;
-    last_position_[FRONT_RIGHT] = 0.0;
-    last_position_[BACK_LEFT] = 0.0;
-    last_position_[BACK_RIGHT] = 0.0;
-    last_velocity_[FRONT_LEFT] = 0.0;
-    last_velocity_[FRONT_RIGHT] = 0.0;
-    last_velocity_[BACK_LEFT] = 0.0;
-    last_velocity_[BACK_RIGHT] = 0.0;
+
+    // 轮子角度
+    last_position_[WHEEL_FRONT_LEFT] = 0.0;
+    last_position_[WHEEL_FRONT_RIGHT] = 0.0;
+    last_position_[WHEEL_BACK_LEFT] = 0.0;
+    last_position_[WHEEL_BACK_RIGHT] = 0.0;
+    // 轮子角速度
+    last_velocity_[WHEEL_FRONT_LEFT] = 0.0;
+    last_velocity_[WHEEL_FRONT_RIGHT] = 0.0;
+    last_velocity_[WHEEL_BACK_LEFT] = 0.0;
+    last_velocity_[WHEEL_BACK_RIGHT] = 0.0;
+
+    // 里程计位移x y θ
     odom_pose_[0] = 0.0;
     odom_pose_[1] = 0.0;
     odom_pose_[2] = 0.0;
+    // 里程计瞬时速度x y θ
     odom_vel_[0] = 0.0;
     odom_vel_[1] = 0.0;
     odom_vel_[2] = 0.0;
 
+    // 关节
     joint_states_.name.push_back("wheel_front_left_joint");
     joint_states_.name.push_back("wheel_front_right_joint");
     joint_states_.name.push_back("wheel_back_left_joint");
@@ -102,22 +149,23 @@ void RobotSim::init_variables()
     last_cmd_vel_time_ = this->now();
 }
 
-// sub_cmd_ Subscriber的回调函数
-void RobotSim::cmd_vel_callback(const geometry_msgs::msg::Twist::SharedPtr cmd_vel_msg)
+// cmd_vel_sub_ Subscriber的回调函数
+void RobotSim::cmd_vel_callback(
+    const geometry_msgs::msg::Twist::SharedPtr cmd_vel_msg)
 {
+    // 记录控制时间
     last_cmd_vel_time_ = this->now();
-
+    
+    // 车子速度
     linear_x_speed_ = cmd_vel_msg->linear.x;
     linear_y_speed_ = cmd_vel_msg->linear.y;
     angular_speed_ = cmd_vel_msg->angular.z;
 
-    // current_twist_ = *cmd_vel_msg.get();
-
-    // 麦轮运动学逆解
-    wheel_speed_cmd_[FRONT_LEFT]  = (1) * linear_x_speed_ + (-1) * linear_y_speed_ + (-1) * (wheel_ax_plus_bx_) * angular_speed_;
-    wheel_speed_cmd_[FRONT_RIGHT] = (1) * linear_x_speed_ + ( 1) * linear_y_speed_ + ( 1) * (wheel_ax_plus_bx_) * angular_speed_;
-    wheel_speed_cmd_[BACK_LEFT]   = (1) * linear_x_speed_ + ( 1) * linear_y_speed_ + (-1) * (wheel_ax_plus_bx_) * angular_speed_;
-    wheel_speed_cmd_[BACK_RIGHT]  = (1) * linear_x_speed_ + (-1) * linear_y_speed_ + ( 1) * (wheel_ax_plus_bx_) * angular_speed_;
+    // 麦轮运动学逆解，通过车子速度计算四轮速度
+    wheel_speed_cmd_[WHEEL_FRONT_LEFT]  = (1) * linear_x_speed_ + (-1) * linear_y_speed_ + (-1) * (wheel_ax_plus_bx_) * angular_speed_;
+    wheel_speed_cmd_[WHEEL_FRONT_RIGHT] = (1) * linear_x_speed_ + ( 1) * linear_y_speed_ + ( 1) * (wheel_ax_plus_bx_) * angular_speed_;
+    wheel_speed_cmd_[WHEEL_BACK_LEFT]   = (1) * linear_x_speed_ + ( 1) * linear_y_speed_ + (-1) * (wheel_ax_plus_bx_) * angular_speed_;
+    wheel_speed_cmd_[WHEEL_BACK_RIGHT]  = (1) * linear_x_speed_ + (-1) * linear_y_speed_ + ( 1) * (wheel_ax_plus_bx_) * angular_speed_;
 }
 
 // update_timer_ Timer的回调函数
@@ -130,18 +178,18 @@ void RobotSim::update_callback()
     // 如果未收到cmd_vel, 则设置速度为0
     if((time_now - last_cmd_vel_time_).nanoseconds() / 1e9 >= cmd_vel_timeout_)
     {
-        wheel_speed_cmd_[FRONT_LEFT] = 0.0;
-        wheel_speed_cmd_[FRONT_RIGHT] = 0.0;
-        wheel_speed_cmd_[BACK_LEFT] = 0.0;
-        wheel_speed_cmd_[BACK_RIGHT] = 0.0;
+        wheel_speed_cmd_[WHEEL_FRONT_LEFT] = 0.0;
+        wheel_speed_cmd_[WHEEL_FRONT_RIGHT] = 0.0;
+        wheel_speed_cmd_[WHEEL_BACK_LEFT] = 0.0;
+        wheel_speed_cmd_[WHEEL_BACK_RIGHT] = 0.0;
     }
 
-    // odom
+    // 更新里程计
     update_odometry(duration);
     odom_pub_data_.header.stamp = time_now;
-    pub_odom_->publish(odom_pub_data_);
+    odom_pub_->publish(odom_pub_data_);
 
-    // joint_states
+    // 更新关节状态
     update_joint_state();
     joint_states_.header.stamp = time_now;
     joint_states_pub_->publish(joint_states_);
@@ -152,7 +200,7 @@ void RobotSim::update_callback()
     update_tf(odom_tf);
     tf2_msgs::msg::TFMessage odom_tf_msg;
     odom_tf_msg.transforms.push_back(odom_tf);
-    pub_tf_->publish(odom_tf_msg);
+    tf_pub_->publish(odom_tf_msg);
     
 }
 
@@ -172,36 +220,30 @@ bool RobotSim::update_odometry(const rclcpp::Duration & duration)
     delta_x_of_car = delta_y_of_car = delta_theta_of_car = 0.0;
 
     // v 轮子平移速度[m/s]
-    v[FRONT_LEFT] = wheel_speed_cmd_[FRONT_LEFT];
-    v[FRONT_RIGHT] = wheel_speed_cmd_[FRONT_RIGHT];
-    v[BACK_LEFT] = wheel_speed_cmd_[BACK_LEFT];
-    v[BACK_RIGHT] = wheel_speed_cmd_[BACK_RIGHT];
+    v[WHEEL_FRONT_LEFT] = wheel_speed_cmd_[WHEEL_FRONT_LEFT];
+    v[WHEEL_FRONT_RIGHT] = wheel_speed_cmd_[WHEEL_FRONT_RIGHT];
+    v[WHEEL_BACK_LEFT] = wheel_speed_cmd_[WHEEL_BACK_LEFT];
+    v[WHEEL_BACK_RIGHT] = wheel_speed_cmd_[WHEEL_BACK_RIGHT];
 
     // 求当前时间段内轮子走过的距离
-    s_of_wheel[FRONT_LEFT] = v[FRONT_LEFT] * step_time;
-    s_of_wheel[FRONT_RIGHT] = v[FRONT_RIGHT] * step_time;
-    s_of_wheel[BACK_LEFT] = v[BACK_LEFT] * step_time;
-    s_of_wheel[BACK_RIGHT] = v[BACK_RIGHT] * step_time;
+    s_of_wheel[WHEEL_FRONT_LEFT] = v[WHEEL_FRONT_LEFT] * step_time;
+    s_of_wheel[WHEEL_FRONT_RIGHT] = v[WHEEL_FRONT_RIGHT] * step_time;
+    s_of_wheel[WHEEL_BACK_LEFT] = v[WHEEL_BACK_LEFT] * step_time;
+    s_of_wheel[WHEEL_BACK_RIGHT] = v[WHEEL_BACK_RIGHT] * step_time;
 
     // w 轮子旋转速度[rad/s] w = v / r
-    w[FRONT_LEFT] = v[FRONT_LEFT] / wheel_radius_;
-    w[FRONT_RIGHT] = v[FRONT_RIGHT] / wheel_radius_;
-    w[BACK_LEFT] = v[BACK_LEFT] / wheel_radius_;
-    w[BACK_RIGHT] = v[BACK_RIGHT] / wheel_radius_;
+    w[WHEEL_FRONT_LEFT] = v[WHEEL_FRONT_LEFT] / wheel_radius_;
+    w[WHEEL_FRONT_RIGHT] = v[WHEEL_FRONT_RIGHT] / wheel_radius_;
+    w[WHEEL_BACK_LEFT] = v[WHEEL_BACK_LEFT] / wheel_radius_;
+    w[WHEEL_BACK_RIGHT] = v[WHEEL_BACK_RIGHT] / wheel_radius_;
 
     // 求当前时间段内轮子旋转过的角度
-    theta_of_wheel[FRONT_LEFT] = w[FRONT_LEFT] * step_time;
-    theta_of_wheel[FRONT_RIGHT] = w[FRONT_RIGHT] * step_time;
-    theta_of_wheel[BACK_LEFT] = w[BACK_LEFT] * step_time;
-    theta_of_wheel[BACK_RIGHT] = w[BACK_RIGHT] * step_time;
-
-    // 更新当前角速度
-    last_velocity_[FRONT_LEFT] = w[FRONT_LEFT];
-    last_velocity_[FRONT_RIGHT] = w[FRONT_RIGHT];
-    last_velocity_[BACK_LEFT] = w[BACK_LEFT];
-    last_velocity_[BACK_RIGHT] = w[BACK_RIGHT];
-
-    // 判断非法数字
+    theta_of_wheel[WHEEL_FRONT_LEFT] = w[WHEEL_FRONT_LEFT] * step_time;
+    theta_of_wheel[WHEEL_FRONT_RIGHT] = w[WHEEL_FRONT_RIGHT] * step_time;
+    theta_of_wheel[WHEEL_BACK_LEFT] = w[WHEEL_BACK_LEFT] * step_time;
+    theta_of_wheel[WHEEL_BACK_RIGHT] = w[WHEEL_BACK_RIGHT] * step_time;
+    
+    // 前面做了除法，判断非法数字
     for(int i = 0; i < 4; i++)
     {
         if(std::isnan(theta_of_wheel[i]))
@@ -210,20 +252,26 @@ bool RobotSim::update_odometry(const rclcpp::Duration & duration)
         }
     }
 
+    // 更新当前角速度
+    last_velocity_[WHEEL_FRONT_LEFT] = w[WHEEL_FRONT_LEFT];
+    last_velocity_[WHEEL_FRONT_RIGHT] = w[WHEEL_FRONT_RIGHT];
+    last_velocity_[WHEEL_BACK_LEFT] = w[WHEEL_BACK_LEFT];
+    last_velocity_[WHEEL_BACK_RIGHT] = w[WHEEL_BACK_RIGHT];
+
     // 更新旋转过的角度值
-    last_position_[FRONT_LEFT] += theta_of_wheel[FRONT_LEFT];
-    last_position_[FRONT_RIGHT] += theta_of_wheel[FRONT_RIGHT];
-    last_position_[BACK_LEFT] += theta_of_wheel[BACK_LEFT];
-    last_position_[BACK_RIGHT] += theta_of_wheel[BACK_RIGHT];
+    last_position_[WHEEL_FRONT_LEFT] += theta_of_wheel[WHEEL_FRONT_LEFT];
+    last_position_[WHEEL_FRONT_RIGHT] += theta_of_wheel[WHEEL_FRONT_RIGHT];
+    last_position_[WHEEL_BACK_LEFT] += theta_of_wheel[WHEEL_BACK_LEFT];
+    last_position_[WHEEL_BACK_RIGHT] += theta_of_wheel[WHEEL_BACK_RIGHT];
 
     // 运动学正解
     // 单位时间内车体移动的位移
-    delta_x_of_car = (s_of_wheel[BACK_RIGHT] + s_of_wheel[BACK_LEFT]) / 2.0;
-    delta_y_of_car = (s_of_wheel[BACK_LEFT] - s_of_wheel[FRONT_LEFT]) / 2.0;
+    delta_x_of_car = (s_of_wheel[WHEEL_BACK_RIGHT] + s_of_wheel[WHEEL_BACK_LEFT]) / 2.0;
+    delta_y_of_car = (s_of_wheel[WHEEL_BACK_LEFT] - s_of_wheel[WHEEL_FRONT_LEFT]) / 2.0;
     // 单位时间内车体旋转的角度
-    delta_theta_of_car = (s_of_wheel[FRONT_RIGHT] - s_of_wheel[BACK_LEFT]) / (2.0 * wheel_ax_plus_bx_);
+    delta_theta_of_car = (s_of_wheel[WHEEL_FRONT_RIGHT] - s_of_wheel[WHEEL_BACK_LEFT]) / (2.0 * wheel_ax_plus_bx_);
 
-    // 计算里程计位移, x, y, θ
+    // 计算里程计位姿, x, y, θ
     odom_pose_[0] += delta_x_of_car * cos(odom_pose_[2] + delta_theta_of_car) - delta_y_of_car * sin(odom_pose_[2] + delta_theta_of_car);
     odom_pose_[1] += delta_x_of_car * sin(odom_pose_[2] + delta_theta_of_car) + delta_y_of_car * cos(odom_pose_[2] + delta_theta_of_car);
     odom_pose_[2] += delta_theta_of_car;
@@ -233,7 +281,7 @@ bool RobotSim::update_odometry(const rclcpp::Duration & duration)
     odom_vel_[1] = delta_y_of_car / step_time;;
     odom_vel_[2] = delta_theta_of_car / step_time;
 
-    //更新里程计平移变换
+    // 更新里程计平移变换
     odom_pub_data_.pose.pose.position.x = odom_pose_[0];
     odom_pub_data_.pose.pose.position.y = odom_pose_[1];
     odom_pub_data_.pose.pose.position.z = 0;
@@ -241,7 +289,6 @@ bool RobotSim::update_odometry(const rclcpp::Duration & duration)
     // 将旋转变换转化为四元数表示
     tf2::Quaternion q;
     q.setRPY(0, 0, odom_pose_[2]);
-
     // // debug
     // std::cout << "- Rotation: in Quaternion [" << q.x() << ", " << q.y() << ", " << q.z() << ", " << q.w() << "]" << std::endl
     //           << "            in RPY (radian) [" <<  0 << ", " << 0 << ", " << odom_pose_[2] << "]" << std::endl
@@ -262,17 +309,18 @@ bool RobotSim::update_odometry(const rclcpp::Duration & duration)
     return true;
 }
 
+// 更新关节状态
 void RobotSim::update_joint_state()
 {
-    joint_states_.position[FRONT_LEFT] = last_position_[FRONT_LEFT];
-    joint_states_.position[FRONT_RIGHT] = last_position_[FRONT_RIGHT];
-    joint_states_.position[BACK_LEFT] = last_position_[BACK_LEFT];
-    joint_states_.position[BACK_RIGHT] = last_position_[BACK_RIGHT];
+    joint_states_.position[WHEEL_FRONT_LEFT] = last_position_[WHEEL_FRONT_LEFT];
+    joint_states_.position[WHEEL_FRONT_RIGHT] = last_position_[WHEEL_FRONT_RIGHT];
+    joint_states_.position[WHEEL_BACK_LEFT] = last_position_[WHEEL_BACK_LEFT];
+    joint_states_.position[WHEEL_BACK_RIGHT] = last_position_[WHEEL_BACK_RIGHT];
 
-    joint_states_.velocity[FRONT_LEFT] = last_velocity_[FRONT_LEFT];
-    joint_states_.velocity[FRONT_RIGHT] = last_velocity_[FRONT_RIGHT];
-    joint_states_.velocity[BACK_LEFT] = last_velocity_[BACK_LEFT];
-    joint_states_.velocity[BACK_RIGHT] = last_velocity_[BACK_RIGHT];
+    joint_states_.velocity[WHEEL_FRONT_LEFT] = last_velocity_[WHEEL_FRONT_LEFT];
+    joint_states_.velocity[WHEEL_FRONT_RIGHT] = last_velocity_[WHEEL_FRONT_RIGHT];
+    joint_states_.velocity[WHEEL_BACK_LEFT] = last_velocity_[WHEEL_BACK_LEFT];
+    joint_states_.velocity[WHEEL_BACK_RIGHT] = last_velocity_[WHEEL_BACK_RIGHT];
 }
 
 // tf解算/更新函数
@@ -292,5 +340,6 @@ int main(int argc, char ** argv)
     auto node = std::make_shared<RobotSim>();
     rclcpp::spin(node);
     rclcpp::shutdown();
+    
     return 0;
 }

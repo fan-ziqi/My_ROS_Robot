@@ -1,2 +1,0 @@
-/usr/bin/ar qc libastra_driver_lib.a  CMakeFiles/astra_driver_lib.dir/src/astra_driver.cpp.o CMakeFiles/astra_driver_lib.dir/src/astra_device_type.cpp.o
-/usr/bin/ranlib libastra_driver_lib.a

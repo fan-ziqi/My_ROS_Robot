@@ -1,9 +1,0 @@
-[35m[1mScanning dependencies of target serial_test[0m
-[ 33%] [32mBuilding CXX object CMakeFiles/serial_test.dir/src/serial_linux.cpp.o[0m
-[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:[m[K In member function ‘[01m[Kvoid Serial::read_from_serial()[m[K’:
-[01m[K/home/fzq614/My_ROS_Robot/ROS-WorkSpace/ROS2-Robot-WS/src/third_pkg/Serial_Linux/src/serial_linux.cpp:82:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kboost::asio::io_service[m[K’ {aka ‘[01m[Kclass boost::asio::io_context[m[K’} has no member named ‘[01m[Kopen[m[K’
-     io_service_.[01;31m[Kopen[m[K();
-                 [01;31m[K^~~~[m[K
-make[2]: *** [CMakeFiles/serial_test.dir/build.make:76: CMakeFiles/serial_test.dir/src/serial_linux.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/serial_test.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2

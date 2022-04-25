@@ -3,8 +3,6 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include <chrono>
-#include <memory>
-#include <string>
 
 #include <tf2/LinearMath/Quaternion.h>
 #include <tf2_ros/transform_broadcaster.h>
@@ -17,13 +15,13 @@
 #define LEFT 0
 #define RIGHT 1
 
-enum Wheel
+typedef enum
 {
-    FRONT_LEFT,
-    FRONT_RIGHT,
-    BACK_LEFT,
-    BACK_RIGHT
-};
+    WHEEL_FRONT_LEFT,
+    WHEEL_FRONT_RIGHT,
+    WHEEL_BACK_LEFT,
+    WHEEL_BACK_RIGHT
+} WHEEL_ID;
 
 class RobotSim : public rclcpp::Node 
 {
@@ -39,12 +37,12 @@ private:
     rclcpp::TimerBase::SharedPtr update_timer_;
 
     // ROS topic publishers
-    rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr pub_odom_;
+    rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr odom_pub_;
     rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr joint_states_pub_;
-    rclcpp::Publisher<tf2_msgs::msg::TFMessage>::SharedPtr pub_tf_;
+    rclcpp::Publisher<tf2_msgs::msg::TFMessage>::SharedPtr tf_pub_;
     
     // ROS topic subscribers
-    rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr sub_cmd_;
+    rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr cmd_vel_sub_;
 
     nav_msgs::msg::Odometry odom_pub_data_;
     sensor_msgs::msg::JointState joint_states_;

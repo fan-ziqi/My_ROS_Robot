@@ -1,4 +1,0 @@
-/home/fzq614/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.6777.58/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/fzq614/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.6777.58/bin/ninja/linux/ninja -G Ninja /home/fzq614/Desktop/serial-port/Serial_Linux
--- Configuring done
--- Generating done
--- Build files have been written to: /home/fzq614/Desktop/serial-port/Serial_Linux/cmake-build-debug
