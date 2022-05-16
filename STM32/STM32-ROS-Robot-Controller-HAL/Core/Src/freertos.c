@@ -51,20 +51,9 @@ osThreadId defaultTaskHandle;
 uint32_t defaultTaskBuffer[ 128 ];
 osStaticThreadDef_t defaultTaskControlBlock;
 osThreadId KEYHandle;
-uint32_t KEYBuffer[ 128 ];
-osStaticThreadDef_t KEYControlBlock;
 osThreadId VINHandle;
-uint32_t VINBuffer[ 128 ];
-osStaticThreadDef_t VINControlBlock;
-osThreadId UART_PIHandle;
-uint32_t UART_PIBuffer[ 128 ];
-osStaticThreadDef_t UART_PIControlBlock;
-osThreadId UART_DEBUGHandle;
-uint32_t UART_DEBUGBuffer[ 128 ];
-osStaticThreadDef_t UART_DEBUGControlBlock;
+osThreadId PIHandle;
 osThreadId ROBOT_MOVEHandle;
-uint32_t ROBOT_MOVEBuffer[ 128 ];
-osStaticThreadDef_t ROBOT_MOVEControlBlock;
 osThreadId IMUHandle;
 osThreadId LEDHandle;
 osThreadId OTHERHandle;
@@ -78,8 +67,7 @@ osThreadId CMDHandle;
 void StartDefaultTask(void const * argument);
 extern void key_task(void const * argument);
 extern void vin_task(void const * argument);
-extern void uart_pi_task(void const * argument);
-extern void uart_debug_task(void const * argument);
+extern void pi_task(void const * argument);
 extern void robot_move_task(void const * argument);
 extern void imu_task(void const * argument);
 extern void led_task(void const * argument);
@@ -136,23 +124,19 @@ void MX_FREERTOS_Init(void) {
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* definition and creation of KEY */
-  osThreadStaticDef(KEY, key_task, osPriorityBelowNormal, 0, 128, KEYBuffer, &KEYControlBlock);
+  osThreadDef(KEY, key_task, osPriorityBelowNormal, 0, 128);
   KEYHandle = osThreadCreate(osThread(KEY), NULL);
 
   /* definition and creation of VIN */
-  osThreadStaticDef(VIN, vin_task, osPriorityBelowNormal, 0, 128, VINBuffer, &VINControlBlock);
+  osThreadDef(VIN, vin_task, osPriorityBelowNormal, 0, 128);
   VINHandle = osThreadCreate(osThread(VIN), NULL);
 
-  /* definition and creation of UART_PI */
-  osThreadStaticDef(UART_PI, uart_pi_task, osPriorityHigh, 0, 128, UART_PIBuffer, &UART_PIControlBlock);
-  UART_PIHandle = osThreadCreate(osThread(UART_PI), NULL);
-
-  /* definition and creation of UART_DEBUG */
-  osThreadStaticDef(UART_DEBUG, uart_debug_task, osPriorityNormal, 0, 128, UART_DEBUGBuffer, &UART_DEBUGControlBlock);
-  UART_DEBUGHandle = osThreadCreate(osThread(UART_DEBUG), NULL);
+  /* definition and creation of PI */
+  osThreadDef(PI, pi_task, osPriorityHigh, 0, 128);
+  PIHandle = osThreadCreate(osThread(PI), NULL);
 
   /* definition and creation of ROBOT_MOVE */
-  osThreadStaticDef(ROBOT_MOVE, robot_move_task, osPriorityHigh, 0, 128, ROBOT_MOVEBuffer, &ROBOT_MOVEControlBlock);
+  osThreadDef(ROBOT_MOVE, robot_move_task, osPriorityHigh, 0, 128);
   ROBOT_MOVEHandle = osThreadCreate(osThread(ROBOT_MOVE), NULL);
 
   /* definition and creation of IMU */

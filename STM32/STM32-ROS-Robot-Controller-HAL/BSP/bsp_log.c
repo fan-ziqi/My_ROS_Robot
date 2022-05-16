@@ -6,7 +6,7 @@
 
 void Log_Init(void)
 {
-	/* initialize EasyLogger */
+		/* initialize EasyLogger */
     elog_init();
     /* set EasyLogger log format */
     elog_set_fmt(ELOG_LVL_ASSERT, ELOG_FMT_ALL);
@@ -15,19 +15,21 @@ void Log_Init(void)
     elog_set_fmt(ELOG_LVL_INFO, ELOG_FMT_LVL | ELOG_FMT_TAG | ELOG_FMT_TIME);
     elog_set_fmt(ELOG_LVL_DEBUG, ELOG_FMT_ALL & ~(ELOG_FMT_FUNC | ELOG_FMT_T_INFO | ELOG_FMT_P_INFO));
     elog_set_fmt(ELOG_LVL_VERBOSE, ELOG_FMT_ALL & ~(ELOG_FMT_FUNC | ELOG_FMT_T_INFO | ELOG_FMT_P_INFO));
-    /* start EasyLogger */
-    elog_start();
+    
     
     /* dynamic set enable or disable for output logs (true or false) */
 //    elog_set_output_enabled(false);
     /* dynamic set output logs's level (from ELOG_LVL_ASSERT to ELOG_LVL_VERBOSE) */
-//    elog_set_filter_lvl(ELOG_LVL_WARN);
+    elog_set_filter_lvl(ELOG_LVL_INFO);
     /* dynamic set output logs's filter for tag */
 //    elog_set_filter_tag("main");
     /* dynamic set output logs's filter for keyword */
 //    elog_set_filter_kw("Hello");
     /* dynamic set output logs's tag filter */
 //    elog_set_filter_tag_lvl("main", ELOG_LVL_WARN);
+
+		/* start EasyLogger */
+    elog_start();
 
 		LOG_I("LOG Init Success\r\n");
 }

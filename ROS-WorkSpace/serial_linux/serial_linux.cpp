@@ -116,7 +116,7 @@ bool Serial::SerialWrite(short * MessageData, unsigned int MessageLenth, unsigne
     unsigned char SendLength = (2 * MessageLenth) + 7;
 
     // 发送消息缓冲区(变长数组)
-    unsigned char * SendBuf = (unsigned char *)malloc(SendLength * sizeof(unsigned char));
+    unsigned char * SendBuf = malloc(SendLength * sizeof(unsigned char));
 
     // 消息头 SendBuf[0] SendBuf[1]
     for(int i = 0; i < 2; i++)
@@ -172,6 +172,9 @@ bool Serial::SerialWrite(short * MessageData, unsigned int MessageLenth, unsigne
 
     //消息Union清零
     SendUnion.data = 0; 
+
+    //释放内存
+	free(SendBuf);
 
     return true;
 }

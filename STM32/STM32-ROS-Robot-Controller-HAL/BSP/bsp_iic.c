@@ -8,7 +8,8 @@
 //MPU IIC 延时函数
 void IIC_Delay(void)
 {
-	delay_us(2);
+	for(int i=0;i<1;i++) ;
+//	osDelay(1);
 }
 
 //初始化IIC
@@ -33,7 +34,7 @@ void IIC_Init(void)
 void IIC_Start(void)
 {
 	SDA_OUT();     //sda线输出
-	IIC_SDA=1;	  	  
+	IIC_SDA=1;	 
 	IIC_SCL=1;
 	IIC_Delay();
  	IIC_SDA=0;//START:when CLK is high,DATA change form high to low 

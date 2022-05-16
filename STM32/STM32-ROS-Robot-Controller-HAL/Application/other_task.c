@@ -4,6 +4,7 @@
 #include "bsp_other.h"
 #include "bsp_motor.h"
 #include "bsp_encoder.h"
+#include "bsp_usart.h"
 
 #define LOG_TAG    "OTHER"
 #include "bsp_log.h"
@@ -11,10 +12,29 @@
 extern int battery_status;
 extern float battery_voltage;
 
+extern int16_t robot_target_speed[];  // X Y Yaw
+extern int16_t robot_params[];
+extern struct imu_data robot_imu_dmp_data;
+
+extern UART_HandleTypeDef huart1;
+extern UART_HandleTypeDef huart2;
+
 void other_task(void const * argument)
 {
 	while(1)
 	{
+
+//		LOG_I("Pitch:%d Roll:%d Yaw:%d\r\n", 
+//					robot_imu_dmp_data.pitch,
+//					robot_imu_dmp_data.roll,
+//					robot_imu_dmp_data.yaw);
+		
+		
+//		LOG_I("X:%d Y:%d Z:%d\r\n", 
+//					robot_target_speed[0],
+//					robot_target_speed[1],
+//					robot_target_speed[2]);
+//		USART_Send_Pack(&huart2, sendtest, 3, 06);
 //		//全部初始化完成且电量充足，绿灯点亮，蓝灯熄灭，提示运行
 //		if(battery_status == IS_FULL)
 //		{
@@ -47,32 +67,16 @@ void other_task(void const * argument)
 //					Encoder_Get_Counter(3),
 //					Encoder_Get_Counter(4));
 
-
-		osDelay(10);
+		osDelay(2000);
 	}
 }
 
-void uart_pi_task(void const * argument)
-{
-	while(1)
-	{
-		osDelay(1);
-	}
-}
-
-void uart_debug_task(void const * argument)
-{
-	while(1)
-	{
-		osDelay(1);
-	}
-}
 
 void robot_move_task(void const * argument)
 {
 	while(1)
 	{
-		osDelay(1);
+		osDelay(10);
 	}
 }
 

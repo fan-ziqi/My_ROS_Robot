@@ -33,13 +33,11 @@ void MPU6050_Init(void)
 	
 	//配置MPU6050寄存器  
 	MPU6050_Write_Byte(MPU6050_PWR_MGMT1_REG,0X80);	//复位MPU6050
-	delay_ms(100);
+	osDelay(100);
 	MPU6050_Write_Byte(MPU6050_PWR_MGMT1_REG,0x00); //唤醒MPU6050 
 	
 	MPU6050_SetGyroRange(GYRO_RANGE_2000); //陀螺仪量程 ±2000dps
 	MPU6050_SetAccelRange(ACC_RANGE_2G); //加速计量程 ±2g
-	
-	MPU6050_SetSmplRate(50); //设置采样率50Hz
 	
 	MPU6050_Write_Byte(MPU6050_INT_EN_REG,0X00);	//关闭所有中断
 	MPU6050_Write_Byte(MPU6050_USER_CTRL_REG,0X00);	//I2C主模式关闭
@@ -54,15 +52,22 @@ void MPU6050_Init(void)
 		MPU6050_Write_Byte(MPU6050_PWR_MGMT1_REG,0X01);	//设置CLKSEL,PLL X轴为参考
 		MPU6050_Write_Byte(MPU6050_PWR_MGMT2_REG,0X00);	//加速度与陀螺仪都工作
 		MPU6050_SetSmplRate(50); //设置采样率为50Hz
+		
+		osDelay(100);  //等待传感器稳定
+		
+		if(MPU6050_DMP_Init())	//DMP初始化
+		{
+			LOG_I("MPU6050 Init Success, ID=0x%x\r\n",ID);
+		}
+		else
+		{
+			LOG_E("MPU6050 Init Failed: DMP Failed");
+		}
  	}
 	else
 	{
-		LOG_E("READ MPU6050_ADDR ERROR\r\n");
+		LOG_E("MPU6050 Init Failed, ID=0x%x\r\n",ID);
 	}
-	
-	delay_ms(100);  //等待传感器稳定
-	
-	LOG_I("MPU6050 Init Success\r\n");
 }
 
 
@@ -516,69 +521,94 @@ static  uint16_t inv_orientation_matrix_to_scalar(const signed char *mtx)
   * @参  数  无	  
   * @返回值  无
   */
-void MPU6050_DMP_Init(void)
+int MPU6050_DMP_Init(void)
 {
 	uint8_t res=0;
+	
+	int ok = 1;
 
 	if(mpu_init() == 0)
 	{
 		res=mpu_set_sensors(INV_XYZ_GYRO|INV_XYZ_ACCEL);//设置所需要的传感器
-		if(res)
+		if(res&&ok)
 		{
-			while(1) LOG_E("mpu_set_sensor error\r\n");
+			ok = 0;
+			LOG_E("mpu_set_sensor error\r\n");
+			return 0;
 		}
 		
 		res=mpu_configure_fifo(INV_XYZ_GYRO | INV_XYZ_ACCEL);//设置FIFO
-		if(res)
+		if(res&&ok)
 		{
-			while(1) LOG_E("mpu_configure_fifo error\r\n"); 
+			ok = 0;
+			LOG_E("mpu_configure_fifo error\r\n"); 
+			return 0;
 		}
 		
 		res=mpu_set_sample_rate(DEFAULT_MPU_HZ);	//设置采样率
-		if(res)
+		if(res&&ok)
 		{
-			while(1) LOG_E("mpu_set_sample_rate error\r\n");
+			ok = 0;
+			LOG_E("mpu_set_sample_rate error\r\n");
+			return 0;
 		}
 		
 		res=dmp_load_motion_driver_firmware();		//加载dmp固件
-		if(res)
+		if(res&&ok)
 		{
-			while(1) LOG_E("dmp_load_motion_driver_firmware error\r\n"); 
+			ok = 0;
+			LOG_E("dmp_load_motion_driver_firmware error\r\n"); 
+			return 0;
 		}
 		
 		res=dmp_set_orientation(inv_orientation_matrix_to_scalar(gyro_orientation));//设置陀螺仪方向
-		if(res)
+		if(res&&ok)
 		{
-			while(1) LOG_E("dmp_set_orientation error\r\n");
+			ok = 0;
+			LOG_E("dmp_set_orientation error\r\n");
+			return 0;
 		}
 		
 		res=dmp_enable_feature(DMP_FEATURE_6X_LP_QUAT|DMP_FEATURE_TAP|	//设置dmp功能
 		    DMP_FEATURE_ANDROID_ORIENT|DMP_FEATURE_SEND_RAW_ACCEL|DMP_FEATURE_SEND_CAL_GYRO|
 		    DMP_FEATURE_GYRO_CAL);
-		if(res)
+		if(res&&ok)
 		{
-			while(1) LOG_E("dmp_enable_feature error\r\n");
+			ok = 0;
+			LOG_E("dmp_enable_feature error\r\n");
+			return 0;
 		}
 		
 		res=dmp_set_fifo_rate(DEFAULT_MPU_HZ);	//设置DMP输出速率(最大不超过200Hz)
-		if(res)
+		if(res&&ok)
 		{
-			while(1) LOG_E("dmp_set_fifo_rate error\r\n");
+			ok = 0;
+			LOG_E("dmp_set_fifo_rate error\r\n");
+			return 0;
 		}
 		
 		res=run_self_test();  //自检
-		if(res)
+		if(res&&ok)
 		{
-			while(1) LOG_E("run_self_test error\r\n");
+			ok = 0;
+			LOG_E("run_self_test error\r\n");
+			return 0;
 		}
 		
 		res=mpu_set_dmp_state(1);  //使能DMP
-		if(res)
+		if(res&&ok)
 		{
-			while(1) LOG_E("mpu_set_dmp_state error\r\n"); 
+			ok = 0;
+			LOG_E("mpu_set_dmp_state error\r\n"); 
+			return 0;
+		}
+		
+		if(ok)
+		{
+			LOG_D("MPU6050_DMP Init Success\r\n");
+			return 1;
 		}
 	}
-	LOG_I("MPU6050_DMP Init Success\r\n");
 }
 
 
@@ -627,7 +657,6 @@ void MPU6050_DMP_GetData(struct imu_data *robot_imu_data)
 		robot_imu_data->pitch = pitch * 100;		
 		robot_imu_data->roll  = roll  * 100;	
 	  robot_imu_data->yaw   = yaw   * 100;	
-	
 	}
 	
 }

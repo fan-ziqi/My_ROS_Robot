@@ -160,7 +160,7 @@ struct imu_data
 	int16_t yaw;
 };
 
-void MPU6050_DMP_Init(void);    //MPU6050 DMP初始化
+int MPU6050_DMP_Init(void);    //MPU6050 DMP初始化
 //void MPU6050_DMP_GetData(int16_t *data);  //MPU6050 MDP获取解算数据，姿态欧拉角
 void MPU6050_DMP_GetData(struct imu_data *robot_imu_data);
 

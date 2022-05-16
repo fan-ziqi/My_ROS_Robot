@@ -313,7 +313,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>4</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xE</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;   ../Drivers/STM32F1xx_HAL_Driver/Inc;   ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;   ../Drivers/CMSIS/Device/ST/STM32F1xx/Include;   ../Drivers/CMSIS/Include;   ../Middlewares/Third_Party/FreeRTOS/Source/include;   ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;   ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3;   ..\Application;   ..\BSP;   ..\BSP\mpu6050\eMPL;   ..\BSP\mpu6050;   ..\BSP\easylogger\inc</IncludePath>
+              <IncludePath>../Core/Inc;                 ../Drivers/STM32F1xx_HAL_Driver/Inc;                 ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;                 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include;                 ../Drivers/CMSIS/Include;                 ../Middlewares/Third_Party/FreeRTOS/Source/include;                 ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;                 ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3;                 ..\Application;                 ..\BSP;                 ..\BSP\mpu6050\eMPL;                 ..\BSP\mpu6050;                 ..\BSP\easylogger\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1660,6 +1660,11 @@
               <FileName>cmd_task.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Application\cmd_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>pi_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Application\pi_task.c</FilePath>
             </File>
           </Files>
         </Group>

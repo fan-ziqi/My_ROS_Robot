@@ -8,7 +8,7 @@ void key_task(void const * argument)
 {
 	while(1)
 	{
-		Key_Scan();
+//		Key_Scan();
 		
 		osDelay(20);
 	}

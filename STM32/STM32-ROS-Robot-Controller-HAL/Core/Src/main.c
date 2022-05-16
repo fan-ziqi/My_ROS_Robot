@@ -112,23 +112,14 @@ int main(void)
   MX_TIM5_Init();
   MX_ADC2_Init();
   MX_ADC1_Init();
+  MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
 	Buddha_Bless();
-	//机器人初始化
-	Delay_Init();     
+//	Delay_Init();     
 	Log_Init();
-	Motor_Init();
-	Encoder_Init();
-	LED_Init();
-//	VIN_Init();
-//	USART_Init();
-//	UART_DB_Init(115200);
-//	UART_PI_Init(115200);
-
-
-
-//	MPU6050_Init();    //MPU6050初始化
-//	MPU6050_DMP_Init();	//DMP初始化
+//	Motor_Init();
+//	Encoder_Init();
+	USART_Init();
 
 
 

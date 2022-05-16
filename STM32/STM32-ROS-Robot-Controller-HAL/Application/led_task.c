@@ -10,6 +10,8 @@ extern int battery_status;
 //20ms
 void led_task(void const * argument)
 {
+	LED_Init();
+	
 	//开机提示信息
 	LED_Blue_On();
 	LED_Green_On();
@@ -33,15 +35,23 @@ void led_task(void const * argument)
 			//需要充电，绿灯继续亮，蓝灯闪烁
 			LED_Green_On();
 			LED_Blue_Toggle();
+			osDelay(100);
 			if(battery_status == NEED_POWEROFF)
 			{
 				//绿灯熄灭，蓝灯点亮，进入停机状态，电机停止转动
 				LED_Blue_On();
 				LED_Green_Off();
-				while(1) ;
+				while(1)
+				{
+					if(battery_status != NEED_POWEROFF)
+					{
+						break;
+					}
+					osDelay(200);
+				}
 			}
 		}
 
-		osDelay(20);
+		osDelay(200);
 	}
 }

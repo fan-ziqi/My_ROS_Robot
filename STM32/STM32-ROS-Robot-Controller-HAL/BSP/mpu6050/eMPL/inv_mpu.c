@@ -26,7 +26,6 @@
 #include "inv_mpu_dmp_motion_driver.h"
 
 #include "bsp_imu.h"
-#include "bsp_delay.h"
 #include "bsp_usart.h"
 
 #define LOG_TAG    "IMU"
@@ -56,7 +55,7 @@
 //½Ó¿Úº¯Êý
 #define i2c_write   MPU6050_Write_Len
 #define i2c_read    MPU6050_Read_Len
-#define delay_ms    delay_ms
+#define delay_ms    osDelay
 #define get_ms      myget_ms
 //static inline int reg_int_cb(struct int_param_s *int_param)
 //{

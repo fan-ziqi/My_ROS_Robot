@@ -16,8 +16,6 @@ volatile float voltage_vrefint_proportion;
 
 void VIN_Init(void)
 {
-	//初始化放在vin_task中
-	
 	//使用内部1.2v进行校准
 	init_vrefint_reciprocal();
 	
@@ -67,7 +65,7 @@ voltage_vrefint_proportion=vrefint/average_adc=(times*vrefint)/total_dac
 
 void init_vrefint_reciprocal(void)
 {
-		LOG_I("Start VREF Reciprocal\r\n");
+		LOG_D("Start VREF Reciprocal\r\n");
 	
     float total_adc = 0;
 		const int times = 1000;
@@ -81,7 +79,7 @@ void init_vrefint_reciprocal(void)
     voltage_vrefint_proportion = times * vrefint / total_adc;
 		LOG_D("voltage_vrefint_proportion = %f\r\n",voltage_vrefint_proportion);
 		
-		LOG_I("End VREF Reciprocal\r\n");
+		LOG_D("End VREF Reciprocal\r\n");
 }
 
 /*
@@ -114,5 +112,5 @@ float get_temprate(void)
     temperate = (float)adcx * voltage_vrefint_proportion;
     temperate = (temperate - 0.76f) * 400.0f + 25.0f;
 
-    return temperate;
+    return temperate/10.0;
 }
