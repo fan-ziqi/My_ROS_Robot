@@ -8,44 +8,56 @@ from launch.actions import LogInfo
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
-
+from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
-    param_dir = LaunchConfiguration(
-        'param_dir',
-        default=os.path.join(get_package_share_directory('robot_sim'), 'param', 'params.yaml'))
 
-    rviz_dir = LaunchConfiguration(
-        'rviz_dir',
-        default=os.path.join(get_package_share_directory('robot_sim'), 'launch'))
+    ld = LaunchDescription()
 
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
-    urdf_file_name = 'robot_sim.urdf'
 
-    urdf = os.path.join(get_package_share_directory('robot_sim'), 'urdf', urdf_file_name)
+    package_name = 'robot_sim'
+    urdf_name = "robot.urdf" 
+    package_path = FindPackageShare(package = package_name).find(package_name) 
+    urdf_path = os.path.join(package_path, 'urdf', urdf_name)
+    param_path = os.path.join(package_path, 'param', 'params.yaml')
+    launch_path = os.path.join(package_path, 'launch')
 
-    return LaunchDescription([
-        LogInfo(msg=['Execute Robot Sim']),
+    with open(urdf_path, 'r') as urdf:
+        robot_desc = urdf.read()
 
-        DeclareLaunchArgument(
-            'param_dir',
-            default_value=param_dir,
-            description='parameter 路径'),
+    info = LogInfo(
+        msg=['Execute Robot Sim']
+    )
 
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource([rviz_dir, '/rviz2.launch.py'])),
+    robot_sim_node = Node(
+        package=package_name,
+        executable='robot_sim',
+        parameters=[param_path],
+        output='screen'
+    )
 
-        Node(
-            package='robot_sim',
-            executable='robot_sim',
-            parameters=[param_dir],
-            output='screen'),
+    robot_state_publisher_node = Node(
+        package='robot_state_publisher',
+        executable='robot_state_publisher',
+        name='robot_state_publisher',
+        output='screen',
+        arguments=[urdf_path],
+        parameters=[{
+            'use_sim_time': use_sim_time,
+            'robot_description': robot_desc
+        }]
+    )
+    
+    rviz_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(launch_path, 'rviz2.launch.py')
+        )
+    )
 
-        Node(
-            package='robot_state_publisher',
-            executable='robot_state_publisher',
-            name='robot_state_publisher',
-            output='screen',
-            arguments=[urdf],
-            parameters=[{'use_sim_time': use_sim_time}]),
-    ])
+    ld.add_action(info)
+    ld.add_action(robot_sim_node)
+    ld.add_action(robot_state_publisher_node)
+    ld.add_action(rviz_launch)
+
+    return ld
