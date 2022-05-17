@@ -2,7 +2,7 @@ RobotNode:
   ros__parameters:
     version: Mec
     #port_name: /dev/ttyAMA0 #设备端口
-    port_name: /dev/ttys005
+    port_name: /dev/ttyUSB0
     baud_rate: 115200       #通信波特率，固定115200
 
     #odom_frame: odom               #里程计坐标系

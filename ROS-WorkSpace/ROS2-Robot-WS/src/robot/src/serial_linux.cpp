@@ -193,13 +193,14 @@ bool Serial::SerialRead(short * MessageData, unsigned int * MessageLenth, unsign
         boost::asio::streambuf response;
         boost::asio::read_until(*serial_port_, response, "\r\n", error_code_);
         std::copy(std::istream_iterator<unsigned char>(std::istream(&response) >> std::noskipws), std::istream_iterator<unsigned char>(), ReceiveBuf);
-        // DEBUG
-        std::cout << "Read:(ALL HEX) " << std::endl;
-        for(int i = 0; i < ReceiveBuf[2]; i++)
-        {
-            std::cout << std::setfill('0') << std::setw(2) << std::hex << (unsigned int)ReceiveBuf[i] << " ";
-        }
-        std::cout << std::endl;
+        // // DEBUG BEGIN
+        // std::cout << "Read:(ALL HEX) " << std::endl;
+        // for(int i = 0; i < ReceiveBuf[2]; i++)
+        // {
+        //     std::cout << std::setfill('0') << std::setw(2) << std::hex << (unsigned int)ReceiveBuf[i] << " ";
+        // }
+        // std::cout << std::endl;
+        // // DEBUG END
     }
     catch(boost::system::system_error &error_code_)
     {

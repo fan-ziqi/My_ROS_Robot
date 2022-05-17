@@ -3,7 +3,14 @@
 Robot::Robot() : 
     Node("RobotNode")
 {
-    rcutils_logging_set_logger_level(this->get_name(), RCUTILS_LOG_SEVERITY_DEBUG);
+    if(rcutils_logging_set_logger_level(this->get_name(), RCUTILS_LOG_SEVERITY_DEBUG))
+    {
+        RCLCPP_ERROR(this->get_logger(), "Failed to set logger level");
+    }
+    else
+    {
+        RCLCPP_INFO(this->get_logger(), "Logger level set to DEBUG");
+    }
 
     RCLCPP_INFO(this->get_logger(), "创建机器人节点RobotNode");
     robot_loop();
@@ -176,154 +183,173 @@ void Robot::serial_receive_classify(short * msg_data, unsigned int msg_lenth, un
 void Robot::serial_receive_process(const short * buffer_data)
 {
     
-    // // 记录当前时间
-    // current_time_ = this->get_clock()->now();
+
+    // 记录当前时间
+    current_time_ = this->get_clock()->now();
     
-    // // imu部分
-    // // 解析串口接受的imu数据
-    // // gyro
-    // imu_get_vector_[0] = ((double)((int16_t)(buffer_data[4] * 256 + buffer_data[5])) / 32768 * 2000 / 180 * 3.1415);
-    // imu_get_vector_[1] = ((double)((int16_t)(buffer_data[6] * 256 + buffer_data[7])) / 32768 * 2000 / 180 * 3.1415);
-    // imu_get_vector_[2] = ((double)((int16_t)(buffer_data[8] * 256 + buffer_data[9])) / 32768 * 2000 / 180 * 3.1415);
-    // // Acc
-    // imu_get_vector_[3] = ((double)((int16_t)(buffer_data[10] * 256 + buffer_data[11])) / 32768 * 2 * 9.8);
-    // imu_get_vector_[4] = ((double)((int16_t)(buffer_data[12] * 256 + buffer_data[13])) / 32768 * 2 * 9.8);
-    // imu_get_vector_[5] = ((double)((int16_t)(buffer_data[14] * 256 + buffer_data[15])) / 32768 * 2 * 9.8);
-    // // Angle
-    // imu_get_vector_[6] = ((double)((int16_t)(buffer_data[16] * 256 + buffer_data[17])) / 100);
-    // imu_get_vector_[7] = ((double)((int16_t)(buffer_data[18] * 256 + buffer_data[19])) / 100);
-    // imu_get_vector_[8] = ((double)((int16_t)(buffer_data[20] * 256 + buffer_data[21])) / 100);
-    // // 把角度转换成四元数(tf类型)
-    // imu_quaternion_tf_.setRPY(0.0, 0.0, (imu_get_vector_[8] / 180 * 3.1415926));
-    // tf2::convert(imu_quaternion_tf_, imu_quaternion_msg_); //把tf类型的四元数转换成msg类型
-    // // 准备odom的pub数据
-    // imu_pub_data_.header.stamp = current_time_;
-    // imu_pub_data_.header.frame_id = imu_frame_;
-    // imu_pub_data_.orientation = imu_quaternion_msg_;
-    // imu_pub_data_.angular_velocity.x = imu_get_vector_[0];
-    // imu_pub_data_.angular_velocity.y = imu_get_vector_[1];
-    // imu_pub_data_.angular_velocity.z = imu_get_vector_[2];
-    // imu_pub_data_.linear_acceleration.x = imu_get_vector_[3];
-    // imu_pub_data_.linear_acceleration.y = imu_get_vector_[4];
-    // imu_pub_data_.linear_acceleration.z = imu_get_vector_[5];
-    // imu_pub_data_.orientation_covariance = 
-    //     {
-    //         1e6, 0  , 0   ,
-    //         0  , 1e6, 0   ,
-    //         0  , 0  , 1e-6
-    //     };
-    // imu_pub_data_.angular_velocity_covariance = 
-    //     {
-    //         1e6, 0  , 0  ,
-    //         0  , 1e6, 0  ,
-    //         0  , 0  , 1e-6
-    //     };
-    // imu_pub_data_.linear_acceleration_covariance = 
-    //     {
-    //         -1, 0, 0,
-    //         0 , 0, 0,
-    //         0 , 0, 0
-    //     };
-    // // pub imu
-    // pub_imu_->publish(imu_pub_data_);
+    // imu部分
+    // 解析串口接受的imu数据
+    // gyro 陀螺仪角速度
+    imu_get_vector_[0] = ((double)(buffer_data[0]) / 32768 * 2000 / 180 * 3.1415);
+    imu_get_vector_[1] = ((double)(buffer_data[1]) / 32768 * 2000 / 180 * 3.1415);
+    imu_get_vector_[2] = ((double)(buffer_data[2]) / 32768 * 2000 / 180 * 3.1415);
+    // Acc 加速度
+    imu_get_vector_[3] = ((double)(buffer_data[3]) / 32768 * 2 * 9.8);
+    imu_get_vector_[4] = ((double)(buffer_data[4]) / 32768 * 2 * 9.8);
+    imu_get_vector_[5] = ((double)(buffer_data[5]) / 32768 * 2 * 9.8);
+    // Angle 姿态角
+    imu_get_vector_[6] = ((double)(buffer_data[6]) / 100);
+    imu_get_vector_[7] = ((double)(buffer_data[7]) / 100);
+    imu_get_vector_[8] = ((double)(buffer_data[8]) / 100);
+    // 把角度转换成四元数(tf类型)
+    imu_quaternion_tf_.setRPY(0.0, 0.0, (imu_get_vector_[8] / 180 * 3.1415926));
+    tf2::convert(imu_quaternion_tf_, imu_quaternion_msg_); //把tf类型的四元数转换成msg类型
+    // 准备odom的pub数据
+    imu_pub_data_.header.stamp = current_time_;
+    imu_pub_data_.header.frame_id = imu_frame_;
+    imu_pub_data_.orientation = imu_quaternion_msg_;
+    imu_pub_data_.angular_velocity.x = imu_get_vector_[0];
+    imu_pub_data_.angular_velocity.y = imu_get_vector_[1];
+    imu_pub_data_.angular_velocity.z = imu_get_vector_[2];
+    imu_pub_data_.linear_acceleration.x = imu_get_vector_[3];
+    imu_pub_data_.linear_acceleration.y = imu_get_vector_[4];
+    imu_pub_data_.linear_acceleration.z = imu_get_vector_[5];
+    imu_pub_data_.orientation_covariance = 
+        {
+            1e6, 0  , 0   ,
+            0  , 1e6, 0   ,
+            0  , 0  , 1e-6
+        };
+    imu_pub_data_.angular_velocity_covariance = 
+        {
+            1e6, 0  , 0  ,
+            0  , 1e6, 0  ,
+            0  , 0  , 1e-6
+        };
+    imu_pub_data_.linear_acceleration_covariance = 
+        {
+            -1, 0, 0,
+            0 , 0, 0,
+            0 , 0, 0
+        };
+    // pub imu
+    pub_imu_->publish(imu_pub_data_);
 
-    // // odom部分
-    // // 解析串口接受的odom数据
-    // odom_get_vector_[0] = ((double)((int16_t)(buffer_data[22] * 256 + buffer_data[23])) / 1000);
-    // odom_get_vector_[1] = ((double)((int16_t)(buffer_data[24] * 256 + buffer_data[25])) / 1000);
-    // odom_get_vector_[2] = ((double)((int16_t)(buffer_data[26] * 256 + buffer_data[27])) / 1000);
-    // // dx dy dyaw base_frame
-    // odom_get_vector_[3] = ((double)((int16_t)(buffer_data[28] * 256 + buffer_data[29])) / 1000);
-    // odom_get_vector_[4] = ((double)((int16_t)(buffer_data[30] * 256 + buffer_data[31])) / 1000);
-    // odom_get_vector_[5] = ((double)((int16_t)(buffer_data[32] * 256 + buffer_data[33])) / 1000);
-    // // 把角度转换成四元数(tf类型)
-    // odom_quaternion_tf_.setRPY(0,0,odom_get_vector_[2]);
-    // // 准备odom的pub数据
-    // odom_pub_data_.header.stamp    = current_time_;
-    // odom_pub_data_.header.frame_id = odom_frame_;
-    // odom_pub_data_.child_frame_id  = base_frame_;
-    // odom_pub_data_.pose.pose.position.x = odom_get_vector_[0];
-    // odom_pub_data_.pose.pose.position.y = odom_get_vector_[1];
-    // odom_pub_data_.pose.pose.position.z = 0;
-    // odom_pub_data_.pose.pose.orientation.x = odom_quaternion_tf_.getX();
-    // odom_pub_data_.pose.pose.orientation.y = odom_quaternion_tf_.getY();
-    // odom_pub_data_.pose.pose.orientation.z = odom_quaternion_tf_.getZ();
-    // odom_pub_data_.pose.pose.orientation.w = odom_quaternion_tf_.getW();
-    // odom_pub_data_.twist.twist.linear.x = odom_get_vector_[3]/((current_time_.sec-last_time_.sec));
-    // odom_pub_data_.twist.twist.linear.y = odom_get_vector_[4]/((current_time_.sec-last_time_.sec));
-    // odom_pub_data_.twist.twist.angular.z = odom_get_vector_[5]/((current_time_.sec-last_time_.sec));
-    // odom_pub_data_.twist.covariance = 
-    //     {
-    //         1e-9, 0   , 0   , 0  , 0  , 0  ,
-    //         0   , 1e-3, 1e-9, 0  , 0  , 0  ,
-    //         0   , 0   , 1e6 , 0  , 0  , 0  ,
-    //         0   , 0   , 0   , 1e6, 0  , 0  ,
-    //         0   , 0   , 0   , 0  , 1e6, 0  ,
-    //         0   , 0   , 0   , 0  , 0  , 1e-9
-    //     };
-    // odom_pub_data_.pose.covariance = 
-    //     {
-    //         1e-9, 0   , 0   , 0  , 0  , 0  ,
-    //         0   , 1e-3, 1e-9, 0  , 0  , 0  ,
-    //         0   , 0   , 1e6 , 0  , 0  , 0  ,
-    //         0   , 0   , 0   , 1e6, 0  , 0  ,
-    //         0   , 0   , 0   , 0  , 1e6, 0  ,
-    //         0   , 0   , 0   , 0  , 0  , 1e-9
-    //     };
-    // // pub odom
-    // pub_odom_->publish(odom_pub_data_);
+    // odom部分
+    // 里程计坐标 x(m) y(m) yaw(rad)  odom_frame
+    odom_get_vector_[0] = ((double)(buffer_data[9]) / 1000);
+    odom_get_vector_[1] = ((double)(buffer_data[10]) / 1000);
+    odom_get_vector_[2] = ((double)(buffer_data[11]) / 1000);
+    // 里程计坐标变化量  d_x(m) d_y(m) d_yaw(rad)  base_frame
+    odom_get_vector_[3] = ((double)(buffer_data[12]) / 1000);
+    odom_get_vector_[4] = ((double)(buffer_data[13]) / 1000);
+    odom_get_vector_[5] = ((double)(buffer_data[14]) / 1000);
+    // 把角度转换成四元数(tf类型)
+    odom_quaternion_tf_.setRPY(0,0,odom_get_vector_[2]);
+    // 准备odom的pub数据
+    odom_pub_data_.header.stamp    = current_time_;
+    odom_pub_data_.header.frame_id = odom_frame_;
+    odom_pub_data_.child_frame_id  = base_frame_;
+    odom_pub_data_.pose.pose.position.x = odom_get_vector_[0];
+    odom_pub_data_.pose.pose.position.y = odom_get_vector_[1];
+    odom_pub_data_.pose.pose.position.z = 0;
+    odom_pub_data_.pose.pose.orientation.x = odom_quaternion_tf_.getX();
+    odom_pub_data_.pose.pose.orientation.y = odom_quaternion_tf_.getY();
+    odom_pub_data_.pose.pose.orientation.z = odom_quaternion_tf_.getZ();
+    odom_pub_data_.pose.pose.orientation.w = odom_quaternion_tf_.getW();
+    odom_pub_data_.twist.twist.linear.x = odom_get_vector_[3]/((current_time_.sec-last_time_.sec));
+    odom_pub_data_.twist.twist.linear.y = odom_get_vector_[4]/((current_time_.sec-last_time_.sec));
+    odom_pub_data_.twist.twist.angular.z = odom_get_vector_[5]/((current_time_.sec-last_time_.sec));
+    odom_pub_data_.twist.covariance = 
+        {
+            1e-9, 0   , 0   , 0  , 0  , 0  ,
+            0   , 1e-3, 1e-9, 0  , 0  , 0  ,
+            0   , 0   , 1e6 , 0  , 0  , 0  ,
+            0   , 0   , 0   , 1e6, 0  , 0  ,
+            0   , 0   , 0   , 0  , 1e6, 0  ,
+            0   , 0   , 0   , 0  , 0  , 1e-9
+        };
+    odom_pub_data_.pose.covariance = 
+        {
+            1e-9, 0   , 0   , 0  , 0  , 0  ,
+            0   , 1e-3, 1e-9, 0  , 0  , 0  ,
+            0   , 0   , 1e6 , 0  , 0  , 0  ,
+            0   , 0   , 0   , 1e6, 0  , 0  ,
+            0   , 0   , 0   , 0  , 1e6, 0  ,
+            0   , 0   , 0   , 0  , 0  , 1e-9
+        };
+    // pub odom
+    pub_odom_->publish(odom_pub_data_);
 
-    // // 发布tf变换, odom_frame_->base_frame_
-    // tf_odom_to_base_data_.header.stamp    = current_time_;
-    // tf_odom_to_base_data_.header.frame_id = odom_frame_;
-    // tf_odom_to_base_data_.child_frame_id  = base_frame_;
-    // tf_odom_to_base_data_.transform.translation.x = odom_get_vector_[0];
-    // tf_odom_to_base_data_.transform.translation.y = odom_get_vector_[1];
-    // tf_odom_to_base_data_.transform.translation.z = 0.0;
-    // tf_odom_to_base_data_.transform.rotation.x = odom_quaternion_tf_.getX();
-    // tf_odom_to_base_data_.transform.rotation.y = odom_quaternion_tf_.getY();
-    // tf_odom_to_base_data_.transform.rotation.z = odom_quaternion_tf_.getZ();
-    // tf_odom_to_base_data_.transform.rotation.w = odom_quaternion_tf_.getW();
-    // if(publish_odom_transform_)
-    //     tf_broadcaster_->sendTransform(tf_odom_to_base_data_);
+    // 发布tf变换, odom_frame_->base_frame_
+    tf_odom_to_base_data_.header.stamp    = current_time_;
+    tf_odom_to_base_data_.header.frame_id = odom_frame_;
+    tf_odom_to_base_data_.child_frame_id  = base_frame_;
+    tf_odom_to_base_data_.transform.translation.x = odom_get_vector_[0];
+    tf_odom_to_base_data_.transform.translation.y = odom_get_vector_[1];
+    tf_odom_to_base_data_.transform.translation.z = 0.0;
+    tf_odom_to_base_data_.transform.rotation.x = odom_quaternion_tf_.getX();
+    tf_odom_to_base_data_.transform.rotation.y = odom_quaternion_tf_.getY();
+    tf_odom_to_base_data_.transform.rotation.z = odom_quaternion_tf_.getZ();
+    tf_odom_to_base_data_.transform.rotation.w = odom_quaternion_tf_.getW();
+    if(publish_odom_transform_)
+        tf_broadcaster_->sendTransform(tf_odom_to_base_data_);
 
-    // // wheelvel部分
-    // // 解析串口接受的wheelvel数据
-    // wheelvel_get_vector_[0]=((int16_t)(buffer_data[34]*256+buffer_data[35]));
-    // wheelvel_get_vector_[1]=((int16_t)(buffer_data[36]*256+buffer_data[37]));
-    // wheelvel_get_vector_[2]=((int16_t)(buffer_data[38]*256+buffer_data[39]));
-    // wheelvel_get_vector_[3]=((int16_t)(buffer_data[40]*256+buffer_data[41]));
-    // wheelvel_set_vector_[0]=((int16_t)(buffer_data[42]*256+buffer_data[43]));
-    // wheelvel_set_vector_[1]=((int16_t)(buffer_data[44]*256+buffer_data[45]));
-    // wheelvel_set_vector_[2]=((int16_t)(buffer_data[46]*256+buffer_data[47]));
-    // wheelvel_set_vector_[3]=((int16_t)(buffer_data[48]*256+buffer_data[49]));
-    // // 准备的pub数据
-    // wheelvel_a_get_pub_data_.data = wheelvel_get_vector_[0];
-    // wheelvel_b_get_pub_data_.data = wheelvel_get_vector_[1];
-    // wheelvel_c_get_pub_data_.data = wheelvel_get_vector_[2];
-    // wheelvel_d_get_pub_data_.data = wheelvel_get_vector_[3];
-    // wheelvel_a_set_pub_data_.data = wheelvel_set_vector_[0];
-    // wheelvel_b_set_pub_data_.data = wheelvel_set_vector_[1];
-    // wheelvel_c_set_pub_data_.data = wheelvel_set_vector_[2];
-    // wheelvel_d_set_pub_data_.data = wheelvel_set_vector_[3];
-    // // pub wheelvel
-    // pub_wheelvel_a_get_->publish(wheelvel_a_get_pub_data_);
-    // pub_wheelvel_b_get_->publish(wheelvel_b_get_pub_data_);
-    // pub_wheelvel_c_get_->publish(wheelvel_c_get_pub_data_);
-    // pub_wheelvel_d_get_->publish(wheelvel_d_get_pub_data_);
-    // pub_wheelvel_a_set_->publish(wheelvel_a_set_pub_data_);
-    // pub_wheelvel_b_set_->publish(wheelvel_b_set_pub_data_);
-    // pub_wheelvel_c_set_->publish(wheelvel_c_set_pub_data_);
-    // pub_wheelvel_d_set_->publish(wheelvel_d_set_pub_data_);
+    // wheelvel部分
+    // 解析串口接受的wheelvel数据
+    wheelvel_get_vector_[0]=buffer_data[15];
+    wheelvel_get_vector_[1]=buffer_data[16];
+    wheelvel_get_vector_[2]=buffer_data[17];
+    wheelvel_get_vector_[3]=buffer_data[18];
+    wheelvel_set_vector_[0]=buffer_data[19];
+    wheelvel_set_vector_[1]=buffer_data[20];
+    wheelvel_set_vector_[2]=buffer_data[21];
+    wheelvel_set_vector_[3]=buffer_data[22];
+    // 准备的pub数据
+    wheelvel_a_get_pub_data_.data = wheelvel_get_vector_[0];
+    wheelvel_b_get_pub_data_.data = wheelvel_get_vector_[1];
+    wheelvel_c_get_pub_data_.data = wheelvel_get_vector_[2];
+    wheelvel_d_get_pub_data_.data = wheelvel_get_vector_[3];
+    wheelvel_a_set_pub_data_.data = wheelvel_set_vector_[0];
+    wheelvel_b_set_pub_data_.data = wheelvel_set_vector_[1];
+    wheelvel_c_set_pub_data_.data = wheelvel_set_vector_[2];
+    wheelvel_d_set_pub_data_.data = wheelvel_set_vector_[3];
+    // pub wheelvel
+    pub_wheelvel_a_get_->publish(wheelvel_a_get_pub_data_);
+    pub_wheelvel_b_get_->publish(wheelvel_b_get_pub_data_);
+    pub_wheelvel_c_get_->publish(wheelvel_c_get_pub_data_);
+    pub_wheelvel_d_get_->publish(wheelvel_d_get_pub_data_);
+    pub_wheelvel_a_set_->publish(wheelvel_a_set_pub_data_);
+    pub_wheelvel_b_set_->publish(wheelvel_b_set_pub_data_);
+    pub_wheelvel_c_set_->publish(wheelvel_c_set_pub_data_);
+    pub_wheelvel_d_set_->publish(wheelvel_d_set_pub_data_);
 
-    // // battery部分
-    // // 解析串口接受的battery数据
-    // battery_pub_data_.data = (double)(((buffer_data[50]<<8)+buffer_data[51]))/100;
-    // // pub battery
-    // pub_battery_->publish(battery_pub_data_);
+    // battery部分
+    // 解析串口接受的电池电压
+    battery_pub_data_.data = (double)(buffer_data[23])/100;
+    // pub battery
+    pub_battery_->publish(battery_pub_data_);
 
-    // // 更新时间
-    // last_time_ = current_time_;
+    // 更新时间
+    last_time_ = current_time_;
+
+    RCLCPP_DEBUG(this->get_logger(), "当前时间: %d.%d\r\n", 
+        current_time_.sec, current_time_.nanosec);
+    RCLCPP_DEBUG(this->get_logger(), "角速度: x:%f\ty:%f\tz:%f\r\n",
+        imu_get_vector_[0], imu_get_vector_[1], imu_get_vector_[2]);
+    RCLCPP_DEBUG(this->get_logger(), "加速度: x:%f\ty:%f\tz:%f\r\n",
+        imu_get_vector_[3], imu_get_vector_[4], imu_get_vector_[5]);
+    RCLCPP_DEBUG(this->get_logger(), "角度: pitch:%f\troll:%f\tyaw:%f\r\n",
+        imu_get_vector_[6], imu_get_vector_[7], imu_get_vector_[8]);
+    RCLCPP_DEBUG(this->get_logger(), "里程计坐标: x:%f(m)\ty:%f(m)\tyaw:%f(rad)\r\n",
+        odom_get_vector_[0], odom_get_vector_[1], odom_get_vector_[2]);
+    RCLCPP_DEBUG(this->get_logger(), "里程计坐标变化量: base_frame dx%f(m)\tdy%f(m)\tdyaw%f(rad)\r\n",
+        odom_get_vector_[3], odom_get_vector_[4], odom_get_vector_[5]);
+    RCLCPP_DEBUG(this->get_logger(), "获得轮速: %d\tb:%d\tc:%d\td:%d\r\n",
+        wheelvel_get_vector_[0], wheelvel_get_vector_[1], wheelvel_get_vector_[2], wheelvel_get_vector_[3]);
+    RCLCPP_DEBUG(this->get_logger(), "设置轮速: a:%d\tb:%d\tc:%d\td:%d\r\n",
+        wheelvel_set_vector_[0], wheelvel_set_vector_[1], wheelvel_set_vector_[2], wheelvel_set_vector_[3]);
+    RCLCPP_DEBUG(this->get_logger(), "电池电压: %f\r\n", battery_pub_data_.data);
 }
 
 // 串口发送PID参数
@@ -359,9 +385,9 @@ void Robot::serial_send_velocity(double x, double y, double yaw)
     vel_data[1] = (short)(y * 1000);
     vel_data[2] = (short)(yaw * 1000);
     my_serial->SerialWrite(vel_data, 3, SENDTYPE_VELOCITY);
-    RCLCPP_DEBUG(this->get_logger(), 
-                 "串口发送底盘速度: %d, %d, %d", 
-                 vel_data[0], vel_data[1], vel_data[2]);
+    // RCLCPP_DEBUG(this->get_logger(), 
+    //              "串口发送底盘速度: %d, %d, %d", 
+    //              vel_data[0], vel_data[1], vel_data[2]);
     
 }
 
