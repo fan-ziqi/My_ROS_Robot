@@ -10,14 +10,21 @@
 #include "bsp_motor.h"
 #include "bsp_encoder.h"
 #include "bsp_pid.h"
+#include "bsp_cmd.h"
+
+#include <cstring>
 
 #define LOG_TAG    "TEST"
 #include "bsp_log.h"
 
+extern char CMD_Buffer[];
+extern int CMD_Buffer_Count;
+extern int CMD_Flag;
+
 //LED测试
 void Test_LED(void)
 {
-	Delay_Init();
+	printf("LED测试\r\n");
 	
 	//LED_Green点亮0.5S
 	LED_Green_On();
@@ -35,22 +42,18 @@ void Test_LED(void)
 	
 	while (1)
 	{	
-		delay_ms(100);
-		
 		//LED反转
 		LED_Green_Toggle();
 		LED_Blue_Toggle();
+		
+		cmd_exit();
+		osDelay(100);
 	}
 }
 
 //串口输出测试
 void Test_Debug(void)
 {
-	Delay_Init();
-	
-	//LOG初始化
-	Log_Init();
-	
 	uint8_t count=0;
 	
 	while (1)
@@ -62,40 +65,42 @@ void Test_Debug(void)
 		LOG_I("LOG测试：%d \r\n",count);
 		
 		count++;
-		delay_ms(100);
+		
+		cmd_exit();
+		osDelay(100);
 	}
 }
 
 //输入电压检测，通过串口输出
 void Test_VIN(void)
 {
-	Delay_Init();
+	printf("电压测试\r\n");
 	
 	float battery_voltage;
 	
 	//等待电压稳定
-	delay_ms(1000);
+	osDelay(1000);
 	
 	//VIN检测初始化
 	VIN_Init();
 	
-	//提示信息
-	printf("ADC2通道8电压测试\r\n");
-	
 	while (1) 
 	{	
-		battery_voltage = get_battery_voltage() + 0.312712f;
+		battery_voltage = get_battery_voltage() + 0.13214f;
 		LOG_D("当前电压 = %f\r\n", battery_voltage);
+		
+		cmd_exit();
+		osDelay(100);
 	}
 }
 
 void Test_KEY(void)
 {
-	Delay_Init();
+	printf("按键测试\r\n");
 	
 	extern int key1_state,key2_state;
 
-	while (1) 
+	while(1) 
 	{	
 		Key_Scan();
 		//KEY1按下LED1亮，松开LED1灭
@@ -112,13 +117,15 @@ void Test_KEY(void)
 		{
 			LED_Blue_Toggle(); 
 		}
-		//delay
+		
+		cmd_exit();
+		osDelay(100);
 	}
 }	
 
 void Test_MPU6050(void)
 {
-	Delay_Init();
+	printf("MPU6050测试\r\n");
 	
 	struct xyz_data robot_accel_xyz_data;
 	struct xyz_data robot_gyro_xyz_data;
@@ -152,6 +159,8 @@ void Test_MPU6050(void)
 			robot_imu_dmp_data.roll,
 			robot_imu_dmp_data.yaw);
 		
+		cmd_exit();
+		osDelay(100);
 	}
 }
 
@@ -224,7 +233,7 @@ void Test_Motor_PID(void)
 	int16_t encoder_delta_target[4] = {0}; //编码器目标值，代表目标速度
 	int16_t motor_pwm[4];  //电机PWM速度
 
-	uint8_t comdata[32];
+//	uint8_t comdata[32];
 	
 	Delay_Init();
 	

@@ -72,11 +72,5 @@ void other_task(void const * argument)
 }
 
 
-void robot_move_task(void const * argument)
-{
-	while(1)
-	{
-		osDelay(10);
-	}
-}
+
 

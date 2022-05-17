@@ -112,13 +112,12 @@ int main(void)
   MX_TIM5_Init();
   MX_ADC2_Init();
   MX_ADC1_Init();
-  MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
 	Buddha_Bless();
 //	Delay_Init();     
 	Log_Init();
-//	Motor_Init();
-//	Encoder_Init();
+	Motor_Init();
+	Encoder_Init();
 	USART_Init();
 
 

@@ -96,22 +96,7 @@ void show_imu(void)
 					robot_imu_dmp_data.roll,
 					robot_imu_dmp_data.yaw);
 		
-		if(CMD_Flag)
-		{
-			CMD_Flag = 0;
-		}
-
-		if(!strcmp(CMD_Buffer,"exit"))
-		{
-			printf("exit\r\n");
-			break;
-		}
-		//缓存区清零
-		for(int i = CMD_Buffer_Count+2; i >= 0; i--)
-		{
-			CMD_Buffer[i] = 0;
-		}
-		CMD_Buffer_Count = 0;
+		cmd_exit();
 		
 		osDelay(20);
 	}
@@ -124,22 +109,7 @@ void show_battery(void)
 	{
 		printf("当前电压 = %.1f\r\n", battery_voltage);
 		
-		if(CMD_Flag)
-		{
-			CMD_Flag = 0;
-		}
-
-		if(!strcmp(CMD_Buffer,"exit"))
-		{
-			printf("exit\r\n");
-			break;
-		}
-		//缓存区清零
-		for(int i = CMD_Buffer_Count+2; i >= 0; i--)
-		{
-			CMD_Buffer[i] = 0;
-		}
-		CMD_Buffer_Count = 0;
+		cmd_exit();
 		
 		osDelay(20);
 	}
@@ -160,23 +130,11 @@ void show_send_to_pi(void)
 		}
 		printf("\r\n");
 		
-		if(CMD_Flag)
-		{
-			CMD_Flag = 0;
-		}
-
-		if(!strcmp(CMD_Buffer,"exit"))
-		{
-			printf("exit\r\n");
-			break;
-		}
-		//缓存区清零
-		for(int i = CMD_Buffer_Count+2; i >= 0; i--)
-		{
-			CMD_Buffer[i] = 0;
-		}
-		CMD_Buffer_Count = 0;
+		cmd_exit();
 		
 		osDelay(10);
 	}
 }
+
+
+

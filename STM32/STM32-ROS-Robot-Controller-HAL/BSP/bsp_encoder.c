@@ -5,8 +5,6 @@
 #define LOG_TAG    "ENCODER"
 #include "bsp_log.h"
 
-#define ENCODER_MID_VALUE 30000
-
 extern TIM_HandleTypeDef htim2;
 extern TIM_HandleTypeDef htim3;
 extern TIM_HandleTypeDef htim4;
@@ -33,10 +31,10 @@ void Encoder_Set_Counter(int8_t Motor_Num, int16_t count)
 {
 	switch(Motor_Num)
 	{
-		case 1: TIM2->CNT = count; break;
-		case 2: TIM3->CNT = count; break;
-		case 3: TIM4->CNT = count; break;
-		case 4: TIM5->CNT = count; break;
+		case 1: __HAL_TIM_SET_COUNTER(&htim2, count); break;
+		case 2: __HAL_TIM_SET_COUNTER(&htim3, count); break;
+		case 3: __HAL_TIM_SET_COUNTER(&htim4, count); break;
+		case 4: __HAL_TIM_SET_COUNTER(&htim5, count); break;
 		default: 
 		{
 			LOG_E("Motor_Num ERROR\r\n");
@@ -65,3 +63,21 @@ uint16_t Encoder_Get_Counter(int8_t Motor_Num)
 	return counter;
 }
 
+uint16_t Encoder_Get_Dir(int8_t Motor_Num)
+{
+	uint16_t direction = 1;
+	switch(Motor_Num)
+	{
+		case 1: direction = __HAL_TIM_IS_TIM_COUNTING_DOWN(&htim2); break;
+		case 2: direction = __HAL_TIM_IS_TIM_COUNTING_DOWN(&htim3); break;
+		case 3: direction = __HAL_TIM_IS_TIM_COUNTING_DOWN(&htim4); break;
+		case 4: direction = __HAL_TIM_IS_TIM_COUNTING_DOWN(&htim5); break;
+		default: 
+		{
+			LOG_E("Motor_Num ERROR\r\n");
+			direction = 1;
+			break;
+		}
+	}
+	return direction;
+}

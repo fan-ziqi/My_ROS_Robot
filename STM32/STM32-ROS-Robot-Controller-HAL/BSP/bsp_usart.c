@@ -20,16 +20,10 @@ union SerialMessageUnion
 
 short MessageData[255] = {0};
 
-
 extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart2;
 
-static uint8_t uart_db_flag_rx_ok = 0; //接收成功标志
-static uint32_t USART_Debug_RX_Count=0;       //接收计数器
-static uint32_t USART_Debug_RX_Length=0;       //接收计数器
-static uint32_t uart_db_rx_checksum;    //帧头部分校验和
 static uint8_t USART_Robot_RX_Package[255];     //接收缓冲，数据内容小于等于32Byte
-static uint8_t uart_db_tx_buf[40];     //发送缓冲
 
 
 //外部变量
@@ -39,7 +33,6 @@ extern int16_t motor_kd;
 
 int16_t robot_target_speed[3] = {0};  // X Y Yaw
 int16_t robot_params[2] = {0};
-
 
 u8 USART_Debug_RX_Buffer[1];//HAL库使用的串口接收缓冲
 u8 USART_Robot_RX_Buffer[1];//HAL库使用的串口接收缓冲
@@ -186,14 +179,6 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 						robot_target_speed[0] = MessageData[0];
 						robot_target_speed[1] = MessageData[1];
 						robot_target_speed[2] = MessageData[2];
-						
-//						//速度限制
-//						if(robot_target_speed[0] > ROBOT_LINEAR_SPEED_LIMIT)    robot_target_speed[0] = ROBOT_LINEAR_SPEED_LIMIT;
-//						if(robot_target_speed[0] < (-ROBOT_LINEAR_SPEED_LIMIT)) robot_target_speed[0] = (-ROBOT_LINEAR_SPEED_LIMIT);
-//						if(robot_target_speed[1] > ROBOT_LINEAR_SPEED_LIMIT)    robot_target_speed[1] = ROBOT_LINEAR_SPEED_LIMIT;
-//						if(robot_target_speed[1] < (-ROBOT_LINEAR_SPEED_LIMIT)) robot_target_speed[1] = (-ROBOT_LINEAR_SPEED_LIMIT);
-//						if(robot_target_speed[2] > ROBOT_ANGULAR_SPEED_LIMIT)    robot_target_speed[2] = ROBOT_ANGULAR_SPEED_LIMIT;
-//						if(robot_target_speed[2] < (-ROBOT_ANGULAR_SPEED_LIMIT)) robot_target_speed[2] = (-ROBOT_ANGULAR_SPEED_LIMIT);
 					}
 					if(USART_Robot_RX_Package[3] == 0x12)
 					{

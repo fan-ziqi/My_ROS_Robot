@@ -53,7 +53,7 @@ osStaticThreadDef_t defaultTaskControlBlock;
 osThreadId KEYHandle;
 osThreadId VINHandle;
 osThreadId PIHandle;
-osThreadId ROBOT_MOVEHandle;
+osThreadId MOVEHandle;
 osThreadId IMUHandle;
 osThreadId LEDHandle;
 osThreadId OTHERHandle;
@@ -68,7 +68,7 @@ void StartDefaultTask(void const * argument);
 extern void key_task(void const * argument);
 extern void vin_task(void const * argument);
 extern void pi_task(void const * argument);
-extern void robot_move_task(void const * argument);
+extern void move_task(void const * argument);
 extern void imu_task(void const * argument);
 extern void led_task(void const * argument);
 extern void other_task(void const * argument);
@@ -135,9 +135,9 @@ void MX_FREERTOS_Init(void) {
   osThreadDef(PI, pi_task, osPriorityHigh, 0, 128);
   PIHandle = osThreadCreate(osThread(PI), NULL);
 
-  /* definition and creation of ROBOT_MOVE */
-  osThreadDef(ROBOT_MOVE, robot_move_task, osPriorityHigh, 0, 128);
-  ROBOT_MOVEHandle = osThreadCreate(osThread(ROBOT_MOVE), NULL);
+  /* definition and creation of MOVE */
+  osThreadDef(MOVE, move_task, osPriorityHigh, 0, 128);
+  MOVEHandle = osThreadCreate(osThread(MOVE), NULL);
 
   /* definition and creation of IMU */
   osThreadDef(IMU, imu_task, osPriorityAboveNormal, 0, 128);

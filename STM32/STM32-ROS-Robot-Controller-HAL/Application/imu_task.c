@@ -18,7 +18,7 @@ void imu_task(void const * argument)
 	{
 		MPU6050_DMP_GetData(&robot_imu_dmp_data);
 		
-		osDelay(20);
+		osDelay(10);
 	}
 }
 

@@ -609,6 +609,7 @@ int MPU6050_DMP_Init(void)
 			return 1;
 		}
 	}
+	return 0;
 }
 
 
