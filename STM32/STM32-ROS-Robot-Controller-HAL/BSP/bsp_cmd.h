@@ -24,4 +24,6 @@ void show_imu(void);
 void show_battery(void);
 void show_battery_once(void);
 void show_send_to_pi(void);
+void set_pid(void);
+void set_speed(void);
 #endif

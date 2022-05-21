@@ -258,10 +258,10 @@ void Test_Motor_PID(void)
 		Encoder_Set_Counter(4, 30000);
 		
 		//计算PID控制后的速度
-		motor_pwm[0] = PID_Motor_Control(encoder_delta_target[0], encoder_delta[0]);
-		motor_pwm[1] = PID_Motor_Control(encoder_delta_target[1], encoder_delta[1]);
-		motor_pwm[2] = PID_Motor_Control(encoder_delta_target[2], encoder_delta[2]);
-		motor_pwm[3] = PID_Motor_Control(encoder_delta_target[3], encoder_delta[3]);
+		motor_pwm[0] = PID_Motor_Control(1, encoder_delta_target[0], encoder_delta[0]);
+		motor_pwm[1] = PID_Motor_Control(2, encoder_delta_target[1], encoder_delta[1]);
+		motor_pwm[2] = PID_Motor_Control(3, encoder_delta_target[2], encoder_delta[2]);
+		motor_pwm[3] = PID_Motor_Control(4, encoder_delta_target[3], encoder_delta[3]);
 
 		MOTOR_SetSpeed(1, motor_pwm[0]);
 		MOTOR_SetSpeed(1, motor_pwm[1]);

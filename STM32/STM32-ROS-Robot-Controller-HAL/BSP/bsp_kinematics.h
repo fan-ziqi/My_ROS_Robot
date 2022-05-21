@@ -5,8 +5,8 @@
 
 #define ENCODER_RESOLUTION 1440.0 //编码器分辨率, 轮子转一圈，编码器产生的脉冲数(编码器分辨率：12*30*4（12线，1：30减速比，四倍频）)
 #define WHEEL_DIAMETER 0.097 //轮子直径,单位：米
-#define D_X 0.195 //底盘Y轴上两轮中心的间距
-#define D_Y 0.165 //底盘X轴上两轮中心的间距
+#define D_X 0.193 //底盘Y轴上两轮中心的间距
+#define D_Y 0.169 //底盘X轴上两轮中心的间距
 #define PID_RATE                50      //PID调节PWM值的频率(50HZ=20ms)
 
 #define ROBOT_LINEAR_SPEED_LIMIT 5000   //机器人线速度限值 m/s*1000

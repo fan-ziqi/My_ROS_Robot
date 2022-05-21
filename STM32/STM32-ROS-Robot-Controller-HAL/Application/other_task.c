@@ -34,6 +34,11 @@ void other_task(void const * argument)
 //					robot_target_speed[0],
 //					robot_target_speed[1],
 //					robot_target_speed[2]);
+//		
+//		LOG_I("%d %d\r\n", 
+//			robot_params[0],
+//			robot_params[1]);
+		
 //		USART_Send_Pack(&huart2, sendtest, 3, 06);
 //		//全部初始化完成且电量充足，绿灯点亮，蓝灯熄灭，提示运行
 //		if(battery_status == IS_FULL)

@@ -2,6 +2,7 @@
 #include "bsp_cmd.h"
 #include "bsp_define.h"
 #include <cstring>
+#include <stdlib.h>
 
 #include "bsp_imu.h"
 
@@ -10,6 +11,47 @@
 
 #define SCB_AIRCR       (*(volatile unsigned long *)0xE000ED0C)  /* Reset control Address Register */
 #define SCB_RESET_VALUE 0x05FA0004                               /* Reset value, write to SCB_AIRCR can reset cpu */
+
+void split(char *src,const char *separator,char **dest,int *num) {
+     char *pNext;
+     //记录分隔符数量 
+     int count = 0;
+     //原字符串为空 
+     if (src == NULL || strlen(src) == 0)
+        return;
+    //未输入分隔符
+     if (separator == NULL || strlen(separator) == 0)
+        return;   
+	/*
+		c语言string库中函数，
+		声明： 
+		char *strtok(char *str, const char *delim)
+		参数： 
+	    str -- 要被分解成一组小字符串的字符串。
+    	delim -- 包含分隔符的 C 字符串。
+    	返回值：
+		该函数返回被分解的第一个子字符串，如果没有可检索的字符串，则返回一个空指针。 
+
+	*/
+	char *strtok(char *str, const char *delim); 
+	 //获得第一个由分隔符分割的字符串 
+    pNext = strtok(src,separator);
+    while(pNext != NULL) {
+     	//存入到目的字符串数组中 
+        *dest++ = pNext; 
+        ++count;
+        /*
+			strtok()用来将字符串分割成一个个片段。参数s指向欲分割的字符串，参数delim则为分割字符串中包含的所有字符。
+			当strtok()在参数s的字符串中发现参数delim中包涵的分割字符时,则会将该字符改为\0 字符。
+			在第一次调用时，strtok()必需给予参数s字符串，往后的调用则将参数s设置成NULL。
+			每次调用成功则返回指向被分割出片段的指针。
+
+		*/  
+        pNext = strtok(NULL,separator);  
+    }  
+    *num = count;
+}    
+
 
 char CMD_Buffer[50] = {0};
 int CMD_Buffer_Count = 0;
@@ -36,6 +78,8 @@ void cmd(void)
 	else if(!strcmp(CMD_Buffer,"show_battery"))      {show_battery();}
 	else if(!strcmp(CMD_Buffer,"show_battery_once")) {show_battery_once();}
 	else if(!strcmp(CMD_Buffer,"show_send_to_pi"))   {show_send_to_pi();}
+	else if(strstr(CMD_Buffer,"set_pid"))            {set_pid();}
+	else if(strstr(CMD_Buffer,"set_speed"))          {set_speed();}
 	else
 	{
 		printf("unknown cmd '%s'\r\n",CMD_Buffer);
@@ -69,9 +113,10 @@ void help(void)
 	printf("show_battery         ----------     Show battery\r\n");
 	printf("show_battery_once    ----------     Show battery once\r\n");
 	printf("show_send_to_pi      ----------     Show data send to pi\r\n");
+	printf("set_pid              ----------     Set motor pid, format: [set_pid P I D] \r\n");
+	printf("set_speed            ----------     Set robot speed, format: [set_speed X(m/s) Y(m/s) Yaw(deg/s)] \r\n");
 
 }
-
 
 
 void debug_on(void)
@@ -86,9 +131,9 @@ void debug_off(void)
 	printf("debug_off, elog_set_filter_lvl: ELOG_LVL_INFO\r\n");
 }
 
-extern struct imu_data robot_imu_dmp_data;
 void show_imu(void)
 {
+	extern struct imu_data robot_imu_dmp_data;
 	while(1)
 	{
 		printf("Pitch:%d Roll:%d Yaw:%d\r\n", 
@@ -102,9 +147,10 @@ void show_imu(void)
 	}
 }
 
-extern float battery_voltage;
+
 void show_battery(void)
 {
+	extern float battery_voltage;
 	while(1)
 	{
 		printf("当前电压 = %.1f\r\n", battery_voltage);
@@ -116,12 +162,14 @@ void show_battery(void)
 }
 void show_battery_once(void)
 {
-		printf("当前电压: %f\r\n", battery_voltage);
+	extern float battery_voltage;
+	printf("当前电压: %f\r\n", battery_voltage);
 }
 
-extern int16_t SendData[];
+
 void show_send_to_pi(void)
 {
+	extern int16_t SendData[];
 	while(1)
 	{
 		for(int i = 0; i < 24; i++)
@@ -136,5 +184,40 @@ void show_send_to_pi(void)
 	}
 }
 
+void set_pid(void)
+{
+	extern int16_t motor_kp;  //电机转速PID-P
+	extern int16_t motor_ki;    //电机转速PID-I
+	extern int16_t motor_kd;  //电机转速PID-D
+	
+	char *buf[4]={0};
+	int num=0;
+	split(CMD_Buffer," ",buf,&num);
+	
+	motor_kp = atoi(buf[1]);
+	motor_ki = atoi(buf[2]);
+	motor_kd = atoi(buf[3]);
+	
+	printf("\tSet motor pid to: \tP[%d]\tI[%d]\tD[%d]\t\r\n",
+					motor_kp, 
+					motor_ki, 
+					motor_kd);
+}
 
-
+void set_speed(void)
+{
+	extern int16_t robot_target_speed[];  // X Y Yaw
+	
+	char *buf[4]={0};
+	int num=0;
+	split(CMD_Buffer," ",buf,&num);
+	
+	robot_target_speed[0] = (int16_t)(atof(buf[1])*1000);
+	robot_target_speed[1] = (int16_t)(atof(buf[2])*1000);
+	robot_target_speed[2] = (int16_t)((atof(buf[3])*3.1415926/180)*1000);
+	
+	printf("\tSet robot speed to: \tX[%.2fm/s]\tY[%.2fm/s]\tYaw[%.1fdeg/s]\t\r\n",
+					atof(buf[1]), 
+					atof(buf[2]), 
+					atof(buf[3])*3.1415926/180);
+}

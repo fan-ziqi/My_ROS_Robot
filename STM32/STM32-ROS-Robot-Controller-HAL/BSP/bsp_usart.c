@@ -1,6 +1,7 @@
 #include "main.h"
 #include "bsp_usart.h"
 #include "bsp_define.h"
+#include "bsp_kinematics.h"
 
 #include <stdlib.h>
 
@@ -172,25 +173,25 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 							}
 							MessageData[i] = ReceiveUnion.data; //读取数据
 					}
-					
 					//此处进行数据解析
-					if(USART_Robot_RX_Package[3] == 0x06)
+					if(USART_Robot_RX_Package[3] == 11)
 					{
 						robot_target_speed[0] = MessageData[0];
 						robot_target_speed[1] = MessageData[1];
 						robot_target_speed[2] = MessageData[2];
+						
 					}
-					if(USART_Robot_RX_Package[3] == 0x12)
+					if(USART_Robot_RX_Package[3] == 12)
 					{
 						motor_kp = MessageData[0];
 						motor_ki = MessageData[1];
 						motor_kd = MessageData[2];
 					}
-					if(USART_Robot_RX_Package[3] == 0x13)
+					if(USART_Robot_RX_Package[3] == 13)
 					{
 						robot_params[0] = MessageData[0];
 						robot_params[1] = MessageData[1];
-//						Kinematics_Init(robot_params);
+						Kinematics_Init(robot_params);
 					}
 					USART_Robot_RX_Count = 0;
 				}

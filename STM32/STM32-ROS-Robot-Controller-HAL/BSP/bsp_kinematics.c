@@ -9,7 +9,7 @@
 
 //变量定义
 float rx_plus_ry_cali = 0.3;
-double pulse_per_meter = 0;
+double pulse_per_meter = ENCODER_RESOLUTION/(WHEEL_DIAMETER*3.1415926);
 double linear_correction_factor = 1.0;
 double angular_correction_factor = 1.0;
 
@@ -28,7 +28,7 @@ void Kinematics_Init(int16_t* robot_params)
 	angular_correction_factor   = (float)robot_params[1]/1000;
 	
 	float r_x = D_X/2;
-    float r_y = D_Y/2;
+  float r_y = D_Y/2;
 	rx_plus_ry_cali = (r_x + r_y)/angular_correction_factor;
 
 	robot_odom[0]  = 0;

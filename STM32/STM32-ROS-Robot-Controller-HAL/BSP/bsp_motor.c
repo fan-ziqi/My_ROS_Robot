@@ -51,14 +51,14 @@ static void MOTOR2_SetSpeed(int16_t speed)
 
 	if(speed > 0)
 	{
-		HAL_GPIO_WritePin(M2IN1_GPIO_Port, M2IN1_Pin, GPIO_PIN_SET);
-		HAL_GPIO_WritePin(M2IN2_GPIO_Port, M2IN2_Pin, GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(M2IN1_GPIO_Port, M2IN1_Pin, GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(M2IN2_GPIO_Port, M2IN2_Pin, GPIO_PIN_SET);
 		temp = speed;	
 	}
 	else if(speed < 0)
 	{
-		HAL_GPIO_WritePin(M2IN1_GPIO_Port, M2IN1_Pin, GPIO_PIN_RESET);
-		HAL_GPIO_WritePin(M2IN2_GPIO_Port, M2IN2_Pin, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(M2IN1_GPIO_Port, M2IN1_Pin, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(M2IN2_GPIO_Port, M2IN2_Pin, GPIO_PIN_RESET);
 		temp = (-speed);
 	}
 	else
@@ -107,14 +107,14 @@ static void MOTOR4_SetSpeed(int16_t speed)
 
 	if(speed > 0)
 	{
-		HAL_GPIO_WritePin(M4IN1_GPIO_Port, M4IN1_Pin, GPIO_PIN_SET);
-		HAL_GPIO_WritePin(M4IN2_GPIO_Port, M4IN2_Pin, GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(M4IN1_GPIO_Port, M4IN1_Pin, GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(M4IN2_GPIO_Port, M4IN2_Pin, GPIO_PIN_SET);
 		temp = speed;	
 	}
 	else if(speed < 0)
 	{
-		HAL_GPIO_WritePin(M4IN1_GPIO_Port, M4IN1_Pin, GPIO_PIN_RESET);
-		HAL_GPIO_WritePin(M4IN2_GPIO_Port, M4IN2_Pin, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(M4IN1_GPIO_Port, M4IN1_Pin, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(M4IN2_GPIO_Port, M4IN2_Pin, GPIO_PIN_RESET);
 		temp = (-speed);
 	}
 	else
