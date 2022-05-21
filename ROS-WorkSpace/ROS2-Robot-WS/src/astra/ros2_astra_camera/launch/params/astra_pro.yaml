@@ -1,0 +1,44 @@
+astra_camera_node:
+  ros__parameters:
+    auto_exposure: true
+    auto_white_balance: true
+    color_depth_synchronization: false
+    ir_frame_id: camera_ir_optical_frame
+    rgb_frame_id: camera_rgb_optical_frame
+    color_time_offset: -0.033
+    data_skip: 0
+    depth_camera_info_url: ''
+    depth_frame_id: camera_depth_optical_frame
+    depth_ir_offset_x: 5.0
+    depth_ir_offset_y: 4.0
+    depth_mode: 7
+    depth_registration: true
+    depth_time_offset: 0.0
+    device_id: '#1'
+    ir_mode: 7
+    ir_time_offset: -0.033
+    rgb_camera_info_url: ''
+    rgb_preferred: true
+    use_color: false
+    use_depth: true
+    use_device_time: false
+    use_ir: true
+    use_sim_time: false
+    z_offset_mm: 0.0
+    z_scaling: 1.0
+
+uvc_camera_node:
+  ros__parameters:
+    vendor: "0x2bc5"
+    product: "0x0502"
+    serial: ""
+    index: 0
+    width: 640
+    height: 480
+    video_mode: uncompressed
+    frame_rate: 30.0
+    timestamp_method: start
+    frame_id: camera
+    camera_info_url: ""
+    scanning_mode: 0
+    auto_exposure: 3

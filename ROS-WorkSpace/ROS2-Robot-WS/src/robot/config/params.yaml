@@ -1,20 +1,19 @@
 RobotNode:
   ros__parameters:
-    version: Mec
     #port_name: /dev/ttyAMA0 #设备端口
     port_name: /dev/ttyUSB0
     baud_rate: 115200       #通信波特率，固定115200
 
-    #odom_frame: odom               #里程计坐标系
+    odom_frame: odom                #里程计坐标系
     base_frame: base_footprint      #底盘坐标系
     imu_frame: base_imu_link        #IMU坐标系
 
-    linear_correction_factor: 1.25  #线速度校准系数
-    angular_correction_factor: 0.93  #角速度校准系数
+    linear_correction_factor: 1.00  #线速度校准系数
+    angular_correction_factor: 1.00  #角速度校准系数
 
-    #publish_odom_transform: True   #是否发布odom->base_footprint坐标变换
-    Kp: 200                         #电机控制PID，P参数
+    publish_odom_transform: True    #是否发布odom->base_footprint坐标变换
+    Kp: 300                         #电机控制PID，P参数
     Ki: 0                           #电机控制PID, I参数
-    Kd: 100                         #电机控制PID，D参数
+    Kd: 900                         #电机控制PID，D参数
 
     control_rate: 50                #底盘控制频率  

@@ -103,10 +103,13 @@ private:
     int ki_;
     int kd_;
 
-
+    //存放时间的消息，使用.sec获取秒，使用.nanosec获取毫秒
     builtin_interfaces::msg::Time current_time_;
     builtin_interfaces::msg::Time last_time_;
-    builtin_interfaces::msg::Time last_twist_time_;
+
+    //用于计时的变量，获取浮点数时间用.seconds()
+    rclcpp::Time last_twist_time_;
+    rclcpp::Time last_serial_time_;
 
     rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr pub_odom_;
     rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr pub_battery_;

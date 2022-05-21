@@ -105,7 +105,7 @@ void Robot::get_parameter_from_file()
     this->get_parameter("Ki", ki_);
     this->declare_parameter<int>("Kd", 52000);
     this->get_parameter("Kd", kd_);
-    
+
     RCLCPP_INFO(this->get_logger(), "成功从配置文件中获取参数");
 }
 
@@ -114,7 +114,7 @@ void Robot::serial_send_speed_callback()
 {
     double linear_x_speed, linear_y_speed, angular_speed;
 
-    if((this->get_clock()->now().seconds() - last_twist_time_.sec) <= 0.5)
+    if((this->now().seconds()-last_twist_time_.seconds()) < 0.1)
     {
         linear_x_speed = current_twist_.linear.x;
         linear_y_speed = current_twist_.linear.y;
@@ -126,9 +126,9 @@ void Robot::serial_send_speed_callback()
         linear_y_speed  = 0;
         angular_speed = 0;
     }
-    
-    // 如果超过一秒没有接收到里程计消息，则认为连接错误，给出warning
-    if((this->get_clock()->now().seconds() - current_time_.sec) >= 1.0)
+
+    // 如果超过1秒没有接收到里程计消息，则认为连接错误，给出warning
+    if((this->now().seconds() - last_serial_time_.seconds()) >= 1.0)
     {
         rclcpp::Clock steady_clock(RCL_STEADY_TIME);
         RCLCPP_WARN_THROTTLE(this->get_logger(), 
@@ -142,9 +142,9 @@ void Robot::serial_send_speed_callback()
 // cmd_vel Subscriber的回调函数
 void Robot::cmd_vel_callback(const geometry_msgs::msg::Twist::SharedPtr msg)
 {
-    last_twist_time_ = this->get_clock()->now();
+    last_twist_time_ = this->now();
     current_twist_ = *msg.get();
-    RCLCPP_DEBUG(this->get_logger(), "收到cmd_vel信息");
+    // RCLCPP_DEBUG(this->get_logger(), "收到cmd_vel信息");
 }
 
 // 串口数据接收线程的回调函数
@@ -159,7 +159,7 @@ void Robot::serial_receive_callback()
 	 	my_serial->SerialRead(msg_data, &msg_lenth, &msg_code);
 		
 		// std::this_thread::sleep_for(std::chrono::milliseconds(10));
-        RCLCPP_DEBUG(this->get_logger(), "串口接收到机器人端发送的数据");
+        // RCLCPP_DEBUG(this->get_logger(), "串口接收到机器人端发送的数据");
 
         //数据处理
         if(msg_code == RESEIVETYPE_PACKAGES)
@@ -186,6 +186,7 @@ void Robot::serial_receive_process(const short * buffer_data)
 
     // 记录当前时间
     current_time_ = this->get_clock()->now();
+    last_serial_time_ = this->now();
     
     // imu部分
     // 解析串口接受的imu数据
@@ -333,23 +334,23 @@ void Robot::serial_receive_process(const short * buffer_data)
     // 更新时间
     last_time_ = current_time_;
 
-    RCLCPP_DEBUG(this->get_logger(), "当前时间: %d.%d\r\n", 
-        current_time_.sec, current_time_.nanosec);
-    RCLCPP_DEBUG(this->get_logger(), "角速度: x:%f\ty:%f\tz:%f\r\n",
-        imu_get_vector_[0], imu_get_vector_[1], imu_get_vector_[2]);
-    RCLCPP_DEBUG(this->get_logger(), "加速度: x:%f\ty:%f\tz:%f\r\n",
-        imu_get_vector_[3], imu_get_vector_[4], imu_get_vector_[5]);
-    RCLCPP_DEBUG(this->get_logger(), "角度: pitch:%f\troll:%f\tyaw:%f\r\n",
-        imu_get_vector_[6], imu_get_vector_[7], imu_get_vector_[8]);
-    RCLCPP_DEBUG(this->get_logger(), "里程计坐标: x:%f(m)\ty:%f(m)\tyaw:%f(rad)\r\n",
-        odom_get_vector_[0], odom_get_vector_[1], odom_get_vector_[2]);
-    RCLCPP_DEBUG(this->get_logger(), "里程计坐标变化量: base_frame dx%f(m)\tdy%f(m)\tdyaw%f(rad)\r\n",
-        odom_get_vector_[3], odom_get_vector_[4], odom_get_vector_[5]);
-    RCLCPP_DEBUG(this->get_logger(), "获得轮速: %d\tb:%d\tc:%d\td:%d\r\n",
-        wheelvel_get_vector_[0], wheelvel_get_vector_[1], wheelvel_get_vector_[2], wheelvel_get_vector_[3]);
-    RCLCPP_DEBUG(this->get_logger(), "设置轮速: a:%d\tb:%d\tc:%d\td:%d\r\n",
-        wheelvel_set_vector_[0], wheelvel_set_vector_[1], wheelvel_set_vector_[2], wheelvel_set_vector_[3]);
-    RCLCPP_DEBUG(this->get_logger(), "电池电压: %f\r\n", battery_pub_data_.data);
+    // RCLCPP_DEBUG(this->get_logger(), "当前时间: %d.%d\r\n", 
+    //     current_time_.sec, current_time_.nanosec);
+    // RCLCPP_DEBUG(this->get_logger(), "角速度: x:%f\ty:%f\tz:%f\r\n",
+    //     imu_get_vector_[0], imu_get_vector_[1], imu_get_vector_[2]);
+    // RCLCPP_DEBUG(this->get_logger(), "加速度: x:%f\ty:%f\tz:%f\r\n",
+    //     imu_get_vector_[3], imu_get_vector_[4], imu_get_vector_[5]);
+    // RCLCPP_DEBUG(this->get_logger(), "角度: pitch:%f\troll:%f\tyaw:%f\r\n",
+    //     imu_get_vector_[6], imu_get_vector_[7], imu_get_vector_[8]);
+    // RCLCPP_DEBUG(this->get_logger(), "里程计坐标: x:%f(m)\ty:%f(m)\tyaw:%f(rad)\r\n",
+    //     odom_get_vector_[0], odom_get_vector_[1], odom_get_vector_[2]);
+    // RCLCPP_DEBUG(this->get_logger(), "里程计坐标变化量: base_frame dx%f(m)\tdy%f(m)\tdyaw%f(rad)\r\n",
+    //     odom_get_vector_[3], odom_get_vector_[4], odom_get_vector_[5]);
+    // RCLCPP_DEBUG(this->get_logger(), "获得轮速: a:%d\tb:%d\tc:%d\td:%d\r\n",
+    //     wheelvel_get_vector_[0], wheelvel_get_vector_[1], wheelvel_get_vector_[2], wheelvel_get_vector_[3]);
+    // RCLCPP_DEBUG(this->get_logger(), "设置轮速: a:%d\tb:%d\tc:%d\td:%d\r\n",
+    //     wheelvel_set_vector_[0], wheelvel_set_vector_[1], wheelvel_set_vector_[2], wheelvel_set_vector_[3]);
+    // RCLCPP_DEBUG(this->get_logger(), "电池电压: %f\r\n", battery_pub_data_.data);
 }
 
 // 串口发送PID参数
@@ -369,8 +370,8 @@ void Robot::serial_send_pid(int p,int i, int d)
 void Robot::serial_send_correction(double linear_correction,double angular_correction)
 {
     static short param_data[2];
-    param_data[0] = (short)linear_correction * 1000;
-    param_data[1] = (short)angular_correction * 1000;
+    param_data[0] = (short)(linear_correction * 1000);
+    param_data[1] = (short)(angular_correction * 1000);
     my_serial->SerialWrite(param_data, 2, SENDTYPE_PARAMS);
     RCLCPP_INFO(this->get_logger(), 
                 "向机器人发送底盘矫正参数：linear_correction=%d, angular_correction=%d",

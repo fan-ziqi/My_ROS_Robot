@@ -68,14 +68,9 @@ install(TARGETS
     robot
     DESTINATION lib/${PROJECT_NAME}
 )
-install(DIRECTORY launch
-    DESTINATION share/${PROJECT_NAME}
-    FILES_MATCHING PATTERN "*.py"
-)
 
-install(DIRECTORY config
-    DESTINATION share/${PROJECT_NAME}
-    FILES_MATCHING PATTERN "*.yaml"
+install(DIRECTORY launch urdf meshes config
+  DESTINATION share/${PROJECT_NAME}/
 )
 
 ament_package()
