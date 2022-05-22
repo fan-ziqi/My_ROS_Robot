@@ -4,4 +4,4 @@
 
 * 硬件Hardware
 * 软件Software
-* 控制板Control-Board
+* 控制板ROS-Robot-Controller
