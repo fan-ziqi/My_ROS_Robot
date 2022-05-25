@@ -1,4 +1,0 @@
-<launch>
-	<test pkg="warehouse_ros_mongo" type="test_warehouse_ros_mongo_cpp" test-name="test_warehouse_ros_mongo_cpp"/>
-	<test pkg="warehouse_ros_mongo" type="test_warehouse_ros_mongo_py.py" test-name="test_warehouse_ros_mongo_py"/>
-</launch>

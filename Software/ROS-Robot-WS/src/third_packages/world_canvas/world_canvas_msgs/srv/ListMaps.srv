@@ -1,5 +1,0 @@
-# Service used to list the most recent map from every map-making session.
-
-# No arguments at this time.
----
-MapListEntry[] map_list

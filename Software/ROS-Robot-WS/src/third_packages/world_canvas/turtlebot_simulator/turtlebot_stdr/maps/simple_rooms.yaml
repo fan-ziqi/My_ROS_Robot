@@ -1,6 +1,0 @@
-image: simple_rooms.png
-resolution: 0.05
-origin: [0.0, 0.0, 0.0]
-occupied_thresh: 0.6
-free_thresh: 0.3
-negate: 0

@@ -1,6 +1,0 @@
-<launch>
-	<include file="$(find nav_depthcamera)/launch/Driver/RTAB_Driver/bringup_depthcameraRTAB.launch" />
-	<include file="$(find rtabmap_ros)/launch/demo/demo_mapping.launch" />
-	
-
-</launch>

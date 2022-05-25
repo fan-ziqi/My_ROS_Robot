@@ -1,8 +1,0 @@
- <!-- 
-   runs relays to remap topics from STDR nomenclature to Stage nomenclature
- -->
-<launch>
-  <!--node name="relay_laser_data" pkg="topic_tools" type="relay" args="robot0/laser_0 scan"/-->
-  <!--node name="relay_odom_data" pkg="topic_tools" type="relay" args="robot0/odom odom"/-->
-    <node name="relay_cmd_data" pkg="topic_tools" type="relay" args="mobile_base/commands/velocity robot0/cmd_vel"/>
-</launch>
